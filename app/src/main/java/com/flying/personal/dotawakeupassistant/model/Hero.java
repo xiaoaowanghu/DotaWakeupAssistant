@@ -12,17 +12,35 @@ public class Hero {
     protected WakeUpTask1 task1;
     protected WakeUpTask2 task2;
     protected WakeUpTask1 task3;
+    protected PositionType positionType;
+    protected AbilityType abilityType;
+    protected String picPath;
 
-    public List<String> GenerateIndex()
-    {
-        List<String> result = new ArrayList<>(8);
-        //TODO Index create. Including full/first characters for Chinese name, short name, English name, alias.
+    public enum PositionType {
+        Front, Middle, Back
+    }
 
-        return result;
+    public enum AbilityType {
+        Strength, Agility, Intelligence
     }
 
     public String getName() {
         return name;
+    }
+
+    public String getPicPath() {
+        return picPath;
+    }
+
+    public void setPicPath(String picPath) {
+        this.picPath = picPath;
+    }
+
+    public List<String> GenerateIndex() {
+        List<String> result = new ArrayList<>(8);
+        //TODO Index create. Including full/first characters for Chinese name, short name, English name, alias.
+
+        return result;
     }
 
     public void setName(String name) {
@@ -59,5 +77,21 @@ public class Hero {
 
     public void setTask3(WakeUpTask1 task3) {
         this.task3 = task3;
+    }
+
+    public AbilityType getAbilityType() {
+        return abilityType;
+    }
+
+    public void setAbilityType(AbilityType abilityType) {
+        this.abilityType = abilityType;
+    }
+
+    public PositionType getPositionType() {
+        return positionType;
+    }
+
+    public void setPositionType(PositionType positionType) {
+        this.positionType = positionType;
     }
 }

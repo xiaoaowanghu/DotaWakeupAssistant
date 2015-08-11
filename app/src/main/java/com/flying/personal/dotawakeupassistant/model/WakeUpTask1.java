@@ -22,5 +22,19 @@ public class WakeUpTask1 {
         return stage.getStamina();
     }
 
+    public GameStage getStage() {
+        return stage;
+    }
 
+    public void setStage(GameStage stage) {
+        this.stage = stage;
+    }
+
+    public double getDropRate() {
+        return dropRate;
+    }
+
+    public void setDropRate(double dropRate) {
+        this.dropRate = dropRate;
+    }
 }

@@ -11,4 +11,6 @@ public interface IDataProvider {
     List<Hero> getAllHeros();
 
     List<Hero> GetMatchedHeros(String index);
+
+    int getTotalHeroCount();
 }
