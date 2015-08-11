@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\wangxian\AndroidStudioProjects\ComputerForWakeupHeroOfDotaLegend\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="C:\Users\wangxian\AndroidStudioProjects\ComputerForWakeupHeroOfDotaLegend\app\build\intermediates\pre-dexed\debug\classes-6c6c68c3c857490c44eb1229bc73a57778754ac4.jar" />
+    </item>
+    <item
+        jar="C:\Users\wangxian\AndroidStudioProjects\ComputerForWakeupHeroOfDotaLegend\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="C:\Users\wangxian\AndroidStudioProjects\ComputerForWakeupHeroOfDotaLegend\app\build\intermediates\pre-dexed\debug\classes-0ce1c4761a9adeff61f0d09647ef4770e89aa7b8.jar" />
+    </item>
+    <item
+        jar="C:\Users\wangxian\AndroidStudioProjects\ComputerForWakeupHeroOfDotaLegend\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="C:\Users\wangxian\AndroidStudioProjects\ComputerForWakeupHeroOfDotaLegend\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-277054266e037fe1fb0b2251c0833c6d8f662014.jar" />
+    </item>
+    <item
+        jar="C:\Users\wangxian\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="C:\Users\wangxian\AndroidStudioProjects\ComputerForWakeupHeroOfDotaLegend\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-66e7942cd8bba2976e8df4f3b73ecfab68efe531.jar" />
+    </item>
+
+</items>
