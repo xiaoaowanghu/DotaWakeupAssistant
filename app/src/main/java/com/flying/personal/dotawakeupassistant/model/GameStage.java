@@ -1,4 +1,4 @@
-package com.flying.personal.dotawakeupassistant;
+package com.flying.personal.dotawakeupassistant.model;
 
 import java.util.List;
 

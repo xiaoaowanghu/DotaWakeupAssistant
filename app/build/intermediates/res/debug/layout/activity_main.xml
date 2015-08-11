@@ -3,4 +3,4 @@
     android:name="com.flying.personal.dotawakeupassistant.MainActivityFragment"
     tools:layout="@layout/fragment_main" android:layout_width="match_parent"
     android:layout_height="match_parent" />
-<!-- From: file:/C:/Users/wangxian/AndroidStudioProjects/ComputerForWakeupHeroOfDotaLegend/app/src/main/res/layout/activity_main.xml -->
+<!-- From: file:/D:/mywork/AndroidStudioProjects/DotaWakeupAssistant/app/src/main/res/layout/activity_main.xml -->

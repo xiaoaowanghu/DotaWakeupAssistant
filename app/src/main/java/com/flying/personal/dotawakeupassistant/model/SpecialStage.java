@@ -1,4 +1,4 @@
-package com.flying.personal.dotawakeupassistant;
+package com.flying.personal.dotawakeupassistant.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +32,7 @@ public class SpecialStage extends GameStage {
     }
 
     private int occurDays;
-
+    private int canBeExecutedTimes = 1;
 
     public List<Integer> taskWeekDayIndex() {
         List<Integer> result = new ArrayList<Integer>(7);

@@ -1,6 +1,4 @@
-package com.flying.personal.dotawakeupassistant;
-
-import com.flying.personal.dotawakeupassistant.GameStage;
+package com.flying.personal.dotawakeupassistant.model;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -10,11 +8,12 @@ import java.util.Date;
  */
 public class WakeUpTask1 {
     private GameStage stage;
+    private double dropRate = 6 / 4.0;
 
     public Date whenCanFinish(Date startDate, int refreshTimes) {
         Calendar c = Calendar.getInstance();
         c.setTime(startDate);
-        double days = 60 / (6 / 4.0 * (1 + refreshTimes));
+        double days = 60 / (dropRate * (1 + refreshTimes));
         c.add(Calendar.DATE, (int) Math.ceil(days));
         return c.getTime();
     }
@@ -22,4 +21,6 @@ public class WakeUpTask1 {
     public int GetStaminaSpend() {
         return stage.getStamina();
     }
+
+
 }
