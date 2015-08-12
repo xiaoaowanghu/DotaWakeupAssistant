@@ -41,6 +41,18 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:15:17
 	android:name
 		ADDED from AndroidManifest.xml:15:27
+supports-screens
+ADDED from AndroidManifest.xml:19:5
+	android:resizeable
+		ADDED from AndroidManifest.xml:23:9
+	android:largeScreens
+		ADDED from AndroidManifest.xml:21:9
+	android:anyDensity
+		ADDED from AndroidManifest.xml:20:9
+	android:normalScreens
+		ADDED from AndroidManifest.xml:22:9
+	android:smallScreens
+		ADDED from AndroidManifest.xml:24:9
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from com.android.support:appcompat-v7:22.2.0:20:5
