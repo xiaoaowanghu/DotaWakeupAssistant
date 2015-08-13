@@ -8,9 +8,9 @@ import java.util.List;
  * Created by wangxian on 8/10/2015.
  */
 public interface IDataProvider {
-    List<Hero> getAllHeros();
+    List<Hero> getAllHeroes();
 
-    List<Hero> GetMatchedHeros(String index);
+    List<Hero> GetMatchedHeroes(String index);
 
     int getTotalHeroCount();
 }

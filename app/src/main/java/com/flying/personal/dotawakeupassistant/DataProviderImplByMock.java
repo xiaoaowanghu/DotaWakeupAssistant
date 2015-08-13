@@ -10,14 +10,13 @@ import java.util.List;
 /**
  * Created by wangxian on 8/11/2015.
  */
-public class DataProviderImplByTest implements IDataProvider {
+public class DataProviderImplByMock implements IDataProvider {
 
-    private List<Hero> heros;
+    private List<Hero> heroes;
     private List<GameStage> stages;
 
-    public DataProviderImplByTest()
-    {
-        heros = new ArrayList<Hero>(10);
+    public DataProviderImplByMock() {
+        heroes = new ArrayList<Hero>(10);
 
         {
             Hero h1 = new Hero();
@@ -35,7 +34,7 @@ public class DataProviderImplByTest implements IDataProvider {
             w1.setStage(g1);
             h1.setTask1(w1);
             h1.setPicPath("ic_launcher.png");
-            heros.add(h1);
+            heroes.add(h1);
         }
 
         {
@@ -54,7 +53,7 @@ public class DataProviderImplByTest implements IDataProvider {
             w1.setStage(g1);
             h1.setTask1(w1);
             h1.setPicPath("ic_launcher.png");
-            heros.add(h1);
+            heroes.add(h1);
         }
 
         {
@@ -73,28 +72,26 @@ public class DataProviderImplByTest implements IDataProvider {
             w1.setStage(g1);
             h1.setTask1(w1);
             h1.setPicPath("ic_launcher.png");
-            heros.add(h1);
-            heros.add(h1);
-            heros.add(h1);
-            heros.add(h1);
-            heros.add(h1);
-            heros.add(h1);
-            heros.add(h1);
+            heroes.add(h1);
+
+            for (int i = 0; i < 30; i++)
+                heroes.add(h1);
         }
+
     }
 
     @Override
-    public List<Hero> getAllHeros() {
-        return heros;
+    public List<Hero> getAllHeroes() {
+        return heroes;
     }
 
     @Override
-    public List<Hero> GetMatchedHeros(String index) {
-        return heros;
+    public List<Hero> GetMatchedHeroes(String index) {
+        return heroes;
     }
 
     @Override
     public int getTotalHeroCount() {
-        return heros.size();
+        return heroes.size();
     }
 }
