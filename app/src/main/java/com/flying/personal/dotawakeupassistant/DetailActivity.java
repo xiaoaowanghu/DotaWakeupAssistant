@@ -1,8 +1,11 @@
 package com.flying.personal.dotawakeupassistant;
 
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.v7.app.ActionBarActivity;
 import android.widget.TextView;
+
+import com.flying.personal.dotawakeupassistant.util.ContactLocaleUtils;
 
 /**
  * Created by wangxian on 8/13/2015.
@@ -16,6 +19,7 @@ public class DetailActivity extends ActionBarActivity {
 
         Bundle bundle = this.getIntent().getExtras();
         String name = bundle.getString("name");
-        ((TextView) findViewById(R.id.tvHeroName)).setText(name);
+        String pinyin = ContactLocaleUtils.getIntance().getSortKey(name, ContactsContract.FullNameStyle.CHINESE);
+        ((TextView) findViewById(R.id.tvHeroName)).setText(pinyin);
     }
 }
