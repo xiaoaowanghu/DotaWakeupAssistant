@@ -20,7 +20,7 @@ public class DataProviderImplByMock implements IDataProvider {
 
         {
             Hero h1 = new Hero();
-            h1.setName("小黑");
+            h1.setName("鲜还阿");
             h1.setPositionType(Hero.PositionType.Back);
             h1.setAbilityType(Hero.AbilityType.Agility);
             WakeUpTask1 w1 = new WakeUpTask1();
