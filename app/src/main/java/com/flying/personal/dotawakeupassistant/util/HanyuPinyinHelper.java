@@ -8,8 +8,7 @@ import java.util.List;
 import java.util.Properties;
 
 /**
- * 中文转汉语拼音
- * 支持多音字
+ * Note : This class isn't thread safe
  */
 public class HanyuPinyinHelper {
 

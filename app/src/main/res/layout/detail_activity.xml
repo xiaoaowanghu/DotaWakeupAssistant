@@ -1,29 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imHeroPortrait"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top"
-        android:layout_marginTop="5dp"
-        android:adjustViewBounds="true"
-        android:scaleType="centerInside"
-        android:layout_marginLeft="5dp"
-        android:layout_marginStart="5dp"
-        android:src="@drawable/ic_launcher" />
+    <LinearLayout
+        android:id="@+id/llHead"
+        style="@style/layout_vertical"
+        android:layout_weight="300"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/tvHeroName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:text="OnlyForTest"
-        android:layout_toRightOf="@id/imHeroPortrait"
-        android:layout_toEndOf="@id/imHeroPortrait"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginStart="15dp"/>
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/imHeroPortrait"
+            style="@style/layout_horizontal"
+            android:layout_gravity="top"
+            android:layout_marginLeft="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="382"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_launcher" />
+
+        <LinearLayout
+            style="@style/layout_horizontal"
+            android:layout_weight="618"
+            android:orientation="vertical">
+
+            <View
+                style="@style/layout_vertical"
+                android:layout_weight="382" />
+
+            <TextView
+                android:id="@+id/tvHeroName"
+                style="@style/layout_vertical"
+                android:layout_weight="618"
+                android:gravity="top"
+                android:text="OnlyForTestShow"
+                android:textSize="25sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llContent"
+        style="@style/layout_vertical"
+        android:layout_weight="618"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/layout_vertical"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/tv_backgroud"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                style="@style/normal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/task1"
+                android:textSize="18sp" />
+
+            <TextView
+                style="@style/normal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test:收集满60碎片"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/layout_vertical"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/tv_backgroud"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                style="@style/normal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/task2"
+                android:textSize="18sp" />
+
+            <TextView
+                style="@style/normal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test:收集满60碎片"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/layout_vertical"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/tv_backgroud"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                style="@style/normal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/task3"
+                android:textSize="18sp" />
+
+            <TextView
+                style="@style/normal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test:收集满60碎片"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

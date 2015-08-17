@@ -28,6 +28,5 @@ public class DetailActivity extends ActionBarActivity {
         }
 
         ((TextView) findViewById(R.id.tvHeroName)).setText(tmp);
-
     }
 }

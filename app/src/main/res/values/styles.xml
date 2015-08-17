@@ -1,10 +1,8 @@
 <resources>
-
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
     </style>
-
     <!-- 全屏幕拉伸-->
     <style name="layout_full">
         <item name="android:layout_width">fill_parent</item>
@@ -23,4 +21,9 @@
     <style name="layout_vertical" parent="layout_full">
         <item name="android:layout_height">0px</item>
     </style>
+
+    <style name="normal_margin">
+        <item name="android:layout_marginLeft">10dp</item>
+    </style>
+
 </resources>
