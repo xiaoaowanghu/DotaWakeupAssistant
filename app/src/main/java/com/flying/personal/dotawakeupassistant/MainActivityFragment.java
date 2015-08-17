@@ -58,6 +58,7 @@ public class MainActivityFragment extends Fragment {
             imageView.setImageResource(R.drawable.ic_launcher);
             imageView.setPadding(0, 0, 0, 0);
             final Activity mainActivity = getActivity();
+
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
