@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="equip_im_border">#a67900</color>
+    <color name="detail_back">#0e4371</color>
+</resources>

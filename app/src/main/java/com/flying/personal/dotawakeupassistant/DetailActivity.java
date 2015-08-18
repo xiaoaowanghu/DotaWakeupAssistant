@@ -63,26 +63,27 @@ public class DetailActivity extends ActionBarActivity {
             int picWidthPX = (int) ((screenWidthPX - marginPX * (colCount + 1)) / colCount * 1.0 - 0.5f);
 
             TextView tv = new TextView(this);
+//            tv.setTextColor(getResources().getColor(R.color.white));
             tv.setText(R.string.equipRemind);
             tv.setTextAppearance(this, R.style.normal_margin);
-            tv.setGravity(Gravity.CENTER);
-            tv.setTextSize(18);
+            tv.setTextSize(14); //14sp
             LinearLayout.LayoutParams layoutParamForTV = new LinearLayout.LayoutParams(
                     ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            layoutParamForTV.gravity = Gravity.CENTER;
             layoutParamForTV.setMargins(UnitUtility.getInstance().dip2px(this, 10), 0, 0, 0);
             subLayoutForEquip.addView(tv, layoutParamForTV);
 
             for (EquipmentItem item : hero.getTask1().getStage().getItems()) {
-
                 ImageView ivEquip = new ImageView(this);
                 LinearLayout.LayoutParams imgLayout = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                 imgLayout.setMargins(2, 2, 0, 0);
+
                 ivEquip.setLayoutParams(imgLayout);
-                ivEquip.setMaxWidth(picWidthPX);
-                ivEquip.setScaleType(ImageView.ScaleType.FIT_XY);
+                //ivEquip.setMaxWidth(picWidthPX);
+                //ivEquip.setScaleType(ImageView.ScaleType.FIT_XY);
                 ivEquip.setAdjustViewBounds(true);
                 ivEquip.setImageResource(res.getIdentifier(item.getPath(), "drawable", getPackageName()));
-                ivEquip.setPadding(0, 0, 0, 0);
+                ivEquip.setBackgroundResource(R.drawable.border);
                 subLayoutForEquip.addView(ivEquip);
             }
         }

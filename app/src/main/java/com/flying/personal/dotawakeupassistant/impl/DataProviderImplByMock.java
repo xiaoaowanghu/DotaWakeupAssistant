@@ -35,15 +35,15 @@ public class DataProviderImplByMock implements IDataProvider {
             outPut1.add("遗物");
             g1.setOutput(outPut1);
             w1.setStage(g1);
-            w1.setDescription("任务1,集满60个碎片");
+            w1.setDescription("集满60个碎片,集满60个碎片,集满60个碎片");
             h1.setTask1(w1);
             h1.setPicPath("ic_launcher");
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             WakeUpTask2 w2 = new WakeUpTask2();
-            w2.setDescription("任务2，冰龙");
+            w2.setDescription("冰龙");
             h1.setTask2(w2);
             WakeUpTask1 w3 = new WakeUpTask1();
-            w3.setDescription("任务3,单挑敌法");
+            w3.setDescription("单挑敌法");
             h1.setTask3(w3);
 
             EquipmentItem item = new EquipmentItem();

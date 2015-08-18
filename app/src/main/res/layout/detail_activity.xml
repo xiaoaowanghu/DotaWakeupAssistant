@@ -2,7 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/detail_back"
     android:orientation="vertical">
+
 
     <LinearLayout
         android:id="@+id/llHead"
@@ -50,7 +52,7 @@
         <LinearLayout
             android:id="@+id/llTask1"
             style="@style/layout_vertical"
-            android:layout_margin="5dp"
+            android:layout_margin="10dp"
             android:layout_weight="1"
             android:background="@drawable/tv_backgroud"
             android:orientation="vertical"
@@ -66,7 +68,7 @@
                 android:text="@string/task1"
                 android:textSize="14sp" />
 
-            <TextView
+            <com.flying.personal.dotawakeupassistant.view.AutoAdjustFontSizeTextView
                 android:id="@+id/tvTask1"
                 style="@style/normal_margin"
                 android:layout_width="wrap_content"
@@ -77,7 +79,7 @@
 
         <LinearLayout
             style="@style/layout_vertical"
-            android:layout_margin="5dp"
+            android:layout_margin="10dp"
             android:layout_weight="1"
             android:background="@drawable/tv_backgroud"
             android:orientation="vertical"
@@ -93,11 +95,12 @@
                 android:text="@string/task2"
                 android:textSize="14sp" />
 
-            <TextView
+            <com.flying.personal.dotawakeupassistant.view.AutoAdjustFontSizeTextView
                 android:id="@+id/tvTask2"
                 style="@style/normal_margin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
                 android:text="Test:收集满60碎片"
                 android:textSize="18sp" />
 
@@ -105,7 +108,7 @@
 
         <LinearLayout
             style="@style/layout_vertical"
-            android:layout_margin="5dp"
+            android:layout_margin="10dp"
             android:layout_weight="1"
             android:background="@drawable/tv_backgroud"
             android:orientation="vertical"
@@ -121,7 +124,7 @@
                 android:text="@string/task3"
                 android:textSize="14sp" />
 
-            <TextView
+            <com.flying.personal.dotawakeupassistant.view.AutoAdjustFontSizeTextView
                 android:id="@+id/tvTask3"
                 style="@style/normal_margin"
                 android:layout_width="wrap_content"
