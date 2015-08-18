@@ -1,8 +1,11 @@
-package com.flying.personal.dotawakeupassistant;
+package com.flying.personal.dotawakeupassistant.impl;
 
+import com.flying.personal.dotawakeupassistant.IDataProvider;
+import com.flying.personal.dotawakeupassistant.model.EquipmentItem;
 import com.flying.personal.dotawakeupassistant.model.GameStage;
 import com.flying.personal.dotawakeupassistant.model.Hero;
 import com.flying.personal.dotawakeupassistant.model.WakeUpTask1;
+import com.flying.personal.dotawakeupassistant.model.WakeUpTask2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +23,7 @@ public class DataProviderImplByMock implements IDataProvider {
 
         {
             Hero h1 = new Hero();
-            h1.setName("鲜还阿");
+            h1.setName("小黑");
             h1.setPositionType(Hero.PositionType.Back);
             h1.setAbilityType(Hero.AbilityType.Agility);
             WakeUpTask1 w1 = new WakeUpTask1();
@@ -32,8 +35,22 @@ public class DataProviderImplByMock implements IDataProvider {
             outPut1.add("遗物");
             g1.setOutput(outPut1);
             w1.setStage(g1);
+            w1.setDescription("任务1,集满60个碎片");
             h1.setTask1(w1);
-            h1.setPicPath("ic_launcher.png");
+            h1.setPicPath("ic_launcher");
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            WakeUpTask2 w2 = new WakeUpTask2();
+            w2.setDescription("任务2，冰龙");
+            h1.setTask2(w2);
+            WakeUpTask1 w3 = new WakeUpTask1();
+            w3.setDescription("任务3,单挑敌法");
+            h1.setTask3(w3);
+
+            EquipmentItem item = new EquipmentItem();
+            item.setDisplayName("敏捷+10");
+            item.setPath("jxfq");
+            items.add(item);
+            g1.setItems(items);
             heroes.add(h1);
         }
 
@@ -81,12 +98,32 @@ public class DataProviderImplByMock implements IDataProvider {
     }
 
     @Override
+    public Hero getHeroByName(String heroName) {
+        for (Hero h : heroes) {
+            if (h.getName().equalsIgnoreCase(heroName))
+                return h;
+        }
+
+        return null;
+    }
+
+    @Override
+    public List<Hero> getHeroesByPosition(Hero.PositionType position) {
+        return null;
+    }
+
+    @Override
+    public List<Hero> getHeroesByAbilityType(Hero.AbilityType abilityType) {
+        return null;
+    }
+
+    @Override
     public List<Hero> getAllHeroes() {
         return heroes;
     }
 
     @Override
-    public List<Hero> GetMatchedHeroes(String index) {
+    public List<Hero> getMatchedHeroes(String index) {
         return heroes;
     }
 

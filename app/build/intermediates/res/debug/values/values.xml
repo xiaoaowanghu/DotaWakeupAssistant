@@ -200,10 +200,17 @@
     <eat-comment/>
     <string name="action_settings">Settings</string>
     <string name="app_name">刀塔传奇觉醒助手</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="equipRemind">可获得</string>
     <!-- From: file:/D:/mywork/GitHub/DotaWakeupAssistant/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <!-- From: file:/D:/mywork/GitHub/DotaWakeupAssistant/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="task1">任务1</string>
+    <string name="task2">任务2</string>
+    <string name="task3">任务3</string>
+    <!-- From: file:/D:/mywork/GitHub/DotaWakeupAssistant/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
@@ -1470,5 +1477,8 @@
     <style name="layout_wrap">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="normal_margin">
+        <item name="android:layout_marginLeft">10dp</item>
     </style>
 </resources>

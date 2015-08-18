@@ -10,7 +10,13 @@ import java.util.List;
 public interface IDataProvider {
     List<Hero> getAllHeroes();
 
-    List<Hero> GetMatchedHeroes(String index);
+    List<Hero> getMatchedHeroes(String index);
 
     int getTotalHeroCount();
+
+    Hero getHeroByName(String heroName);
+
+    List<Hero> getHeroesByPosition(Hero.PositionType position);
+
+    List<Hero> getHeroesByAbilityType(Hero.AbilityType abilityType);
 }

@@ -1,4 +1,4 @@
-package com.flying.personal.dotawakeupassistant;
+package com.flying.personal.dotawakeupassistant.util;
 
 import android.content.Context;
 
@@ -25,5 +25,4 @@ public class UnitUtility {
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int) (pxValue / scale + 0.5f);
     }
-
 }

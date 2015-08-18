@@ -12,7 +12,9 @@ import android.view.ViewGroup;
 import android.widget.GridLayout;
 import android.widget.ImageView;
 
+import com.flying.personal.dotawakeupassistant.impl.DataProviderImplByMock;
 import com.flying.personal.dotawakeupassistant.model.Hero;
+import com.flying.personal.dotawakeupassistant.util.UnitUtility;
 
 import java.util.List;
 
@@ -64,9 +66,8 @@ public class MainActivityFragment extends Fragment {
                 public void onClick(View v) {
                     Intent intent = new Intent();
                     Bundle bundle = new Bundle();
-                    bundle.putString("name", "tinyphp");
+                    bundle.putString("name", h.getName());
                     intent.putExtras(bundle);
-                    intent.putExtra("name", h.getName());
                     intent.setClass(mainActivity, DetailActivity.class);
                     startActivity(intent);
                 }
