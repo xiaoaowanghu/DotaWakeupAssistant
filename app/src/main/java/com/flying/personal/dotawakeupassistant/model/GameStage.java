@@ -11,6 +11,7 @@ public class GameStage {
     protected int sequenceNo;
     protected int stamina;
     protected List<String> output;
+    protected List<EquipmentItem> items;
 
     public int getChapter() {
         return chapter;
@@ -42,5 +43,21 @@ public class GameStage {
 
     public void setOutput(List<String> output) {
         this.output = output;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<EquipmentItem> getItems() {
+        return items;
+    }
+
+    public void setItems(List<EquipmentItem> items) {
+        this.items = items;
     }
 }

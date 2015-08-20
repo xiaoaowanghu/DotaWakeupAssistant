@@ -12,7 +12,9 @@ import android.view.ViewGroup;
 import android.widget.GridLayout;
 import android.widget.ImageView;
 
+import com.flying.personal.dotawakeupassistant.impl.DataProviderImplByMock;
 import com.flying.personal.dotawakeupassistant.model.Hero;
+import com.flying.personal.dotawakeupassistant.util.Utility;
 
 import java.util.List;
 
@@ -41,7 +43,7 @@ public class MainActivityFragment extends Fragment {
         int screenWidthPX = dm.widthPixels;
         int colCount = 4;
         int marginDP = 16;
-        int marginPX = UnitUtility.getInstance().dip2px(this.getActivity(), marginDP);
+        int marginPX = Utility.getInstance().dip2px(this.getActivity(), marginDP);
         int picWidthPX = (int) ((screenWidthPX - marginPX * (colCount + 1)) / colCount * 1.0 - 0.5f);
 
         for (int i = 0; i < dataProvider.getTotalHeroCount(); i++) {
@@ -64,9 +66,8 @@ public class MainActivityFragment extends Fragment {
                 public void onClick(View v) {
                     Intent intent = new Intent();
                     Bundle bundle = new Bundle();
-                    bundle.putString("name", "tinyphp");
+                    bundle.putString("name", h.getName());
                     intent.putExtras(bundle);
-                    intent.putExtra("name", h.getName());
                     intent.setClass(mainActivity, DetailActivity.class);
                     startActivity(intent);
                 }

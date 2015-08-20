@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cs="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llparent_in_detail"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -10,17 +12,20 @@
         android:layout_weight="300"
         android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/imHeroPortrait"
+        <LinearLayout
             style="@style/layout_horizontal"
-            android:layout_gravity="top"
-            android:layout_marginLeft="2dp"
-            android:layout_marginStart="2dp"
-            android:layout_marginTop="2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
             android:layout_weight="382"
-            android:adjustViewBounds="true"
-            android:scaleType="centerInside"
-            android:src="@drawable/ic_launcher" />
+            android:gravity="center">
+
+            <com.flying.personal.dotawakeupassistant.view.RoundImageView2
+                android:id="@+id/ivHeroPortrait"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                cs:BorderRadius="8dp" />
+        </LinearLayout>
 
         <LinearLayout
             style="@style/layout_horizontal"
@@ -35,8 +40,9 @@
                 android:id="@+id/tvHeroName"
                 style="@style/layout_vertical"
                 android:layout_weight="618"
-                android:gravity="top"
+                android:gravity="top|center_horizontal"
                 android:text="OnlyForTestShow"
+                android:textColor="@color/black"
                 android:textSize="25sp" />
         </LinearLayout>
     </LinearLayout>
@@ -48,74 +54,103 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/llTask1"
             style="@style/layout_vertical"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/tv_backgroud"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="3"
+            android:background="@drawable/layout_border"
             android:orientation="vertical"
-            android:padding="15dp">
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp">
 
             <TextView
                 style="@style/normal_margin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/task1"
-                android:textSize="18sp" />
+                android:textColor="@color/font_color1"
+                android:textSize="16sp" />
 
-            <TextView
+            <com.flying.personal.dotawakeupassistant.view.AutoAdjustFontSizeTextView
+                android:id="@+id/tvTask1"
                 style="@style/normal_margin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="Test:收集满60碎片"
-                android:textSize="24sp" />
-
+                android:textColor="@color/white"
+                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
             style="@style/layout_vertical"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/tv_backgroud"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="2"
+            android:background="@drawable/layout_border"
             android:orientation="vertical"
-            android:padding="15dp">
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp">
 
             <TextView
                 style="@style/normal_margin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/task2"
-                android:textSize="18sp" />
+                android:textColor="@color/font_color1"
+                android:textSize="16sp" />
 
-            <TextView
+            <com.flying.personal.dotawakeupassistant.view.AutoAdjustFontSizeTextView
+                android:id="@+id/tvTask2"
                 style="@style/normal_margin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                android:layout_marginTop="10dp"
                 android:text="Test:收集满60碎片"
-                android:textSize="24sp" />
+                android:textColor="@color/white"
+                android:textSize="18sp" />
 
         </LinearLayout>
 
         <LinearLayout
             style="@style/layout_vertical"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/tv_backgroud"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="2"
+            android:background="@drawable/layout_border"
             android:orientation="vertical"
-            android:padding="15dp">
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp">
 
             <TextView
                 style="@style/normal_margin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/task3"
-                android:textSize="18sp" />
+                android:textColor="@color/font_color1"
+                android:textSize="16sp" />
 
-            <TextView
+            <com.flying.personal.dotawakeupassistant.view.AutoAdjustFontSizeTextView
+                android:id="@+id/tvTask3"
                 style="@style/normal_margin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="Test:收集满60碎片"
-                android:textSize="24sp" />
+                android:textColor="@color/white"
+                android:textSize="18sp" />
 
         </LinearLayout>
 

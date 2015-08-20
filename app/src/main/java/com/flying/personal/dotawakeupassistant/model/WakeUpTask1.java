@@ -9,6 +9,7 @@ import java.util.Date;
 public class WakeUpTask1 {
     private GameStage stage;
     private double dropRate = 6 / 4.0;
+    private String description;
 
     public Date whenCanFinish(Date startDate, int refreshTimes) {
         Calendar c = Calendar.getInstance();
@@ -24,6 +25,14 @@ public class WakeUpTask1 {
 
     public GameStage getStage() {
         return stage;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public void setStage(GameStage stage) {

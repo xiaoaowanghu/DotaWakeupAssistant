@@ -44,4 +44,20 @@ public class SpecialStage extends GameStage {
 
         return result;
     }
+
+    public int getOccurDays() {
+        return occurDays;
+    }
+
+    public void setOccurDays(int occurDays) {
+        this.occurDays = occurDays;
+    }
+
+    public int getCanBeExecutedTimes() {
+        return canBeExecutedTimes;
+    }
+
+    public void setCanBeExecutedTimes(int canBeExecutedTimes) {
+        this.canBeExecutedTimes = canBeExecutedTimes;
+    }
 }
