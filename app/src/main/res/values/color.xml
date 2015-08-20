@@ -4,4 +4,10 @@
     <color name="black">#000000</color>
     <color name="equip_im_border">#a67900</color>
     <color name="detail_back">#0e4371</color>
+    <color name="dark_blue">#98CEEC</color>
+    <color name="font_color1">#d2d2d2</color>
+    <color name="font_color2">#858489</color>
+    <color name="font_color3">#6b3537</color>
+    <color name="hero_portrait_border">#ff0000</color>
+    <color name="trans_white">#00ffffff</color>
 </resources>

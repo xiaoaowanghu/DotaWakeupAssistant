@@ -14,7 +14,7 @@ import android.widget.ImageView;
 
 import com.flying.personal.dotawakeupassistant.impl.DataProviderImplByMock;
 import com.flying.personal.dotawakeupassistant.model.Hero;
-import com.flying.personal.dotawakeupassistant.util.UnitUtility;
+import com.flying.personal.dotawakeupassistant.util.Utility;
 
 import java.util.List;
 
@@ -43,7 +43,7 @@ public class MainActivityFragment extends Fragment {
         int screenWidthPX = dm.widthPixels;
         int colCount = 4;
         int marginDP = 16;
-        int marginPX = UnitUtility.getInstance().dip2px(this.getActivity(), marginDP);
+        int marginPX = Utility.getInstance().dip2px(this.getActivity(), marginDP);
         int picWidthPX = (int) ((screenWidthPX - marginPX * (colCount + 1)) / colCount * 1.0 - 0.5f);
 
         for (int i = 0; i < dataProvider.getTotalHeroCount(); i++) {

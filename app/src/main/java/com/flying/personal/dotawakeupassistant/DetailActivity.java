@@ -1,6 +1,7 @@
 package com.flying.personal.dotawakeupassistant;
 
-import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.DisplayMetrics;
@@ -12,7 +13,8 @@ import android.widget.TextView;
 
 import com.flying.personal.dotawakeupassistant.model.EquipmentItem;
 import com.flying.personal.dotawakeupassistant.model.Hero;
-import com.flying.personal.dotawakeupassistant.util.UnitUtility;
+import com.flying.personal.dotawakeupassistant.util.Utility;
+import com.flying.personal.dotawakeupassistant.view.RoundImageView2;
 
 /**
  * Created by wangxian on 8/13/2015.
@@ -23,20 +25,18 @@ public class DetailActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detail_activity);
+        LinearLayout parentView = (LinearLayout) findViewById(R.id.llparent_in_detail);
+        BitmapDrawable bd = new BitmapDrawable(null, Utility.getInstance().createImageFromAsset(this, "bg9.jpg", 1080, 1920 * 1080));
+        parentView.setBackgroundDrawable(bd);
         Bundle bundle = this.getIntent().getExtras();
         String name = bundle.getString("name");
         showDetail(ProviderFactory.getInstance().getDataProvider().getHeroByName(name));
     }
 
     private void showDetail(Hero hero) {
-        ImageView ivPortrait = (ImageView) findViewById(R.id.ivHeroPortrait);
-        Resources res = getResources();
-        int r = res.getIdentifier(hero.getPicPath(), "drawable", getPackageName());
-        if (r > 0)
-            ivPortrait.setImageResource(r);
-        else
-            ivPortrait.setImageResource(R.drawable.ic_launcher);
-
+        RoundImageView2 ivPortrait = (RoundImageView2) findViewById(R.id.ivHeroPortrait);
+//        Bitmap heroPicBM = Utility.getInstance().createImageFromAsset(this, hero.getPicPath());
+        ivPortrait.setFilePath(hero.getPicPath());
         TextView tvName = (TextView) findViewById(R.id.tvHeroName);
         tvName.setText(hero.getName());
 
@@ -59,7 +59,7 @@ public class DetailActivity extends ActionBarActivity {
             int screenWidthPX = dm.widthPixels;
             int colCount = 5;
             int marginDP = 2;
-            int marginPX = UnitUtility.getInstance().dip2px(this, marginDP);
+            int marginPX = Utility.getInstance().dip2px(this, marginDP);
             int picWidthPX = (int) ((screenWidthPX - marginPX * (colCount + 1)) / colCount * 1.0 - 0.5f);
 
             TextView tv = new TextView(this);
@@ -70,7 +70,7 @@ public class DetailActivity extends ActionBarActivity {
             LinearLayout.LayoutParams layoutParamForTV = new LinearLayout.LayoutParams(
                     ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             layoutParamForTV.gravity = Gravity.CENTER;
-            layoutParamForTV.setMargins(UnitUtility.getInstance().dip2px(this, 10), 0, 0, 0);
+            layoutParamForTV.setMargins(Utility.getInstance().dip2px(this, 10), 0, 0, 0);
             subLayoutForEquip.addView(tv, layoutParamForTV);
 
             for (EquipmentItem item : hero.getTask1().getStage().getItems()) {
@@ -82,8 +82,10 @@ public class DetailActivity extends ActionBarActivity {
                 //ivEquip.setMaxWidth(picWidthPX);
                 //ivEquip.setScaleType(ImageView.ScaleType.FIT_XY);
                 ivEquip.setAdjustViewBounds(true);
-                ivEquip.setImageResource(res.getIdentifier(item.getPath(), "drawable", getPackageName()));
-                ivEquip.setBackgroundResource(R.drawable.border);
+//                ivEquip.setImageResource(res.getIdentifier(item.getPath(), "drawable", getPackageName()));
+                Bitmap equipBM = Utility.getInstance().createImageFromAsset(this, item.getPath());
+                ivEquip.setImageBitmap(equipBM);
+                ivEquip.setBackgroundResource(R.drawable.equip_image_border);
                 subLayoutForEquip.addView(ivEquip);
             }
         }

@@ -23,7 +23,7 @@ public class DataProviderImplByMock implements IDataProvider {
 
         {
             Hero h1 = new Hero();
-            h1.setName("小黑");
+            h1.setName("飞机");
             h1.setPositionType(Hero.PositionType.Back);
             h1.setAbilityType(Hero.AbilityType.Agility);
             WakeUpTask1 w1 = new WakeUpTask1();
@@ -37,7 +37,7 @@ public class DataProviderImplByMock implements IDataProvider {
             w1.setStage(g1);
             w1.setDescription("集满60个碎片,集满60个碎片,集满60个碎片");
             h1.setTask1(w1);
-            h1.setPicPath("ic_launcher");
+            h1.setPicPath("feiji.jpg");
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             WakeUpTask2 w2 = new WakeUpTask2();
             w2.setDescription("冰龙");
@@ -48,7 +48,7 @@ public class DataProviderImplByMock implements IDataProvider {
 
             EquipmentItem item = new EquipmentItem();
             item.setDisplayName("敏捷+10");
-            item.setPath("jxfq");
+            item.setPath("jxfq.jpg");
             items.add(item);
             g1.setItems(items);
             heroes.add(h1);
