@@ -19,13 +19,12 @@
             android:layout_weight="382"
             android:gravity="center">
 
-            <com.flying.personal.dotawakeupassistant.view.CropRoundImageView
+            <com.flying.personal.dotawakeupassistant.view.RoundImageView
                 android:id="@+id/ivHeroPortrait"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:scaleType="centerInside"
                 app:borderRadius="8dp"
-                app:isPng="false"
+                app:scaleType="AutoScale"
                 app:srcFilePath="feiji" />
         </LinearLayout>
 

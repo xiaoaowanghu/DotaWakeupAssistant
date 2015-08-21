@@ -9,7 +9,4 @@
             <enum name="Center" value="2" />
         </attr>
     </declare-styleable>
-    <declare-styleable name="CropRoundImageView">
-        <attr name="isPng" format="boolean" />
-    </declare-styleable>
 </resources>

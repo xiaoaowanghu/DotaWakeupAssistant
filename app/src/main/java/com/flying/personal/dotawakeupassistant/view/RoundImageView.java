@@ -45,6 +45,10 @@ public class RoundImageView extends View {
             width = w;
             height = h;
         }
+
+        public CustomSize() {
+
+        }
     }
 
     protected int mBorderRadiusPX;
@@ -81,6 +85,10 @@ public class RoundImageView extends View {
             BitmapFactory.Options opts = new BitmapFactory.Options();
 
             try {
+                //only for preview
+                if (this.getContext() == null || this.getContext().getAssets() == null)
+                    return new CustomSize();
+
                 InputStream is = this.getContext().getAssets().open(filePath);
                 opts.inJustDecodeBounds = true;
                 BitmapFactory.decodeStream(is, null, opts);
@@ -108,8 +116,7 @@ public class RoundImageView extends View {
             super.onMeasure(widthMeasureSpec, heightMeasureSpec);
             return;
         }
-        int widthResult = 0;
-        int heightResult = 0;
+        int widthResult, heightResult;
         int heightSpecSize = MeasureSpec.getSize(heightMeasureSpec);
         int heightMode = MeasureSpec.getMode(heightMeasureSpec);
         int widthSpecSize = MeasureSpec.getSize(widthMeasureSpec);
@@ -150,23 +157,25 @@ public class RoundImageView extends View {
             if (bitmap == null || bitmap.isRecycled()) {
                 mPaint.reset();
 
-                if (scaleMode == SimpleScale.AutoScale.Center
-                        && originalPicSize.width >= getWidth()
-                        && originalPicSize.height >= getHeight()) {
-                } else {
-                    bitmap = getSuitableSizePic();
-                    Canvas tmpCanvas = new Canvas(bitmap);
+//                if (scaleMode == SimpleScale.AutoScale.Center
+//                        && originalPicSize.width >= getWidth()
+//                        && originalPicSize.height >= getHeight()) {
+//                    //TODO: draw in center
+//                    throw new Exception("Not implement yet.");
+//                } else {
+                bitmap = getSuitableSizePic();
+                Canvas tmpCanvas = new Canvas(bitmap);
 
-                    if (mMashBitmap == null || mMashBitmap.isRecycled()) {
-                        mMashBitmap = getRoundShapeBitmap(getWidth(), getHeight());
-                    }
-
-                    mPaint.setFilterBitmap(false);
-                    mPaint.setXfermode(xfermodeForDrawingForePic);
-                    tmpCanvas.drawBitmap(mMashBitmap, 0, 0, mPaint);
-                    canvas.drawBitmap(bitmap, 0, 0, null);
-                    mWeakBitmap = new WeakReference<Bitmap>(bitmap);
+                if (mMashBitmap == null || mMashBitmap.isRecycled()) {
+                    mMashBitmap = getRoundShapeBitmap(getWidth(), getHeight());
                 }
+
+                mPaint.setFilterBitmap(false);
+                mPaint.setXfermode(xfermodeForDrawingForePic);
+                tmpCanvas.drawBitmap(mMashBitmap, 0, 0, mPaint);
+                canvas.drawBitmap(bitmap, 0, 0, null);
+                mWeakBitmap = new WeakReference<Bitmap>(bitmap);
+//                }
             } else {
                 mPaint.setXfermode(null);
                 canvas.drawBitmap(bitmap, 0, 0, null);
@@ -178,27 +187,53 @@ public class RoundImageView extends View {
     }
 
     protected Bitmap getSuitableSizePic() throws IOException {
+        Bitmap resultBitmap = null;
+
         int oriWidth = originalPicSize.width;
         int oriHeight = originalPicSize.height;
-        float scalX = getWidth() * 1f / oriWidth;
-        float scalY = getHeight() * 1f / oriHeight;
-        float minScaleValue = scalX < scalY ? scalX : scalY;
-
-        Matrix matrix = new Matrix();
-        if (scaleMode == SimpleScale.AutoScale.Fill)
-            matrix.postScale(scalX, scalY);
-        else
-            matrix.postScale(minScaleValue, minScaleValue);
-
         InputStream is = this.getContext().getAssets().open(filePath);
-        Bitmap oriPic = BitmapFactory.decodeStream(is, null, null);
-        Bitmap dstBitmap = Bitmap.createBitmap(getWidth(), getHeight(), Bitmap.Config.ARGB_8888);
-        Canvas tmpCanvas = new Canvas(dstBitmap);
-        Bitmap scaledBitMap = Bitmap.createBitmap(oriPic, 0, 0, oriWidth, oriHeight, matrix, true);
-        tmpCanvas.drawBitmap(scaledBitMap, 0, 0, mPaint);
-        oriPic.recycle();
-        scaledBitMap.recycle();
-        return dstBitmap;
+
+        if (oriHeight == getHeight() && oriWidth == getHeight()) {
+            resultBitmap = BitmapFactory.decodeStream(is, null, null);
+        } else if (scaleMode == SimpleScale.AutoScale.AutoScale
+                && oriHeight >= getHeight() && oriWidth >= getWidth()) {
+            //Only for shrink pic
+            BitmapFactory.Options ops = new BitmapFactory.Options();
+            //Get a little bit bitmap larger than view's size, then scale it
+            ops.inSampleSize = calculateInSampleSize();
+            Bitmap littleLargerPic = BitmapFactory.decodeStream(is, null, ops);
+            resultBitmap = littleLargerPic.createScaledBitmap(littleLargerPic, getWidth(), getHeight(), false);
+            littleLargerPic.recycle();
+        } else if (scaleMode == SimpleScale.AutoScale.Center
+                && oriHeight >= getHeight() && oriWidth >= getWidth()) {
+            Bitmap oriPic = BitmapFactory.decodeStream(is, null, null);
+            int x = (oriHeight - getHeight()) / 2;
+            int y = (oriWidth - getWidth()) / 2;
+            resultBitmap = Bitmap.createBitmap(oriPic, x, y, getWidth(), getHeight());
+            oriPic.recycle();
+        } else if (scaleMode == SimpleScale.AutoScale.Fill
+                || scaleMode == SimpleScale.AutoScale
+                || scaleMode == SimpleScale.Center) {
+            //Auto,Center because of size not correct
+            float scalX = getWidth() * 1f / oriWidth;
+            float scalY = getHeight() * 1f / oriHeight;
+            Matrix matrix = new Matrix();
+            matrix.postScale(scalX, scalY);
+            Bitmap oriPic = BitmapFactory.decodeStream(is, null, null);
+            resultBitmap = Bitmap.createBitmap(oriPic, 0, 0, oriWidth, oriHeight, matrix, true);
+            oriPic.recycle();
+        } else {
+            throw new IllegalArgumentException(this.scaleMode.toString() + " is not implemented.");
+        }
+
+        if (!resultBitmap.hasAlpha()) { //if the pic can't be transparent, so need to create a new pic first
+            Bitmap tmp = resultBitmap;
+            resultBitmap = Bitmap.createBitmap(getWidth(), getHeight(), Bitmap.Config.ARGB_8888);
+            Canvas tmpCanvas = new Canvas(resultBitmap);
+            tmpCanvas.drawBitmap(tmp, 0, 0, mPaint);
+            tmp.recycle();
+        }
+        return resultBitmap;
     }
 
     private Bitmap getRoundShapeBitmap(int width, int height) {
@@ -227,6 +262,26 @@ public class RoundImageView extends View {
         }
 
         super.invalidate();
+    }
+
+    //Get a little bit bitmap larger than view's size
+    private int calculateInSampleSize() {
+        int height = getImageSize().height;
+        int width = getImageSize().width;
+        int reqHeight = getHeight();
+        int reqWidth = getWidth();
+        int inSampleSize = 1;
+
+        if (height > reqHeight || width > reqWidth) {
+            int halfHeight = height / 2;
+            int halfWidth = width / 2;
+            while ((halfHeight / inSampleSize) > reqHeight
+                    && (halfWidth / inSampleSize) > reqWidth) {
+                inSampleSize *= 2;
+            }
+        }
+
+        return inSampleSize;
     }
 
 }
