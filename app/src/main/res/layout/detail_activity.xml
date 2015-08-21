@@ -33,18 +33,33 @@
             android:layout_weight="618"
             android:orientation="vertical">
 
-            <View
-                style="@style/layout_vertical"
-                android:layout_weight="382" />
-
-            <TextView
+            <com.flying.personal.dotawakeupassistant.view.AutoAdjustFontSizeTextView
                 android:id="@+id/tvHeroName"
                 style="@style/layout_vertical"
-                android:layout_weight="618"
-                android:gravity="top|center_horizontal"
-                android:text="OnlyForTestShow"
+                android:layout_marginTop="10dp"
+                android:layout_weight="382"
+                android:gravity="center"
+                android:text="HeroName"
                 android:textColor="@color/black"
-                android:textSize="25sp" />
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tvPositsion"
+                style="@style/layout_vertical"
+                android:layout_weight="309"
+                android:gravity="center"
+                android:text="位置: 前排"
+                android:textColor="@color/font_color5"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvAbilityType"
+                style="@style/layout_vertical"
+                android:layout_weight="309"
+                android:gravity="top|center_horizontal"
+                android:text="主要属性: 敏捷"
+                android:textColor="@color/font_color5"
+                android:textSize="16sp" />
         </LinearLayout>
     </LinearLayout>
 
@@ -73,7 +88,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/task1"
-                android:textColor="@color/font_color1"
+                android:textColor="@color/font_color4"
                 android:textSize="16sp" />
 
             <com.flying.personal.dotawakeupassistant.view.AutoAdjustFontSizeTextView
@@ -105,7 +120,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/task2"
-                android:textColor="@color/font_color1"
+                android:textColor="@color/font_color4"
                 android:textSize="16sp" />
 
             <com.flying.personal.dotawakeupassistant.view.AutoAdjustFontSizeTextView
@@ -140,7 +155,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/task3"
-                android:textColor="@color/font_color1"
+                android:textColor="@color/font_color4"
                 android:textSize="16sp" />
 
             <com.flying.personal.dotawakeupassistant.view.AutoAdjustFontSizeTextView

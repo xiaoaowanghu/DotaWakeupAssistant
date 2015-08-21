@@ -9,4 +9,8 @@
             <enum name="Center" value="2" />
         </attr>
     </declare-styleable>
+    
+    <declare-styleable name="QuickSearchEditText">
+        <attr name="delayToSearch" format="integer" />
+    </declare-styleable>
 </resources>

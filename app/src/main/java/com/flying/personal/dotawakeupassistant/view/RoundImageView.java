@@ -156,13 +156,6 @@ public class RoundImageView extends View {
 
             if (bitmap == null || bitmap.isRecycled()) {
                 mPaint.reset();
-
-//                if (scaleMode == SimpleScale.AutoScale.Center
-//                        && originalPicSize.width >= getWidth()
-//                        && originalPicSize.height >= getHeight()) {
-//                    //TODO: draw in center
-//                    throw new Exception("Not implement yet.");
-//                } else {
                 bitmap = getSuitableSizePic();
                 Canvas tmpCanvas = new Canvas(bitmap);
 
@@ -175,7 +168,6 @@ public class RoundImageView extends View {
                 tmpCanvas.drawBitmap(mMashBitmap, 0, 0, mPaint);
                 canvas.drawBitmap(bitmap, 0, 0, null);
                 mWeakBitmap = new WeakReference<Bitmap>(bitmap);
-//                }
             } else {
                 mPaint.setXfermode(null);
                 canvas.drawBitmap(bitmap, 0, 0, null);
@@ -214,7 +206,7 @@ public class RoundImageView extends View {
         } else if (scaleMode == SimpleScale.AutoScale.Fill
                 || scaleMode == SimpleScale.AutoScale
                 || scaleMode == SimpleScale.Center) {
-            //Auto,Center because of size not correct
+            //to deal with Auto/Center because of size not correct
             float scalX = getWidth() * 1f / oriWidth;
             float scalY = getHeight() * 1f / oriHeight;
             Matrix matrix = new Matrix();
@@ -264,7 +256,9 @@ public class RoundImageView extends View {
         super.invalidate();
     }
 
-    //Get a little bit bitmap larger than view's size
+    /**
+     * Get a little bit bitmap larger than view's size
+     */
     private int calculateInSampleSize() {
         int height = getImageSize().height;
         int width = getImageSize().width;

@@ -11,7 +11,7 @@ import com.flying.personal.dotawakeupassistant.R;
 import com.flying.personal.dotawakeupassistant.util.Utility;
 
 public class AutoAdjustFontSizeTextView extends TextView {
-    private final static float DEFAULT_MIN_TEXT_SIZE = 12; //sp
+    private final static float DEFAULT_MIN_TEXT_SIZE = 8; //sp
 
     // Attributes
     private float minTextSizePX;

@@ -1,5 +1,7 @@
 package com.flying.personal.dotawakeupassistant.model;
 
+import com.flying.personal.dotawakeupassistant.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -89,6 +91,32 @@ public class Hero {
 
     public PositionType getPositionType() {
         return positionType;
+    }
+
+    public int getPostionDisplayNameIndex() {
+        switch (positionType) {
+            case Front:
+                return R.string.position_front;
+            case Back:
+                return R.string.position_back;
+            case Middle:
+                return R.string.position_middle;
+            default:
+                return -1;
+        }
+    }
+
+    public int getAbilityDisplayNameIndex() {
+        switch (abilityType) {
+            case Strength:
+                return R.string.ability_type_strength;
+            case Agility:
+                return R.string.ablility_type_Agility;
+            case Intelligence:
+                return R.string.ablility_type_Intelligence;
+            default:
+                return -1;
+        }
     }
 
     public void setPositionType(PositionType positionType) {
