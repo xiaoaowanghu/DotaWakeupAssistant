@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:cs="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/llparent_in_detail"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -19,12 +19,14 @@
             android:layout_weight="382"
             android:gravity="center">
 
-            <com.flying.personal.dotawakeupassistant.view.RoundImageView2
+            <com.flying.personal.dotawakeupassistant.view.CropRoundImageView
                 android:id="@+id/ivHeroPortrait"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:scaleType="centerInside"
-                cs:BorderRadius="8dp" />
+                app:borderRadius="8dp"
+                app:isPng="false"
+                app:srcFilePath="feiji" />
         </LinearLayout>
 
         <LinearLayout

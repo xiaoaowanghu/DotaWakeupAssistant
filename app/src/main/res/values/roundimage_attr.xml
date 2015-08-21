@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RoundImageView">
+        <attr name="borderRadius" format="dimension" />
+        <attr name="srcFilePath" format="string" />
+        <attr name="scaleType" format="enum">
+            <enum name="AutoScale" value="0" />
+            <enum name="Fill" value="1" />
+            <enum name="Center" value="2" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="CropRoundImageView">
+        <attr name="isPng" format="boolean" />
+    </declare-styleable>
+</resources>

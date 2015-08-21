@@ -12,6 +12,7 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Xfermode;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 import com.flying.personal.dotawakeupassistant.R;
@@ -26,7 +27,7 @@ import java.lang.ref.WeakReference;
  * All rights reserved.
  * Do not Copy/Edit/Use this class without permission.
  */
-public class RoundImageView2 extends View {
+public class RoundImageView extends View {
     private final static Xfermode xfermodeForDrawingForePic = new PorterDuffXfermode(PorterDuff.Mode.DST_IN);
     private final static int DefaultRaidusDP = 10;
 
@@ -54,20 +55,20 @@ public class RoundImageView2 extends View {
     protected SimpleScale scaleMode;
     protected CustomSize originalPicSize;
 
-    public RoundImageView2(Context context) {
+    public RoundImageView(Context context) {
         super(context);
         this.mBorderRadiusPX = Utility.getInstance().dip2px(context, DefaultRaidusDP);
         sharedConstructor(context);
     }
 
-    public RoundImageView2(Context context, AttributeSet attrs) {
+    public RoundImageView(Context context, AttributeSet attrs) {
         super(context, attrs);
         sharedConstructor(context);
-        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.RoundImage2Attrs);
-        mBorderRadiusPX = a.getDimensionPixelSize(R.styleable.RoundImage2Attrs_BorderRadius, 0);
-        if (mBorderRadiusPX == 0)
-            this.mBorderRadiusPX = Utility.getInstance().dip2px(context, DefaultRaidusDP);
-        a.recycle();
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.RoundImageView);
+        mBorderRadiusPX = typedArray.getDimensionPixelSize(R.styleable.RoundImageView_borderRadius,
+                Utility.getInstance().dip2px(context, DefaultRaidusDP));
+        scaleMode = SimpleScale.values()[typedArray.getInteger(R.styleable.RoundImageView_scaleType, 0)];
+        typedArray.recycle();
     }
 
     protected void sharedConstructor(Context context) {
@@ -84,7 +85,7 @@ public class RoundImageView2 extends View {
                 opts.inJustDecodeBounds = true;
                 BitmapFactory.decodeStream(is, null, opts);
             } catch (IOException e) {
-                e.printStackTrace();
+                Log.e(this.getClass().getName(), Log.getStackTraceString(e));
             }
 
             originalPicSize = new CustomSize(opts.outWidth, opts.outHeight);
@@ -143,36 +144,40 @@ public class RoundImageView2 extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        Bitmap bitmap = mWeakBitmap == null ? null : mWeakBitmap.get();
+        try {
+            Bitmap bitmap = mWeakBitmap == null ? null : mWeakBitmap.get();
 
-        if (bitmap == null || bitmap.isRecycled()) {
-            mPaint.reset();
+            if (bitmap == null || bitmap.isRecycled()) {
+                mPaint.reset();
 
-            if (scaleMode == SimpleScale.AutoScale.Center
-                    && originalPicSize.width >= getWidth()
-                    && originalPicSize.height >= getHeight()) {
-            } else {
-                bitmap = getSuitableSizePic();
-                Canvas tmpCanvas = new Canvas(bitmap);
+                if (scaleMode == SimpleScale.AutoScale.Center
+                        && originalPicSize.width >= getWidth()
+                        && originalPicSize.height >= getHeight()) {
+                } else {
+                    bitmap = getSuitableSizePic();
+                    Canvas tmpCanvas = new Canvas(bitmap);
 
-                if (mMashBitmap == null || mMashBitmap.isRecycled()) {
-                    mMashBitmap = getRoundShapeBitmap(getWidth(), getHeight());
+                    if (mMashBitmap == null || mMashBitmap.isRecycled()) {
+                        mMashBitmap = getRoundShapeBitmap(getWidth(), getHeight());
+                    }
+
+                    mPaint.setFilterBitmap(false);
+                    mPaint.setXfermode(xfermodeForDrawingForePic);
+                    tmpCanvas.drawBitmap(mMashBitmap, 0, 0, mPaint);
+                    canvas.drawBitmap(bitmap, 0, 0, null);
+                    mWeakBitmap = new WeakReference<Bitmap>(bitmap);
                 }
-
-                mPaint.setFilterBitmap(false);
-                mPaint.setXfermode(xfermodeForDrawingForePic);
-                tmpCanvas.drawBitmap(mMashBitmap, 0, 0, mPaint);
+            } else {
+                mPaint.setXfermode(null);
                 canvas.drawBitmap(bitmap, 0, 0, null);
-                mWeakBitmap = new WeakReference<Bitmap>(bitmap);
+                return;
             }
-        } else {
-            mPaint.setXfermode(null);
-            canvas.drawBitmap(bitmap, 0, 0, null);
-            return;
+        } catch (Exception e) {
+            Log.e(this.getClass().getName(), Log.getStackTraceString(e));
         }
     }
 
-    private Bitmap getSuitableSizePic() {
+    protected Bitmap getSuitableSizePic() throws IOException {
         int oriWidth = originalPicSize.width;
         int oriHeight = originalPicSize.height;
         float scalX = getWidth() * 1f / oriWidth;
@@ -185,21 +190,15 @@ public class RoundImageView2 extends View {
         else
             matrix.postScale(minScaleValue, minScaleValue);
 
-        try {
-            InputStream is = this.getContext().getAssets().open(filePath);
-            Bitmap oriPic = BitmapFactory.decodeStream(is, null, null);
-            Bitmap dstBitmap = Bitmap.createBitmap(getWidth(), getHeight(), Bitmap.Config.ARGB_8888);
-            Canvas tmpCanvas = new Canvas(dstBitmap);
-            Bitmap scaledBitMap = Bitmap.createBitmap(oriPic, 0, 0, oriWidth, oriHeight, matrix, true);
-            tmpCanvas.drawBitmap(scaledBitMap, 0, 0, mPaint);
-            oriPic.recycle();
-            scaledBitMap.recycle();
-            return dstBitmap;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return null;
+        InputStream is = this.getContext().getAssets().open(filePath);
+        Bitmap oriPic = BitmapFactory.decodeStream(is, null, null);
+        Bitmap dstBitmap = Bitmap.createBitmap(getWidth(), getHeight(), Bitmap.Config.ARGB_8888);
+        Canvas tmpCanvas = new Canvas(dstBitmap);
+        Bitmap scaledBitMap = Bitmap.createBitmap(oriPic, 0, 0, oriWidth, oriHeight, matrix, true);
+        tmpCanvas.drawBitmap(scaledBitMap, 0, 0, mPaint);
+        oriPic.recycle();
+        scaledBitMap.recycle();
+        return dstBitmap;
     }
 
     private Bitmap getRoundShapeBitmap(int width, int height) {

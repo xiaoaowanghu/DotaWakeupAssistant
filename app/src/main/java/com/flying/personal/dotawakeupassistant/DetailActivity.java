@@ -14,7 +14,7 @@ import android.widget.TextView;
 import com.flying.personal.dotawakeupassistant.model.EquipmentItem;
 import com.flying.personal.dotawakeupassistant.model.Hero;
 import com.flying.personal.dotawakeupassistant.util.Utility;
-import com.flying.personal.dotawakeupassistant.view.RoundImageView2;
+import com.flying.personal.dotawakeupassistant.view.RoundImageView;
 
 /**
  * Created by wangxian on 8/13/2015.
@@ -34,9 +34,9 @@ public class DetailActivity extends ActionBarActivity {
     }
 
     private void showDetail(Hero hero) {
-        RoundImageView2 ivPortrait = (RoundImageView2) findViewById(R.id.ivHeroPortrait);
-//        Bitmap heroPicBM = Utility.getInstance().createImageFromAsset(this, hero.getPicPath());
+        RoundImageView ivPortrait = (RoundImageView) findViewById(R.id.ivHeroPortrait);
         ivPortrait.setFilePath(hero.getPicPath());
+        ivPortrait.invalidate();
         TextView tvName = (TextView) findViewById(R.id.tvHeroName);
         tvName.setText(hero.getName());
 
