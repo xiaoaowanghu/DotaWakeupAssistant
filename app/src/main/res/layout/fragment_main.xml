@@ -1,5 +1,4 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,7 +10,26 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        app:delayToSearch="1000" />
+        android:background="@drawable/round_edittext"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:paddingBottom="10dip"
+        android:paddingLeft="47dp"
+        android:paddingTop="10dip"
+        android:singleLine="true"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/syncOperatorImg"
+        android:layout_width="46dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/search_editText"
+        android:layout_alignLeft="@id/search_editText"
+        android:layout_alignTop="@id/search_editText"
+        android:padding="2dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/search5" />
+
 
     <ScrollView
         android:id="@+id/scrollView1"

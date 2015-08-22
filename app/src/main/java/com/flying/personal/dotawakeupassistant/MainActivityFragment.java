@@ -54,7 +54,7 @@ public class MainActivityFragment extends Fragment {
         DisplayMetrics dm = new DisplayMetrics();
         this.getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);
         int screenWidthPX = dm.widthPixels;
-        int colCount = 4;
+        int colCount = 5;
         int marginDP = 16;
         int marginPX = Utility.getInstance().dip2px(this.getActivity(), marginDP);
         int picWidthPX = (int) ((screenWidthPX - marginPX * (colCount + 1)) / colCount * 1.0 - 0.5f);
@@ -96,6 +96,7 @@ public class MainActivityFragment extends Fragment {
     }
 
     private void initSearchEditText(QuickSearchEditText etSearch) {
+        etSearch.setHint(R.string.search_hint);
         etSearch.setKeyListener(new DigitsKeyListener() {
             @Override
             public int getInputType() {
@@ -108,19 +109,25 @@ public class MainActivityFragment extends Fragment {
                 return data;
             }
         });
-
         etSearch.setSearchListener(new IOnSearch() {
             @Override
             public void OnSearch(String text) {
                 List<Hero> heroes;
                 text = text.trim();
+
+                if (text.equalsIgnoreCase(currentSearchString))
+                    return;
+
                 if (text.length() == 0)
                     heroes = dataProvider.getAllHeroes();
                 else
                     heroes = dataProvider.getMatchedHeroes(text);
 
                 ShowHeroes(heroes);
+                currentSearchString = text;
             }
         });
     }
+
+    private String currentSearchString;
 }

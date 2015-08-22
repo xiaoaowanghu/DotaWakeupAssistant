@@ -19,6 +19,7 @@ public class QuickSearchEditText extends EditText {
     private IOnSearch searchListener;
     private Handler handler;
     private Runnable notifyToSearch;
+    private boolean isInputting;
 
     public QuickSearchEditText(Context context) {
         super(context);
@@ -31,14 +32,22 @@ public class QuickSearchEditText extends EditText {
         delayMilliseconds = typedArray.getDimensionPixelSize(R.styleable.QuickSearchEditText_delayToSearch,
                 1000);
         init();
+        typedArray.recycle();
     }
 
     private void init() {
+        if (isInEditMode())
+            return;
+
+        isInputting = false;
         handler = new Handler();
 
         notifyToSearch = new Runnable() {
             @Override
             public void run() {
+                if (isInputting)
+                    return;
+
                 if (searchListener != null)
                     searchListener.OnSearch(QuickSearchEditText.this.getText().toString());
             }
@@ -57,8 +66,15 @@ public class QuickSearchEditText extends EditText {
 
             @Override
             public void afterTextChanged(Editable s) {
-                handler.removeCallbacks(notifyToSearch);
-                handler.postDelayed(notifyToSearch, delayMilliseconds);
+                //To be more safe to not to trigger it while inputting. The removeCallbacks doesn't work im time.
+                isInputting = true;
+
+                if (searchListener != null) {
+                    handler.removeCallbacks(notifyToSearch);
+                    handler.postDelayed(notifyToSearch, delayMilliseconds);
+                }
+
+                isInputting = false;
             }
         });
     }
