@@ -4,8 +4,8 @@ import com.flying.personal.dotawakeupassistant.IDataProvider;
 import com.flying.personal.dotawakeupassistant.model.EquipmentItem;
 import com.flying.personal.dotawakeupassistant.model.GameStage;
 import com.flying.personal.dotawakeupassistant.model.Hero;
-import com.flying.personal.dotawakeupassistant.model.WakeUpTask1;
-import com.flying.personal.dotawakeupassistant.model.WakeUpTask2;
+import com.flying.personal.dotawakeupassistant.model.WakeUpRepeatableTask;
+import com.flying.personal.dotawakeupassistant.model.WakeUpTask;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +18,16 @@ public class DataProviderImplByMock implements IDataProvider {
     private List<Hero> heroes;
     private List<GameStage> stages;
 
+    @Override
+    public void save(String[] args) {
+
+    }
+
+    @Override
+    public void visitHero(Hero hero) {
+
+    }
+
     public DataProviderImplByMock() {
         heroes = new ArrayList<Hero>(10);
 
@@ -26,7 +36,7 @@ public class DataProviderImplByMock implements IDataProvider {
             h1.setName("飞机");
             h1.setPositionType(Hero.PositionType.Back);
             h1.setAbilityType(Hero.AbilityType.Agility);
-            WakeUpTask1 w1 = new WakeUpTask1();
+            WakeUpTask w1 = new WakeUpTask();
             GameStage g1 = new GameStage();
             g1.setChapter(1);
             g1.setSequenceNo(1);
@@ -36,19 +46,21 @@ public class DataProviderImplByMock implements IDataProvider {
             g1.setOutput(outPut1);
             w1.setStage(g1);
             w1.setDescription("集满60个碎片,集满60个碎片,集满60个碎片");
-            h1.setTask1(w1);
+            WakeUpTask[] tasks = new WakeUpTask[3];
+            h1.setTasks(tasks);
+            tasks[0] = w1;
             h1.setPicPath("feiji.jpg");
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            WakeUpTask2 w2 = new WakeUpTask2();
+            WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             w2.setDescription("冰龙");
-            h1.setTask2(w2);
-            WakeUpTask1 w3 = new WakeUpTask1();
+            tasks[1] = w2;
+            WakeUpTask w3 = new WakeUpTask();
             w3.setDescription("单挑敌法");
-            h1.setTask3(w3);
+            tasks[2] = w3;
 
             EquipmentItem item = new EquipmentItem();
             item.setDisplayName("敏捷+10");
-            item.setPath("jxfq.jpg");
+            item.setPicPath("jxfq.jpg");
             items.add(item);
             g1.setItems(items);
             heroes.add(h1);
@@ -59,7 +71,7 @@ public class DataProviderImplByMock implements IDataProvider {
             h1.setName("骨弓");
             h1.setPositionType(Hero.PositionType.Back);
             h1.setAbilityType(Hero.AbilityType.Agility);
-            WakeUpTask1 w1 = new WakeUpTask1();
+            WakeUpTask w1 = new WakeUpTask();
             GameStage g1 = new GameStage();
             g1.setChapter(1);
             g1.setSequenceNo(1);
@@ -68,7 +80,9 @@ public class DataProviderImplByMock implements IDataProvider {
             outPut1.add("遗物");
             g1.setOutput(outPut1);
             w1.setStage(g1);
-            h1.setTask1(w1);
+            WakeUpTask[] tasks = new WakeUpTask[3];
+            h1.setTasks(tasks);
+            tasks[0] = w1;
             h1.setPicPath("ic_launcher.png");
             heroes.add(h1);
         }
@@ -78,7 +92,7 @@ public class DataProviderImplByMock implements IDataProvider {
             h1.setName("船长");
             h1.setPositionType(Hero.PositionType.Front);
             h1.setAbilityType(Hero.AbilityType.Strength);
-            WakeUpTask1 w1 = new WakeUpTask1();
+            WakeUpTask w1 = new WakeUpTask();
             GameStage g1 = new GameStage();
             g1.setChapter(1);
             g1.setSequenceNo(1);
@@ -87,7 +101,9 @@ public class DataProviderImplByMock implements IDataProvider {
             outPut1.add("遗物");
             g1.setOutput(outPut1);
             w1.setStage(g1);
-            h1.setTask1(w1);
+            WakeUpTask[] tasks = new WakeUpTask[3];
+            h1.setTasks(tasks);
+            tasks[0] = w1;
             h1.setPicPath("ic_launcher.png");
             heroes.add(h1);
 
@@ -130,5 +146,9 @@ public class DataProviderImplByMock implements IDataProvider {
     @Override
     public int getTotalHeroCount() {
         return heroes.size();
+    }
+
+    @Override
+    public void init(String[] args) {
     }
 }

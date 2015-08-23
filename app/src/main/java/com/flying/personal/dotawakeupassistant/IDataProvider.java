@@ -19,4 +19,10 @@ public interface IDataProvider {
     List<Hero> getHeroesByPosition(Hero.PositionType position);
 
     List<Hero> getHeroesByAbilityType(Hero.AbilityType abilityType);
+
+    void init(String[] args);
+
+    void save(String[] args);
+
+    void visitHero(Hero hero);
 }

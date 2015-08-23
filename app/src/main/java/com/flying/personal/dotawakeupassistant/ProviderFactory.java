@@ -10,7 +10,6 @@ public class ProviderFactory {
     private IDataProvider dataProvider;
 
     private ProviderFactory() {
-        dataProvider = new DataProviderImplByMock();
     }
 
     public static ProviderFactory getInstance() {
@@ -18,6 +17,11 @@ public class ProviderFactory {
     }
 
     public IDataProvider getDataProvider() {
+        if (dataProvider == null) {
+            dataProvider = new DataProviderImplByMock();
+            dataProvider.init(null);
+        }
+
         return dataProvider;
     }
 }

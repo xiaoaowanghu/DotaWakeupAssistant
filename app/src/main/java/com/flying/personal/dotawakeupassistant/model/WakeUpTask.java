@@ -6,10 +6,10 @@ import java.util.Date;
 /**
  * Created by wangxian on 8/10/2015.
  */
-public class WakeUpTask1 {
-    private GameStage stage;
-    private double dropRate = 6 / 4.0;
-    private String description;
+public class WakeUpTask {
+    protected GameStage stage;
+    protected double dropRate = 6 / 4.0;
+    protected String description;
 
     public Date whenCanFinish(Date startDate, int refreshTimes) {
         Calendar c = Calendar.getInstance();

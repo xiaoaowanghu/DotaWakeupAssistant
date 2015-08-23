@@ -3,21 +3,11 @@ package com.flying.personal.dotawakeupassistant.model;
 /**
  * Created by wangxian on 8/10/2015.
  */
-public class WakeUpTask2 {
+public class WakeUpRepeatableTask extends WakeUpTask {
     private int executeTimes = 2;
-    private SpecialStage stage;
-    private String description;
 
     public int GetStaminaSpend() {
         return stage.getStamina() * executeTimes;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public int getExecuteTimes() {
@@ -28,8 +18,9 @@ public class WakeUpTask2 {
         this.executeTimes = executeTimes;
     }
 
+    @Override
     public SpecialStage getStage() {
-        return stage;
+        return (SpecialStage) stage;
     }
 
     public void setStage(SpecialStage stage) {

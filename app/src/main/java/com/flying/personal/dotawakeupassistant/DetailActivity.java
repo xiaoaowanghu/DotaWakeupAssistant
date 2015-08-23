@@ -45,11 +45,11 @@ public class DetailActivity extends ActionBarActivity {
         TextView tvAbility = (TextView) findViewById(R.id.tvAbilityType);
         tvAbility.setText("主属性: " + getString(hero.getAbilityDisplayNameIndex()));
 
-        ((TextView) findViewById(R.id.tvTask1)).setText(hero.getTask1().getDescription());
-        ((TextView) findViewById(R.id.tvTask2)).setText(hero.getTask2().getDescription());
-        ((TextView) findViewById(R.id.tvTask3)).setText(hero.getTask3().getDescription());
+        ((TextView) findViewById(R.id.tvTask1)).setText(hero.getTasks()[0].getDescription());
+        ((TextView) findViewById(R.id.tvTask2)).setText(hero.getTasks()[1].getDescription());
+        ((TextView) findViewById(R.id.tvTask3)).setText(hero.getTasks()[2].getDescription());
 
-        if (hero.getTask1().getStage().getItems().size() > 0) {
+        if (hero.getTasks()[0].getStage().getItems().size() > 0) {
             LinearLayout ll = (LinearLayout) findViewById(R.id.llTask1);
 
             LinearLayout subLayoutForEquip = new LinearLayout(this);
@@ -70,14 +70,14 @@ public class DetailActivity extends ActionBarActivity {
             layoutParamForTV.setMargins(Utility.getInstance().dip2px(this, 10), 0, 0, 0);
             subLayoutForEquip.addView(tv, layoutParamForTV);
 
-            for (EquipmentItem item : hero.getTask1().getStage().getItems()) {
+            for (EquipmentItem item : hero.getTasks()[0].getStage().getItems()) {
                 ImageView ivEquip = new ImageView(this);
                 LinearLayout.LayoutParams imgLayout = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                 imgLayout.setMargins(2, 2, 0, 0);
                 // set imageview property
                 ivEquip.setLayoutParams(imgLayout);
                 ivEquip.setAdjustViewBounds(true);
-                Bitmap equipBM = Utility.getInstance().createImageFromAsset(this, item.getPath());
+                Bitmap equipBM = Utility.getInstance().createImageFromAsset(this, item.getPicPath());
                 ivEquip.setImageBitmap(equipBM);
                 ivEquip.setBackgroundResource(R.drawable.equip_image_border);
                 subLayoutForEquip.addView(ivEquip);

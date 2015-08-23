@@ -11,9 +11,9 @@ import java.util.List;
 public class Hero {
     protected String name;
     protected List<String> alias;
-    protected WakeUpTask1 task1;
-    protected WakeUpTask2 task2;
-    protected WakeUpTask1 task3;
+    protected WakeUpTask[] tasks;
+    //    protected WakeUpRepeatableTask task2;
+//    protected WakeUpTask task3;
     protected PositionType positionType;
     protected AbilityType abilityType;
     protected String picPath;
@@ -45,6 +45,14 @@ public class Hero {
         return result;
     }
 
+    public WakeUpTask[] getTasks() {
+        return tasks;
+    }
+
+    public void setTasks(WakeUpTask[] tasks) {
+        this.tasks = tasks;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -56,30 +64,30 @@ public class Hero {
     public void setAlias(List<String> alias) {
         this.alias = alias;
     }
-
-    public WakeUpTask1 getTask1() {
-        return task1;
-    }
-
-    public void setTask1(WakeUpTask1 task1) {
-        this.task1 = task1;
-    }
-
-    public WakeUpTask2 getTask2() {
-        return task2;
-    }
-
-    public void setTask2(WakeUpTask2 task2) {
-        this.task2 = task2;
-    }
-
-    public WakeUpTask1 getTask3() {
-        return task3;
-    }
-
-    public void setTask3(WakeUpTask1 task3) {
-        this.task3 = task3;
-    }
+//
+//    public WakeUpTask getTask1() {
+//        return task1;
+//    }
+//
+//    public void setTask1(WakeUpTask task1) {
+//        this.task1 = task1;
+//    }
+//
+//    public WakeUpRepeatableTask getTask2() {
+//        return task2;
+//    }
+//
+//    public void setTask2(WakeUpRepeatableTask task2) {
+//        this.task2 = task2;
+//    }
+//
+//    public WakeUpTask getTask3() {
+//        return task3;
+//    }
+//
+//    public void setTask3(WakeUpTask task3) {
+//        this.task3 = task3;
+//    }
 
     public AbilityType getAbilityType() {
         return abilityType;
