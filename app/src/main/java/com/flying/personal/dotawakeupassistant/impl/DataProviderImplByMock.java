@@ -1,12 +1,18 @@
 package com.flying.personal.dotawakeupassistant.impl;
 
+import android.util.Log;
+
 import com.flying.personal.dotawakeupassistant.IDataProvider;
 import com.flying.personal.dotawakeupassistant.model.EquipmentItem;
 import com.flying.personal.dotawakeupassistant.model.GameStage;
 import com.flying.personal.dotawakeupassistant.model.Hero;
 import com.flying.personal.dotawakeupassistant.model.WakeUpRepeatableTask;
 import com.flying.personal.dotawakeupassistant.model.WakeUpTask;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
+import java.io.FileWriter;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,7 +26,16 @@ public class DataProviderImplByMock implements IDataProvider {
 
     @Override
     public void save(String[] args) {
-
+        try {
+            com.google.gson.stream.JsonWriter jw = new com.google.gson.stream.JsonWriter(new FileWriter(args[0]));
+            Gson gson = new Gson();
+            Type heroListType = new TypeToken<List<Hero>>() {
+            }.getType();
+            gson.toJson(heroes, heroes.getClass(), jw);
+            jw.close();
+        } catch (Exception e) {
+            Log.e(this.getClass().getName(), Log.getStackTraceString(e));
+        }
     }
 
     @Override

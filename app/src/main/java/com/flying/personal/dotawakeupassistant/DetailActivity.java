@@ -40,7 +40,7 @@ public class DetailActivity extends ActionBarActivity {
         tvName.setText(hero.getName());
 
         TextView tvPosition = (TextView) findViewById(R.id.tvPositsion);
-        tvPosition.setText("位置: " + getString(hero.getPostionDisplayNameIndex()));
+        tvPosition.setText("位置: " + getString(hero.getPositionDisplayNameIndex()));
 
         TextView tvAbility = (TextView) findViewById(R.id.tvAbilityType);
         tvAbility.setText("主属性: " + getString(hero.getAbilityDisplayNameIndex()));

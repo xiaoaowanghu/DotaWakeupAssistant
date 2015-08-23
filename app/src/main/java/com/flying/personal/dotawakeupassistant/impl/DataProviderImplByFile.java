@@ -3,10 +3,8 @@ package com.flying.personal.dotawakeupassistant.impl;
 import android.util.Log;
 
 import com.flying.personal.dotawakeupassistant.IDataProvider;
-import com.flying.personal.dotawakeupassistant.model.GameStage;
 import com.flying.personal.dotawakeupassistant.model.Hero;
-import com.flying.personal.dotawakeupassistant.model.WakeUpTask;
-import com.flying.personal.dotawakeupassistant.model.WakeUpRepeatableTask;
+import com.flying.personal.dotawakeupassistant.util.HanyuPinyinHelper;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -15,6 +13,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -24,9 +23,6 @@ import java.util.Map;
 public class DataProviderImplByFile implements IDataProvider {
 
     private List<Hero> heroes;
-    private List<GameStage> stages;
-    private List<WakeUpTask> task1s;
-    private List<WakeUpRepeatableTask> task2s;
     private Map<Hero, List<String>> searchIndexs;
 
     @Override
@@ -95,12 +91,25 @@ public class DataProviderImplByFile implements IDataProvider {
 
     @Override
     public void init(String[] args) {
-        //Context.getExternalFilesDir()
         try {
             dataFilePath = args[0];
+
             if (isDataFileExit()) {
                 getDataFromJsonFile();
             }
+
+            searchIndexs = new HashMap<Hero, List<String>>(heroes.size());
+
+            for (Hero h : heroes) {
+                List<String> indexes = new ArrayList<String>(20);
+                indexes.addAll(HanyuPinyinHelper.getInstance().getHanziT9Index(h.getName()));
+                for (String a : h.getAlias()) {
+                    indexes.addAll(HanyuPinyinHelper.getInstance().getHanziT9Index(a));
+                }
+
+                searchIndexs.put(h, indexes);
+            }
+
         } catch (Exception e) {
             Log.e(this.getClass().getName(), Log.getStackTraceString(e));
         }
@@ -116,7 +125,6 @@ public class DataProviderImplByFile implements IDataProvider {
 
     @Override
     public void save(String[] args) {
-
     }
 
     @Override

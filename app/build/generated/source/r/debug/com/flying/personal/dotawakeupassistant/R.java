@@ -2097,33 +2097,33 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionBar_background com.flying.personal.computerforwakeupheroofdotalegend:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_backgroundSplit com.flying.personal.computerforwakeupheroofdotalegend:backgroundSplit}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_backgroundStacked com.flying.personal.computerforwakeupheroofdotalegend:backgroundStacked}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetEnd com.flying.personal.computerforwakeupheroofdotalegend:contentInsetEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetLeft com.flying.personal.computerforwakeupheroofdotalegend:contentInsetLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetRight com.flying.personal.computerforwakeupheroofdotalegend:contentInsetRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetStart com.flying.personal.computerforwakeupheroofdotalegend:contentInsetStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_customNavigationLayout com.flying.personal.computerforwakeupheroofdotalegend:customNavigationLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_displayOptions com.flying.personal.computerforwakeupheroofdotalegend:displayOptions}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_divider com.flying.personal.computerforwakeupheroofdotalegend:divider}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_elevation com.flying.personal.computerforwakeupheroofdotalegend:elevation}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_height com.flying.personal.computerforwakeupheroofdotalegend:height}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_hideOnContentScroll com.flying.personal.computerforwakeupheroofdotalegend:hideOnContentScroll}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_homeAsUpIndicator com.flying.personal.computerforwakeupheroofdotalegend:homeAsUpIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_homeLayout com.flying.personal.computerforwakeupheroofdotalegend:homeLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_icon com.flying.personal.computerforwakeupheroofdotalegend:icon}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.flying.personal.computerforwakeupheroofdotalegend:indeterminateProgressStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_itemPadding com.flying.personal.computerforwakeupheroofdotalegend:itemPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_logo com.flying.personal.computerforwakeupheroofdotalegend:logo}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_navigationMode com.flying.personal.computerforwakeupheroofdotalegend:navigationMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_popupTheme com.flying.personal.computerforwakeupheroofdotalegend:popupTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_progressBarPadding com.flying.personal.computerforwakeupheroofdotalegend:progressBarPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_progressBarStyle com.flying.personal.computerforwakeupheroofdotalegend:progressBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_subtitle com.flying.personal.computerforwakeupheroofdotalegend:subtitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_subtitleTextStyle com.flying.personal.computerforwakeupheroofdotalegend:subtitleTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_title com.flying.personal.computerforwakeupheroofdotalegend:title}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_titleTextStyle com.flying.personal.computerforwakeupheroofdotalegend:titleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_background com.flying.personal.dotawakeupassistant:background}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_backgroundSplit com.flying.personal.dotawakeupassistant:backgroundSplit}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_backgroundStacked com.flying.personal.dotawakeupassistant:backgroundStacked}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetEnd com.flying.personal.dotawakeupassistant:contentInsetEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetLeft com.flying.personal.dotawakeupassistant:contentInsetLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetRight com.flying.personal.dotawakeupassistant:contentInsetRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetStart com.flying.personal.dotawakeupassistant:contentInsetStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_customNavigationLayout com.flying.personal.dotawakeupassistant:customNavigationLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_displayOptions com.flying.personal.dotawakeupassistant:displayOptions}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_divider com.flying.personal.dotawakeupassistant:divider}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_elevation com.flying.personal.dotawakeupassistant:elevation}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_height com.flying.personal.dotawakeupassistant:height}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_hideOnContentScroll com.flying.personal.dotawakeupassistant:hideOnContentScroll}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_homeAsUpIndicator com.flying.personal.dotawakeupassistant:homeAsUpIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_homeLayout com.flying.personal.dotawakeupassistant:homeLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_icon com.flying.personal.dotawakeupassistant:icon}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.flying.personal.dotawakeupassistant:indeterminateProgressStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_itemPadding com.flying.personal.dotawakeupassistant:itemPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_logo com.flying.personal.dotawakeupassistant:logo}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_navigationMode com.flying.personal.dotawakeupassistant:navigationMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_popupTheme com.flying.personal.dotawakeupassistant:popupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_progressBarPadding com.flying.personal.dotawakeupassistant:progressBarPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_progressBarStyle com.flying.personal.dotawakeupassistant:progressBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_subtitle com.flying.personal.dotawakeupassistant:subtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_subtitleTextStyle com.flying.personal.dotawakeupassistant:subtitleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_title com.flying.personal.dotawakeupassistant:title}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_titleTextStyle com.flying.personal.dotawakeupassistant:titleTextStyle}</code></td><td></td></tr>
            </table>
            @see #ActionBar_background
            @see #ActionBar_backgroundSplit
@@ -2163,17 +2163,17 @@ containing a value of this type.
             0x7f01001a, 0x7f01001b, 0x7f010082
         };
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#background}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#background}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:background
+          @attr name com.flying.personal.dotawakeupassistant:background
         */
         public static final int ActionBar_background = 10;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#backgroundSplit}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#backgroundSplit}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2181,11 +2181,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:backgroundSplit
+          @attr name com.flying.personal.dotawakeupassistant:backgroundSplit
         */
         public static final int ActionBar_backgroundSplit = 12;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#backgroundStacked}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#backgroundStacked}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2193,11 +2193,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:backgroundStacked
+          @attr name com.flying.personal.dotawakeupassistant:backgroundStacked
         */
         public static final int ActionBar_backgroundStacked = 11;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#contentInsetEnd}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#contentInsetEnd}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2209,11 +2209,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:contentInsetEnd
+          @attr name com.flying.personal.dotawakeupassistant:contentInsetEnd
         */
         public static final int ActionBar_contentInsetEnd = 21;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#contentInsetLeft}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#contentInsetLeft}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2225,11 +2225,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:contentInsetLeft
+          @attr name com.flying.personal.dotawakeupassistant:contentInsetLeft
         */
         public static final int ActionBar_contentInsetLeft = 22;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#contentInsetRight}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#contentInsetRight}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2241,11 +2241,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:contentInsetRight
+          @attr name com.flying.personal.dotawakeupassistant:contentInsetRight
         */
         public static final int ActionBar_contentInsetRight = 23;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#contentInsetStart}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#contentInsetStart}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2257,21 +2257,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:contentInsetStart
+          @attr name com.flying.personal.dotawakeupassistant:contentInsetStart
         */
         public static final int ActionBar_contentInsetStart = 20;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#customNavigationLayout}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#customNavigationLayout}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:customNavigationLayout
+          @attr name com.flying.personal.dotawakeupassistant:customNavigationLayout
         */
         public static final int ActionBar_customNavigationLayout = 13;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#displayOptions}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#displayOptions}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2289,21 +2289,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>showCustom</code></td><td>0x10</td><td></td></tr>
 <tr><td><code>disableHome</code></td><td>0x20</td><td></td></tr>
 </table>
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:displayOptions
+          @attr name com.flying.personal.dotawakeupassistant:displayOptions
         */
         public static final int ActionBar_displayOptions = 3;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#divider}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#divider}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:divider
+          @attr name com.flying.personal.dotawakeupassistant:divider
         */
         public static final int ActionBar_divider = 9;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#elevation}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#elevation}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2315,11 +2315,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:elevation
+          @attr name com.flying.personal.dotawakeupassistant:elevation
         */
         public static final int ActionBar_elevation = 24;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#height}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#height}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2331,11 +2331,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:height
+          @attr name com.flying.personal.dotawakeupassistant:height
         */
         public static final int ActionBar_height = 0;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#hideOnContentScroll}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#hideOnContentScroll}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2345,51 +2345,51 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:hideOnContentScroll
+          @attr name com.flying.personal.dotawakeupassistant:hideOnContentScroll
         */
         public static final int ActionBar_hideOnContentScroll = 19;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#homeAsUpIndicator}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#homeAsUpIndicator}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:homeAsUpIndicator
+          @attr name com.flying.personal.dotawakeupassistant:homeAsUpIndicator
         */
         public static final int ActionBar_homeAsUpIndicator = 26;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#homeLayout}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#homeLayout}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:homeLayout
+          @attr name com.flying.personal.dotawakeupassistant:homeLayout
         */
         public static final int ActionBar_homeLayout = 14;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#icon}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#icon}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:icon
+          @attr name com.flying.personal.dotawakeupassistant:icon
         */
         public static final int ActionBar_icon = 7;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#indeterminateProgressStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#indeterminateProgressStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:indeterminateProgressStyle
+          @attr name com.flying.personal.dotawakeupassistant:indeterminateProgressStyle
         */
         public static final int ActionBar_indeterminateProgressStyle = 16;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#itemPadding}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#itemPadding}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2401,21 +2401,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:itemPadding
+          @attr name com.flying.personal.dotawakeupassistant:itemPadding
         */
         public static final int ActionBar_itemPadding = 18;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#logo}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#logo}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:logo
+          @attr name com.flying.personal.dotawakeupassistant:logo
         */
         public static final int ActionBar_logo = 8;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#navigationMode}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#navigationMode}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2429,21 +2429,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>listMode</code></td><td>1</td><td></td></tr>
 <tr><td><code>tabMode</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:navigationMode
+          @attr name com.flying.personal.dotawakeupassistant:navigationMode
         */
         public static final int ActionBar_navigationMode = 2;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#popupTheme}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#popupTheme}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:popupTheme
+          @attr name com.flying.personal.dotawakeupassistant:popupTheme
         */
         public static final int ActionBar_popupTheme = 25;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#progressBarPadding}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#progressBarPadding}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2455,21 +2455,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:progressBarPadding
+          @attr name com.flying.personal.dotawakeupassistant:progressBarPadding
         */
         public static final int ActionBar_progressBarPadding = 17;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#progressBarStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#progressBarStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:progressBarStyle
+          @attr name com.flying.personal.dotawakeupassistant:progressBarStyle
         */
         public static final int ActionBar_progressBarStyle = 15;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#subtitle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#subtitle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2479,21 +2479,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:subtitle
+          @attr name com.flying.personal.dotawakeupassistant:subtitle
         */
         public static final int ActionBar_subtitle = 4;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#subtitleTextStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#subtitleTextStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:subtitleTextStyle
+          @attr name com.flying.personal.dotawakeupassistant:subtitleTextStyle
         */
         public static final int ActionBar_subtitleTextStyle = 6;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#title}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#title}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2503,17 +2503,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:title
+          @attr name com.flying.personal.dotawakeupassistant:title
         */
         public static final int ActionBar_title = 1;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#titleTextStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#titleTextStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:titleTextStyle
+          @attr name com.flying.personal.dotawakeupassistant:titleTextStyle
         */
         public static final int ActionBar_titleTextStyle = 5;
         /** Attributes that can be used with a ActionBarLayout.
@@ -2565,12 +2565,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionMode_background com.flying.personal.computerforwakeupheroofdotalegend:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_backgroundSplit com.flying.personal.computerforwakeupheroofdotalegend:backgroundSplit}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_closeItemLayout com.flying.personal.computerforwakeupheroofdotalegend:closeItemLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_height com.flying.personal.computerforwakeupheroofdotalegend:height}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_subtitleTextStyle com.flying.personal.computerforwakeupheroofdotalegend:subtitleTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_titleTextStyle com.flying.personal.computerforwakeupheroofdotalegend:titleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_background com.flying.personal.dotawakeupassistant:background}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_backgroundSplit com.flying.personal.dotawakeupassistant:backgroundSplit}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_closeItemLayout com.flying.personal.dotawakeupassistant:closeItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_height com.flying.personal.dotawakeupassistant:height}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_subtitleTextStyle com.flying.personal.dotawakeupassistant:subtitleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_titleTextStyle com.flying.personal.dotawakeupassistant:titleTextStyle}</code></td><td></td></tr>
            </table>
            @see #ActionMode_background
            @see #ActionMode_backgroundSplit
@@ -2584,17 +2584,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f01000e, 0x7f01001c
         };
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#background}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#background}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:background
+          @attr name com.flying.personal.dotawakeupassistant:background
         */
         public static final int ActionMode_background = 3;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#backgroundSplit}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#backgroundSplit}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
@@ -2602,21 +2602,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:backgroundSplit
+          @attr name com.flying.personal.dotawakeupassistant:backgroundSplit
         */
         public static final int ActionMode_backgroundSplit = 4;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#closeItemLayout}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#closeItemLayout}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:closeItemLayout
+          @attr name com.flying.personal.dotawakeupassistant:closeItemLayout
         */
         public static final int ActionMode_closeItemLayout = 5;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#height}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#height}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
@@ -2628,27 +2628,27 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:height
+          @attr name com.flying.personal.dotawakeupassistant:height
         */
         public static final int ActionMode_height = 0;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#subtitleTextStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#subtitleTextStyle}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:subtitleTextStyle
+          @attr name com.flying.personal.dotawakeupassistant:subtitleTextStyle
         */
         public static final int ActionMode_subtitleTextStyle = 2;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#titleTextStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#titleTextStyle}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:titleTextStyle
+          @attr name com.flying.personal.dotawakeupassistant:titleTextStyle
         */
         public static final int ActionMode_titleTextStyle = 1;
         /** Attributes that can be used with a ActivityChooserView.
@@ -2657,8 +2657,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.flying.personal.computerforwakeupheroofdotalegend:expandActivityOverflowButtonDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.flying.personal.computerforwakeupheroofdotalegend:initialActivityCount}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.flying.personal.dotawakeupassistant:expandActivityOverflowButtonDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.flying.personal.dotawakeupassistant:initialActivityCount}</code></td><td></td></tr>
            </table>
            @see #ActivityChooserView_expandActivityOverflowButtonDrawable
            @see #ActivityChooserView_initialActivityCount
@@ -2667,17 +2667,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f01001d, 0x7f01001e
         };
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#expandActivityOverflowButtonDrawable}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#expandActivityOverflowButtonDrawable}
           attribute's value can be found in the {@link #ActivityChooserView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:expandActivityOverflowButtonDrawable
+          @attr name com.flying.personal.dotawakeupassistant:expandActivityOverflowButtonDrawable
         */
         public static final int ActivityChooserView_expandActivityOverflowButtonDrawable = 1;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#initialActivityCount}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#initialActivityCount}
           attribute's value can be found in the {@link #ActivityChooserView} array.
 
 
@@ -2687,7 +2687,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:initialActivityCount
+          @attr name com.flying.personal.dotawakeupassistant:initialActivityCount
         */
         public static final int ActivityChooserView_initialActivityCount = 0;
         /** Attributes that can be used with a AlertDialog.
@@ -2697,11 +2697,11 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #AlertDialog_android_layout android:layout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_buttonPanelSideLayout com.flying.personal.computerforwakeupheroofdotalegend:buttonPanelSideLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_listItemLayout com.flying.personal.computerforwakeupheroofdotalegend:listItemLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_listLayout com.flying.personal.computerforwakeupheroofdotalegend:listLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_multiChoiceItemLayout com.flying.personal.computerforwakeupheroofdotalegend:multiChoiceItemLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_singleChoiceItemLayout com.flying.personal.computerforwakeupheroofdotalegend:singleChoiceItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_buttonPanelSideLayout com.flying.personal.dotawakeupassistant:buttonPanelSideLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_listItemLayout com.flying.personal.dotawakeupassistant:listItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_listLayout com.flying.personal.dotawakeupassistant:listLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_multiChoiceItemLayout com.flying.personal.dotawakeupassistant:multiChoiceItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_singleChoiceItemLayout com.flying.personal.dotawakeupassistant:singleChoiceItemLayout}</code></td><td></td></tr>
            </table>
            @see #AlertDialog_android_layout
            @see #AlertDialog_buttonPanelSideLayout
@@ -2721,53 +2721,53 @@ containing a value of this type.
         */
         public static final int AlertDialog_android_layout = 0;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#buttonPanelSideLayout}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#buttonPanelSideLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:buttonPanelSideLayout
+          @attr name com.flying.personal.dotawakeupassistant:buttonPanelSideLayout
         */
         public static final int AlertDialog_buttonPanelSideLayout = 1;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#listItemLayout}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#listItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:listItemLayout
+          @attr name com.flying.personal.dotawakeupassistant:listItemLayout
         */
         public static final int AlertDialog_listItemLayout = 5;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#listLayout}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#listLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:listLayout
+          @attr name com.flying.personal.dotawakeupassistant:listLayout
         */
         public static final int AlertDialog_listLayout = 2;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#multiChoiceItemLayout}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#multiChoiceItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:multiChoiceItemLayout
+          @attr name com.flying.personal.dotawakeupassistant:multiChoiceItemLayout
         */
         public static final int AlertDialog_multiChoiceItemLayout = 3;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#singleChoiceItemLayout}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#singleChoiceItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:singleChoiceItemLayout
+          @attr name com.flying.personal.dotawakeupassistant:singleChoiceItemLayout
         */
         public static final int AlertDialog_singleChoiceItemLayout = 4;
         /** Attributes that can be used with a AppCompatTextView.
@@ -2777,7 +2777,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #AppCompatTextView_android_textAppearance android:textAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTextView_textAllCaps com.flying.personal.computerforwakeupheroofdotalegend:textAllCaps}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTextView_textAllCaps com.flying.personal.dotawakeupassistant:textAllCaps}</code></td><td></td></tr>
            </table>
            @see #AppCompatTextView_android_textAppearance
            @see #AppCompatTextView_textAllCaps
@@ -2792,14 +2792,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int AppCompatTextView_android_textAppearance = 0;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#textAllCaps}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#textAllCaps}
           attribute's value can be found in the {@link #AppCompatTextView} array.
 
 
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:textAllCaps
+          @attr name com.flying.personal.dotawakeupassistant:textAllCaps
         */
         public static final int AppCompatTextView_textAllCaps = 1;
         /** Attributes that can be used with a AutoAdjustFontSizeTextView.
@@ -2808,7 +2808,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #AutoAdjustFontSizeTextView_minTextSize com.flying.personal.computerforwakeupheroofdotalegend:minTextSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #AutoAdjustFontSizeTextView_minTextSize com.flying.personal.dotawakeupassistant:minTextSize}</code></td><td></td></tr>
            </table>
            @see #AutoAdjustFontSizeTextView_minTextSize
          */
@@ -2816,7 +2816,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010025
         };
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#minTextSize}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#minTextSize}
           attribute's value can be found in the {@link #AutoAdjustFontSizeTextView} array.
 
 
@@ -2826,7 +2826,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:minTextSize
+          @attr name com.flying.personal.dotawakeupassistant:minTextSize
         */
         public static final int AutoAdjustFontSizeTextView_minTextSize = 0;
         /** Attributes that can be used with a DrawerArrowToggle.
@@ -2835,14 +2835,14 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_barSize com.flying.personal.computerforwakeupheroofdotalegend:barSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_color com.flying.personal.computerforwakeupheroofdotalegend:color}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_drawableSize com.flying.personal.computerforwakeupheroofdotalegend:drawableSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars com.flying.personal.computerforwakeupheroofdotalegend:gapBetweenBars}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_middleBarArrowSize com.flying.personal.computerforwakeupheroofdotalegend:middleBarArrowSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_spinBars com.flying.personal.computerforwakeupheroofdotalegend:spinBars}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_thickness com.flying.personal.computerforwakeupheroofdotalegend:thickness}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_topBottomBarArrowSize com.flying.personal.computerforwakeupheroofdotalegend:topBottomBarArrowSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_barSize com.flying.personal.dotawakeupassistant:barSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_color com.flying.personal.dotawakeupassistant:color}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_drawableSize com.flying.personal.dotawakeupassistant:drawableSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars com.flying.personal.dotawakeupassistant:gapBetweenBars}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_middleBarArrowSize com.flying.personal.dotawakeupassistant:middleBarArrowSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_spinBars com.flying.personal.dotawakeupassistant:spinBars}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_thickness com.flying.personal.dotawakeupassistant:thickness}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_topBottomBarArrowSize com.flying.personal.dotawakeupassistant:topBottomBarArrowSize}</code></td><td></td></tr>
            </table>
            @see #DrawerArrowToggle_barSize
            @see #DrawerArrowToggle_color
@@ -2858,7 +2858,7 @@ containing a value of this type.
             0x7f01002a, 0x7f01002b, 0x7f01002c, 0x7f01002d
         };
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#barSize}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#barSize}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -2870,11 +2870,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:barSize
+          @attr name com.flying.personal.dotawakeupassistant:barSize
         */
         public static final int DrawerArrowToggle_barSize = 6;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#color}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#color}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -2885,11 +2885,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:color
+          @attr name com.flying.personal.dotawakeupassistant:color
         */
         public static final int DrawerArrowToggle_color = 0;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#drawableSize}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#drawableSize}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -2901,11 +2901,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:drawableSize
+          @attr name com.flying.personal.dotawakeupassistant:drawableSize
         */
         public static final int DrawerArrowToggle_drawableSize = 2;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#gapBetweenBars}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#gapBetweenBars}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -2917,11 +2917,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:gapBetweenBars
+          @attr name com.flying.personal.dotawakeupassistant:gapBetweenBars
         */
         public static final int DrawerArrowToggle_gapBetweenBars = 3;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#middleBarArrowSize}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#middleBarArrowSize}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -2933,11 +2933,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:middleBarArrowSize
+          @attr name com.flying.personal.dotawakeupassistant:middleBarArrowSize
         */
         public static final int DrawerArrowToggle_middleBarArrowSize = 5;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#spinBars}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#spinBars}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -2947,11 +2947,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:spinBars
+          @attr name com.flying.personal.dotawakeupassistant:spinBars
         */
         public static final int DrawerArrowToggle_spinBars = 1;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#thickness}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#thickness}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -2963,11 +2963,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:thickness
+          @attr name com.flying.personal.dotawakeupassistant:thickness
         */
         public static final int DrawerArrowToggle_thickness = 7;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#topBottomBarArrowSize}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#topBottomBarArrowSize}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -2979,7 +2979,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:topBottomBarArrowSize
+          @attr name com.flying.personal.dotawakeupassistant:topBottomBarArrowSize
         */
         public static final int DrawerArrowToggle_topBottomBarArrowSize = 4;
         /** Attributes that can be used with a LinearLayoutCompat.
@@ -2993,10 +2993,10 @@ containing a value of this type.
            <tr><td><code>{@link #LinearLayoutCompat_android_gravity android:gravity}</code></td><td></td></tr>
            <tr><td><code>{@link #LinearLayoutCompat_android_orientation android:orientation}</code></td><td></td></tr>
            <tr><td><code>{@link #LinearLayoutCompat_android_weightSum android:weightSum}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_divider com.flying.personal.computerforwakeupheroofdotalegend:divider}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_dividerPadding com.flying.personal.computerforwakeupheroofdotalegend:dividerPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild com.flying.personal.computerforwakeupheroofdotalegend:measureWithLargestChild}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_showDividers com.flying.personal.computerforwakeupheroofdotalegend:showDividers}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_divider com.flying.personal.dotawakeupassistant:divider}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_dividerPadding com.flying.personal.dotawakeupassistant:dividerPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild com.flying.personal.dotawakeupassistant:measureWithLargestChild}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_showDividers com.flying.personal.dotawakeupassistant:showDividers}</code></td><td></td></tr>
            </table>
            @see #LinearLayoutCompat_android_baselineAligned
            @see #LinearLayoutCompat_android_baselineAlignedChildIndex
@@ -3044,17 +3044,17 @@ containing a value of this type.
         */
         public static final int LinearLayoutCompat_android_weightSum = 4;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#divider}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#divider}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:divider
+          @attr name com.flying.personal.dotawakeupassistant:divider
         */
         public static final int LinearLayoutCompat_divider = 5;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#dividerPadding}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#dividerPadding}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -3066,11 +3066,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:dividerPadding
+          @attr name com.flying.personal.dotawakeupassistant:dividerPadding
         */
         public static final int LinearLayoutCompat_dividerPadding = 8;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#measureWithLargestChild}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#measureWithLargestChild}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -3080,11 +3080,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:measureWithLargestChild
+          @attr name com.flying.personal.dotawakeupassistant:measureWithLargestChild
         */
         public static final int LinearLayoutCompat_measureWithLargestChild = 6;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#showDividers}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#showDividers}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -3099,7 +3099,7 @@ containing a value of this type.
 <tr><td><code>middle</code></td><td>2</td><td></td></tr>
 <tr><td><code>end</code></td><td>4</td><td></td></tr>
 </table>
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:showDividers
+          @attr name com.flying.personal.dotawakeupassistant:showDividers
         */
         public static final int LinearLayoutCompat_showDividers = 7;
         /** Attributes that can be used with a LinearLayoutCompat_Layout.
@@ -3238,9 +3238,9 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #MenuItem_actionLayout com.flying.personal.computerforwakeupheroofdotalegend:actionLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_actionProviderClass com.flying.personal.computerforwakeupheroofdotalegend:actionProviderClass}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_actionViewClass com.flying.personal.computerforwakeupheroofdotalegend:actionViewClass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionLayout com.flying.personal.dotawakeupassistant:actionLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionProviderClass com.flying.personal.dotawakeupassistant:actionProviderClass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionViewClass com.flying.personal.dotawakeupassistant:actionViewClass}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_alphabeticShortcut android:alphabeticShortcut}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_checkable android:checkable}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_checked android:checked}</code></td><td></td></tr>
@@ -3254,7 +3254,7 @@ containing a value of this type.
            <tr><td><code>{@link #MenuItem_android_title android:title}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_titleCondensed android:titleCondensed}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_visible android:visible}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_showAsAction com.flying.personal.computerforwakeupheroofdotalegend:showAsAction}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_showAsAction com.flying.personal.dotawakeupassistant:showAsAction}</code></td><td></td></tr>
            </table>
            @see #MenuItem_actionLayout
            @see #MenuItem_actionProviderClass
@@ -3282,17 +3282,17 @@ containing a value of this type.
             0x7f010034
         };
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionLayout}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionLayout}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionLayout
+          @attr name com.flying.personal.dotawakeupassistant:actionLayout
         */
         public static final int MenuItem_actionLayout = 14;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionProviderClass}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionProviderClass}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -3302,11 +3302,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionProviderClass
+          @attr name com.flying.personal.dotawakeupassistant:actionProviderClass
         */
         public static final int MenuItem_actionProviderClass = 16;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionViewClass}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionViewClass}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -3316,7 +3316,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionViewClass
+          @attr name com.flying.personal.dotawakeupassistant:actionViewClass
         */
         public static final int MenuItem_actionViewClass = 15;
         /**
@@ -3398,7 +3398,7 @@ containing a value of this type.
         */
         public static final int MenuItem_android_visible = 4;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#showAsAction}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#showAsAction}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -3414,7 +3414,7 @@ containing a value of this type.
 <tr><td><code>withText</code></td><td>4</td><td></td></tr>
 <tr><td><code>collapseActionView</code></td><td>8</td><td></td></tr>
 </table>
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:showAsAction
+          @attr name com.flying.personal.dotawakeupassistant:showAsAction
         */
         public static final int MenuItem_showAsAction = 13;
         /** Attributes that can be used with a MenuView.
@@ -3430,7 +3430,7 @@ containing a value of this type.
            <tr><td><code>{@link #MenuView_android_itemTextAppearance android:itemTextAppearance}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuView_android_verticalDivider android:verticalDivider}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuView_android_windowAnimationStyle android:windowAnimationStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuView_preserveIconSpacing com.flying.personal.computerforwakeupheroofdotalegend:preserveIconSpacing}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuView_preserveIconSpacing com.flying.personal.dotawakeupassistant:preserveIconSpacing}</code></td><td></td></tr>
            </table>
            @see #MenuView_android_headerBackground
            @see #MenuView_android_horizontalDivider
@@ -3488,7 +3488,7 @@ containing a value of this type.
         */
         public static final int MenuView_android_windowAnimationStyle = 0;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#preserveIconSpacing}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#preserveIconSpacing}
           attribute's value can be found in the {@link #MenuView} array.
 
 
@@ -3498,7 +3498,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:preserveIconSpacing
+          @attr name com.flying.personal.dotawakeupassistant:preserveIconSpacing
         */
         public static final int MenuView_preserveIconSpacing = 7;
         /** Attributes that can be used with a PopupWindow.
@@ -3508,7 +3508,7 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #PopupWindow_android_popupBackground android:popupBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #PopupWindow_overlapAnchor com.flying.personal.computerforwakeupheroofdotalegend:overlapAnchor}</code></td><td></td></tr>
+           <tr><td><code>{@link #PopupWindow_overlapAnchor com.flying.personal.dotawakeupassistant:overlapAnchor}</code></td><td></td></tr>
            </table>
            @see #PopupWindow_android_popupBackground
            @see #PopupWindow_overlapAnchor
@@ -3523,7 +3523,7 @@ containing a value of this type.
         */
         public static final int PopupWindow_android_popupBackground = 0;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#overlapAnchor}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#overlapAnchor}
           attribute's value can be found in the {@link #PopupWindow} array.
 
 
@@ -3533,7 +3533,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:overlapAnchor
+          @attr name com.flying.personal.dotawakeupassistant:overlapAnchor
         */
         public static final int PopupWindow_overlapAnchor = 1;
         /** Attributes that can be used with a PopupWindowBackgroundState.
@@ -3542,7 +3542,7 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor com.flying.personal.computerforwakeupheroofdotalegend:state_above_anchor}</code></td><td></td></tr>
+           <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor com.flying.personal.dotawakeupassistant:state_above_anchor}</code></td><td></td></tr>
            </table>
            @see #PopupWindowBackgroundState_state_above_anchor
          */
@@ -3550,7 +3550,7 @@ containing a value of this type.
             0x7f010037
         };
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#state_above_anchor}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#state_above_anchor}
           attribute's value can be found in the {@link #PopupWindowBackgroundState} array.
 
 
@@ -3560,7 +3560,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:state_above_anchor
+          @attr name com.flying.personal.dotawakeupassistant:state_above_anchor
         */
         public static final int PopupWindowBackgroundState_state_above_anchor = 0;
         /** Attributes that can be used with a QuickSearchEditText.
@@ -3569,7 +3569,7 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #QuickSearchEditText_delayToSearch com.flying.personal.computerforwakeupheroofdotalegend:delayToSearch}</code></td><td></td></tr>
+           <tr><td><code>{@link #QuickSearchEditText_delayToSearch com.flying.personal.dotawakeupassistant:delayToSearch}</code></td><td></td></tr>
            </table>
            @see #QuickSearchEditText_delayToSearch
          */
@@ -3577,7 +3577,7 @@ containing a value of this type.
             0x7f010038
         };
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#delayToSearch}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#delayToSearch}
           attribute's value can be found in the {@link #QuickSearchEditText} array.
 
 
@@ -3587,7 +3587,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:delayToSearch
+          @attr name com.flying.personal.dotawakeupassistant:delayToSearch
         */
         public static final int QuickSearchEditText_delayToSearch = 0;
         /** Attributes that can be used with a RoundImageView.
@@ -3596,9 +3596,9 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #RoundImageView_borderRadius com.flying.personal.computerforwakeupheroofdotalegend:borderRadius}</code></td><td></td></tr>
-           <tr><td><code>{@link #RoundImageView_scaleType com.flying.personal.computerforwakeupheroofdotalegend:scaleType}</code></td><td></td></tr>
-           <tr><td><code>{@link #RoundImageView_srcFilePath com.flying.personal.computerforwakeupheroofdotalegend:srcFilePath}</code></td><td></td></tr>
+           <tr><td><code>{@link #RoundImageView_borderRadius com.flying.personal.dotawakeupassistant:borderRadius}</code></td><td></td></tr>
+           <tr><td><code>{@link #RoundImageView_scaleType com.flying.personal.dotawakeupassistant:scaleType}</code></td><td></td></tr>
+           <tr><td><code>{@link #RoundImageView_srcFilePath com.flying.personal.dotawakeupassistant:srcFilePath}</code></td><td></td></tr>
            </table>
            @see #RoundImageView_borderRadius
            @see #RoundImageView_scaleType
@@ -3608,7 +3608,7 @@ containing a value of this type.
             0x7f010039, 0x7f01003a, 0x7f01003b
         };
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#borderRadius}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#borderRadius}
           attribute's value can be found in the {@link #RoundImageView} array.
 
 
@@ -3620,11 +3620,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:borderRadius
+          @attr name com.flying.personal.dotawakeupassistant:borderRadius
         */
         public static final int RoundImageView_borderRadius = 0;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#scaleType}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#scaleType}
           attribute's value can be found in the {@link #RoundImageView} array.
 
 
@@ -3638,11 +3638,11 @@ containing a value of this type.
 <tr><td><code>Fill</code></td><td>1</td><td></td></tr>
 <tr><td><code>Center</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:scaleType
+          @attr name com.flying.personal.dotawakeupassistant:scaleType
         */
         public static final int RoundImageView_scaleType = 2;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#srcFilePath}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#srcFilePath}
           attribute's value can be found in the {@link #RoundImageView} array.
 
 
@@ -3652,7 +3652,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:srcFilePath
+          @attr name com.flying.personal.dotawakeupassistant:srcFilePath
         */
         public static final int RoundImageView_srcFilePath = 1;
         /** Attributes that can be used with a SearchView.
@@ -3665,19 +3665,19 @@ containing a value of this type.
            <tr><td><code>{@link #SearchView_android_imeOptions android:imeOptions}</code></td><td></td></tr>
            <tr><td><code>{@link #SearchView_android_inputType android:inputType}</code></td><td></td></tr>
            <tr><td><code>{@link #SearchView_android_maxWidth android:maxWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_closeIcon com.flying.personal.computerforwakeupheroofdotalegend:closeIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_commitIcon com.flying.personal.computerforwakeupheroofdotalegend:commitIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_defaultQueryHint com.flying.personal.computerforwakeupheroofdotalegend:defaultQueryHint}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_goIcon com.flying.personal.computerforwakeupheroofdotalegend:goIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_iconifiedByDefault com.flying.personal.computerforwakeupheroofdotalegend:iconifiedByDefault}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_layout com.flying.personal.computerforwakeupheroofdotalegend:layout}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_queryBackground com.flying.personal.computerforwakeupheroofdotalegend:queryBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_queryHint com.flying.personal.computerforwakeupheroofdotalegend:queryHint}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_searchHintIcon com.flying.personal.computerforwakeupheroofdotalegend:searchHintIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_searchIcon com.flying.personal.computerforwakeupheroofdotalegend:searchIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_submitBackground com.flying.personal.computerforwakeupheroofdotalegend:submitBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_suggestionRowLayout com.flying.personal.computerforwakeupheroofdotalegend:suggestionRowLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_voiceIcon com.flying.personal.computerforwakeupheroofdotalegend:voiceIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_closeIcon com.flying.personal.dotawakeupassistant:closeIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_commitIcon com.flying.personal.dotawakeupassistant:commitIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_defaultQueryHint com.flying.personal.dotawakeupassistant:defaultQueryHint}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_goIcon com.flying.personal.dotawakeupassistant:goIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_iconifiedByDefault com.flying.personal.dotawakeupassistant:iconifiedByDefault}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_layout com.flying.personal.dotawakeupassistant:layout}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_queryBackground com.flying.personal.dotawakeupassistant:queryBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_queryHint com.flying.personal.dotawakeupassistant:queryHint}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_searchHintIcon com.flying.personal.dotawakeupassistant:searchHintIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_searchIcon com.flying.personal.dotawakeupassistant:searchIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_submitBackground com.flying.personal.dotawakeupassistant:submitBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_suggestionRowLayout com.flying.personal.dotawakeupassistant:suggestionRowLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_voiceIcon com.flying.personal.dotawakeupassistant:voiceIcon}</code></td><td></td></tr>
            </table>
            @see #SearchView_android_focusable
            @see #SearchView_android_imeOptions
@@ -3729,27 +3729,27 @@ containing a value of this type.
         */
         public static final int SearchView_android_maxWidth = 1;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#closeIcon}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#closeIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:closeIcon
+          @attr name com.flying.personal.dotawakeupassistant:closeIcon
         */
         public static final int SearchView_closeIcon = 8;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#commitIcon}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#commitIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:commitIcon
+          @attr name com.flying.personal.dotawakeupassistant:commitIcon
         */
         public static final int SearchView_commitIcon = 13;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#defaultQueryHint}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#defaultQueryHint}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -3759,21 +3759,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:defaultQueryHint
+          @attr name com.flying.personal.dotawakeupassistant:defaultQueryHint
         */
         public static final int SearchView_defaultQueryHint = 7;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#goIcon}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#goIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:goIcon
+          @attr name com.flying.personal.dotawakeupassistant:goIcon
         */
         public static final int SearchView_goIcon = 9;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#iconifiedByDefault}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#iconifiedByDefault}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -3783,31 +3783,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:iconifiedByDefault
+          @attr name com.flying.personal.dotawakeupassistant:iconifiedByDefault
         */
         public static final int SearchView_iconifiedByDefault = 5;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#layout}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#layout}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:layout
+          @attr name com.flying.personal.dotawakeupassistant:layout
         */
         public static final int SearchView_layout = 4;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#queryBackground}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#queryBackground}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:queryBackground
+          @attr name com.flying.personal.dotawakeupassistant:queryBackground
         */
         public static final int SearchView_queryBackground = 15;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#queryHint}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#queryHint}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -3817,57 +3817,57 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:queryHint
+          @attr name com.flying.personal.dotawakeupassistant:queryHint
         */
         public static final int SearchView_queryHint = 6;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#searchHintIcon}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#searchHintIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:searchHintIcon
+          @attr name com.flying.personal.dotawakeupassistant:searchHintIcon
         */
         public static final int SearchView_searchHintIcon = 11;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#searchIcon}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#searchIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:searchIcon
+          @attr name com.flying.personal.dotawakeupassistant:searchIcon
         */
         public static final int SearchView_searchIcon = 10;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#submitBackground}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#submitBackground}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:submitBackground
+          @attr name com.flying.personal.dotawakeupassistant:submitBackground
         */
         public static final int SearchView_submitBackground = 16;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#suggestionRowLayout}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#suggestionRowLayout}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:suggestionRowLayout
+          @attr name com.flying.personal.dotawakeupassistant:suggestionRowLayout
         */
         public static final int SearchView_suggestionRowLayout = 14;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#voiceIcon}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#voiceIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:voiceIcon
+          @attr name com.flying.personal.dotawakeupassistant:voiceIcon
         */
         public static final int SearchView_voiceIcon = 12;
         /** Attributes that can be used with a Spinner.
@@ -3883,10 +3883,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #Spinner_android_dropDownWidth android:dropDownWidth}</code></td><td></td></tr>
            <tr><td><code>{@link #Spinner_android_gravity android:gravity}</code></td><td></td></tr>
            <tr><td><code>{@link #Spinner_android_popupBackground android:popupBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Spinner_disableChildrenWhenDisabled com.flying.personal.computerforwakeupheroofdotalegend:disableChildrenWhenDisabled}</code></td><td></td></tr>
-           <tr><td><code>{@link #Spinner_popupPromptView com.flying.personal.computerforwakeupheroofdotalegend:popupPromptView}</code></td><td></td></tr>
-           <tr><td><code>{@link #Spinner_prompt com.flying.personal.computerforwakeupheroofdotalegend:prompt}</code></td><td></td></tr>
-           <tr><td><code>{@link #Spinner_spinnerMode com.flying.personal.computerforwakeupheroofdotalegend:spinnerMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #Spinner_disableChildrenWhenDisabled com.flying.personal.dotawakeupassistant:disableChildrenWhenDisabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #Spinner_popupPromptView com.flying.personal.dotawakeupassistant:popupPromptView}</code></td><td></td></tr>
+           <tr><td><code>{@link #Spinner_prompt com.flying.personal.dotawakeupassistant:prompt}</code></td><td></td></tr>
+           <tr><td><code>{@link #Spinner_spinnerMode com.flying.personal.dotawakeupassistant:spinnerMode}</code></td><td></td></tr>
            </table>
            @see #Spinner_android_background
            @see #Spinner_android_dropDownHorizontalOffset
@@ -3948,7 +3948,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Spinner_android_popupBackground = 3;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#disableChildrenWhenDisabled}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#disableChildrenWhenDisabled}
           attribute's value can be found in the {@link #Spinner} array.
 
 
@@ -3958,31 +3958,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:disableChildrenWhenDisabled
+          @attr name com.flying.personal.dotawakeupassistant:disableChildrenWhenDisabled
         */
         public static final int Spinner_disableChildrenWhenDisabled = 10;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#popupPromptView}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#popupPromptView}
           attribute's value can be found in the {@link #Spinner} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:popupPromptView
+          @attr name com.flying.personal.dotawakeupassistant:popupPromptView
         */
         public static final int Spinner_popupPromptView = 9;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#prompt}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#prompt}
           attribute's value can be found in the {@link #Spinner} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:prompt
+          @attr name com.flying.personal.dotawakeupassistant:prompt
         */
         public static final int Spinner_prompt = 7;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#spinnerMode}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#spinnerMode}
           attribute's value can be found in the {@link #Spinner} array.
 
 
@@ -3995,7 +3995,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>dialog</code></td><td>0</td><td></td></tr>
 <tr><td><code>dropdown</code></td><td>1</td><td></td></tr>
 </table>
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:spinnerMode
+          @attr name com.flying.personal.dotawakeupassistant:spinnerMode
         */
         public static final int Spinner_spinnerMode = 8;
         /** Attributes that can be used with a SwitchCompat.
@@ -4007,13 +4007,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #SwitchCompat_android_textOff android:textOff}</code></td><td></td></tr>
            <tr><td><code>{@link #SwitchCompat_android_textOn android:textOn}</code></td><td></td></tr>
            <tr><td><code>{@link #SwitchCompat_android_thumb android:thumb}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_showText com.flying.personal.computerforwakeupheroofdotalegend:showText}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_splitTrack com.flying.personal.computerforwakeupheroofdotalegend:splitTrack}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchMinWidth com.flying.personal.computerforwakeupheroofdotalegend:switchMinWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchPadding com.flying.personal.computerforwakeupheroofdotalegend:switchPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchTextAppearance com.flying.personal.computerforwakeupheroofdotalegend:switchTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_thumbTextPadding com.flying.personal.computerforwakeupheroofdotalegend:thumbTextPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_track com.flying.personal.computerforwakeupheroofdotalegend:track}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_showText com.flying.personal.dotawakeupassistant:showText}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_splitTrack com.flying.personal.dotawakeupassistant:splitTrack}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchMinWidth com.flying.personal.dotawakeupassistant:switchMinWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchPadding com.flying.personal.dotawakeupassistant:switchPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchTextAppearance com.flying.personal.dotawakeupassistant:switchTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_thumbTextPadding com.flying.personal.dotawakeupassistant:thumbTextPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_track com.flying.personal.dotawakeupassistant:track}</code></td><td></td></tr>
            </table>
            @see #SwitchCompat_android_textOff
            @see #SwitchCompat_android_textOn
@@ -4050,7 +4050,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int SwitchCompat_android_thumb = 2;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#showText}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#showText}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -4060,11 +4060,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:showText
+          @attr name com.flying.personal.dotawakeupassistant:showText
         */
         public static final int SwitchCompat_showText = 9;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#splitTrack}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#splitTrack}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -4074,11 +4074,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:splitTrack
+          @attr name com.flying.personal.dotawakeupassistant:splitTrack
         */
         public static final int SwitchCompat_splitTrack = 8;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#switchMinWidth}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#switchMinWidth}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -4090,11 +4090,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:switchMinWidth
+          @attr name com.flying.personal.dotawakeupassistant:switchMinWidth
         */
         public static final int SwitchCompat_switchMinWidth = 6;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#switchPadding}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#switchPadding}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -4106,21 +4106,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:switchPadding
+          @attr name com.flying.personal.dotawakeupassistant:switchPadding
         */
         public static final int SwitchCompat_switchPadding = 7;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#switchTextAppearance}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#switchTextAppearance}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:switchTextAppearance
+          @attr name com.flying.personal.dotawakeupassistant:switchTextAppearance
         */
         public static final int SwitchCompat_switchTextAppearance = 5;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#thumbTextPadding}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#thumbTextPadding}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -4132,17 +4132,17 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:thumbTextPadding
+          @attr name com.flying.personal.dotawakeupassistant:thumbTextPadding
         */
         public static final int SwitchCompat_thumbTextPadding = 4;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#track}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#track}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:track
+          @attr name com.flying.personal.dotawakeupassistant:track
         */
         public static final int SwitchCompat_track = 3;
         /** Attributes that can be used with a TextAppearance.
@@ -4155,7 +4155,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #TextAppearance_android_textSize android:textSize}</code></td><td></td></tr>
            <tr><td><code>{@link #TextAppearance_android_textStyle android:textStyle}</code></td><td></td></tr>
            <tr><td><code>{@link #TextAppearance_android_typeface android:typeface}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextAppearance_textAllCaps com.flying.personal.computerforwakeupheroofdotalegend:textAllCaps}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextAppearance_textAllCaps com.flying.personal.dotawakeupassistant:textAllCaps}</code></td><td></td></tr>
            </table>
            @see #TextAppearance_android_textColor
            @see #TextAppearance_android_textSize
@@ -4192,14 +4192,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int TextAppearance_android_typeface = 1;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#textAllCaps}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#textAllCaps}
           attribute's value can be found in the {@link #TextAppearance} array.
 
 
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:textAllCaps
+          @attr name com.flying.personal.dotawakeupassistant:textAllCaps
         */
         public static final int TextAppearance_textAllCaps = 4;
         /** Attributes that can be used with a Theme.
@@ -4208,113 +4208,113 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #Theme_actionBarDivider com.flying.personal.computerforwakeupheroofdotalegend:actionBarDivider}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarItemBackground com.flying.personal.computerforwakeupheroofdotalegend:actionBarItemBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarPopupTheme com.flying.personal.computerforwakeupheroofdotalegend:actionBarPopupTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarSize com.flying.personal.computerforwakeupheroofdotalegend:actionBarSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarSplitStyle com.flying.personal.computerforwakeupheroofdotalegend:actionBarSplitStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarStyle com.flying.personal.computerforwakeupheroofdotalegend:actionBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTabBarStyle com.flying.personal.computerforwakeupheroofdotalegend:actionBarTabBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTabStyle com.flying.personal.computerforwakeupheroofdotalegend:actionBarTabStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTabTextStyle com.flying.personal.computerforwakeupheroofdotalegend:actionBarTabTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTheme com.flying.personal.computerforwakeupheroofdotalegend:actionBarTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarWidgetTheme com.flying.personal.computerforwakeupheroofdotalegend:actionBarWidgetTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionButtonStyle com.flying.personal.computerforwakeupheroofdotalegend:actionButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionDropDownStyle com.flying.personal.computerforwakeupheroofdotalegend:actionDropDownStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionMenuTextAppearance com.flying.personal.computerforwakeupheroofdotalegend:actionMenuTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionMenuTextColor com.flying.personal.computerforwakeupheroofdotalegend:actionMenuTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeBackground com.flying.personal.computerforwakeupheroofdotalegend:actionModeBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCloseButtonStyle com.flying.personal.computerforwakeupheroofdotalegend:actionModeCloseButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCloseDrawable com.flying.personal.computerforwakeupheroofdotalegend:actionModeCloseDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCopyDrawable com.flying.personal.computerforwakeupheroofdotalegend:actionModeCopyDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCutDrawable com.flying.personal.computerforwakeupheroofdotalegend:actionModeCutDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeFindDrawable com.flying.personal.computerforwakeupheroofdotalegend:actionModeFindDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModePasteDrawable com.flying.personal.computerforwakeupheroofdotalegend:actionModePasteDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModePopupWindowStyle com.flying.personal.computerforwakeupheroofdotalegend:actionModePopupWindowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeSelectAllDrawable com.flying.personal.computerforwakeupheroofdotalegend:actionModeSelectAllDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeShareDrawable com.flying.personal.computerforwakeupheroofdotalegend:actionModeShareDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeSplitBackground com.flying.personal.computerforwakeupheroofdotalegend:actionModeSplitBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeStyle com.flying.personal.computerforwakeupheroofdotalegend:actionModeStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeWebSearchDrawable com.flying.personal.computerforwakeupheroofdotalegend:actionModeWebSearchDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionOverflowButtonStyle com.flying.personal.computerforwakeupheroofdotalegend:actionOverflowButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionOverflowMenuStyle com.flying.personal.computerforwakeupheroofdotalegend:actionOverflowMenuStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_activityChooserViewStyle com.flying.personal.computerforwakeupheroofdotalegend:activityChooserViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_alertDialogButtonGroupStyle com.flying.personal.computerforwakeupheroofdotalegend:alertDialogButtonGroupStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_alertDialogCenterButtons com.flying.personal.computerforwakeupheroofdotalegend:alertDialogCenterButtons}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_alertDialogStyle com.flying.personal.computerforwakeupheroofdotalegend:alertDialogStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_alertDialogTheme com.flying.personal.computerforwakeupheroofdotalegend:alertDialogTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarDivider com.flying.personal.dotawakeupassistant:actionBarDivider}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarItemBackground com.flying.personal.dotawakeupassistant:actionBarItemBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarPopupTheme com.flying.personal.dotawakeupassistant:actionBarPopupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarSize com.flying.personal.dotawakeupassistant:actionBarSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarSplitStyle com.flying.personal.dotawakeupassistant:actionBarSplitStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarStyle com.flying.personal.dotawakeupassistant:actionBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarTabBarStyle com.flying.personal.dotawakeupassistant:actionBarTabBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarTabStyle com.flying.personal.dotawakeupassistant:actionBarTabStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarTabTextStyle com.flying.personal.dotawakeupassistant:actionBarTabTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarTheme com.flying.personal.dotawakeupassistant:actionBarTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarWidgetTheme com.flying.personal.dotawakeupassistant:actionBarWidgetTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionButtonStyle com.flying.personal.dotawakeupassistant:actionButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionDropDownStyle com.flying.personal.dotawakeupassistant:actionDropDownStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionMenuTextAppearance com.flying.personal.dotawakeupassistant:actionMenuTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionMenuTextColor com.flying.personal.dotawakeupassistant:actionMenuTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeBackground com.flying.personal.dotawakeupassistant:actionModeBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeCloseButtonStyle com.flying.personal.dotawakeupassistant:actionModeCloseButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeCloseDrawable com.flying.personal.dotawakeupassistant:actionModeCloseDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeCopyDrawable com.flying.personal.dotawakeupassistant:actionModeCopyDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeCutDrawable com.flying.personal.dotawakeupassistant:actionModeCutDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeFindDrawable com.flying.personal.dotawakeupassistant:actionModeFindDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModePasteDrawable com.flying.personal.dotawakeupassistant:actionModePasteDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModePopupWindowStyle com.flying.personal.dotawakeupassistant:actionModePopupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeSelectAllDrawable com.flying.personal.dotawakeupassistant:actionModeSelectAllDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeShareDrawable com.flying.personal.dotawakeupassistant:actionModeShareDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeSplitBackground com.flying.personal.dotawakeupassistant:actionModeSplitBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeStyle com.flying.personal.dotawakeupassistant:actionModeStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeWebSearchDrawable com.flying.personal.dotawakeupassistant:actionModeWebSearchDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionOverflowButtonStyle com.flying.personal.dotawakeupassistant:actionOverflowButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionOverflowMenuStyle com.flying.personal.dotawakeupassistant:actionOverflowMenuStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_activityChooserViewStyle com.flying.personal.dotawakeupassistant:activityChooserViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_alertDialogButtonGroupStyle com.flying.personal.dotawakeupassistant:alertDialogButtonGroupStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_alertDialogCenterButtons com.flying.personal.dotawakeupassistant:alertDialogCenterButtons}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_alertDialogStyle com.flying.personal.dotawakeupassistant:alertDialogStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_alertDialogTheme com.flying.personal.dotawakeupassistant:alertDialogTheme}</code></td><td></td></tr>
            <tr><td><code>{@link #Theme_android_windowAnimationStyle android:windowAnimationStyle}</code></td><td></td></tr>
            <tr><td><code>{@link #Theme_android_windowIsFloating android:windowIsFloating}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_autoCompleteTextViewStyle com.flying.personal.computerforwakeupheroofdotalegend:autoCompleteTextViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_borderlessButtonStyle com.flying.personal.computerforwakeupheroofdotalegend:borderlessButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarButtonStyle com.flying.personal.computerforwakeupheroofdotalegend:buttonBarButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarNegativeButtonStyle com.flying.personal.computerforwakeupheroofdotalegend:buttonBarNegativeButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarNeutralButtonStyle com.flying.personal.computerforwakeupheroofdotalegend:buttonBarNeutralButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarPositiveButtonStyle com.flying.personal.computerforwakeupheroofdotalegend:buttonBarPositiveButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarStyle com.flying.personal.computerforwakeupheroofdotalegend:buttonBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonStyle com.flying.personal.computerforwakeupheroofdotalegend:buttonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonStyleSmall com.flying.personal.computerforwakeupheroofdotalegend:buttonStyleSmall}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_checkboxStyle com.flying.personal.computerforwakeupheroofdotalegend:checkboxStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_checkedTextViewStyle com.flying.personal.computerforwakeupheroofdotalegend:checkedTextViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorAccent com.flying.personal.computerforwakeupheroofdotalegend:colorAccent}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorButtonNormal com.flying.personal.computerforwakeupheroofdotalegend:colorButtonNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorControlActivated com.flying.personal.computerforwakeupheroofdotalegend:colorControlActivated}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorControlHighlight com.flying.personal.computerforwakeupheroofdotalegend:colorControlHighlight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorControlNormal com.flying.personal.computerforwakeupheroofdotalegend:colorControlNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorPrimary com.flying.personal.computerforwakeupheroofdotalegend:colorPrimary}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorPrimaryDark com.flying.personal.computerforwakeupheroofdotalegend:colorPrimaryDark}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorSwitchThumbNormal com.flying.personal.computerforwakeupheroofdotalegend:colorSwitchThumbNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dialogPreferredPadding com.flying.personal.computerforwakeupheroofdotalegend:dialogPreferredPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dialogTheme com.flying.personal.computerforwakeupheroofdotalegend:dialogTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dividerHorizontal com.flying.personal.computerforwakeupheroofdotalegend:dividerHorizontal}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dividerVertical com.flying.personal.computerforwakeupheroofdotalegend:dividerVertical}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dropDownListViewStyle com.flying.personal.computerforwakeupheroofdotalegend:dropDownListViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dropdownListPreferredItemHeight com.flying.personal.computerforwakeupheroofdotalegend:dropdownListPreferredItemHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_editTextBackground com.flying.personal.computerforwakeupheroofdotalegend:editTextBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_editTextColor com.flying.personal.computerforwakeupheroofdotalegend:editTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_editTextStyle com.flying.personal.computerforwakeupheroofdotalegend:editTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_homeAsUpIndicator com.flying.personal.computerforwakeupheroofdotalegend:homeAsUpIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listChoiceBackgroundIndicator com.flying.personal.computerforwakeupheroofdotalegend:listChoiceBackgroundIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listDividerAlertDialog com.flying.personal.computerforwakeupheroofdotalegend:listDividerAlertDialog}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPopupWindowStyle com.flying.personal.computerforwakeupheroofdotalegend:listPopupWindowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemHeight com.flying.personal.computerforwakeupheroofdotalegend:listPreferredItemHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemHeightLarge com.flying.personal.computerforwakeupheroofdotalegend:listPreferredItemHeightLarge}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemHeightSmall com.flying.personal.computerforwakeupheroofdotalegend:listPreferredItemHeightSmall}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemPaddingLeft com.flying.personal.computerforwakeupheroofdotalegend:listPreferredItemPaddingLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemPaddingRight com.flying.personal.computerforwakeupheroofdotalegend:listPreferredItemPaddingRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_panelBackground com.flying.personal.computerforwakeupheroofdotalegend:panelBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_panelMenuListTheme com.flying.personal.computerforwakeupheroofdotalegend:panelMenuListTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_panelMenuListWidth com.flying.personal.computerforwakeupheroofdotalegend:panelMenuListWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_popupMenuStyle com.flying.personal.computerforwakeupheroofdotalegend:popupMenuStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_popupWindowStyle com.flying.personal.computerforwakeupheroofdotalegend:popupWindowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_radioButtonStyle com.flying.personal.computerforwakeupheroofdotalegend:radioButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_ratingBarStyle com.flying.personal.computerforwakeupheroofdotalegend:ratingBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_searchViewStyle com.flying.personal.computerforwakeupheroofdotalegend:searchViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_selectableItemBackground com.flying.personal.computerforwakeupheroofdotalegend:selectableItemBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_selectableItemBackgroundBorderless com.flying.personal.computerforwakeupheroofdotalegend:selectableItemBackgroundBorderless}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_spinnerDropDownItemStyle com.flying.personal.computerforwakeupheroofdotalegend:spinnerDropDownItemStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_spinnerStyle com.flying.personal.computerforwakeupheroofdotalegend:spinnerStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_switchStyle com.flying.personal.computerforwakeupheroofdotalegend:switchStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceLargePopupMenu com.flying.personal.computerforwakeupheroofdotalegend:textAppearanceLargePopupMenu}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceListItem com.flying.personal.computerforwakeupheroofdotalegend:textAppearanceListItem}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceListItemSmall com.flying.personal.computerforwakeupheroofdotalegend:textAppearanceListItemSmall}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceSearchResultSubtitle com.flying.personal.computerforwakeupheroofdotalegend:textAppearanceSearchResultSubtitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceSearchResultTitle com.flying.personal.computerforwakeupheroofdotalegend:textAppearanceSearchResultTitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceSmallPopupMenu com.flying.personal.computerforwakeupheroofdotalegend:textAppearanceSmallPopupMenu}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textColorAlertDialogListItem com.flying.personal.computerforwakeupheroofdotalegend:textColorAlertDialogListItem}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textColorSearchUrl com.flying.personal.computerforwakeupheroofdotalegend:textColorSearchUrl}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_toolbarNavigationButtonStyle com.flying.personal.computerforwakeupheroofdotalegend:toolbarNavigationButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_toolbarStyle com.flying.personal.computerforwakeupheroofdotalegend:toolbarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowActionBar com.flying.personal.computerforwakeupheroofdotalegend:windowActionBar}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowActionBarOverlay com.flying.personal.computerforwakeupheroofdotalegend:windowActionBarOverlay}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowActionModeOverlay com.flying.personal.computerforwakeupheroofdotalegend:windowActionModeOverlay}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowFixedHeightMajor com.flying.personal.computerforwakeupheroofdotalegend:windowFixedHeightMajor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowFixedHeightMinor com.flying.personal.computerforwakeupheroofdotalegend:windowFixedHeightMinor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowFixedWidthMajor com.flying.personal.computerforwakeupheroofdotalegend:windowFixedWidthMajor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowFixedWidthMinor com.flying.personal.computerforwakeupheroofdotalegend:windowFixedWidthMinor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowMinWidthMajor com.flying.personal.computerforwakeupheroofdotalegend:windowMinWidthMajor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowMinWidthMinor com.flying.personal.computerforwakeupheroofdotalegend:windowMinWidthMinor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowNoTitle com.flying.personal.computerforwakeupheroofdotalegend:windowNoTitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_autoCompleteTextViewStyle com.flying.personal.dotawakeupassistant:autoCompleteTextViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_borderlessButtonStyle com.flying.personal.dotawakeupassistant:borderlessButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonBarButtonStyle com.flying.personal.dotawakeupassistant:buttonBarButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonBarNegativeButtonStyle com.flying.personal.dotawakeupassistant:buttonBarNegativeButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonBarNeutralButtonStyle com.flying.personal.dotawakeupassistant:buttonBarNeutralButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonBarPositiveButtonStyle com.flying.personal.dotawakeupassistant:buttonBarPositiveButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonBarStyle com.flying.personal.dotawakeupassistant:buttonBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonStyle com.flying.personal.dotawakeupassistant:buttonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonStyleSmall com.flying.personal.dotawakeupassistant:buttonStyleSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_checkboxStyle com.flying.personal.dotawakeupassistant:checkboxStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_checkedTextViewStyle com.flying.personal.dotawakeupassistant:checkedTextViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorAccent com.flying.personal.dotawakeupassistant:colorAccent}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorButtonNormal com.flying.personal.dotawakeupassistant:colorButtonNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorControlActivated com.flying.personal.dotawakeupassistant:colorControlActivated}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorControlHighlight com.flying.personal.dotawakeupassistant:colorControlHighlight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorControlNormal com.flying.personal.dotawakeupassistant:colorControlNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorPrimary com.flying.personal.dotawakeupassistant:colorPrimary}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorPrimaryDark com.flying.personal.dotawakeupassistant:colorPrimaryDark}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorSwitchThumbNormal com.flying.personal.dotawakeupassistant:colorSwitchThumbNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dialogPreferredPadding com.flying.personal.dotawakeupassistant:dialogPreferredPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dialogTheme com.flying.personal.dotawakeupassistant:dialogTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dividerHorizontal com.flying.personal.dotawakeupassistant:dividerHorizontal}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dividerVertical com.flying.personal.dotawakeupassistant:dividerVertical}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dropDownListViewStyle com.flying.personal.dotawakeupassistant:dropDownListViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dropdownListPreferredItemHeight com.flying.personal.dotawakeupassistant:dropdownListPreferredItemHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_editTextBackground com.flying.personal.dotawakeupassistant:editTextBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_editTextColor com.flying.personal.dotawakeupassistant:editTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_editTextStyle com.flying.personal.dotawakeupassistant:editTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_homeAsUpIndicator com.flying.personal.dotawakeupassistant:homeAsUpIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listChoiceBackgroundIndicator com.flying.personal.dotawakeupassistant:listChoiceBackgroundIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listDividerAlertDialog com.flying.personal.dotawakeupassistant:listDividerAlertDialog}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPopupWindowStyle com.flying.personal.dotawakeupassistant:listPopupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemHeight com.flying.personal.dotawakeupassistant:listPreferredItemHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemHeightLarge com.flying.personal.dotawakeupassistant:listPreferredItemHeightLarge}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemHeightSmall com.flying.personal.dotawakeupassistant:listPreferredItemHeightSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemPaddingLeft com.flying.personal.dotawakeupassistant:listPreferredItemPaddingLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemPaddingRight com.flying.personal.dotawakeupassistant:listPreferredItemPaddingRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_panelBackground com.flying.personal.dotawakeupassistant:panelBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_panelMenuListTheme com.flying.personal.dotawakeupassistant:panelMenuListTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_panelMenuListWidth com.flying.personal.dotawakeupassistant:panelMenuListWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_popupMenuStyle com.flying.personal.dotawakeupassistant:popupMenuStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_popupWindowStyle com.flying.personal.dotawakeupassistant:popupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_radioButtonStyle com.flying.personal.dotawakeupassistant:radioButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_ratingBarStyle com.flying.personal.dotawakeupassistant:ratingBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_searchViewStyle com.flying.personal.dotawakeupassistant:searchViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_selectableItemBackground com.flying.personal.dotawakeupassistant:selectableItemBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_selectableItemBackgroundBorderless com.flying.personal.dotawakeupassistant:selectableItemBackgroundBorderless}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_spinnerDropDownItemStyle com.flying.personal.dotawakeupassistant:spinnerDropDownItemStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_spinnerStyle com.flying.personal.dotawakeupassistant:spinnerStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_switchStyle com.flying.personal.dotawakeupassistant:switchStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceLargePopupMenu com.flying.personal.dotawakeupassistant:textAppearanceLargePopupMenu}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceListItem com.flying.personal.dotawakeupassistant:textAppearanceListItem}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceListItemSmall com.flying.personal.dotawakeupassistant:textAppearanceListItemSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceSearchResultSubtitle com.flying.personal.dotawakeupassistant:textAppearanceSearchResultSubtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceSearchResultTitle com.flying.personal.dotawakeupassistant:textAppearanceSearchResultTitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceSmallPopupMenu com.flying.personal.dotawakeupassistant:textAppearanceSmallPopupMenu}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textColorAlertDialogListItem com.flying.personal.dotawakeupassistant:textColorAlertDialogListItem}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textColorSearchUrl com.flying.personal.dotawakeupassistant:textColorSearchUrl}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_toolbarNavigationButtonStyle com.flying.personal.dotawakeupassistant:toolbarNavigationButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_toolbarStyle com.flying.personal.dotawakeupassistant:toolbarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowActionBar com.flying.personal.dotawakeupassistant:windowActionBar}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowActionBarOverlay com.flying.personal.dotawakeupassistant:windowActionBarOverlay}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowActionModeOverlay com.flying.personal.dotawakeupassistant:windowActionModeOverlay}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowFixedHeightMajor com.flying.personal.dotawakeupassistant:windowFixedHeightMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowFixedHeightMinor com.flying.personal.dotawakeupassistant:windowFixedHeightMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowFixedWidthMajor com.flying.personal.dotawakeupassistant:windowFixedWidthMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowFixedWidthMinor com.flying.personal.dotawakeupassistant:windowFixedWidthMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowMinWidthMajor com.flying.personal.dotawakeupassistant:windowMinWidthMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowMinWidthMinor com.flying.personal.dotawakeupassistant:windowMinWidthMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowNoTitle com.flying.personal.dotawakeupassistant:windowNoTitle}</code></td><td></td></tr>
            </table>
            @see #Theme_actionBarDivider
            @see #Theme_actionBarItemBackground
@@ -4454,37 +4454,37 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f0100ba, 0x7f0100bb, 0x7f0100bc
         };
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionBarDivider}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionBarDivider}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionBarDivider
+          @attr name com.flying.personal.dotawakeupassistant:actionBarDivider
         */
         public static final int Theme_actionBarDivider = 23;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionBarItemBackground}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionBarItemBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionBarItemBackground
+          @attr name com.flying.personal.dotawakeupassistant:actionBarItemBackground
         */
         public static final int Theme_actionBarItemBackground = 24;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionBarPopupTheme}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionBarPopupTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionBarPopupTheme
+          @attr name com.flying.personal.dotawakeupassistant:actionBarPopupTheme
         */
         public static final int Theme_actionBarPopupTheme = 17;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionBarSize}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionBarSize}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4504,111 +4504,111 @@ containing a value of this type.
 <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
 <tr><td><code>wrap_content</code></td><td>0</td><td></td></tr>
 </table>
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionBarSize
+          @attr name com.flying.personal.dotawakeupassistant:actionBarSize
         */
         public static final int Theme_actionBarSize = 22;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionBarSplitStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionBarSplitStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionBarSplitStyle
+          @attr name com.flying.personal.dotawakeupassistant:actionBarSplitStyle
         */
         public static final int Theme_actionBarSplitStyle = 19;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionBarStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionBarStyle
+          @attr name com.flying.personal.dotawakeupassistant:actionBarStyle
         */
         public static final int Theme_actionBarStyle = 18;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionBarTabBarStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionBarTabBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionBarTabBarStyle
+          @attr name com.flying.personal.dotawakeupassistant:actionBarTabBarStyle
         */
         public static final int Theme_actionBarTabBarStyle = 13;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionBarTabStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionBarTabStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionBarTabStyle
+          @attr name com.flying.personal.dotawakeupassistant:actionBarTabStyle
         */
         public static final int Theme_actionBarTabStyle = 12;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionBarTabTextStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionBarTabTextStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionBarTabTextStyle
+          @attr name com.flying.personal.dotawakeupassistant:actionBarTabTextStyle
         */
         public static final int Theme_actionBarTabTextStyle = 14;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionBarTheme}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionBarTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionBarTheme
+          @attr name com.flying.personal.dotawakeupassistant:actionBarTheme
         */
         public static final int Theme_actionBarTheme = 20;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionBarWidgetTheme}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionBarWidgetTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionBarWidgetTheme
+          @attr name com.flying.personal.dotawakeupassistant:actionBarWidgetTheme
         */
         public static final int Theme_actionBarWidgetTheme = 21;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionButtonStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionButtonStyle
+          @attr name com.flying.personal.dotawakeupassistant:actionButtonStyle
         */
         public static final int Theme_actionButtonStyle = 49;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionDropDownStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionDropDownStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionDropDownStyle
+          @attr name com.flying.personal.dotawakeupassistant:actionDropDownStyle
         */
         public static final int Theme_actionDropDownStyle = 45;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionMenuTextAppearance}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionMenuTextAppearance}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionMenuTextAppearance
+          @attr name com.flying.personal.dotawakeupassistant:actionMenuTextAppearance
         */
         public static final int Theme_actionMenuTextAppearance = 25;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionMenuTextColor}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionMenuTextColor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4616,181 +4616,181 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionMenuTextColor
+          @attr name com.flying.personal.dotawakeupassistant:actionMenuTextColor
         */
         public static final int Theme_actionMenuTextColor = 26;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionModeBackground}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionModeBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionModeBackground
+          @attr name com.flying.personal.dotawakeupassistant:actionModeBackground
         */
         public static final int Theme_actionModeBackground = 29;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionModeCloseButtonStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionModeCloseButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionModeCloseButtonStyle
+          @attr name com.flying.personal.dotawakeupassistant:actionModeCloseButtonStyle
         */
         public static final int Theme_actionModeCloseButtonStyle = 28;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionModeCloseDrawable}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionModeCloseDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionModeCloseDrawable
+          @attr name com.flying.personal.dotawakeupassistant:actionModeCloseDrawable
         */
         public static final int Theme_actionModeCloseDrawable = 31;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionModeCopyDrawable}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionModeCopyDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionModeCopyDrawable
+          @attr name com.flying.personal.dotawakeupassistant:actionModeCopyDrawable
         */
         public static final int Theme_actionModeCopyDrawable = 33;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionModeCutDrawable}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionModeCutDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionModeCutDrawable
+          @attr name com.flying.personal.dotawakeupassistant:actionModeCutDrawable
         */
         public static final int Theme_actionModeCutDrawable = 32;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionModeFindDrawable}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionModeFindDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionModeFindDrawable
+          @attr name com.flying.personal.dotawakeupassistant:actionModeFindDrawable
         */
         public static final int Theme_actionModeFindDrawable = 37;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionModePasteDrawable}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionModePasteDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionModePasteDrawable
+          @attr name com.flying.personal.dotawakeupassistant:actionModePasteDrawable
         */
         public static final int Theme_actionModePasteDrawable = 34;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionModePopupWindowStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionModePopupWindowStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionModePopupWindowStyle
+          @attr name com.flying.personal.dotawakeupassistant:actionModePopupWindowStyle
         */
         public static final int Theme_actionModePopupWindowStyle = 39;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionModeSelectAllDrawable}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionModeSelectAllDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionModeSelectAllDrawable
+          @attr name com.flying.personal.dotawakeupassistant:actionModeSelectAllDrawable
         */
         public static final int Theme_actionModeSelectAllDrawable = 35;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionModeShareDrawable}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionModeShareDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionModeShareDrawable
+          @attr name com.flying.personal.dotawakeupassistant:actionModeShareDrawable
         */
         public static final int Theme_actionModeShareDrawable = 36;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionModeSplitBackground}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionModeSplitBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionModeSplitBackground
+          @attr name com.flying.personal.dotawakeupassistant:actionModeSplitBackground
         */
         public static final int Theme_actionModeSplitBackground = 30;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionModeStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionModeStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionModeStyle
+          @attr name com.flying.personal.dotawakeupassistant:actionModeStyle
         */
         public static final int Theme_actionModeStyle = 27;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionModeWebSearchDrawable}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionModeWebSearchDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionModeWebSearchDrawable
+          @attr name com.flying.personal.dotawakeupassistant:actionModeWebSearchDrawable
         */
         public static final int Theme_actionModeWebSearchDrawable = 38;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionOverflowButtonStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionOverflowButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionOverflowButtonStyle
+          @attr name com.flying.personal.dotawakeupassistant:actionOverflowButtonStyle
         */
         public static final int Theme_actionOverflowButtonStyle = 15;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#actionOverflowMenuStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#actionOverflowMenuStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:actionOverflowMenuStyle
+          @attr name com.flying.personal.dotawakeupassistant:actionOverflowMenuStyle
         */
         public static final int Theme_actionOverflowMenuStyle = 16;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#activityChooserViewStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#activityChooserViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:activityChooserViewStyle
+          @attr name com.flying.personal.dotawakeupassistant:activityChooserViewStyle
         */
         public static final int Theme_activityChooserViewStyle = 57;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#alertDialogButtonGroupStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#alertDialogButtonGroupStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:alertDialogButtonGroupStyle
+          @attr name com.flying.personal.dotawakeupassistant:alertDialogButtonGroupStyle
         */
         public static final int Theme_alertDialogButtonGroupStyle = 90;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#alertDialogCenterButtons}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#alertDialogCenterButtons}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4800,27 +4800,27 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:alertDialogCenterButtons
+          @attr name com.flying.personal.dotawakeupassistant:alertDialogCenterButtons
         */
         public static final int Theme_alertDialogCenterButtons = 91;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#alertDialogStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#alertDialogStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:alertDialogStyle
+          @attr name com.flying.personal.dotawakeupassistant:alertDialogStyle
         */
         public static final int Theme_alertDialogStyle = 89;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#alertDialogTheme}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#alertDialogTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:alertDialogTheme
+          @attr name com.flying.personal.dotawakeupassistant:alertDialogTheme
         */
         public static final int Theme_alertDialogTheme = 92;
         /**
@@ -4836,117 +4836,117 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_android_windowIsFloating = 0;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#autoCompleteTextViewStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#autoCompleteTextViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:autoCompleteTextViewStyle
+          @attr name com.flying.personal.dotawakeupassistant:autoCompleteTextViewStyle
         */
         public static final int Theme_autoCompleteTextViewStyle = 97;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#borderlessButtonStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#borderlessButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:borderlessButtonStyle
+          @attr name com.flying.personal.dotawakeupassistant:borderlessButtonStyle
         */
         public static final int Theme_borderlessButtonStyle = 54;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#buttonBarButtonStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#buttonBarButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:buttonBarButtonStyle
+          @attr name com.flying.personal.dotawakeupassistant:buttonBarButtonStyle
         */
         public static final int Theme_buttonBarButtonStyle = 51;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#buttonBarNegativeButtonStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#buttonBarNegativeButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:buttonBarNegativeButtonStyle
+          @attr name com.flying.personal.dotawakeupassistant:buttonBarNegativeButtonStyle
         */
         public static final int Theme_buttonBarNegativeButtonStyle = 95;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#buttonBarNeutralButtonStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#buttonBarNeutralButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:buttonBarNeutralButtonStyle
+          @attr name com.flying.personal.dotawakeupassistant:buttonBarNeutralButtonStyle
         */
         public static final int Theme_buttonBarNeutralButtonStyle = 96;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#buttonBarPositiveButtonStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#buttonBarPositiveButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:buttonBarPositiveButtonStyle
+          @attr name com.flying.personal.dotawakeupassistant:buttonBarPositiveButtonStyle
         */
         public static final int Theme_buttonBarPositiveButtonStyle = 94;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#buttonBarStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#buttonBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:buttonBarStyle
+          @attr name com.flying.personal.dotawakeupassistant:buttonBarStyle
         */
         public static final int Theme_buttonBarStyle = 50;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#buttonStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#buttonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:buttonStyle
+          @attr name com.flying.personal.dotawakeupassistant:buttonStyle
         */
         public static final int Theme_buttonStyle = 98;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#buttonStyleSmall}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#buttonStyleSmall}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:buttonStyleSmall
+          @attr name com.flying.personal.dotawakeupassistant:buttonStyleSmall
         */
         public static final int Theme_buttonStyleSmall = 99;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#checkboxStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#checkboxStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:checkboxStyle
+          @attr name com.flying.personal.dotawakeupassistant:checkboxStyle
         */
         public static final int Theme_checkboxStyle = 100;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#checkedTextViewStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#checkedTextViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:checkedTextViewStyle
+          @attr name com.flying.personal.dotawakeupassistant:checkedTextViewStyle
         */
         public static final int Theme_checkedTextViewStyle = 101;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#colorAccent}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#colorAccent}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4957,11 +4957,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:colorAccent
+          @attr name com.flying.personal.dotawakeupassistant:colorAccent
         */
         public static final int Theme_colorAccent = 83;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#colorButtonNormal}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#colorButtonNormal}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4972,11 +4972,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:colorButtonNormal
+          @attr name com.flying.personal.dotawakeupassistant:colorButtonNormal
         */
         public static final int Theme_colorButtonNormal = 87;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#colorControlActivated}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#colorControlActivated}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4987,11 +4987,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:colorControlActivated
+          @attr name com.flying.personal.dotawakeupassistant:colorControlActivated
         */
         public static final int Theme_colorControlActivated = 85;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#colorControlHighlight}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#colorControlHighlight}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5002,11 +5002,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:colorControlHighlight
+          @attr name com.flying.personal.dotawakeupassistant:colorControlHighlight
         */
         public static final int Theme_colorControlHighlight = 86;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#colorControlNormal}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#colorControlNormal}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5017,11 +5017,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:colorControlNormal
+          @attr name com.flying.personal.dotawakeupassistant:colorControlNormal
         */
         public static final int Theme_colorControlNormal = 84;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#colorPrimary}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#colorPrimary}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5032,11 +5032,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:colorPrimary
+          @attr name com.flying.personal.dotawakeupassistant:colorPrimary
         */
         public static final int Theme_colorPrimary = 81;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#colorPrimaryDark}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#colorPrimaryDark}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5047,11 +5047,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:colorPrimaryDark
+          @attr name com.flying.personal.dotawakeupassistant:colorPrimaryDark
         */
         public static final int Theme_colorPrimaryDark = 82;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#colorSwitchThumbNormal}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#colorSwitchThumbNormal}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5062,11 +5062,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:colorSwitchThumbNormal
+          @attr name com.flying.personal.dotawakeupassistant:colorSwitchThumbNormal
         */
         public static final int Theme_colorSwitchThumbNormal = 88;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#dialogPreferredPadding}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#dialogPreferredPadding}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5078,51 +5078,51 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:dialogPreferredPadding
+          @attr name com.flying.personal.dotawakeupassistant:dialogPreferredPadding
         */
         public static final int Theme_dialogPreferredPadding = 43;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#dialogTheme}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#dialogTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:dialogTheme
+          @attr name com.flying.personal.dotawakeupassistant:dialogTheme
         */
         public static final int Theme_dialogTheme = 42;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#dividerHorizontal}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#dividerHorizontal}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:dividerHorizontal
+          @attr name com.flying.personal.dotawakeupassistant:dividerHorizontal
         */
         public static final int Theme_dividerHorizontal = 56;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#dividerVertical}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#dividerVertical}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:dividerVertical
+          @attr name com.flying.personal.dotawakeupassistant:dividerVertical
         */
         public static final int Theme_dividerVertical = 55;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#dropDownListViewStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#dropDownListViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:dropDownListViewStyle
+          @attr name com.flying.personal.dotawakeupassistant:dropDownListViewStyle
         */
         public static final int Theme_dropDownListViewStyle = 73;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#dropdownListPreferredItemHeight}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#dropdownListPreferredItemHeight}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5134,21 +5134,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:dropdownListPreferredItemHeight
+          @attr name com.flying.personal.dotawakeupassistant:dropdownListPreferredItemHeight
         */
         public static final int Theme_dropdownListPreferredItemHeight = 46;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#editTextBackground}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#editTextBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:editTextBackground
+          @attr name com.flying.personal.dotawakeupassistant:editTextBackground
         */
         public static final int Theme_editTextBackground = 63;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#editTextColor}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#editTextColor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5156,61 +5156,61 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:editTextColor
+          @attr name com.flying.personal.dotawakeupassistant:editTextColor
         */
         public static final int Theme_editTextColor = 62;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#editTextStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#editTextStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:editTextStyle
+          @attr name com.flying.personal.dotawakeupassistant:editTextStyle
         */
         public static final int Theme_editTextStyle = 102;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#homeAsUpIndicator}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#homeAsUpIndicator}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:homeAsUpIndicator
+          @attr name com.flying.personal.dotawakeupassistant:homeAsUpIndicator
         */
         public static final int Theme_homeAsUpIndicator = 48;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#listChoiceBackgroundIndicator}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#listChoiceBackgroundIndicator}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:listChoiceBackgroundIndicator
+          @attr name com.flying.personal.dotawakeupassistant:listChoiceBackgroundIndicator
         */
         public static final int Theme_listChoiceBackgroundIndicator = 80;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#listDividerAlertDialog}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#listDividerAlertDialog}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:listDividerAlertDialog
+          @attr name com.flying.personal.dotawakeupassistant:listDividerAlertDialog
         */
         public static final int Theme_listDividerAlertDialog = 44;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#listPopupWindowStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#listPopupWindowStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:listPopupWindowStyle
+          @attr name com.flying.personal.dotawakeupassistant:listPopupWindowStyle
         */
         public static final int Theme_listPopupWindowStyle = 74;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#listPreferredItemHeight}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#listPreferredItemHeight}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5222,11 +5222,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:listPreferredItemHeight
+          @attr name com.flying.personal.dotawakeupassistant:listPreferredItemHeight
         */
         public static final int Theme_listPreferredItemHeight = 68;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#listPreferredItemHeightLarge}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#listPreferredItemHeightLarge}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5238,11 +5238,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:listPreferredItemHeightLarge
+          @attr name com.flying.personal.dotawakeupassistant:listPreferredItemHeightLarge
         */
         public static final int Theme_listPreferredItemHeightLarge = 70;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#listPreferredItemHeightSmall}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#listPreferredItemHeightSmall}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5254,11 +5254,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:listPreferredItemHeightSmall
+          @attr name com.flying.personal.dotawakeupassistant:listPreferredItemHeightSmall
         */
         public static final int Theme_listPreferredItemHeightSmall = 69;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#listPreferredItemPaddingLeft}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#listPreferredItemPaddingLeft}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5270,11 +5270,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:listPreferredItemPaddingLeft
+          @attr name com.flying.personal.dotawakeupassistant:listPreferredItemPaddingLeft
         */
         public static final int Theme_listPreferredItemPaddingLeft = 71;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#listPreferredItemPaddingRight}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#listPreferredItemPaddingRight}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5286,31 +5286,31 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:listPreferredItemPaddingRight
+          @attr name com.flying.personal.dotawakeupassistant:listPreferredItemPaddingRight
         */
         public static final int Theme_listPreferredItemPaddingRight = 72;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#panelBackground}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#panelBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:panelBackground
+          @attr name com.flying.personal.dotawakeupassistant:panelBackground
         */
         public static final int Theme_panelBackground = 77;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#panelMenuListTheme}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#panelMenuListTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:panelMenuListTheme
+          @attr name com.flying.personal.dotawakeupassistant:panelMenuListTheme
         */
         public static final int Theme_panelMenuListTheme = 79;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#panelMenuListWidth}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#panelMenuListWidth}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5322,171 +5322,171 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:panelMenuListWidth
+          @attr name com.flying.personal.dotawakeupassistant:panelMenuListWidth
         */
         public static final int Theme_panelMenuListWidth = 78;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#popupMenuStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#popupMenuStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:popupMenuStyle
+          @attr name com.flying.personal.dotawakeupassistant:popupMenuStyle
         */
         public static final int Theme_popupMenuStyle = 60;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#popupWindowStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#popupWindowStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:popupWindowStyle
+          @attr name com.flying.personal.dotawakeupassistant:popupWindowStyle
         */
         public static final int Theme_popupWindowStyle = 61;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#radioButtonStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#radioButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:radioButtonStyle
+          @attr name com.flying.personal.dotawakeupassistant:radioButtonStyle
         */
         public static final int Theme_radioButtonStyle = 103;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#ratingBarStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#ratingBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:ratingBarStyle
+          @attr name com.flying.personal.dotawakeupassistant:ratingBarStyle
         */
         public static final int Theme_ratingBarStyle = 104;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#searchViewStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#searchViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:searchViewStyle
+          @attr name com.flying.personal.dotawakeupassistant:searchViewStyle
         */
         public static final int Theme_searchViewStyle = 67;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#selectableItemBackground}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#selectableItemBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:selectableItemBackground
+          @attr name com.flying.personal.dotawakeupassistant:selectableItemBackground
         */
         public static final int Theme_selectableItemBackground = 52;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#selectableItemBackgroundBorderless}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#selectableItemBackgroundBorderless}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:selectableItemBackgroundBorderless
+          @attr name com.flying.personal.dotawakeupassistant:selectableItemBackgroundBorderless
         */
         public static final int Theme_selectableItemBackgroundBorderless = 53;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#spinnerDropDownItemStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#spinnerDropDownItemStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:spinnerDropDownItemStyle
+          @attr name com.flying.personal.dotawakeupassistant:spinnerDropDownItemStyle
         */
         public static final int Theme_spinnerDropDownItemStyle = 47;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#spinnerStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#spinnerStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:spinnerStyle
+          @attr name com.flying.personal.dotawakeupassistant:spinnerStyle
         */
         public static final int Theme_spinnerStyle = 105;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#switchStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#switchStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:switchStyle
+          @attr name com.flying.personal.dotawakeupassistant:switchStyle
         */
         public static final int Theme_switchStyle = 106;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#textAppearanceLargePopupMenu}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#textAppearanceLargePopupMenu}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:textAppearanceLargePopupMenu
+          @attr name com.flying.personal.dotawakeupassistant:textAppearanceLargePopupMenu
         */
         public static final int Theme_textAppearanceLargePopupMenu = 40;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#textAppearanceListItem}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#textAppearanceListItem}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:textAppearanceListItem
+          @attr name com.flying.personal.dotawakeupassistant:textAppearanceListItem
         */
         public static final int Theme_textAppearanceListItem = 75;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#textAppearanceListItemSmall}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#textAppearanceListItemSmall}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:textAppearanceListItemSmall
+          @attr name com.flying.personal.dotawakeupassistant:textAppearanceListItemSmall
         */
         public static final int Theme_textAppearanceListItemSmall = 76;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#textAppearanceSearchResultSubtitle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#textAppearanceSearchResultSubtitle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:textAppearanceSearchResultSubtitle
+          @attr name com.flying.personal.dotawakeupassistant:textAppearanceSearchResultSubtitle
         */
         public static final int Theme_textAppearanceSearchResultSubtitle = 65;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#textAppearanceSearchResultTitle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#textAppearanceSearchResultTitle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:textAppearanceSearchResultTitle
+          @attr name com.flying.personal.dotawakeupassistant:textAppearanceSearchResultTitle
         */
         public static final int Theme_textAppearanceSearchResultTitle = 64;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#textAppearanceSmallPopupMenu}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#textAppearanceSmallPopupMenu}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:textAppearanceSmallPopupMenu
+          @attr name com.flying.personal.dotawakeupassistant:textAppearanceSmallPopupMenu
         */
         public static final int Theme_textAppearanceSmallPopupMenu = 41;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#textColorAlertDialogListItem}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#textColorAlertDialogListItem}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5494,11 +5494,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:textColorAlertDialogListItem
+          @attr name com.flying.personal.dotawakeupassistant:textColorAlertDialogListItem
         */
         public static final int Theme_textColorAlertDialogListItem = 93;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#textColorSearchUrl}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#textColorSearchUrl}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5506,31 +5506,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:textColorSearchUrl
+          @attr name com.flying.personal.dotawakeupassistant:textColorSearchUrl
         */
         public static final int Theme_textColorSearchUrl = 66;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#toolbarNavigationButtonStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#toolbarNavigationButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:toolbarNavigationButtonStyle
+          @attr name com.flying.personal.dotawakeupassistant:toolbarNavigationButtonStyle
         */
         public static final int Theme_toolbarNavigationButtonStyle = 59;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#toolbarStyle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#toolbarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:toolbarStyle
+          @attr name com.flying.personal.dotawakeupassistant:toolbarStyle
         */
         public static final int Theme_toolbarStyle = 58;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#windowActionBar}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#windowActionBar}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5540,11 +5540,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:windowActionBar
+          @attr name com.flying.personal.dotawakeupassistant:windowActionBar
         */
         public static final int Theme_windowActionBar = 2;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#windowActionBarOverlay}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#windowActionBarOverlay}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5554,11 +5554,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:windowActionBarOverlay
+          @attr name com.flying.personal.dotawakeupassistant:windowActionBarOverlay
         */
         public static final int Theme_windowActionBarOverlay = 4;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#windowActionModeOverlay}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#windowActionModeOverlay}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5568,11 +5568,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:windowActionModeOverlay
+          @attr name com.flying.personal.dotawakeupassistant:windowActionModeOverlay
         */
         public static final int Theme_windowActionModeOverlay = 5;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#windowFixedHeightMajor}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#windowFixedHeightMajor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5587,11 +5587,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:windowFixedHeightMajor
+          @attr name com.flying.personal.dotawakeupassistant:windowFixedHeightMajor
         */
         public static final int Theme_windowFixedHeightMajor = 9;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#windowFixedHeightMinor}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#windowFixedHeightMinor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5606,11 +5606,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:windowFixedHeightMinor
+          @attr name com.flying.personal.dotawakeupassistant:windowFixedHeightMinor
         */
         public static final int Theme_windowFixedHeightMinor = 7;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#windowFixedWidthMajor}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#windowFixedWidthMajor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5625,11 +5625,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:windowFixedWidthMajor
+          @attr name com.flying.personal.dotawakeupassistant:windowFixedWidthMajor
         */
         public static final int Theme_windowFixedWidthMajor = 6;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#windowFixedWidthMinor}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#windowFixedWidthMinor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5644,11 +5644,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:windowFixedWidthMinor
+          @attr name com.flying.personal.dotawakeupassistant:windowFixedWidthMinor
         */
         public static final int Theme_windowFixedWidthMinor = 8;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#windowMinWidthMajor}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#windowMinWidthMajor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5663,11 +5663,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:windowMinWidthMajor
+          @attr name com.flying.personal.dotawakeupassistant:windowMinWidthMajor
         */
         public static final int Theme_windowMinWidthMajor = 10;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#windowMinWidthMinor}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#windowMinWidthMinor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5682,11 +5682,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:windowMinWidthMinor
+          @attr name com.flying.personal.dotawakeupassistant:windowMinWidthMinor
         */
         public static final int Theme_windowMinWidthMinor = 11;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#windowNoTitle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#windowNoTitle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5696,7 +5696,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:windowNoTitle
+          @attr name com.flying.personal.dotawakeupassistant:windowNoTitle
         */
         public static final int Theme_windowNoTitle = 3;
         /** Attributes that can be used with a Toolbar.
@@ -5707,25 +5707,25 @@ containing a value of this type.
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #Toolbar_android_gravity android:gravity}</code></td><td></td></tr>
            <tr><td><code>{@link #Toolbar_android_minHeight android:minHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_collapseContentDescription com.flying.personal.computerforwakeupheroofdotalegend:collapseContentDescription}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_collapseIcon com.flying.personal.computerforwakeupheroofdotalegend:collapseIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetEnd com.flying.personal.computerforwakeupheroofdotalegend:contentInsetEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetLeft com.flying.personal.computerforwakeupheroofdotalegend:contentInsetLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetRight com.flying.personal.computerforwakeupheroofdotalegend:contentInsetRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetStart com.flying.personal.computerforwakeupheroofdotalegend:contentInsetStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_maxButtonHeight com.flying.personal.computerforwakeupheroofdotalegend:maxButtonHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_navigationContentDescription com.flying.personal.computerforwakeupheroofdotalegend:navigationContentDescription}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_navigationIcon com.flying.personal.computerforwakeupheroofdotalegend:navigationIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_popupTheme com.flying.personal.computerforwakeupheroofdotalegend:popupTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_subtitle com.flying.personal.computerforwakeupheroofdotalegend:subtitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_subtitleTextAppearance com.flying.personal.computerforwakeupheroofdotalegend:subtitleTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_title com.flying.personal.computerforwakeupheroofdotalegend:title}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginBottom com.flying.personal.computerforwakeupheroofdotalegend:titleMarginBottom}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginEnd com.flying.personal.computerforwakeupheroofdotalegend:titleMarginEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginStart com.flying.personal.computerforwakeupheroofdotalegend:titleMarginStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginTop com.flying.personal.computerforwakeupheroofdotalegend:titleMarginTop}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMargins com.flying.personal.computerforwakeupheroofdotalegend:titleMargins}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleTextAppearance com.flying.personal.computerforwakeupheroofdotalegend:titleTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_collapseContentDescription com.flying.personal.dotawakeupassistant:collapseContentDescription}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_collapseIcon com.flying.personal.dotawakeupassistant:collapseIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetEnd com.flying.personal.dotawakeupassistant:contentInsetEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetLeft com.flying.personal.dotawakeupassistant:contentInsetLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetRight com.flying.personal.dotawakeupassistant:contentInsetRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetStart com.flying.personal.dotawakeupassistant:contentInsetStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_maxButtonHeight com.flying.personal.dotawakeupassistant:maxButtonHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_navigationContentDescription com.flying.personal.dotawakeupassistant:navigationContentDescription}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_navigationIcon com.flying.personal.dotawakeupassistant:navigationIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_popupTheme com.flying.personal.dotawakeupassistant:popupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_subtitle com.flying.personal.dotawakeupassistant:subtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_subtitleTextAppearance com.flying.personal.dotawakeupassistant:subtitleTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_title com.flying.personal.dotawakeupassistant:title}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginBottom com.flying.personal.dotawakeupassistant:titleMarginBottom}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginEnd com.flying.personal.dotawakeupassistant:titleMarginEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginStart com.flying.personal.dotawakeupassistant:titleMarginStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginTop com.flying.personal.dotawakeupassistant:titleMarginTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMargins com.flying.personal.dotawakeupassistant:titleMargins}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleTextAppearance com.flying.personal.dotawakeupassistant:titleTextAppearance}</code></td><td></td></tr>
            </table>
            @see #Toolbar_android_gravity
            @see #Toolbar_android_minHeight
@@ -5770,7 +5770,7 @@ containing a value of this type.
         */
         public static final int Toolbar_android_minHeight = 1;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#collapseContentDescription}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#collapseContentDescription}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5780,21 +5780,21 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:collapseContentDescription
+          @attr name com.flying.personal.dotawakeupassistant:collapseContentDescription
         */
         public static final int Toolbar_collapseContentDescription = 18;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#collapseIcon}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#collapseIcon}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:collapseIcon
+          @attr name com.flying.personal.dotawakeupassistant:collapseIcon
         */
         public static final int Toolbar_collapseIcon = 17;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#contentInsetEnd}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#contentInsetEnd}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5806,11 +5806,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:contentInsetEnd
+          @attr name com.flying.personal.dotawakeupassistant:contentInsetEnd
         */
         public static final int Toolbar_contentInsetEnd = 5;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#contentInsetLeft}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#contentInsetLeft}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5822,11 +5822,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:contentInsetLeft
+          @attr name com.flying.personal.dotawakeupassistant:contentInsetLeft
         */
         public static final int Toolbar_contentInsetLeft = 6;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#contentInsetRight}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#contentInsetRight}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5838,11 +5838,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:contentInsetRight
+          @attr name com.flying.personal.dotawakeupassistant:contentInsetRight
         */
         public static final int Toolbar_contentInsetRight = 7;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#contentInsetStart}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#contentInsetStart}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5854,11 +5854,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:contentInsetStart
+          @attr name com.flying.personal.dotawakeupassistant:contentInsetStart
         */
         public static final int Toolbar_contentInsetStart = 4;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#maxButtonHeight}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#maxButtonHeight}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5870,11 +5870,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:maxButtonHeight
+          @attr name com.flying.personal.dotawakeupassistant:maxButtonHeight
         */
         public static final int Toolbar_maxButtonHeight = 16;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#navigationContentDescription}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#navigationContentDescription}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5884,31 +5884,31 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:navigationContentDescription
+          @attr name com.flying.personal.dotawakeupassistant:navigationContentDescription
         */
         public static final int Toolbar_navigationContentDescription = 20;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#navigationIcon}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#navigationIcon}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:navigationIcon
+          @attr name com.flying.personal.dotawakeupassistant:navigationIcon
         */
         public static final int Toolbar_navigationIcon = 19;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#popupTheme}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#popupTheme}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:popupTheme
+          @attr name com.flying.personal.dotawakeupassistant:popupTheme
         */
         public static final int Toolbar_popupTheme = 8;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#subtitle}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#subtitle}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5918,21 +5918,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:subtitle
+          @attr name com.flying.personal.dotawakeupassistant:subtitle
         */
         public static final int Toolbar_subtitle = 3;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#subtitleTextAppearance}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#subtitleTextAppearance}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:subtitleTextAppearance
+          @attr name com.flying.personal.dotawakeupassistant:subtitleTextAppearance
         */
         public static final int Toolbar_subtitleTextAppearance = 10;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#title}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#title}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5942,11 +5942,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:title
+          @attr name com.flying.personal.dotawakeupassistant:title
         */
         public static final int Toolbar_title = 2;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#titleMarginBottom}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#titleMarginBottom}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5958,11 +5958,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:titleMarginBottom
+          @attr name com.flying.personal.dotawakeupassistant:titleMarginBottom
         */
         public static final int Toolbar_titleMarginBottom = 15;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#titleMarginEnd}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#titleMarginEnd}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5974,11 +5974,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:titleMarginEnd
+          @attr name com.flying.personal.dotawakeupassistant:titleMarginEnd
         */
         public static final int Toolbar_titleMarginEnd = 13;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#titleMarginStart}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#titleMarginStart}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5990,11 +5990,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:titleMarginStart
+          @attr name com.flying.personal.dotawakeupassistant:titleMarginStart
         */
         public static final int Toolbar_titleMarginStart = 12;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#titleMarginTop}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#titleMarginTop}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6006,11 +6006,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:titleMarginTop
+          @attr name com.flying.personal.dotawakeupassistant:titleMarginTop
         */
         public static final int Toolbar_titleMarginTop = 14;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#titleMargins}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#titleMargins}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6022,17 +6022,17 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:titleMargins
+          @attr name com.flying.personal.dotawakeupassistant:titleMargins
         */
         public static final int Toolbar_titleMargins = 11;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#titleTextAppearance}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#titleTextAppearance}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:titleTextAppearance
+          @attr name com.flying.personal.dotawakeupassistant:titleTextAppearance
         */
         public static final int Toolbar_titleTextAppearance = 9;
         /** Attributes that can be used with a View.
@@ -6043,11 +6043,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #View_android_focusable android:focusable}</code></td><td></td></tr>
            <tr><td><code>{@link #View_android_theme android:theme}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_backgroundTint com.flying.personal.computerforwakeupheroofdotalegend:backgroundTint}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_backgroundTintMode com.flying.personal.computerforwakeupheroofdotalegend:backgroundTintMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_paddingEnd com.flying.personal.computerforwakeupheroofdotalegend:paddingEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_paddingStart com.flying.personal.computerforwakeupheroofdotalegend:paddingStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_theme com.flying.personal.computerforwakeupheroofdotalegend:theme}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_backgroundTint com.flying.personal.dotawakeupassistant:backgroundTint}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_backgroundTintMode com.flying.personal.dotawakeupassistant:backgroundTintMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_paddingEnd com.flying.personal.dotawakeupassistant:paddingEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_paddingStart com.flying.personal.dotawakeupassistant:paddingStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_theme com.flying.personal.dotawakeupassistant:theme}</code></td><td></td></tr>
            </table>
            @see #View_android_focusable
            @see #View_android_theme
@@ -6074,7 +6074,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int View_android_theme = 0;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#backgroundTint}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#backgroundTint}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -6085,11 +6085,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:backgroundTint
+          @attr name com.flying.personal.dotawakeupassistant:backgroundTint
         */
         public static final int View_backgroundTint = 5;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#backgroundTintMode}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#backgroundTintMode}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -6105,11 +6105,11 @@ containing a value of this type.
 <tr><td><code>multiply</code></td><td>14</td><td></td></tr>
 <tr><td><code>screen</code></td><td>15</td><td></td></tr>
 </table>
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:backgroundTintMode
+          @attr name com.flying.personal.dotawakeupassistant:backgroundTintMode
         */
         public static final int View_backgroundTintMode = 6;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#paddingEnd}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#paddingEnd}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -6121,11 +6121,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:paddingEnd
+          @attr name com.flying.personal.dotawakeupassistant:paddingEnd
         */
         public static final int View_paddingEnd = 3;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#paddingStart}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#paddingStart}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -6137,17 +6137,17 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:paddingStart
+          @attr name com.flying.personal.dotawakeupassistant:paddingStart
         */
         public static final int View_paddingStart = 2;
         /**
-          <p>This symbol is the offset where the {@link com.flying.personal.computerforwakeupheroofdotalegend.R.attr#theme}
+          <p>This symbol is the offset where the {@link com.flying.personal.dotawakeupassistant.R.attr#theme}
           attribute's value can be found in the {@link #View} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.flying.personal.computerforwakeupheroofdotalegend:theme
+          @attr name com.flying.personal.dotawakeupassistant:theme
         */
         public static final int View_theme = 4;
         /** Attributes that can be used with a ViewStubCompat.

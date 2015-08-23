@@ -2,7 +2,6 @@ package com.flying.personal.dotawakeupassistant.model;
 
 import com.flying.personal.dotawakeupassistant.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,8 +11,6 @@ public class Hero {
     protected String name;
     protected List<String> alias;
     protected WakeUpTask[] tasks;
-    //    protected WakeUpRepeatableTask task2;
-//    protected WakeUpTask task3;
     protected PositionType positionType;
     protected AbilityType abilityType;
     protected String picPath;
@@ -38,13 +35,6 @@ public class Hero {
         this.picPath = picPath;
     }
 
-    public List<String> GenerateIndex() {
-        List<String> result = new ArrayList<>(8);
-        //TODO Index create. Including full/first characters for Chinese name, short name, English name, alias.
-
-        return result;
-    }
-
     public WakeUpTask[] getTasks() {
         return tasks;
     }
@@ -64,30 +54,6 @@ public class Hero {
     public void setAlias(List<String> alias) {
         this.alias = alias;
     }
-//
-//    public WakeUpTask getTask1() {
-//        return task1;
-//    }
-//
-//    public void setTask1(WakeUpTask task1) {
-//        this.task1 = task1;
-//    }
-//
-//    public WakeUpRepeatableTask getTask2() {
-//        return task2;
-//    }
-//
-//    public void setTask2(WakeUpRepeatableTask task2) {
-//        this.task2 = task2;
-//    }
-//
-//    public WakeUpTask getTask3() {
-//        return task3;
-//    }
-//
-//    public void setTask3(WakeUpTask task3) {
-//        this.task3 = task3;
-//    }
 
     public AbilityType getAbilityType() {
         return abilityType;
@@ -101,7 +67,7 @@ public class Hero {
         return positionType;
     }
 
-    public int getPostionDisplayNameIndex() {
+    public int getPositionDisplayNameIndex() {
         switch (positionType) {
             case Front:
                 return R.string.position_front;
