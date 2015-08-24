@@ -166,4 +166,10 @@ public class DataProviderImplByMock implements IDataProvider {
     @Override
     public void init(String[] args) {
     }
+
+
+    @Override
+    public List<Hero> getMatchedHeroes(String index, Hero.PositionType position) {
+        return heroes;
+    }
 }

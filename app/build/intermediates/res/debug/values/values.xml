@@ -235,6 +235,7 @@
     <string name="app_name">刀塔传奇觉醒助手</string>
     <string name="equipRemind">其他碎片</string>
     <string name="only_can_input">qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM1234567890</string>
+    <string name="position_all">全部</string>
     <string name="position_back">后排</string>
     <string name="position_front">前排</string>
     <string name="position_middle">中排</string>

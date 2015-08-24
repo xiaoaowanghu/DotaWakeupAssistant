@@ -4,7 +4,9 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.view.GestureDetector;
 import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -20,6 +22,8 @@ import com.flying.personal.dotawakeupassistant.view.RoundImageView;
  */
 public class DetailActivity extends ActionBarActivity {
 
+    private GestureDetector gesture;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +34,41 @@ public class DetailActivity extends ActionBarActivity {
         Bundle bundle = this.getIntent().getExtras();
         String name = bundle.getString("name");
         showDetail(ProviderFactory.getInstance().getDataProvider().getHeroByName(name));
+
+        gesture = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() {
+            @Override
+            public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+
+                if (Math.abs(velocityX) >= 100 && e2.getX() - e1.getX() > 200) {
+                    close();
+                    return true;
+                } else {
+                    return super.onFling(e1, e2, velocityX, velocityY);
+                }
+            }
+        });
+    }
+
+    public void close() {
+        overridePendingTransition(R.anim.in_from_right, R.anim.out_from_left);
+        finish();
+    }
+
+    /**
+     * Called when a touch screen event was not handled by any of the views
+     * under it.  This is most useful to process touch events that happen
+     * outside of your window bounds, where there is no view to receive it.
+     *
+     * @param event The touch screen event being processed.
+     * @return Return true if you have consumed the event, false if you haven't.
+     * The default implementation always returns false.
+     */
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        if (!this.gesture.onTouchEvent(event))
+            return super.onTouchEvent(event);
+        else
+            return true;
     }
 
     private void showDetail(Hero hero) {

@@ -11,7 +11,10 @@ import android.widget.EditText;
 import com.flying.personal.dotawakeupassistant.R;
 
 /**
+ * Do not search while typing. Will delay some time to search
  * Created by wangxian on 8/21/2015.
+ * All rights reserved.
+ * Do not Copy/Edit/Use this class without permission.
  */
 public class QuickSearchEditText extends EditText {
 
@@ -33,6 +36,17 @@ public class QuickSearchEditText extends EditText {
                 1000);
         init();
         typedArray.recycle();
+    }
+
+    public void ClearSearchText(boolean trigerSearchEvent) {
+        if (trigerSearchEvent) {
+            setText("");
+        } else {
+            IOnSearch tmp = this.searchListener;
+            this.searchListener = null;
+            setText("");
+            this.searchListener = tmp;
+        }
     }
 
     private void init() {

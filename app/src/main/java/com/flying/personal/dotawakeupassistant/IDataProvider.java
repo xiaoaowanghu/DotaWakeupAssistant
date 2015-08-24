@@ -12,6 +12,8 @@ public interface IDataProvider {
 
     List<Hero> getMatchedHeroes(String index);
 
+    List<Hero> getMatchedHeroes(String index, Hero.PositionType position);
+
     int getTotalHeroCount();
 
     Hero getHeroByName(String heroName);

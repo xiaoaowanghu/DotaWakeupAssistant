@@ -32,12 +32,15 @@ public class DataProviderImplByFile implements IDataProvider {
 
     @Override
     public List<Hero> getMatchedHeroes(String index) {
+        if (index == null || index.length() == 0)
+            return getAllHeroes();
+
         List<Hero> result = new ArrayList<>(heroes.size());
 
         for (Hero h : heroes) {
             List<String> tmpList = searchIndexs.get(h);
             for (String s : tmpList) {
-                if (s.startsWith(index)) {
+                if (s.contains(index)) {
                     result.add(h);
                     break;
                 }
@@ -45,6 +48,33 @@ public class DataProviderImplByFile implements IDataProvider {
         }
 
         return result;
+    }
+
+    @Override
+    public List<Hero> getMatchedHeroes(String index, Hero.PositionType position) {
+        if (position == null)
+            return getMatchedHeroes(index);
+        else {
+            List<Hero> result = new ArrayList<>(heroes.size());
+            for (Hero h : heroes) {
+                if (h.getPositionType() != position)
+                    continue;
+
+                if (index != null && index.length() > 0) {
+                    List<String> tmpList = searchIndexs.get(h);
+                    for (String s : tmpList) {
+                        if (s.contains(index)) {
+                            result.add(h);
+                            break;
+                        }
+                    }
+                } else {
+                    result.add(h);
+                }
+            }
+
+            return result;
+        }
     }
 
     @Override
@@ -67,6 +97,9 @@ public class DataProviderImplByFile implements IDataProvider {
 
     @Override
     public List<Hero> getHeroesByPosition(Hero.PositionType position) {
+        if (position == null)
+            return getAllHeroes();
+
         List<Hero> result = new ArrayList<>(heroes.size());
 
         for (Hero h : heroes) {
@@ -79,6 +112,9 @@ public class DataProviderImplByFile implements IDataProvider {
 
     @Override
     public List<Hero> getHeroesByAbilityType(Hero.AbilityType abilityType) {
+        if (abilityType == null)
+            return getAllHeroes();
+
         List<Hero> result = new ArrayList<>(heroes.size());
 
         for (Hero h : heroes) {
@@ -126,6 +162,7 @@ public class DataProviderImplByFile implements IDataProvider {
     @Override
     public void save(String[] args) {
     }
+
 
     @Override
     public void visitHero(Hero hero) {

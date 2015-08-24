@@ -13,4 +13,5 @@
     <string name="ablility_type_Intelligence">智力</string>
     <string name="only_can_input">qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM1234567890</string>
     <string name="search_hint">T9搜索，包括中英文名及昵称</string>
+    <string name="position_all">全部</string>
 </resources>

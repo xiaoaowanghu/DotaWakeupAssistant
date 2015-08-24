@@ -1,14 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="0dp"
-    tools:context=".MainActivityFragment">
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <com.flying.personal.dotawakeupassistant.view.QuickSearchEditText
         android:id="@+id/search_editText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_margin="10dp"
         android:background="@drawable/round_edittext"
         android:ellipsize="end"
@@ -31,20 +31,4 @@
         android:src="@drawable/search5" />
 
 
-    <ScrollView
-        android:id="@+id/scrollView1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/search_editText">
-
-        <GridLayout
-            android:id="@+id/gridLayout"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="0dp"
-            android:padding="0dp" />
-
-    </ScrollView>
-
 </RelativeLayout>
-<!-- From: file:/D:/mywork/GitHub/DotaWakeupAssistant/app/src/main/res/layout/fragment_main.xml -->
