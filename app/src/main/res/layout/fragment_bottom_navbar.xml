@@ -3,7 +3,7 @@
     android:id="@+id/bottomList"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/dark_blue"
+    android:background="@drawable/tv_backgroud"
     android:orientation="horizontal">
 
     <LinearLayout
@@ -18,7 +18,7 @@
             style="@style/layout_vertical"
             android:layout_weight="2"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_launcher" />
+            android:src="@drawable/position_all" />
 
         <TextView
             android:id="@+id/tvAllPosition"
@@ -43,7 +43,7 @@
             style="@style/layout_vertical"
             android:layout_weight="2"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_launcher" />
+            android:src="@drawable/position_front" />
 
         <TextView
             android:id="@+id/tvFrontPosition"
@@ -54,7 +54,6 @@
             android:textSize="12sp" />
 
     </LinearLayout>
-
 
     <LinearLayout
         android:id="@+id/llMiddlePosition"
@@ -68,7 +67,7 @@
             style="@style/layout_vertical"
             android:layout_weight="2"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_launcher" />
+            android:src="@drawable/position_middle" />
 
         <TextView
             android:id="@+id/tvMiddlePosition"
@@ -92,7 +91,7 @@
             style="@style/layout_vertical"
             android:layout_weight="2"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_launcher" />
+            android:src="@drawable/position_back" />
 
         <TextView
             android:id="@+id/tvBackPosition"

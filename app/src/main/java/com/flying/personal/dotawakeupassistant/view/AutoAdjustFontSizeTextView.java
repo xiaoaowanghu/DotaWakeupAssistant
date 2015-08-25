@@ -26,7 +26,7 @@ public class AutoAdjustFontSizeTextView extends TextView {
     }
 
     /**
-     * Re size the font so the specified text fits in the text box * assuming
+     * Re size the position_front so the specified text fits in the text box * assuming
      * the text box is the specified width.
      */
     private void refitText(String text, int textWidth) {

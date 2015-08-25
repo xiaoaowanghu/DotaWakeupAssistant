@@ -10,8 +10,8 @@ public class GameStage {
     protected String name;
     protected int sequenceNo;
     protected int stamina;
-    protected List<String> output;
-    protected List<EquipmentItem> items;
+    protected List<EquipmentItem> outputItems;
+    protected int difficultyLevel = 3;
 
     public int getChapter() {
         return chapter;
@@ -23,10 +23,6 @@ public class GameStage {
 
     public int getStamina() {
         return stamina;
-    }
-
-    public List<String> getOutput() {
-        return output;
     }
 
     public void setChapter(int chapter) {
@@ -41,10 +37,6 @@ public class GameStage {
         this.stamina = stamina;
     }
 
-    public void setOutput(List<String> output) {
-        this.output = output;
-    }
-
     public String getName() {
         return name;
     }
@@ -53,11 +45,19 @@ public class GameStage {
         this.name = name;
     }
 
-    public List<EquipmentItem> getItems() {
-        return items;
+    public List<EquipmentItem> getOutputItems() {
+        return outputItems;
     }
 
-    public void setItems(List<EquipmentItem> items) {
-        this.items = items;
+    public void setOutputItems(List<EquipmentItem> outputItems) {
+        this.outputItems = outputItems;
+    }
+
+    public int getDifficultyLevel() {
+        return difficultyLevel;
+    }
+
+    public void setDifficultyLevel(int difficultyLevel) {
+        this.difficultyLevel = difficultyLevel;
     }
 }

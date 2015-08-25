@@ -14,9 +14,18 @@ public class Hero {
     protected PositionType positionType;
     protected AbilityType abilityType;
     protected String picPath;
+    protected String portraitPath;
 
     public enum PositionType {
         Front, Middle, Back
+    }
+
+    public String getPortraitPath() {
+        return portraitPath;
+    }
+
+    public void setPortraitPath(String portraitPath) {
+        this.portraitPath = portraitPath;
     }
 
     public enum AbilityType {

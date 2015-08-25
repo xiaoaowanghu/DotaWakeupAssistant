@@ -6,9 +6,12 @@ import android.support.v7.app.ActionBarActivity;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.GridLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.flying.personal.dotawakeupassistant.model.Hero;
 import com.flying.personal.dotawakeupassistant.util.Utility;
@@ -19,15 +22,17 @@ import java.util.List;
 public class MainActivity extends ActionBarActivity implements IOnSearch {
     private Hero.PositionType currentPositionType = null;
     private GridLayout mainHeroLayout;
+    private LayoutInflater infalter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        infalter = LayoutInflater.from(this);
         setContentView(R.layout.activity_main);
         LoadData();
-        String path = getSDpath();
+        String path = getAppPath();
         Log.d(this.getClass().getName(), "Path = " + path);
-        ProviderFactory.getInstance().getDataProvider().save(new String[]{path});
+//        ProviderFactory.getInstance().getDataProvider().save(new String[]{path});
     }
 
     private void LoadData() {
@@ -41,26 +46,26 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
         DisplayMetrics dm = new DisplayMetrics();
         this.getWindowManager().getDefaultDisplay().getMetrics(dm);
         int screenWidthPX = dm.widthPixels;
-        int colCount = 5;
-        int marginDP = 16;
+        int colCount = 4;
+        int marginDP = 5; //dp
         int marginPX = Utility.getInstance().dip2px(this, marginDP);
-        int picWidthPX = (int) ((screenWidthPX - marginPX * (colCount + 1)) / colCount * 1.0 - 0.5f);
+        int picWidthPX = (int) ((screenWidthPX - marginPX * (colCount + 1)) / colCount * 1.0);
 
         for (int i = 0; i < dataProvider.getTotalHeroCount(); i++) {
             final Hero h = heroes.get(i);
-            ImageView imageView = new ImageView(this);
-            GridLayout.LayoutParams imgLayout = new GridLayout.LayoutParams();
-            imgLayout.width = picWidthPX;
-            imgLayout.height = GridLayout.LayoutParams.WRAP_CONTENT;
-            imgLayout.setMargins(0, 0, 0, 0);
-            imageView.setLayoutParams(imgLayout);
-            imageView.setMaxWidth(picWidthPX);
-            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
-            imageView.setAdjustViewBounds(true);
-            imageView.setImageResource(R.drawable.ic_launcher);
-            imageView.setPadding(0, 0, 0, 0);
 
-            imageView.setOnClickListener(new View.OnClickListener() {
+            LinearLayout searchItemRoot = (LinearLayout) this.infalter.inflate(R.layout.search_item, null);
+            LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(picWidthPX, picWidthPX);
+            param.setMargins(0, 0, 0, 0);
+            searchItemRoot.setLayoutParams(param);
+            searchItemRoot.setOrientation(LinearLayout.VERTICAL);
+            searchItemRoot.setPadding(0, 0, 0, 0);
+
+            ImageView ivHeroPic = (ImageView) searchItemRoot.getChildAt(0);
+            ivHeroPic.setMaxWidth(picWidthPX);
+            ivHeroPic.setMaxHeight(picWidthPX);
+            ivHeroPic.setImageBitmap(Utility.getInstance().createImageFromAsset(this, h.getPortraitPath()));
+            ivHeroPic.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent();
@@ -71,13 +76,15 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
                     startActivity(intent);
                 }
             });
+            TextView tvHeroDisplayName = (TextView) searchItemRoot.getChildAt(1);
+            tvHeroDisplayName.setText(h.getName());
 
             GridLayout.Spec rowSpec = GridLayout.spec(i / colCount);
             GridLayout.Spec columnSpec = GridLayout.spec(i % colCount);
             GridLayout.LayoutParams params = new GridLayout.LayoutParams(rowSpec, columnSpec);
-            params.setGravity(Gravity.LEFT | Gravity.CENTER_VERTICAL);
             params.setMargins(marginPX, marginPX, 0, 0);
-            mainHeroLayout.addView(imageView, params);
+            params.setGravity(Gravity.CENTER);
+            mainHeroLayout.addView(searchItemRoot, params);
         }
     }
 

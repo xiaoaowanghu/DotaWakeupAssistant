@@ -38,7 +38,6 @@ public class DetailActivity extends ActionBarActivity {
         gesture = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() {
             @Override
             public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-
                 if (Math.abs(velocityX) >= 100 && e2.getX() - e1.getX() > 200) {
                     close();
                     return true;
@@ -50,19 +49,9 @@ public class DetailActivity extends ActionBarActivity {
     }
 
     public void close() {
-        overridePendingTransition(R.anim.in_from_right, R.anim.out_from_left);
         finish();
     }
 
-    /**
-     * Called when a touch screen event was not handled by any of the views
-     * under it.  This is most useful to process touch events that happen
-     * outside of your window bounds, where there is no view to receive it.
-     *
-     * @param event The touch screen event being processed.
-     * @return Return true if you have consumed the event, false if you haven't.
-     * The default implementation always returns false.
-     */
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         if (!this.gesture.onTouchEvent(event))
@@ -88,7 +77,7 @@ public class DetailActivity extends ActionBarActivity {
         ((TextView) findViewById(R.id.tvTask2)).setText(hero.getTasks()[1].getDescription());
         ((TextView) findViewById(R.id.tvTask3)).setText(hero.getTasks()[2].getDescription());
 
-        if (hero.getTasks()[0].getStage().getItems().size() > 0) {
+        if (hero.getTasks()[0].getStage().getOutputItems().size() > 0) {
             LinearLayout ll = (LinearLayout) findViewById(R.id.llTask1);
 
             LinearLayout subLayoutForEquip = new LinearLayout(this);
@@ -100,16 +89,17 @@ public class DetailActivity extends ActionBarActivity {
 
             TextView tv = new TextView(this);
             tv.setTextColor(getResources().getColor(R.color.white));
-            tv.setText(R.string.equipRemind);
+            tv.setText(R.string.extra_equipitem);
             tv.setTextAppearance(this, R.style.normal_margin);
-            tv.setTextSize(14); //14sp
+            tv.setTextSize(12); //12sp
+
             LinearLayout.LayoutParams layoutParamForTV = new LinearLayout.LayoutParams(
                     ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-            layoutParamForTV.gravity = Gravity.CENTER;
+            layoutParamForTV.gravity = Gravity.CENTER_VERTICAL | Gravity.LEFT;
             layoutParamForTV.setMargins(Utility.getInstance().dip2px(this, 10), 0, 0, 0);
             subLayoutForEquip.addView(tv, layoutParamForTV);
 
-            for (EquipmentItem item : hero.getTasks()[0].getStage().getItems()) {
+            for (EquipmentItem item : hero.getTasks()[0].getStage().getOutputItems()) {
                 ImageView ivEquip = new ImageView(this);
                 LinearLayout.LayoutParams imgLayout = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                 imgLayout.setMargins(2, 2, 0, 0);

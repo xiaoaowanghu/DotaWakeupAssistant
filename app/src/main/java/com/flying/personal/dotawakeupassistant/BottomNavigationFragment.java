@@ -1,18 +1,78 @@
 package com.flying.personal.dotawakeupassistant;
 
+import android.app.Activity;
 import android.app.Fragment;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+
+import com.flying.personal.dotawakeupassistant.model.Hero;
+import com.flying.personal.dotawakeupassistant.view.IOnSearch;
 
 /**
  * Created by wangxian on 8/24/2015.
  */
 public class BottomNavigationFragment extends Fragment {
+    private IOnSearch searchListener;
+    private LinearLayout selectedBackground;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View fragmentRoot = inflater.inflate(R.layout.fragment_bottom_navbar, container, false);
+        LinearLayout fragmentRoot = (LinearLayout) inflater.inflate(R.layout.fragment_bottom_navbar, container, false);
+        initListener(fragmentRoot);
         return fragmentRoot;
+    }
+
+    private void initListener(LinearLayout rootLayout) {
+        int i = 0;
+        for (; i < rootLayout.getChildCount(); i++) {
+            final LinearLayout ll = (LinearLayout) rootLayout.getChildAt(i);
+            ll.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (selectedBackground != null)
+                        selectedBackground.setBackgroundColor(Color.TRANSPARENT);
+
+                    ll.setBackgroundColor(getResources().getColor(R.color.bottom_selected_bg));
+                    selectedBackground = ll;
+
+                    if (searchListener != null) {
+                        Log.d("flying.click", getResources().getResourceName(ll.getId()));
+
+                        if (ll.getId() == R.id.l1AllPosition)
+                            searchListener.OnPositionTypeChange(null);
+                        else if (ll.getId() == R.id.llBackPosition)
+                            searchListener.OnPositionTypeChange(Hero.PositionType.Back);
+                        else if (ll.getId() == R.id.llFrontPosition)
+                            searchListener.OnPositionTypeChange(Hero.PositionType.Front);
+                        else if (ll.getId() == R.id.llMiddlePosition)
+                            searchListener.OnPositionTypeChange(Hero.PositionType.Middle);
+                        else
+                            throw new IllegalArgumentException("The click trigger is not correct");
+                    }
+                }
+            });
+
+            //选中第一个
+            if (i == 0) {
+                selectedBackground = ll;
+                ll.setBackgroundColor(getResources().getColor(R.color.bottom_selected_bg));
+            }
+        }
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+
+        if (activity instanceof IOnSearch) {
+            searchListener = (IOnSearch) activity;
+        } else {
+            throw new IllegalArgumentException("The activity must implement IOnSearch");
+        }
     }
 }
