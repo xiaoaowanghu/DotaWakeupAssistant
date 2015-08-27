@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tv_backgroud"
+    android:orientation="vertical">
+
+    <com.flying.personal.dotawakeupassistant.view.QuickSearchEditText
+        android:id="@+id/search_editText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/round_edittext"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:paddingBottom="10dip"
+        android:paddingLeft="47dp"
+        android:paddingTop="10dip"
+        android:singleLine="true"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/syncOperatorImg"
+        android:layout_width="46dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/search_editText"
+        android:layout_alignLeft="@id/search_editText"
+        android:layout_alignTop="@id/search_editText"
+        android:padding="2dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/search5" />
+
+
+</RelativeLayout>

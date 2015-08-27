@@ -12,6 +12,8 @@ public interface IDataProvider {
 
     List<Hero> getMatchedHeroes(String index);
 
+    List<Hero> getMatchedHeroes(String index, Hero.PositionType position);
+
     int getTotalHeroCount();
 
     Hero getHeroByName(String heroName);
@@ -19,4 +21,10 @@ public interface IDataProvider {
     List<Hero> getHeroesByPosition(Hero.PositionType position);
 
     List<Hero> getHeroesByAbilityType(Hero.AbilityType abilityType);
+
+    void init(String[] args);
+
+    void save(String[] args);
+
+    void visitHero(Hero hero);
 }

@@ -5,4 +5,14 @@
     <string name="task2">任务2</string>
     <string name="task3">任务3</string>
     <string name="equipRemind">其他碎片</string>
+    <string name="position_front">前排</string>
+    <string name="position_middle">中排</string>
+    <string name="position_back">后排</string>
+    <string name="ability_type_strength">力量</string>
+    <string name="ablility_type_Agility">敏捷</string>
+    <string name="ablility_type_Intelligence">智力</string>
+    <string name="only_can_input">qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM1234567890</string>
+    <string name="search_hint">T9搜索，包括中英文名及昵称</string>
+    <string name="position_all">全部</string>
+    <string name="extra_equipitem">该关还可获得</string>
 </resources>

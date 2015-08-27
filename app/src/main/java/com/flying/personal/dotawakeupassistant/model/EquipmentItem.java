@@ -5,7 +5,7 @@ package com.flying.personal.dotawakeupassistant.model;
  */
 public class EquipmentItem {
     private String displayName;
-    private String path;
+    private String picPath;
 
     public String getDisplayName() {
         return displayName;
@@ -15,11 +15,11 @@ public class EquipmentItem {
         this.displayName = displayName;
     }
 
-    public String getPath() {
-        return path;
+    public String getPicPath() {
+        return picPath;
     }
 
-    public void setPath(String path) {
-        this.path = path;
+    public void setPicPath(String picPath) {
+        this.picPath = picPath;
     }
 }

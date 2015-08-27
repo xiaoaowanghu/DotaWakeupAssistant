@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomList"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/tv_backgroud"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/l1AllPosition"
+        style="@style/layout_horizontal"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivAllPosition"
+            style="@style/layout_vertical"
+            android:layout_weight="2"
+            android:scaleType="fitCenter"
+            android:src="@drawable/position_all" />
+
+        <TextView
+            android:id="@+id/tvAllPosition"
+            style="@style/layout_vertical"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/position_all"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llFrontPosition"
+        style="@style/layout_horizontal"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivFrontPosition"
+            style="@style/layout_vertical"
+            android:layout_weight="2"
+            android:scaleType="fitCenter"
+            android:src="@drawable/position_front" />
+
+        <TextView
+            android:id="@+id/tvFrontPosition"
+            style="@style/layout_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/position_front"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llMiddlePosition"
+        style="@style/layout_horizontal"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivMiddlePosition"
+            style="@style/layout_vertical"
+            android:layout_weight="2"
+            android:scaleType="fitCenter"
+            android:src="@drawable/position_middle" />
+
+        <TextView
+            android:id="@+id/tvMiddlePosition"
+            style="@style/layout_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/position_middle"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llBackPosition"
+        style="@style/layout_horizontal"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivBackPosition"
+            style="@style/layout_vertical"
+            android:layout_weight="2"
+            android:scaleType="fitCenter"
+            android:src="@drawable/position_back" />
+
+        <TextView
+            android:id="@+id/tvBackPosition"
+            style="@style/layout_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/position_back"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</LinearLayout>

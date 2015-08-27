@@ -4,8 +4,9 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.util.DisplayMetrics;
+import android.view.GestureDetector;
 import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -14,12 +15,14 @@ import android.widget.TextView;
 import com.flying.personal.dotawakeupassistant.model.EquipmentItem;
 import com.flying.personal.dotawakeupassistant.model.Hero;
 import com.flying.personal.dotawakeupassistant.util.Utility;
-import com.flying.personal.dotawakeupassistant.view.RoundImageView2;
+import com.flying.personal.dotawakeupassistant.view.RoundImageView;
 
 /**
  * Created by wangxian on 8/13/2015.
  */
 public class DetailActivity extends ActionBarActivity {
+
+    private GestureDetector gesture;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,20 +34,50 @@ public class DetailActivity extends ActionBarActivity {
         Bundle bundle = this.getIntent().getExtras();
         String name = bundle.getString("name");
         showDetail(ProviderFactory.getInstance().getDataProvider().getHeroByName(name));
+
+        gesture = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() {
+            @Override
+            public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+                if (Math.abs(velocityX) >= 100 && e2.getX() - e1.getX() > 200) {
+                    close();
+                    return true;
+                } else {
+                    return super.onFling(e1, e2, velocityX, velocityY);
+                }
+            }
+        });
+    }
+
+    public void close() {
+        finish();
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        if (!this.gesture.onTouchEvent(event))
+            return super.onTouchEvent(event);
+        else
+            return true;
     }
 
     private void showDetail(Hero hero) {
-        RoundImageView2 ivPortrait = (RoundImageView2) findViewById(R.id.ivHeroPortrait);
-//        Bitmap heroPicBM = Utility.getInstance().createImageFromAsset(this, hero.getPicPath());
+        RoundImageView ivPortrait = (RoundImageView) findViewById(R.id.ivHeroPortrait);
         ivPortrait.setFilePath(hero.getPicPath());
+        ivPortrait.invalidate();
         TextView tvName = (TextView) findViewById(R.id.tvHeroName);
         tvName.setText(hero.getName());
 
-        ((TextView) findViewById(R.id.tvTask1)).setText(hero.getTask1().getDescription());
-        ((TextView) findViewById(R.id.tvTask2)).setText(hero.getTask2().getDescription());
-        ((TextView) findViewById(R.id.tvTask3)).setText(hero.getTask3().getDescription());
+        TextView tvPosition = (TextView) findViewById(R.id.tvPositsion);
+        tvPosition.setText("位置: " + getString(hero.getPositionDisplayNameIndex()));
 
-        if (hero.getTask1().getStage().getItems().size() > 0) {
+        TextView tvAbility = (TextView) findViewById(R.id.tvAbilityType);
+        tvAbility.setText("主属性: " + getString(hero.getAbilityDisplayNameIndex()));
+
+        ((TextView) findViewById(R.id.tvTask1)).setText(hero.getTasks()[0].getDescription());
+        ((TextView) findViewById(R.id.tvTask2)).setText(hero.getTasks()[1].getDescription());
+        ((TextView) findViewById(R.id.tvTask3)).setText(hero.getTasks()[2].getDescription());
+
+        if (hero.getTasks()[0].getStage().getOutputItems().size() > 0) {
             LinearLayout ll = (LinearLayout) findViewById(R.id.llTask1);
 
             LinearLayout subLayoutForEquip = new LinearLayout(this);
@@ -54,36 +87,26 @@ public class DetailActivity extends ActionBarActivity {
             subLayoutForEquip.setLayoutParams(param);
             ll.addView(subLayoutForEquip);
 
-            DisplayMetrics dm = new DisplayMetrics();
-            this.getWindowManager().getDefaultDisplay().getMetrics(dm);
-            int screenWidthPX = dm.widthPixels;
-            int colCount = 5;
-            int marginDP = 2;
-            int marginPX = Utility.getInstance().dip2px(this, marginDP);
-            int picWidthPX = (int) ((screenWidthPX - marginPX * (colCount + 1)) / colCount * 1.0 - 0.5f);
-
             TextView tv = new TextView(this);
-//            tv.setTextColor(getResources().getColor(R.color.white));
-            tv.setText(R.string.equipRemind);
+            tv.setTextColor(getResources().getColor(R.color.white));
+            tv.setText(R.string.extra_equipitem);
             tv.setTextAppearance(this, R.style.normal_margin);
-            tv.setTextSize(14); //14sp
+            tv.setTextSize(12); //12sp
+
             LinearLayout.LayoutParams layoutParamForTV = new LinearLayout.LayoutParams(
                     ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-            layoutParamForTV.gravity = Gravity.CENTER;
+            layoutParamForTV.gravity = Gravity.CENTER_VERTICAL | Gravity.LEFT;
             layoutParamForTV.setMargins(Utility.getInstance().dip2px(this, 10), 0, 0, 0);
             subLayoutForEquip.addView(tv, layoutParamForTV);
 
-            for (EquipmentItem item : hero.getTask1().getStage().getItems()) {
+            for (EquipmentItem item : hero.getTasks()[0].getStage().getOutputItems()) {
                 ImageView ivEquip = new ImageView(this);
                 LinearLayout.LayoutParams imgLayout = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                 imgLayout.setMargins(2, 2, 0, 0);
-
+                // set imageview property
                 ivEquip.setLayoutParams(imgLayout);
-                //ivEquip.setMaxWidth(picWidthPX);
-                //ivEquip.setScaleType(ImageView.ScaleType.FIT_XY);
                 ivEquip.setAdjustViewBounds(true);
-//                ivEquip.setImageResource(res.getIdentifier(item.getPath(), "drawable", getPackageName()));
-                Bitmap equipBM = Utility.getInstance().createImageFromAsset(this, item.getPath());
+                Bitmap equipBM = Utility.getInstance().createImageFromAsset(this, item.getPicPath());
                 ivEquip.setImageBitmap(equipBM);
                 ivEquip.setBackgroundResource(R.drawable.equip_image_border);
                 subLayoutForEquip.addView(ivEquip);

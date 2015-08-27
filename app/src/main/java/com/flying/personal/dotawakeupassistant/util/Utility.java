@@ -3,8 +3,7 @@ package com.flying.personal.dotawakeupassistant.util;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Matrix;
-import android.graphics.drawable.Drawable;
+import android.os.Environment;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -92,6 +91,10 @@ public class Utility {
         } else {
             return upperBound;
         }
+    }
+
+    public boolean isSDCardAvailable() {
+        return Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
     }
 
 }

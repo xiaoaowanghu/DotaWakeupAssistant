@@ -11,7 +11,7 @@ import com.flying.personal.dotawakeupassistant.R;
 import com.flying.personal.dotawakeupassistant.util.Utility;
 
 public class AutoAdjustFontSizeTextView extends TextView {
-    private final static float DEFAULT_MIN_TEXT_SIZE = 12; //sp
+    private final static float DEFAULT_MIN_TEXT_SIZE = 8; //sp
 
     // Attributes
     private float minTextSizePX;
@@ -26,7 +26,7 @@ public class AutoAdjustFontSizeTextView extends TextView {
     }
 
     /**
-     * Re size the font so the specified text fits in the text box * assuming
+     * Re size the position_front so the specified text fits in the text box * assuming
      * the text box is the specified width.
      */
     private void refitText(String text, int textWidth) {
