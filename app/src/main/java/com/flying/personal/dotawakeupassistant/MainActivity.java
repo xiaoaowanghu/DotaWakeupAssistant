@@ -63,6 +63,7 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
 
         currentHeroes = ProviderFactory.getInstance().getDataProvider().getAllHeroes();
         showHeroes(null);
+        mainHeroLayout.requestFocus();
     }
 
 

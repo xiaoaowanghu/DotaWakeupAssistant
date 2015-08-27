@@ -20,7 +20,7 @@ public class SpecialStage extends GameStage {
         weekdayCollection.add(Weekday.Saturday);
     }
 
-    interface Weekday {
+    public interface Weekday {
         int Sunday = 2 ^ 0;
         int Monday = 2 ^ 1;
         int Tuesday = 2 ^ 2;

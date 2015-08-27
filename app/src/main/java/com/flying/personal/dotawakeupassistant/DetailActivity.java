@@ -67,15 +67,12 @@ public class DetailActivity extends ActionBarActivity {
         TextView tvName = (TextView) findViewById(R.id.tvHeroName);
         tvName.setText(hero.getName());
 
-        TextView tvPosition = (TextView) findViewById(R.id.tvPositsion);
-        tvPosition.setText("位置: " + getString(hero.getPositionDisplayNameIndex()));
+        TextView tvSkillDesc = (TextView) findViewById(R.id.tvSkillDesc);
+        tvSkillDesc.setText("位置: " + hero.getWakeupSkill());
 
-        TextView tvAbility = (TextView) findViewById(R.id.tvAbilityType);
-        tvAbility.setText("主属性: " + getString(hero.getAbilityDisplayNameIndex()));
-
-        ((TextView) findViewById(R.id.tvTask1)).setText(hero.getTasks()[0].getDescription());
-        ((TextView) findViewById(R.id.tvTask2)).setText(hero.getTasks()[1].getDescription());
-        ((TextView) findViewById(R.id.tvTask3)).setText(hero.getTasks()[2].getDescription());
+        ((TextView) findViewById(R.id.tvTask1)).setText(hero.getTasks()[0].getDisplayInfo());
+        ((TextView) findViewById(R.id.tvTask2)).setText(hero.getTasks()[1].getDisplayInfo());
+        ((TextView) findViewById(R.id.tvTask3)).setText(hero.getTasks()[2].getDisplayInfo());
 
         if (hero.getTasks()[0].getStage().getOutputItems().size() > 0) {
             LinearLayout ll = (LinearLayout) findViewById(R.id.llTask1);

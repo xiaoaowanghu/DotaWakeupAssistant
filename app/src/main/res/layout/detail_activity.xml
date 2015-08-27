@@ -44,22 +44,15 @@
                 android:textSize="30sp" />
 
             <TextView
-                android:id="@+id/tvPositsion"
+                android:id="@+id/tvSkillDesc"
                 style="@style/layout_vertical"
-                android:layout_weight="309"
-                android:gravity="center"
-                android:text="位置: 前排"
+                android:layout_weight="618"
+                android:gravity="left|center_vertical"
+                android:lines="4"
+                android:text="位置: 三大法撒旦发射大法师多发时段发生三大法撒旦发射大撒旦发射"
                 android:textColor="@color/font_color5"
                 android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/tvAbilityType"
-                style="@style/layout_vertical"
-                android:layout_weight="309"
-                android:gravity="top|center_horizontal"
-                android:text="主要属性: 敏捷"
-                android:textColor="@color/font_color5"
-                android:textSize="16sp" />
         </LinearLayout>
     </LinearLayout>
 
