@@ -9,13 +9,13 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.GridLayout;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.flying.personal.dotawakeupassistant.model.Hero;
 import com.flying.personal.dotawakeupassistant.util.Utility;
 import com.flying.personal.dotawakeupassistant.view.IOnSearch;
+import com.flying.personal.dotawakeupassistant.view.RoundImageView;
 
 import java.util.List;
 
@@ -23,8 +23,9 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
     private Hero.PositionType currentPositionType = null;
     private GridLayout mainHeroLayout;
     private LayoutInflater infalter;
+    private View.OnClickListener imageClickListener;
+    private List<Hero> currentHeroes;
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         infalter = LayoutInflater.from(this);
@@ -37,11 +38,27 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
 
     private void LoadData() {
         mainHeroLayout = (GridLayout) this.findViewById(R.id.gridLayout);
-        List<Hero> heroes = ProviderFactory.getInstance().getDataProvider().getAllHeroes();
-        ShowHeroes(heroes);
+        imageClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String name = v.getTag().toString();
+                Intent intent = new Intent();
+                Bundle bundle = new Bundle();
+                bundle.putString("name", name);
+                intent.putExtras(bundle);
+                intent.setClass(MainActivity.this, DetailActivity.class);
+                startActivity(intent);
+            }
+        };
+
+        currentHeroes = ProviderFactory.getInstance().getDataProvider().getAllHeroes();
+        ShowHeroes();
     }
 
-    private void ShowHeroes(List<Hero> heroes) {
+
+    private void ShowHeroes() {
+        List<Hero> heroes = currentHeroes;
+        mainHeroLayout.removeAllViews();
         IDataProvider dataProvider = ProviderFactory.getInstance().getDataProvider();
         DisplayMetrics dm = new DisplayMetrics();
         this.getWindowManager().getDefaultDisplay().getMetrics(dm);
@@ -53,7 +70,6 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
 
         for (int i = 0; i < dataProvider.getTotalHeroCount(); i++) {
             final Hero h = heroes.get(i);
-
             LinearLayout searchItemRoot = (LinearLayout) this.infalter.inflate(R.layout.search_item, null);
             LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(picWidthPX, picWidthPX);
             param.setMargins(0, 0, 0, 0);
@@ -61,21 +77,21 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
             searchItemRoot.setOrientation(LinearLayout.VERTICAL);
             searchItemRoot.setPadding(0, 0, 0, 0);
 
-            ImageView ivHeroPic = (ImageView) searchItemRoot.getChildAt(0);
-            ivHeroPic.setMaxWidth(picWidthPX);
-            ivHeroPic.setMaxHeight(picWidthPX);
-            ivHeroPic.setImageBitmap(Utility.getInstance().createImageFromAsset(this, h.getPortraitPath()));
-            ivHeroPic.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent();
-                    Bundle bundle = new Bundle();
-                    bundle.putString("name", h.getName());
-                    intent.putExtras(bundle);
-                    intent.setClass(MainActivity.this, DetailActivity.class);
-                    startActivity(intent);
-                }
-            });
+//            ImageView ivHeroPic = (ImageView) searchItemRoot.getChildAt(0);
+//            ivHeroPic.setMaxHeight(picWidthPX);
+//            ivHeroPic.setMaxWidth(picWidthPX);
+//            ivHeroPic.setTag(h.getName());
+//            ivHeroPic.setImageBitmap(Utility.getInstance().createImageFromAsset(this, h.getPortraitPath()));
+//            ivHeroPic.setOnClickListener(imageClickListener);
+
+            RoundImageView ivHeroPic = (RoundImageView) searchItemRoot.getChildAt(0);
+            ivHeroPic.getLayoutParams().width = picWidthPX;
+            ivHeroPic.getLayoutParams().height = picWidthPX;
+            ivHeroPic.setTag(h.getName());
+            ivHeroPic.setFilePath(h.getPortraitPath());
+            ivHeroPic.invalidate();
+            ivHeroPic.setOnClickListener(imageClickListener);
+
             TextView tvHeroDisplayName = (TextView) searchItemRoot.getChildAt(1);
             tvHeroDisplayName.setText(h.getName());
 
@@ -90,10 +106,10 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
 
     @Override
     public void OnSearch(String text) {
-        List<Hero> heroes = ProviderFactory.getInstance().getDataProvider()
+        currentHeroes = ProviderFactory.getInstance().getDataProvider()
                 .getMatchedHeroes(text, currentPositionType);
 
-        ShowHeroes(heroes);
+        ShowHeroes();
     }
 
     @Override

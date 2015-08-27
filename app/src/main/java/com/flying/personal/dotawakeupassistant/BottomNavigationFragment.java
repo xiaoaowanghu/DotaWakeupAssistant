@@ -18,9 +18,9 @@ import com.flying.personal.dotawakeupassistant.view.IOnSearch;
  */
 public class BottomNavigationFragment extends Fragment {
     private IOnSearch searchListener;
-    private LinearLayout selectedBackground;
+    private View selectedBackground;
+    private View.OnClickListener clickListener;
 
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         LinearLayout fragmentRoot = (LinearLayout) inflater.inflate(R.layout.fragment_bottom_navbar, container, false);
         initListener(fragmentRoot);
@@ -29,34 +29,36 @@ public class BottomNavigationFragment extends Fragment {
 
     private void initListener(LinearLayout rootLayout) {
         int i = 0;
+        clickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (selectedBackground != null)
+                    selectedBackground.setBackgroundColor(Color.TRANSPARENT);
+
+                View ll = v;
+                ll.setBackgroundColor(getResources().getColor(R.color.bottom_selected_bg));
+                selectedBackground = ll;
+
+                if (searchListener != null) {
+                    Log.d("flying.click", getResources().getResourceName(ll.getId()));
+
+                    if (ll.getId() == R.id.l1AllPosition)
+                        searchListener.OnPositionTypeChange(null);
+                    else if (ll.getId() == R.id.llBackPosition)
+                        searchListener.OnPositionTypeChange(Hero.PositionType.Back);
+                    else if (ll.getId() == R.id.llFrontPosition)
+                        searchListener.OnPositionTypeChange(Hero.PositionType.Front);
+                    else if (ll.getId() == R.id.llMiddlePosition)
+                        searchListener.OnPositionTypeChange(Hero.PositionType.Middle);
+                    else
+                        throw new IllegalArgumentException("The click trigger is not correct");
+                }
+            }
+        };
+
         for (; i < rootLayout.getChildCount(); i++) {
             final LinearLayout ll = (LinearLayout) rootLayout.getChildAt(i);
-            ll.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (selectedBackground != null)
-                        selectedBackground.setBackgroundColor(Color.TRANSPARENT);
-
-                    ll.setBackgroundColor(getResources().getColor(R.color.bottom_selected_bg));
-                    selectedBackground = ll;
-
-                    if (searchListener != null) {
-                        Log.d("flying.click", getResources().getResourceName(ll.getId()));
-
-                        if (ll.getId() == R.id.l1AllPosition)
-                            searchListener.OnPositionTypeChange(null);
-                        else if (ll.getId() == R.id.llBackPosition)
-                            searchListener.OnPositionTypeChange(Hero.PositionType.Back);
-                        else if (ll.getId() == R.id.llFrontPosition)
-                            searchListener.OnPositionTypeChange(Hero.PositionType.Front);
-                        else if (ll.getId() == R.id.llMiddlePosition)
-                            searchListener.OnPositionTypeChange(Hero.PositionType.Middle);
-                        else
-                            throw new IllegalArgumentException("The click trigger is not correct");
-                    }
-                }
-            });
-
+            ll.setOnClickListener(clickListener);
             //选中第一个
             if (i == 0) {
                 selectedBackground = ll;

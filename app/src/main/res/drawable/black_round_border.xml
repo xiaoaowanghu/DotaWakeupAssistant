@@ -7,12 +7,12 @@
         android:color="@color/dark_blue" />
     <!-- 设置框内的填充色  -->
     <solid android:color="@android:color/transparent" />
-    <!-- 设置圆角 -->
-    <corners android:radius="5dip" />
+    <!--&lt;!&ndash; 设置圆角 &ndash;&gt;-->
+    <!--<corners android:radius="5dip" />-->
     <!-- 设置内边距 -->
     <padding
-        android:bottom="4dp"
-        android:left="4dp"
-        android:right="4dp"
-        android:top="4dp"></padding>
+        android:bottom="2dp"
+        android:left="2dp"
+        android:right="2dp"
+        android:top="2dp"></padding>
 </shape>

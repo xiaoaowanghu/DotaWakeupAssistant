@@ -38,6 +38,7 @@ public class SearchEditTextFragment extends Fragment {
     private void initViews(View root) {
         etSearch = (QuickSearchEditText) root.findViewById(R.id.search_editText);
         etSearch.setHint(R.string.search_hint);
+        etSearch.clearFocus();
         etSearch.setKeyListener(new DigitsKeyListener() {
             @Override
             public int getInputType() {

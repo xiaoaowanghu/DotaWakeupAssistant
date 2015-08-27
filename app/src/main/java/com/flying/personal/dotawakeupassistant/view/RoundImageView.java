@@ -10,6 +10,7 @@ import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
+import android.graphics.RectF;
 import android.graphics.Xfermode;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -29,7 +30,9 @@ import java.lang.ref.WeakReference;
  */
 public class RoundImageView extends View {
     private final static Xfermode xfermodeForDrawingForePic = new PorterDuffXfermode(PorterDuff.Mode.DST_IN);
+    private final static Xfermode xfermodeForBorder = new PorterDuffXfermode(PorterDuff.Mode.SRC_OVER);
     private final static int DefaultRaidusDP = 10;
+    private final static int DefaultBorderWidthDP = 0;
 
     public enum SimpleScale {
         AutoScale, //按比例缩放，自动确定大小
@@ -54,14 +57,14 @@ public class RoundImageView extends View {
     protected int mBorderRadiusPX;
     protected Paint mPaint;
     protected WeakReference<Bitmap> mWeakBitmap;
-    protected Bitmap mMashBitmap;
     protected String filePath;
     protected SimpleScale scaleMode;
     protected CustomSize originalPicSize;
+    protected int borderWidthPX;
+    protected int borderColor;
 
     public RoundImageView(Context context) {
         super(context);
-        this.mBorderRadiusPX = Utility.getInstance().dip2px(context, DefaultRaidusDP);
         sharedConstructor(context);
     }
 
@@ -72,12 +75,18 @@ public class RoundImageView extends View {
         mBorderRadiusPX = typedArray.getDimensionPixelSize(R.styleable.RoundImageView_borderRadius,
                 Utility.getInstance().dip2px(context, DefaultRaidusDP));
         scaleMode = SimpleScale.values()[typedArray.getInteger(R.styleable.RoundImageView_scaleType, 0)];
+        borderWidthPX = typedArray.getDimensionPixelSize(R.styleable.RoundImageView_borderWidth,
+                Utility.getInstance().dip2px(context, DefaultBorderWidthDP));
+        borderColor = typedArray.getColor(R.styleable.RoundImageView_borderColor, Color.BLACK);
         typedArray.recycle();
     }
 
     protected void sharedConstructor(Context context) {
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        this.mBorderRadiusPX = Utility.getInstance().dip2px(context, DefaultRaidusDP);
         scaleMode = SimpleScale.AutoScale.AutoScale;
+        borderWidthPX = Utility.getInstance().dip2px(context, DefaultBorderWidthDP);
+        borderColor = Color.BLACK;
     }
 
     protected CustomSize getImageSize() {
@@ -138,9 +147,22 @@ public class RoundImageView extends View {
         if (scaleMode == SimpleScale.AutoScale
                 || (scaleMode == SimpleScale.Center && oriPicSize.width >= widthResult && oriPicSize.height >= heightResult)) {
             //automatically change size
-            double widthRate = widthResult * 1.0 / oriPicSize.width;
-            double heightRate = heightResult * 1.0 / oriPicSize.height;
-            double actualRate = widthRate > heightRate ? heightRate : widthRate;
+            double widthRate = widthResult * (double) 1 / oriPicSize.width;
+            double heightRate = heightResult * (double) 1 / oriPicSize.height;
+            double actualRate = 0;
+
+            if (widthRate > heightRate) {
+                if (heightRate != 0)
+                    actualRate = heightRate;
+                else
+                    actualRate = widthRate;
+            } else {
+                if (widthRate != 0)
+                    actualRate = widthRate;
+                else
+                    actualRate = heightRate;
+            }
+
             widthResult = (int) (oriPicSize.width * actualRate);
             heightResult = (int) (oriPicSize.height * actualRate);
         }
@@ -159,13 +181,19 @@ public class RoundImageView extends View {
                 bitmap = getSuitableSizePic();
                 Canvas tmpCanvas = new Canvas(bitmap);
 
-                if (mMashBitmap == null || mMashBitmap.isRecycled()) {
-                    mMashBitmap = getRoundShapeBitmap(getWidth(), getHeight());
-                }
-
+                Bitmap tmpRoundBG = getRoundShapeBitmap(getWidth(), getHeight());
                 mPaint.setFilterBitmap(false);
                 mPaint.setXfermode(xfermodeForDrawingForePic);
-                tmpCanvas.drawBitmap(mMashBitmap, 0, 0, mPaint);
+                tmpCanvas.drawBitmap(tmpRoundBG, 0, 0, mPaint);
+                tmpRoundBG.recycle();
+
+                if (this.borderWidthPX > 0) {
+                    Bitmap borderMap = getBorderBitMap(getWidth(), getHeight());
+                    mPaint.setXfermode(xfermodeForBorder);
+                    tmpCanvas.drawBitmap(borderMap, 0, 0, mPaint);
+                    borderMap.recycle();
+                }
+
                 canvas.drawBitmap(bitmap, 0, 0, null);
                 mWeakBitmap = new WeakReference<Bitmap>(bitmap);
             } else {
@@ -180,7 +208,6 @@ public class RoundImageView extends View {
 
     protected Bitmap getSuitableSizePic() throws IOException {
         Bitmap resultBitmap = null;
-
         int oriWidth = originalPicSize.width;
         int oriHeight = originalPicSize.height;
         InputStream is = this.getContext().getAssets().open(filePath);
@@ -195,14 +222,18 @@ public class RoundImageView extends View {
             ops.inSampleSize = calculateInSampleSize();
             Bitmap littleLargerPic = BitmapFactory.decodeStream(is, null, ops);
             resultBitmap = littleLargerPic.createScaledBitmap(littleLargerPic, getWidth(), getHeight(), false);
-            littleLargerPic.recycle();
+            //sometimes it will return the same object as littleLargerPic
+            if (littleLargerPic != resultBitmap)
+                littleLargerPic.recycle();
         } else if (scaleMode == SimpleScale.AutoScale.Center
                 && oriHeight >= getHeight() && oriWidth >= getWidth()) {
             Bitmap oriPic = BitmapFactory.decodeStream(is, null, null);
             int x = (oriHeight - getHeight()) / 2;
             int y = (oriWidth - getWidth()) / 2;
             resultBitmap = Bitmap.createBitmap(oriPic, x, y, getWidth(), getHeight());
-            oriPic.recycle();
+
+            if (resultBitmap != oriPic)
+                oriPic.recycle();
         } else if (scaleMode == SimpleScale.AutoScale.Fill
                 || scaleMode == SimpleScale.AutoScale
                 || scaleMode == SimpleScale.Center) {
@@ -213,7 +244,9 @@ public class RoundImageView extends View {
             matrix.postScale(scalX, scalY);
             Bitmap oriPic = BitmapFactory.decodeStream(is, null, null);
             resultBitmap = Bitmap.createBitmap(oriPic, 0, 0, oriWidth, oriHeight, matrix, true);
-            oriPic.recycle();
+
+            if (resultBitmap != oriPic)
+                oriPic.recycle();
         } else {
             throw new IllegalArgumentException(this.scaleMode.toString() + " is not implemented.");
         }
@@ -232,7 +265,7 @@ public class RoundImageView extends View {
         Bitmap bit = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
         Canvas can = new Canvas(bit);
         Paint pa = new Paint(Paint.ANTI_ALIAS_FLAG);
-        pa.setColor(Color.WHITE);
+        pa.setColor(Color.RED);
         //2 rect and 1/4 cycle * 4
         can.drawRect(0, mBorderRadiusPX, width, height - mBorderRadiusPX, pa);
         can.drawRect(mBorderRadiusPX, 0, width - mBorderRadiusPX, height, pa);
@@ -243,14 +276,45 @@ public class RoundImageView extends View {
         return bit;
     }
 
+    private Bitmap getBorderBitMap(int width, int height) {
+        Bitmap bit = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+        Canvas can = new Canvas(bit);
+        Paint pa = new Paint(Paint.ANTI_ALIAS_FLAG);
+        pa.setStyle(Paint.Style.STROKE);
+        pa.setStrokeWidth(this.borderWidthPX);
+        pa.setColor(this.borderColor);
+        // Padding because of border width
+        float bordingPadding = borderWidthPX / 2f;
+        // lines * 4
+        can.drawLine(this.mBorderRadiusPX, bordingPadding, width - this.mBorderRadiusPX, bordingPadding, pa);
+        can.drawLine(width - bordingPadding, this.mBorderRadiusPX, width - bordingPadding, height - mBorderRadiusPX, pa);
+        can.drawLine(width - this.mBorderRadiusPX, height - bordingPadding, this.mBorderRadiusPX, height - bordingPadding, pa);
+        can.drawLine(bordingPadding, height - mBorderRadiusPX, bordingPadding, mBorderRadiusPX, pa);
+        // 1/4 cycle * 4
+        RectF rectF1 = new RectF(bordingPadding, bordingPadding, mBorderRadiusPX * 2 - bordingPadding, mBorderRadiusPX * 2 - bordingPadding);
+        can.drawArc(rectF1, 180, 90, false, pa);
+        RectF rectF2 = new RectF(width - 2 * mBorderRadiusPX + bordingPadding, bordingPadding, width - bordingPadding, mBorderRadiusPX * 2 - bordingPadding);
+        can.drawArc(rectF2, 270, 90, false, pa);
+        RectF rectF3 = new RectF(width - 2 * mBorderRadiusPX + bordingPadding, height - 2 * mBorderRadiusPX + bordingPadding, width - bordingPadding, height - bordingPadding);
+        can.drawArc(rectF3, 0, 90, false, pa);
+        RectF rectF4 = new RectF(bordingPadding, height - 2 * mBorderRadiusPX + bordingPadding, mBorderRadiusPX * 2 - bordingPadding, height - bordingPadding);
+        can.drawArc(rectF4, 90, 90, false, pa);
+        return bit;
+    }
+
     @Override
+
     public void invalidate() {
         mWeakBitmap = null;
         originalPicSize = null;
 
-        if (mMashBitmap != null) {
-            mMashBitmap.recycle();
-            mMashBitmap = null;
+        if (mWeakBitmap != null) {
+            Bitmap bp = mWeakBitmap.get();
+
+            if (bp != null && !bp.isRecycled())
+                bp.recycle();
+
+            mWeakBitmap = null;
         }
 
         super.invalidate();

@@ -3,13 +3,15 @@
     <declare-styleable name="RoundImageView">
         <attr name="borderRadius" format="dimension" />
         <attr name="srcFilePath" format="string" />
+        <attr name="borderWidth" format="dimension" />
+        <attr name="borderColor" format="color" />
         <attr name="scaleType" format="enum">
             <enum name="AutoScale" value="0" />
             <enum name="Fill" value="1" />
             <enum name="Center" value="2" />
         </attr>
     </declare-styleable>
-    
+
     <declare-styleable name="QuickSearchEditText">
         <attr name="delayToSearch" format="integer" />
     </declare-styleable>
