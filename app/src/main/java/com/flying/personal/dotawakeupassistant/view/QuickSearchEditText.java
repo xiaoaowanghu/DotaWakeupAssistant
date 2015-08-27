@@ -17,8 +17,9 @@ import com.flying.personal.dotawakeupassistant.R;
  * Do not Copy/Edit/Use this class without permission.
  */
 public class QuickSearchEditText extends EditText {
+    private final static int DefaultDelayMillionSecondsToSearch = 800;
 
-    private long delayMilliseconds = 1000;  //delay time to search
+    private int delayMilliseconds = DefaultDelayMillionSecondsToSearch;  //delay time to search
     private IOnSearch searchListener;
     private Handler handler;
     private Runnable notifyToSearch;
@@ -32,13 +33,13 @@ public class QuickSearchEditText extends EditText {
     public QuickSearchEditText(Context context, AttributeSet attrs) {
         super(context, attrs);
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.RoundImageView);
-        delayMilliseconds = typedArray.getDimensionPixelSize(R.styleable.QuickSearchEditText_delayToSearch,
-                1000);
+        delayMilliseconds = typedArray.getInt(R.styleable.QuickSearchEditText_delayToSearch,
+                DefaultDelayMillionSecondsToSearch);
         init();
         typedArray.recycle();
     }
 
-    public void ClearSearchText(boolean trigerSearchEvent) {
+    public void clearSearchText(boolean trigerSearchEvent) {
         if (trigerSearchEvent) {
             setText("");
         } else {
@@ -63,7 +64,7 @@ public class QuickSearchEditText extends EditText {
                     return;
 
                 if (searchListener != null)
-                    searchListener.OnSearch(QuickSearchEditText.this.getText().toString());
+                    searchListener.onSearch(QuickSearchEditText.this.getText().toString());
             }
         };
 

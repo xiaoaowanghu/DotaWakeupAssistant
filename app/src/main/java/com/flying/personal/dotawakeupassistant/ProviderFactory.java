@@ -1,5 +1,6 @@
 package com.flying.personal.dotawakeupassistant;
 
+import com.flying.personal.dotawakeupassistant.impl.DataProviderImplByFile;
 import com.flying.personal.dotawakeupassistant.impl.DataProviderImplByMock;
 
 /**
@@ -8,8 +9,13 @@ import com.flying.personal.dotawakeupassistant.impl.DataProviderImplByMock;
 public class ProviderFactory {
     private static ProviderFactory instance = new ProviderFactory();
     private IDataProvider dataProvider;
+    private String[] args;
 
     private ProviderFactory() {
+    }
+
+    public void initFactory(String[] _args) {
+        args = _args;
     }
 
     public static ProviderFactory getInstance() {
@@ -18,8 +24,8 @@ public class ProviderFactory {
 
     public IDataProvider getDataProvider() {
         if (dataProvider == null) {
-            dataProvider = new DataProviderImplByMock();
-            dataProvider.init(null);
+            dataProvider = new DataProviderImplByFile();
+            dataProvider.init(args);
         }
 
         return dataProvider;

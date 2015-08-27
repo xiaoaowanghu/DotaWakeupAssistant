@@ -1,8 +1,12 @@
 package com.flying.personal.dotawakeupassistant;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.text.Spannable;
+import android.text.SpannableStringBuilder;
+import android.text.style.ForegroundColorSpan;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Gravity;
@@ -12,12 +16,15 @@ import android.widget.GridLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.flying.personal.dotawakeupassistant.impl.DataProviderImplByMock;
 import com.flying.personal.dotawakeupassistant.model.Hero;
 import com.flying.personal.dotawakeupassistant.util.Utility;
 import com.flying.personal.dotawakeupassistant.view.IOnSearch;
 import com.flying.personal.dotawakeupassistant.view.RoundImageView;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MainActivity extends ActionBarActivity implements IOnSearch {
     private Hero.PositionType currentPositionType = null;
@@ -30,14 +37,17 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
         super.onCreate(savedInstanceState);
         infalter = LayoutInflater.from(this);
         setContentView(R.layout.activity_main);
-        LoadData();
+        DataProviderImplByMock mock = new DataProviderImplByMock();
         String path = getAppPath();
         Log.d(this.getClass().getName(), "Path = " + path);
-//        ProviderFactory.getInstance().getDataProvider().save(new String[]{path});
+        mock.save(new String[]{path});
+        ProviderFactory.getInstance().initFactory(new String[]{path});
+        init();
     }
 
-    private void LoadData() {
+    private void init() {
         mainHeroLayout = (GridLayout) this.findViewById(R.id.gridLayout);
+
         imageClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,11 +62,11 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
         };
 
         currentHeroes = ProviderFactory.getInstance().getDataProvider().getAllHeroes();
-        ShowHeroes();
+        showHeroes(null);
     }
 
 
-    private void ShowHeroes() {
+    private void showHeroes(Map<Hero, String> matchedIndex) {
         List<Hero> heroes = currentHeroes;
         mainHeroLayout.removeAllViews();
         IDataProvider dataProvider = ProviderFactory.getInstance().getDataProvider();
@@ -68,7 +78,7 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
         int marginPX = Utility.getInstance().dip2px(this, marginDP);
         int picWidthPX = (int) ((screenWidthPX - marginPX * (colCount + 1)) / colCount * 1.0);
 
-        for (int i = 0; i < dataProvider.getTotalHeroCount(); i++) {
+        for (int i = 0; i < heroes.size(); i++) {
             final Hero h = heroes.get(i);
             LinearLayout searchItemRoot = (LinearLayout) this.infalter.inflate(R.layout.search_item, null);
             LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(picWidthPX, picWidthPX);
@@ -76,13 +86,6 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
             searchItemRoot.setLayoutParams(param);
             searchItemRoot.setOrientation(LinearLayout.VERTICAL);
             searchItemRoot.setPadding(0, 0, 0, 0);
-
-//            ImageView ivHeroPic = (ImageView) searchItemRoot.getChildAt(0);
-//            ivHeroPic.setMaxHeight(picWidthPX);
-//            ivHeroPic.setMaxWidth(picWidthPX);
-//            ivHeroPic.setTag(h.getName());
-//            ivHeroPic.setImageBitmap(Utility.getInstance().createImageFromAsset(this, h.getPortraitPath()));
-//            ivHeroPic.setOnClickListener(imageClickListener);
 
             RoundImageView ivHeroPic = (RoundImageView) searchItemRoot.getChildAt(0);
             ivHeroPic.getLayoutParams().width = picWidthPX;
@@ -93,7 +96,22 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
             ivHeroPic.setOnClickListener(imageClickListener);
 
             TextView tvHeroDisplayName = (TextView) searchItemRoot.getChildAt(1);
-            tvHeroDisplayName.setText(h.getName());
+
+            if (currentSearchString == null || currentSearchString.length() == 0) {
+                tvHeroDisplayName.setText(h.getName());
+            } else {
+                String index = matchedIndex.get(h);
+
+                if (index == null) {
+                    tvHeroDisplayName.setText(h.getName());
+                } else {
+                    int startChangeColorIndex = index.indexOf(currentSearchString);
+                    SpannableStringBuilder span = new SpannableStringBuilder(index);
+                    span.setSpan(new ForegroundColorSpan(Color.RED), startChangeColorIndex,
+                            startChangeColorIndex + currentSearchString.length(), Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
+                    tvHeroDisplayName.setText(span);
+                }
+            }
 
             GridLayout.Spec rowSpec = GridLayout.spec(i / colCount);
             GridLayout.Spec columnSpec = GridLayout.spec(i % colCount);
@@ -104,19 +122,26 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
         }
     }
 
-    @Override
-    public void OnSearch(String text) {
-        currentHeroes = ProviderFactory.getInstance().getDataProvider()
-                .getMatchedHeroes(text, currentPositionType);
+    private String currentSearchString;
 
-        ShowHeroes();
+    @Override
+    public void onSearch(String text) {
+        HashMap<Hero, String> matchedIndex = new HashMap<Hero, String>(30);
+        currentHeroes = ProviderFactory.getInstance().getDataProvider()
+                .getMatchedHeroes(text, currentPositionType, matchedIndex);
+        currentSearchString = text;
+        showHeroes(matchedIndex);
     }
 
     @Override
-    public void OnPositionTypeChange(Hero.PositionType position) {
-        currentPositionType = position;
+    public void onPositionTypeChange(Hero.PositionType position) {
+        //Clear search string
         SearchEditTextFragment f = (SearchEditTextFragment) this.getFragmentManager().findFragmentById(R.id.fragment_search);
-        f.ClearText();
+        f.clearText();
+        currentSearchString = null;
+        currentPositionType = position;
+        currentHeroes = ProviderFactory.getInstance().getDataProvider().getHeroesByPosition(position);
+        showHeroes(null);
     }
 
     public String getAppPath() {

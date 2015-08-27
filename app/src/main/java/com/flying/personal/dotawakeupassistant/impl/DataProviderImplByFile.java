@@ -31,7 +31,10 @@ public class DataProviderImplByFile implements IDataProvider {
     }
 
     @Override
-    public List<Hero> getMatchedHeroes(String index) {
+    public List<Hero> getMatchedHeroes(String index, Map<Hero, String> matchedIndex) {
+        if (matchedIndex == null)
+            throw new IllegalArgumentException("The matchedIndex shouldn't be null.");
+
         if (index == null || index.length() == 0)
             return getAllHeroes();
 
@@ -41,6 +44,7 @@ public class DataProviderImplByFile implements IDataProvider {
             List<String> tmpList = searchIndexs.get(h);
             for (String s : tmpList) {
                 if (s.contains(index)) {
+                    matchedIndex.put(h, s);
                     result.add(h);
                     break;
                 }
@@ -51,9 +55,12 @@ public class DataProviderImplByFile implements IDataProvider {
     }
 
     @Override
-    public List<Hero> getMatchedHeroes(String index, Hero.PositionType position) {
+    public List<Hero> getMatchedHeroes(String index, Hero.PositionType position, Map<Hero, String> matchedIndex) {
+        if (matchedIndex == null)
+            throw new IllegalArgumentException("The matchedIndex shouldn't be null.");
+
         if (position == null)
-            return getMatchedHeroes(index);
+            return getMatchedHeroes(index, matchedIndex);
         else {
             List<Hero> result = new ArrayList<>(heroes.size());
             for (Hero h : heroes) {
@@ -64,6 +71,7 @@ public class DataProviderImplByFile implements IDataProvider {
                     List<String> tmpList = searchIndexs.get(h);
                     for (String s : tmpList) {
                         if (s.contains(index)) {
+                            matchedIndex.put(h, s);
                             result.add(h);
                             break;
                         }
@@ -139,6 +147,10 @@ public class DataProviderImplByFile implements IDataProvider {
             for (Hero h : heroes) {
                 List<String> indexes = new ArrayList<String>(20);
                 indexes.addAll(HanyuPinyinHelper.getInstance().getHanziT9Index(h.getName()));
+
+                if (h.getAlias() == null)
+                    continue;
+
                 for (String a : h.getAlias()) {
                     indexes.addAll(HanyuPinyinHelper.getInstance().getHanziT9Index(a));
                 }
@@ -186,4 +198,10 @@ public class DataProviderImplByFile implements IDataProvider {
     }
 
     private String dataFilePath;
+
+    @Override
+    public double getVersion() {
+        //TODO
+        return 1;
+    }
 }

@@ -15,6 +15,7 @@ import java.io.FileWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by wangxian on 8/11/2015.
@@ -50,10 +51,14 @@ public class DataProviderImplByMock implements IDataProvider {
         {
             Hero h1 = new Hero();
             h1.setName("幻影刺客");
-            h1.setPositionType(Hero.PositionType.Back);
+            h1.setPositionType(Hero.PositionType.Middle);
             h1.setAbilityType(Hero.AbilityType.Agility);
             h1.setPortraitPath("pa.jpg");
             h1.setPicPath("pa_big.jpg");
+            List<String> alias = new ArrayList<String>(5);
+            alias.add("pa");
+            alias.add("幻刺");
+            h1.setAlias(alias);
 
             WakeUpTask[] tasks = new WakeUpTask[3];
             h1.setTasks(tasks);
@@ -91,6 +96,10 @@ public class DataProviderImplByMock implements IDataProvider {
             h1.setAbilityType(Hero.AbilityType.Agility);
             h1.setPortraitPath("ta.jpg");
             h1.setPicPath("ta_big.jpg");
+            List<String> alias = new ArrayList<String>(5);
+            alias.add("ta");
+            alias.add("圣堂");
+            h1.setAlias(alias);
 
             WakeUpTask[] tasks = new WakeUpTask[3];
             h1.setTasks(tasks);
@@ -155,7 +164,7 @@ public class DataProviderImplByMock implements IDataProvider {
     }
 
     @Override
-    public List<Hero> getMatchedHeroes(String index) {
+    public List<Hero> getMatchedHeroes(String index, Map<Hero, String> matchedIndex) {
         return heroes;
     }
 
@@ -168,9 +177,13 @@ public class DataProviderImplByMock implements IDataProvider {
     public void init(String[] args) {
     }
 
+    @Override
+    public List<Hero> getMatchedHeroes(String index, Hero.PositionType position, Map<Hero, String> matchedIndex) {
+        return heroes;
+    }
 
     @Override
-    public List<Hero> getMatchedHeroes(String index, Hero.PositionType position) {
-        return heroes;
+    public double getVersion() {
+        return 1;
     }
 }
