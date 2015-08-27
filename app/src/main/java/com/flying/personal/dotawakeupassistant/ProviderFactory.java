@@ -1,7 +1,6 @@
 package com.flying.personal.dotawakeupassistant;
 
 import com.flying.personal.dotawakeupassistant.impl.DataProviderImplByFile;
-import com.flying.personal.dotawakeupassistant.impl.DataProviderImplByMock;
 
 /**
  * Created by wangxian on 8/18/2015.

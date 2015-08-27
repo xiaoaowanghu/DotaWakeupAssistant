@@ -237,7 +237,7 @@ public class DataProviderImplByFile implements IDataProvider {
 
     }
 
-    private void generateData() {
+    private Map<String, GameStage> getStageCache() {
         Map<String, GameStage> stageCache = new HashMap<String, GameStage>(30);
         {
             GameStage gs = new GameStage();
@@ -261,7 +261,6 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
         }
-
         {
             GameStage gs = new GameStage();
             gs.setName("团战中心(精英)");
@@ -272,13 +271,12 @@ public class DataProviderImplByFile implements IDataProvider {
             {
                 EquipmentItem item = new EquipmentItem();
                 item.setDisplayName("鹰语指环");
-                item.setPicPath("yuzh.jpg");
+                item.setPicPath("yyzh.jpg");
                 items.add(item);
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
         }
-
         {
             GameStage gs = new GameStage();
             gs.setName("黑暗者");
@@ -305,7 +303,22 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
         }
-
+        {
+            GameStage gs = new GameStage();
+            gs.setName("山腰相逢(精英)");
+            gs.setChapter(14);
+            gs.setSequenceNo(3);
+            gs.setStamina(24);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                EquipmentItem item = new EquipmentItem();
+                item.setDisplayName("禁卫军胸甲");
+                item.setPicPath("jwjxj.jpg");
+                items.add(item);
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
         //=============================================Special Stage======================================
         {
             SpecialStage gs = new SpecialStage();
@@ -316,7 +329,15 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
         }
-
+        {
+            SpecialStage gs = new SpecialStage();
+            gs.setName("折戟山谷");
+            gs.setStamina(6);
+            gs.setOccurDays(SpecialStage.Weekday.Tuesday | SpecialStage.Weekday.Friday | SpecialStage.Weekday.Sunday);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
         {
             SpecialStage gs = new SpecialStage();
             gs.setName("女武神的对决");
@@ -332,7 +353,12 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
         }
-        //============================================Hero====================================================
+
+        return stageCache;
+    }
+
+    private void generateData() {
+        Map<String, GameStage> stageCache = getStageCache();
 
         heroes = new ArrayList<Hero>(100);
         {
@@ -392,6 +418,37 @@ public class DataProviderImplByFile implements IDataProvider {
             WakeUpTask w3 = new WakeUpTask();
             w3.setDescription("参与完成关卡并且无人阵亡");
             w3.setStage(stageCache.get("冰火两重天(精英)"));
+            tasks[2] = w3;
+
+            heroes.add(h1);
+        }
+        {
+            Hero h1 = new Hero();
+            h1.setName("凤凰");
+            h1.setPositionType(Hero.PositionType.Middle);
+            h1.setAbilityType(Hero.AbilityType.Strength);
+            h1.setPortraitPath("fenghuang.jpg");
+            h1.setPicPath("fenghuang_big.jpg");
+            h1.setWakeupSkill("敢死队队友增加270点智力");
+            List<String> alias = new ArrayList<String>(5);
+            alias.add("烧烤");
+            h1.setAlias(alias);
+
+            WakeUpTask[] tasks = new WakeUpTask[3];
+            h1.setTasks(tasks);
+            WakeUpTask w1 = new WakeUpTask();
+            tasks[0] = w1;
+            w1.setDescription("收集60个凤羽冠碎片，合成装备");
+            w1.setStage(stageCache.get("山腰相逢(精英)"));
+
+            WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
+            tasks[1] = w2;
+            w2.setExecuteTimes(10);
+            w2.setStage(stageCache.get("折戟山谷"));
+
+            WakeUpTask w3 = new WakeUpTask();
+            w3.setDescription("完成关卡，造成35w伤害");
+            w3.setStage(stageCache.get("乱石山坡(精英)"));
             tasks[2] = w3;
 
             heroes.add(h1);

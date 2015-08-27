@@ -59,6 +59,31 @@ public class RoundImageView extends View {
     protected WeakReference<Bitmap> mWeakBitmap;
     protected String filePath;
     protected SimpleScale scaleMode;
+
+    public int getmBorderRadiusPX() {
+        return mBorderRadiusPX;
+    }
+
+    public void setmBorderRadiusPX(int mBorderRadiusPX) {
+        this.mBorderRadiusPX = mBorderRadiusPX;
+    }
+
+    public int getBorderColor() {
+        return borderColor;
+    }
+
+    public void setBorderColor(int borderColor) {
+        this.borderColor = borderColor;
+    }
+
+    public int getBorderWidthPX() {
+        return borderWidthPX;
+    }
+
+    public void setBorderWidthPX(int borderWidthPX) {
+        this.borderWidthPX = borderWidthPX;
+    }
+
     protected CustomSize originalPicSize;
     protected int borderWidthPX;
     protected int borderColor;

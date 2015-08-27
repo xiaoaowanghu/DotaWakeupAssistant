@@ -36,7 +36,7 @@ public class WakeUpRepeatableTask extends WakeUpTask {
         for (int i = 0; i < weekDayIndex.size(); i++) {
             String dayIndex = null;
             if (i == 0) {
-                result += "星期";
+                result += " 星期";
                 dayIndex = "日";
             } else {
                 dayIndex = String.valueOf(i);

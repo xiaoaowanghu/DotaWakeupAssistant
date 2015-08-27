@@ -16,7 +16,6 @@ import android.widget.GridLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.flying.personal.dotawakeupassistant.impl.DataProviderImplByMock;
 import com.flying.personal.dotawakeupassistant.model.Hero;
 import com.flying.personal.dotawakeupassistant.util.Utility;
 import com.flying.personal.dotawakeupassistant.view.IOnSearch;
@@ -37,11 +36,7 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
         super.onCreate(savedInstanceState);
         infalter = LayoutInflater.from(this);
         setContentView(R.layout.activity_main);
-        DataProviderImplByMock mock = new DataProviderImplByMock();
-        String path = getAppPath();
-        Log.d(this.getClass().getName(), "Path = " + path);
-        mock.save(new String[]{path});
-        ProviderFactory.getInstance().initFactory(new String[]{path});
+        ProviderFactory.getInstance().initFactory(new String[]{getAppPath()});
         init();
     }
 
@@ -66,7 +61,6 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
         mainHeroLayout.requestFocus();
     }
 
-
     private void showHeroes(Map<Hero, String> matchedIndex) {
         List<Hero> heroes = currentHeroes;
         mainHeroLayout.removeAllViews();
@@ -74,7 +68,7 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
         DisplayMetrics dm = new DisplayMetrics();
         this.getWindowManager().getDefaultDisplay().getMetrics(dm);
         int screenWidthPX = dm.widthPixels;
-        int colCount = 4;
+        int colCount = 5;
         int marginDP = 5; //dp
         int marginPX = Utility.getInstance().dip2px(this, marginDP);
         int picWidthPX = (int) ((screenWidthPX - marginPX * (colCount + 1)) / colCount * 1.0);
