@@ -11,24 +11,24 @@ public class SpecialStage extends GameStage {
 
     static {
         weekdayCollection = new ArrayList<Integer>();
-        weekdayCollection.add(Weekday.Sunday);
         weekdayCollection.add(Weekday.Monday);
         weekdayCollection.add(Weekday.Tuesday);
         weekdayCollection.add(Weekday.Wednesday);
         weekdayCollection.add(Weekday.Thursday);
         weekdayCollection.add(Weekday.Friday);
         weekdayCollection.add(Weekday.Saturday);
+        weekdayCollection.add(Weekday.Sunday);
     }
 
     public interface Weekday {
-        int Sunday = 2 ^ 0;
-        int Monday = 2 ^ 1;
-        int Tuesday = 2 ^ 2;
-        int Wednesday = 2 ^ 3;
-        int Thursday = 2 ^ 4;
-        int Friday = 2 ^ 5;
-        int Saturday = 2 ^ 6;
-        int AllDays = 2 ^ 7 - 1;
+        int Sunday = 1;
+        int Monday = 2;
+        int Tuesday = 4;
+        int Wednesday = 8;
+        int Thursday = 16;
+        int Friday = 32;
+        int Saturday = 64;
+        int AllDays = 127;
     }
 
     private int occurDays;

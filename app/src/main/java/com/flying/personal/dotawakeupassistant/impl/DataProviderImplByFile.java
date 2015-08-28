@@ -319,7 +319,55 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
         }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("泰坦遗迹(精英)");
+            gs.setChapter(13);
+            gs.setSequenceNo(6);
+            gs.setStamina(24);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                EquipmentItem item = new EquipmentItem();
+                item.setDisplayName("水晶球");
+                item.setPicPath("sjq.jpg");
+                items.add(item);
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("神殿守卫");
+            gs.setChapter(12);
+            gs.setSequenceNo(4);
+            gs.setStamina(10);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+
         //=============================================Special Stage======================================
+        {
+            SpecialStage gs = new SpecialStage();
+            gs.setName("诅咒之城(魔免)");
+            gs.setStamina(6);
+            gs.setOccurDays(SpecialStage.Weekday.Monday | SpecialStage.Weekday.Thursday | SpecialStage.Weekday.Sunday);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                EquipmentItem item = new EquipmentItem();
+                item.setDisplayName("水晶球");
+                item.setPicPath("sjq.jpg");
+                items.add(item);
+            }
+            {
+                EquipmentItem item = new EquipmentItem();
+                item.setDisplayName("巫师之冠");
+                item.setPicPath("wszg.jpg");
+                items.add(item);
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
         {
             SpecialStage gs = new SpecialStage();
             gs.setName("潮汐神庙");
@@ -331,7 +379,7 @@ public class DataProviderImplByFile implements IDataProvider {
         }
         {
             SpecialStage gs = new SpecialStage();
-            gs.setName("折戟山谷");
+            gs.setName("折戟山谷(物免)");
             gs.setStamina(6);
             gs.setOccurDays(SpecialStage.Weekday.Tuesday | SpecialStage.Weekday.Friday | SpecialStage.Weekday.Sunday);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
@@ -386,7 +434,7 @@ public class DataProviderImplByFile implements IDataProvider {
             w2.setStage(stageCache.get("女武神的对决"));
 
             WakeUpTask w3 = new WakeUpTask();
-            w3.setDescription("小黑独自完成");
+            w3.setDescription("独自完成关卡");
             w3.setStage(stageCache.get("黑暗者"));
             tasks[2] = w3;
 
@@ -408,7 +456,7 @@ public class DataProviderImplByFile implements IDataProvider {
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
             w1.setDescription("收集60个烈焰之角碎片，合成装备");
-            w1.setStage(stageCache.get("团战中心(精英)"));
+            w1.setStage(stageCache.get("泰坦遗迹(精英)"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -444,11 +492,42 @@ public class DataProviderImplByFile implements IDataProvider {
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
             w2.setExecuteTimes(10);
-            w2.setStage(stageCache.get("折戟山谷"));
+            w2.setStage(stageCache.get("折戟山谷(魔免)"));
 
             WakeUpTask w3 = new WakeUpTask();
             w3.setDescription("完成关卡，造成35w伤害");
             w3.setStage(stageCache.get("乱石山坡(精英)"));
+            tasks[2] = w3;
+
+            heroes.add(h1);
+        }
+        {
+            Hero h1 = new Hero();
+            h1.setName("刚背猪");
+            h1.setPositionType(Hero.PositionType.Middle);
+            h1.setAbilityType(Hero.AbilityType.Strength);
+            h1.setPortraitPath("gangbei.jpg");
+            h1.setPicPath("gangbei_big.jpg");
+            h1.setWakeupSkill("针刺扫射可造成额外伤害，并且每次叠加造成的额外伤害提升540点");
+            List<String> alias = new ArrayList<String>(5);
+            alias.add("刚猪");
+            h1.setAlias(alias);
+
+            WakeUpTask[] tasks = new WakeUpTask[3];
+            h1.setTasks(tasks);
+            WakeUpTask w1 = new WakeUpTask();
+            tasks[0] = w1;
+            w1.setDescription("收集60个防暴腰铠碎片，合成装备");
+            w1.setStage(stageCache.get("山腰相逢(精英)"));
+
+            WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
+            tasks[1] = w2;
+            w2.setExecuteTimes(10);
+            w2.setStage(stageCache.get("诅咒之城(魔免)"));
+
+            WakeUpTask w3 = new WakeUpTask();
+            w3.setDescription("独自完成关卡");
+            w3.setStage(stageCache.get("神殿守卫"));
             tasks[2] = w3;
 
             heroes.add(h1);
