@@ -43,13 +43,13 @@ public class BottomNavigationFragment extends Fragment {
                     Log.d("flying.click", getResources().getResourceName(ll.getId()));
 
                     if (ll.getId() == R.id.l1AllPosition)
-                        searchListener.OnPositionTypeChange(null);
+                        searchListener.onPositionTypeChange(null);
                     else if (ll.getId() == R.id.llBackPosition)
-                        searchListener.OnPositionTypeChange(Hero.PositionType.Back);
+                        searchListener.onPositionTypeChange(Hero.PositionType.Back);
                     else if (ll.getId() == R.id.llFrontPosition)
-                        searchListener.OnPositionTypeChange(Hero.PositionType.Front);
+                        searchListener.onPositionTypeChange(Hero.PositionType.Front);
                     else if (ll.getId() == R.id.llMiddlePosition)
-                        searchListener.OnPositionTypeChange(Hero.PositionType.Middle);
+                        searchListener.onPositionTypeChange(Hero.PositionType.Middle);
                     else
                         throw new IllegalArgumentException("The click trigger is not correct");
                 }

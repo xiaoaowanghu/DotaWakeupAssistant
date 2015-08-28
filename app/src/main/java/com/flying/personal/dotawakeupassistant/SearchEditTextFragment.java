@@ -31,8 +31,8 @@ public class SearchEditTextFragment extends Fragment {
         return fragmentRoot;
     }
 
-    public void ClearText() {
-        etSearch.ClearSearchText(true);
+    public void clearText() {
+        etSearch.clearSearchText(false);
     }
 
     private void initViews(View root) {
@@ -53,7 +53,7 @@ public class SearchEditTextFragment extends Fragment {
         });
         etSearch.setSearchListener(new IOnSearch() {
             @Override
-            public void OnSearch(String text) {
+            public void onSearch(String text) {
                 List<Hero> heroes;
                 text = text.trim();
 
@@ -61,13 +61,13 @@ public class SearchEditTextFragment extends Fragment {
                     return;
 
                 if (listener != null)
-                    listener.OnSearch(text);
+                    listener.onSearch(text);
 
                 currentSearchString = text;
             }
 
             @Override
-            public void OnPositionTypeChange(Hero.PositionType position) {
+            public void onPositionTypeChange(Hero.PositionType position) {
                 //No use
             }
         });

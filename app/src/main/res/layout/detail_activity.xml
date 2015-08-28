@@ -44,22 +44,17 @@
                 android:textSize="30sp" />
 
             <TextView
-                android:id="@+id/tvPositsion"
+                android:id="@+id/tvSkillDesc"
                 style="@style/layout_vertical"
-                android:layout_weight="309"
-                android:gravity="center"
-                android:text="位置: 前排"
+                android:layout_weight="618"
+                android:gravity="left|top"
+                android:maxLines="3"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="位置: 三大法撒旦发射大法师多发时段发生三大法撒旦发射大撒旦发射"
                 android:textColor="@color/font_color5"
                 android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/tvAbilityType"
-                style="@style/layout_vertical"
-                android:layout_weight="309"
-                android:gravity="top|center_horizontal"
-                android:text="主要属性: 敏捷"
-                android:textColor="@color/font_color5"
-                android:textSize="16sp" />
         </LinearLayout>
     </LinearLayout>
 
@@ -91,15 +86,16 @@
                 android:textColor="@color/font_color4"
                 android:textSize="16sp" />
 
-            <com.flying.personal.dotawakeupassistant.view.AutoAdjustFontSizeTextView
+            <TextView
                 android:id="@+id/tvTask1"
                 style="@style/normal_margin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:maxLines="2"
                 android:text="Test:收集满60碎片"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -123,16 +119,17 @@
                 android:textColor="@color/font_color4"
                 android:textSize="16sp" />
 
-            <com.flying.personal.dotawakeupassistant.view.AutoAdjustFontSizeTextView
+            <TextView
                 android:id="@+id/tvTask2"
                 style="@style/normal_margin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|left"
                 android:layout_marginTop="10dp"
+                android:maxLines="2"
                 android:text="Test:收集满60碎片"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
         </LinearLayout>
 
@@ -158,15 +155,16 @@
                 android:textColor="@color/font_color4"
                 android:textSize="16sp" />
 
-            <com.flying.personal.dotawakeupassistant.view.AutoAdjustFontSizeTextView
+            <TextView
                 android:id="@+id/tvTask3"
                 style="@style/normal_margin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:maxLines="2"
                 android:text="Test:收集满60碎片"
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
         </LinearLayout>
     </LinearLayout>

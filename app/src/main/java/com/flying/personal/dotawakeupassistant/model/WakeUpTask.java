@@ -35,6 +35,11 @@ public class WakeUpTask {
         this.description = description;
     }
 
+    public String getDisplayInfo() {
+        String result = "第" + stage.getChapter() + "章 " + stage.name;
+        return result + " " + description;
+    }
+
     public void setStage(GameStage stage) {
         this.stage = stage;
     }

@@ -15,6 +15,15 @@ public class Hero {
     protected AbilityType abilityType;
     protected String picPath;
     protected String portraitPath;
+    protected String wakeupSkill;
+
+    public String getWakeupSkill() {
+        return wakeupSkill;
+    }
+
+    public void setWakeupSkill(String wakeupSkill) {
+        this.wakeupSkill = wakeupSkill;
+    }
 
     public enum PositionType {
         Front, Middle, Back
