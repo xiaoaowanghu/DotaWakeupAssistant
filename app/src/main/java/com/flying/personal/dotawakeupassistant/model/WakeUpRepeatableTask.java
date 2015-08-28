@@ -33,20 +33,18 @@ public class WakeUpRepeatableTask extends WakeUpTask {
     public String getDisplayInfo() {
         String result = "完成" + stage.getName() + executeTimes + "次";
         List<Integer> weekDayIndex = getStage().taskWeekDayIndex();
-        for (int i = 0; i < weekDayIndex.size(); i++) {
-            String dayIndex = null;
-            if (i == 0) {
-                result += " 星期";
-                dayIndex = "日";
-            } else {
-                dayIndex = String.valueOf(i);
+
+        if (weekDayIndex.size() > 0) {
+            result += " 星期";
+
+            for (int i = 0; i < weekDayIndex.size(); i++) {
+                int dayIndex = weekDayIndex.get(i);
+                dayIndex++;
+                result += String.valueOf(dayIndex) + ",";
             }
-            if (i == weekDayIndex.size() - 1) {
-                result += dayIndex + " 可执行";
-            } else {
-                result += dayIndex + ",";
-            }
+            result =  result.substring(0, result.length() - 1).replace("7", "日") + " 开放";
         }
+
         return result;
     }
 }
