@@ -74,43 +74,43 @@ public class DetailActivity extends ActionBarActivity {
         ((TextView) findViewById(R.id.tvTask2)).setText(hero.getTasks()[1].getDisplayInfo());
         ((TextView) findViewById(R.id.tvTask3)).setText(hero.getTasks()[2].getDisplayInfo());
 
-        if (hero.getTasks()[0].getStage().getOutputItems().size() > 0) {
+        List<EquipmentItem> equipItems = hero.getTasks()[0].getStage().getOutputItems();
+
+        if (equipItems != null && equipItems.size() > 0) {
             LinearLayout ll = (LinearLayout) findViewById(R.id.llTask1);
 
             LinearLayout subLayoutForEquip = new LinearLayout(this);
             subLayoutForEquip.setOrientation(LinearLayout.HORIZONTAL);
             LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT);
+                    LinearLayout.LayoutParams.MATCH_PARENT);
+            subLayoutForEquip.setGravity(Gravity.CENTER_VERTICAL);
             subLayoutForEquip.setLayoutParams(param);
             ll.addView(subLayoutForEquip);
 
-            List<EquipmentItem> equipItems = hero.getTasks()[0].getStage().getOutputItems();
+            TextView tv = new TextView(this);
+            tv.setTextColor(getResources().getColor(R.color.white));
+            tv.setText(R.string.extra_equipitem);
+            tv.setTextAppearance(this, R.style.normal_margin);
+            tv.setTextSize(12); //12sp
 
-            if (equipItems != null && equipItems.size() > 0) {
-                TextView tv = new TextView(this);
-                tv.setTextColor(getResources().getColor(R.color.white));
-                tv.setText(R.string.extra_equipitem);
-                tv.setTextAppearance(this, R.style.normal_margin);
-                tv.setTextSize(12); //12sp
+            LinearLayout.LayoutParams layoutParamForTV = new LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            layoutParamForTV.gravity = Gravity.CENTER_VERTICAL | Gravity.LEFT;
+            layoutParamForTV.setMargins(Utility.getInstance().dip2px(this, 10), Utility.getInstance().dip2px(this, 5), 0, 0);
+            subLayoutForEquip.addView(tv, layoutParamForTV);
 
-                LinearLayout.LayoutParams layoutParamForTV = new LinearLayout.LayoutParams(
-                        ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                layoutParamForTV.gravity = Gravity.CENTER_VERTICAL | Gravity.LEFT;
-                layoutParamForTV.setMargins(Utility.getInstance().dip2px(this, 10), Utility.getInstance().dip2px(this, 5), 0, 0);
-                subLayoutForEquip.addView(tv, layoutParamForTV);
-
-                for (EquipmentItem item : equipItems) {
-                    RoundImageView riv = new RoundImageView(this);
-                    riv.setBorderColor(getResources().getColor(R.color.equip_im_border));
-                    riv.setBorderWidthPX(Utility.getInstance().dip2px(this, 1));
-                    LinearLayout.LayoutParams imgLayout = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, Utility.getInstance().dip2px(this, 300));
-                    riv.setLayoutParams(imgLayout);
-                    riv.setmBorderRadiusPX(Utility.getInstance().dip2px(this, 5));
-                    imgLayout.setMargins(10, 10, 0, 0);
-                    riv.setFilePath(item.getPicPath());
-                    riv.invalidate();
-                    subLayoutForEquip.addView(riv);
-                }
+            for (EquipmentItem item : equipItems) {
+                RoundImageView riv = new RoundImageView(this);
+                riv.setBorderColor(item.getBorderColor());
+                riv.setBorderWidthPX(Utility.getInstance().dip2px(this, 2));
+                LinearLayout.LayoutParams imgLayout = new LinearLayout.LayoutParams(
+                        ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT);
+                imgLayout.setMargins(10, 10, 0, 0);
+                riv.setLayoutParams(imgLayout);
+                riv.setmBorderRadiusPX(Utility.getInstance().dip2px(this, 5));
+                riv.setFilePath(item.getPicPath());
+                riv.invalidate();
+                subLayoutForEquip.addView(riv);
             }
         }
     }

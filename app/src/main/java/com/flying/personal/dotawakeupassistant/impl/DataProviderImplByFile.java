@@ -237,8 +237,135 @@ public class DataProviderImplByFile implements IDataProvider {
 
     }
 
+    private Map<String, EquipmentItem> getEquipCache() {
+        Map<String, EquipmentItem> equipCache = new HashMap<>(30);
+        {
+            EquipmentItem item = new EquipmentItem();
+            item.setDisplayName("冰甲卷轴");
+            item.setPicPath("bjjz.jpg");
+            equipCache.put(item.getDisplayName(), item);
+        }
+        {
+            EquipmentItem item = new EquipmentItem();
+            item.setDisplayName("辉耀卷轴");
+            item.setPicPath("hyjz.jpg");
+            equipCache.put(item.getDisplayName(), item);
+        }
+        {
+            EquipmentItem item = new EquipmentItem();
+            item.setDisplayName("大炮卷轴");
+            item.setPicPath("dpjz.jpg");
+            equipCache.put(item.getDisplayName(), item);
+        }
+        {
+            EquipmentItem item = new EquipmentItem();
+            item.setDisplayName("龙心卷轴");
+            item.setPicPath("lxjz.jpg");
+            equipCache.put(item.getDisplayName(), item);
+        }
+        {
+            EquipmentItem item = new EquipmentItem();
+            item.setDisplayName("撒旦卷轴");
+            item.setPicPath("sdjz.jpg");
+            equipCache.put(item.getDisplayName(), item);
+        }
+        {
+            EquipmentItem item = new EquipmentItem();
+            item.setDisplayName("恶魔刀锋");
+            item.setPicPath("emdf.jpg");
+            equipCache.put(item.getDisplayName(), item);
+        }
+        {
+            EquipmentItem item = new EquipmentItem();
+            item.setDisplayName("远古遗物");
+            item.setPicPath("ygyw.jpg");
+            equipCache.put(item.getDisplayName(), item);
+        }
+        {
+            EquipmentItem item = new EquipmentItem();
+            item.setDisplayName("永恒冰柱");
+            item.setPicPath("yhbz.jpg");
+            equipCache.put(item.getDisplayName(), item);
+        }
+        {
+            EquipmentItem item = new EquipmentItem();
+            item.setDisplayName("银月长矛");
+            item.setPicPath("yycm.jpg");
+            equipCache.put(item.getDisplayName(), item);
+        }
+        {
+            EquipmentItem item = new EquipmentItem(true);
+            item.setDisplayName("鹰语指环");
+            item.setPicPath("yyzh.jpg");
+            equipCache.put(item.getDisplayName(), item);
+        }
+        {
+            EquipmentItem item = new EquipmentItem();
+            item.setDisplayName("巫师之冠");
+            item.setPicPath("wszg.jpg");
+            equipCache.put(item.getDisplayName(), item);
+        }
+        {
+            EquipmentItem item = new EquipmentItem(true);
+            item.setDisplayName("泰坦战斧");
+            item.setPicPath("ttzf.jpg");
+            equipCache.put(item.getDisplayName(), item);
+        }
+        {
+            EquipmentItem item = new EquipmentItem(true);
+            item.setDisplayName("水晶球");
+            item.setPicPath("sjq.jpg");
+            equipCache.put(item.getDisplayName(), item);
+        }
+        {
+            EquipmentItem item = new EquipmentItem();
+            item.setDisplayName("极限球");
+            item.setPicPath("jxq.jpg");
+            equipCache.put(item.getDisplayName(), item);
+        }
+        {
+            EquipmentItem item = new EquipmentItem();
+            item.setDisplayName("红宝石吊坠");
+            item.setPicPath("hbsdz.jpg");
+            equipCache.put(item.getDisplayName(), item);
+        }
+        {
+            EquipmentItem item = new EquipmentItem();
+            item.setDisplayName("禁卫军胸甲");
+            item.setPicPath("jwjxj.jpg");
+            equipCache.put(item.getDisplayName(), item);
+        }
+        {
+            EquipmentItem item = new EquipmentItem();
+            item.setDisplayName("恶魔之失");
+            item.setPicPath("emzs.jpg");
+            equipCache.put(item.getDisplayName(), item);
+        }
+        {
+            EquipmentItem item = new EquipmentItem(true);
+            item.setDisplayName("蓝宝石法杖");
+            item.setPicPath("lbsfz.jpg");
+            equipCache.put(item.getDisplayName(), item);
+        }
+        {
+            EquipmentItem item = new EquipmentItem(true);
+            item.setDisplayName("麒麟弯刀");
+            item.setPicPath("qlwd.jpg");
+            equipCache.put(item.getDisplayName(), item);
+        }
+        {
+            EquipmentItem item = new EquipmentItem();
+            item.setDisplayName("静息项链");
+            item.setPicPath("jxxl.jpg");
+            equipCache.put(item.getDisplayName(), item);
+        }
+
+        return equipCache;
+    }
+
     private Map<String, GameStage> getStageCache() {
-        Map<String, GameStage> stageCache = new HashMap<String, GameStage>(30);
+        Map<String, EquipmentItem> equipCache = getEquipCache();
+        Map<String, GameStage> stageCache = new HashMap<String, GameStage>(56);
         //=============================11===================================
         {
             GameStage gs = new GameStage();
@@ -248,10 +375,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(20);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("冰甲卷轴");
-                item.setPicPath("bjjz.jpg");
-                items.add(item);
+                items.add(equipCache.get("冰甲卷轴"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -264,10 +388,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(20);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("辉耀卷轴");
-                item.setPicPath("hyjz.jpg");
-                items.add(item);
+                items.add(equipCache.get("辉耀卷轴"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -280,10 +401,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(20);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("大炮卷轴");
-                item.setPicPath("dpjz.jpg");
-                items.add(item);
+                items.add(equipCache.get("大炮卷轴"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -306,10 +424,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(20);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("龙心卷轴");
-                item.setPicPath("lxjz.jpg");
-                items.add(item);
+                items.add(equipCache.get("龙心"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -322,10 +437,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(20);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("撒旦卷轴");
-                item.setPicPath("sdjz.jpg");
-                items.add(item);
+                items.add(equipCache.get("撒旦卷轴"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -338,10 +450,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(20);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("恶魔刀锋");
-                item.setPicPath("emdf.jpg");
-                items.add(item);
+                items.add(equipCache.get("恶魔刀锋"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -355,10 +464,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(20);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("大炮卷轴");
-                item.setPicPath("dpjz.jpg");
-                items.add(item);
+                items.add(equipCache.get("大炮卷轴"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -371,10 +477,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(10);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("大炮卷轴");
-                item.setPicPath("dpjz.jpg");
-                items.add(item);
+                items.add(equipCache.get("大炮卷轴"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -447,10 +550,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(10);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("撒旦卷轴");
-                item.setPicPath("sdjz.jpg");
-                items.add(item);
+                items.add(equipCache.get("撒旦卷轴"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -463,10 +563,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(20);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("撒旦卷轴");
-                item.setPicPath("sdjz.jpg");
-                items.add(item);
+                items.add(equipCache.get("撒旦卷轴"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -479,10 +576,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(20);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("龙心卷轴");
-                item.setPicPath("lxjz.jpg");
-                items.add(item);
+                items.add(equipCache.get("龙心卷轴"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -495,10 +589,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(10);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("龙心卷轴");
-                item.setPicPath("lxjz.jpg");
-                items.add(item);
+                items.add(equipCache.get("龙心卷轴"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -511,10 +602,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(10);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("远古遗物");
-                item.setPicPath("ygyw.jpg");
-                items.add(item);
+                items.add(equipCache.get("远古卷轴"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -527,10 +615,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(20);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("远古遗物");
-                item.setPicPath("ygyw.jpg");
-                items.add(item);
+                items.add(equipCache.get("远古遗物"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -543,10 +628,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(20);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("辉耀卷轴");
-                item.setPicPath("hyjz.jpg");
-                items.add(item);
+                items.add(equipCache.get("辉耀卷轴"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -559,10 +641,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(10);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("辉耀卷轴");
-                item.setPicPath("hyjz.jpg");
-                items.add(item);
+                items.add(equipCache.get("辉耀卷轴"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -576,10 +655,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(24);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("永恒冰柱");
-                item.setPicPath("yhbz.jpg");
-                items.add(item);
+                items.add(equipCache.get("永恒冰柱"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -592,10 +668,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(12);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("永恒冰柱");
-                item.setPicPath("yhbz.jpg");
-                items.add(item);
+                items.add(equipCache.get("永恒冰柱"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -608,10 +681,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(12);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("银月长矛");
-                item.setPicPath("yycm.jpg");
-                items.add(item);
+                items.add(equipCache.get("银月长矛"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -624,10 +694,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(24);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("银月长矛");
-                item.setPicPath("yycm.jpg");
-                items.add(item);
+                items.add(equipCache.get("银月长矛"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -640,10 +707,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(24);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("鹰语指环");
-                item.setPicPath("yyzh.jpg");
-                items.add(item);
+                items.add(equipCache.get("鹰语指环"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -656,10 +720,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(12);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("鹰语指环");
-                item.setPicPath("yyzh.jpg");
-                items.add(item);
+                items.add(equipCache.get("鹰语指环"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -672,10 +733,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(12);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("巫师之冠");
-                item.setPicPath("wszg.jpg");
-                items.add(item);
+                items.add(equipCache.get("巫师之冠"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -688,10 +746,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(24);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("巫师之冠");
-                item.setPicPath("wszg.jpg");
-                items.add(item);
+                items.add(equipCache.get("巫师之冠"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -704,16 +759,10 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(24);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("龙芯卷轴");
-                item.setPicPath("lxjz.jpg");
-                items.add(item);
+                items.add(equipCache.get("龙心卷轴"));
             }
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("泰坦战俘");
-                item.setPicPath("ttzf.jpg");
-                items.add(item);
+                items.add(equipCache.get("泰坦战斧"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -726,16 +775,10 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(12);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("龙芯卷轴");
-                item.setPicPath("lxjz.jpg");
-                items.add(item);
+                items.add(equipCache.get("龙心卷轴"));
             }
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("泰坦战斧");
-                item.setPicPath("ttzf.jpg");
-                items.add(item);
+                items.add(equipCache.get("泰坦战斧"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -748,10 +791,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(12);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("水晶球");
-                item.setPicPath("sjq.jpg");
-                items.add(item);
+                items.add(equipCache.get("水晶球"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -764,10 +804,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(24);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("水晶球");
-                item.setPicPath("sjq.jpg");
-                items.add(item);
+                items.add(equipCache.get("水晶球"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -781,16 +818,10 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(24);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("巫师之冠");
-                item.setPicPath("wszg.jpg");
-                items.add(item);
+                items.add(equipCache.get("巫师之冠"));
             }
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("极限球");
-                item.setPicPath("jxq.jpg");
-                items.add(item);
+                items.add(equipCache.get("极限球"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -803,16 +834,10 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(12);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("巫师之冠");
-                item.setPicPath("wszg.jpg");
-                items.add(item);
+                items.add(equipCache.get("巫师之冠"));
             }
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("极限球");
-                item.setPicPath("jxq.jpg");
-                items.add(item);
+                items.add(equipCache.get("极限球"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -825,10 +850,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(12);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("红宝石吊坠");
-                item.setPicPath("hbsdz.jpg");
-                items.add(item);
+                items.add(equipCache.get("红宝石吊坠"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -841,10 +863,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(24);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("红宝石吊坠");
-                item.setPicPath("hbsdz.jpg");
-                items.add(item);
+                items.add(equipCache.get("红宝石吊坠"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -857,10 +876,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(24);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("禁卫军胸甲");
-                item.setPicPath("jwjxj.jpg");
-                items.add(item);
+                items.add(equipCache.get("禁卫军胸甲"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -873,10 +889,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(12);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("禁卫军胸甲");
-                item.setPicPath("jwjxj.jpg");
-                items.add(item);
+                items.add(equipCache.get("禁卫军胸甲"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -889,16 +902,10 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(12);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("远古遗物");
-                item.setPicPath("ygyw.jpg");
-                items.add(item);
+                items.add(equipCache.get("远古遗物"));
             }
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("恶魔之失");
-                item.setPicPath("emzs.jpg");
-                items.add(item);
+                items.add(equipCache.get("恶魔之失"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -911,16 +918,10 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(24);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("远古遗物");
-                item.setPicPath("ygyw.jpg");
-                items.add(item);
+                items.add(equipCache.get("远古遗物"));
             }
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("恶魔之失");
-                item.setPicPath("emzs.jpg");
-                items.add(item);
+                items.add(equipCache.get("恶魔之失"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -933,16 +934,10 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(24);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("蓝宝石法杖");
-                item.setPicPath("lbsfz.jpg");
-                items.add(item);
+                items.add(equipCache.get("蓝宝石法杖"));
             }
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("撒旦卷轴");
-                item.setPicPath("sdjz.jpg");
-                items.add(item);
+                items.add(equipCache.get("撒旦卷轴"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -955,16 +950,10 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(12);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("蓝宝石法杖");
-                item.setPicPath("lbsfz.jpg");
-                items.add(item);
+                items.add(equipCache.get("蓝宝石法杖"));
             }
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("撒旦卷轴");
-                item.setPicPath("sdjz.jpg");
-                items.add(item);
+                items.add(equipCache.get("撒旦卷轴"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -977,16 +966,26 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setStamina(24);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("麒麟弯刀");
-                item.setPicPath("qlwd.jpg");
-                items.add(item);
+                items.add(equipCache.get("麒麟弯刀"));
             }
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("辉耀卷轴");
-                item.setPicPath("hyjz.jpg");
-                items.add(item);
+                items.add(equipCache.get("辉耀卷轴"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("巨龙巢穴");
+            gs.setChapter(14);
+            gs.setSequenceNo(6);
+            gs.setStamina(12);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("麒麟弯刀"));
+            }
+            {
+                items.add(equipCache.get("辉耀卷轴"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -1001,16 +1000,10 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setOccurDays(SpecialStage.Weekday.Monday | SpecialStage.Weekday.Thursday | SpecialStage.Weekday.Sunday);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("水晶球");
-                item.setPicPath("sjq.jpg");
-                items.add(item);
+                items.add(equipCache.get("水晶球"));
             }
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("巫师之冠");
-                item.setPicPath("wszg.jpg");
-                items.add(item);
+                items.add(equipCache.get("巫师之冠"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
@@ -1031,10 +1024,7 @@ public class DataProviderImplByFile implements IDataProvider {
             gs.setOccurDays(SpecialStage.Weekday.Wednesday | SpecialStage.Weekday.Saturday | SpecialStage.Weekday.Sunday);
             List<EquipmentItem> items = new ArrayList<EquipmentItem>();
             {
-                EquipmentItem item = new EquipmentItem();
-                item.setDisplayName("静息项链");
-                item.setPicPath("jxxl.jpg");
-                items.add(item);
+                items.add(equipCache.get("静息项链"));
             }
             gs.setOutputItems(items);
             stageCache.put(gs.getName(), gs);
