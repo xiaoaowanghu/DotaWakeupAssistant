@@ -100,18 +100,9 @@ public class DetailActivity extends ActionBarActivity {
                 subLayoutForEquip.addView(tv, layoutParamForTV);
 
                 for (EquipmentItem item : equipItems) {
-//                    ImageView ivEquip = new ImageView(this);
-//                    LinearLayout.LayoutParams imgLayout = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-//                    imgLayout.setMargins(2, 2, 0, 0);
-//                    // set imageview property
-//                    ivEquip.setLayoutParams(imgLayout);
-//                    ivEquip.setAdjustViewBounds(true);
-//                    Bitmap equipBM = Utility.getInstance().createImageFromAsset(this, item.getPicPath());
-//                    ivEquip.setImageBitmap(equipBM);
-//                    ivEquip.setBackgroundResource(R.drawable.equip_image_border);
-//                    subLayoutForEquip.addView(ivEquip);
-
                     RoundImageView riv = new RoundImageView(this);
+                    riv.setBorderColor(getResources().getColor(R.color.equip_im_border));
+                    riv.setBorderWidthPX(Utility.getInstance().dip2px(this, 1));
                     LinearLayout.LayoutParams imgLayout = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, Utility.getInstance().dip2px(this, 300));
                     riv.setLayoutParams(imgLayout);
                     riv.setmBorderRadiusPX(Utility.getInstance().dip2px(this, 5));
