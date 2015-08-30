@@ -74,6 +74,9 @@ public class DetailActivity extends ActionBarActivity {
         ((TextView) findViewById(R.id.tvTask2)).setText(hero.getTasks()[1].getDisplayInfo());
         ((TextView) findViewById(R.id.tvTask3)).setText(hero.getTasks()[2].getDisplayInfo());
 
+        if (hero.getTasks()[0].getStage() == null)
+            return;
+
         List<EquipmentItem> equipItems = hero.getTasks()[0].getStage().getOutputItems();
 
         if (equipItems != null && equipItems.size() > 0) {
@@ -105,9 +108,9 @@ public class DetailActivity extends ActionBarActivity {
                 riv.setBorderWidthPX(Utility.getInstance().dip2px(this, 2));
                 LinearLayout.LayoutParams imgLayout = new LinearLayout.LayoutParams(
                         ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT);
-                imgLayout.setMargins(10, 10, 0, 0);
+                imgLayout.setMargins(10, 10, 0, 10);
                 riv.setLayoutParams(imgLayout);
-                riv.setmBorderRadiusPX(Utility.getInstance().dip2px(this, 5));
+                riv.setmBorderRadiusPX(Utility.getInstance().dip2px(this, 8));
                 riv.setFilePath(item.getPicPath());
                 riv.invalidate();
                 subLayoutForEquip.addView(riv);
