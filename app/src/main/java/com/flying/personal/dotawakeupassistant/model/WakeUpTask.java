@@ -36,7 +36,11 @@ public class WakeUpTask {
     }
 
     public String getDisplayInfo() {
-        String result = "第" + stage.getChapter() + "章 " + stage.name;
+        String result = "";
+
+        if (stage != null)
+            result = "第" + stage.getChapter() + "章 " + stage.name;
+
         return result + " " + description;
     }
 

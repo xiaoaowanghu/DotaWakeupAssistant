@@ -242,7 +242,7 @@
     <string name="position_back">后排</string>
     <string name="position_front">前排</string>
     <string name="position_middle">中排</string>
-    <string name="search_hint">T9搜索，包括中英文名及昵称</string>
+    <string name="search_hint">名字/昵称/英文的拼音(字母)搜索</string>
     <!-- From: file:/D:/mywork/GitHub/DotaWakeupAssistant/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>

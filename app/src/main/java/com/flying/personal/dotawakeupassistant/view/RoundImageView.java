@@ -150,49 +150,131 @@ public class RoundImageView extends View {
             super.onMeasure(widthMeasureSpec, heightMeasureSpec);
             return;
         }
-        int widthResult, heightResult;
         int heightSpecSize = MeasureSpec.getSize(heightMeasureSpec);
         int heightMode = MeasureSpec.getMode(heightMeasureSpec);
         int widthSpecSize = MeasureSpec.getSize(widthMeasureSpec);
         int widthMode = MeasureSpec.getMode(widthMeasureSpec);
         CustomSize oriPicSize = getImageSize();
-
-        if (heightMode == MeasureSpec.AT_MOST) {
-            heightResult = oriPicSize.height > heightSpecSize ? heightSpecSize : oriPicSize.height;
-        } else {
-            heightResult = heightSpecSize;
-        }
-
-        if (widthMode == MeasureSpec.AT_MOST) {
-            widthResult = oriPicSize.width > widthSpecSize ? widthSpecSize : oriPicSize.width;
-        } else {
-            widthResult = widthSpecSize;
-        }
-
-        if (scaleMode == SimpleScale.AutoScale
-                || (scaleMode == SimpleScale.Center && oriPicSize.width >= widthResult && oriPicSize.height >= heightResult)) {
-            //automatically change size
-            double widthRate = widthResult * (double) 1 / oriPicSize.width;
-            double heightRate = heightResult * (double) 1 / oriPicSize.height;
-            double actualRate = 0;
-
-            if (widthRate > heightRate) {
-                if (heightRate != 0)
-                    actualRate = heightRate;
-                else
-                    actualRate = widthRate;
-            } else {
-                if (widthRate != 0)
-                    actualRate = widthRate;
-                else
-                    actualRate = heightRate;
+        CustomSize measureResult = null;
+        //ajust the size of the view according to the pic's rate
+        if (scaleMode == SimpleScale.AutoScale) {
+            if (heightMode == MeasureSpec.UNSPECIFIED) {
+                if (widthMode == MeasureSpec.EXACTLY) {
+                    measureResult = getMinRateSize(widthSpecSize, 0);
+                } else if (widthMode == MeasureSpec.UNSPECIFIED) {
+                    measureResult = new CustomSize(oriPicSize.width, oriPicSize.height);
+                } else {
+                    int tmpWidth = oriPicSize.width > widthSpecSize ? widthSpecSize : oriPicSize.width;
+                    measureResult = getMinRateSize(tmpWidth, 0);
+                }
+            } else if (heightMode == MeasureSpec.EXACTLY) {
+                if (widthMode == MeasureSpec.UNSPECIFIED) {
+                    measureResult = getMinRateSize(0, heightSpecSize);
+                } else {
+                    measureResult = getMinRateSize(widthSpecSize, heightSpecSize);
+                }
+            } else if (heightMode == MeasureSpec.AT_MOST) {
+                if (widthMode == MeasureSpec.UNSPECIFIED) {
+                    int tmpHeight = oriPicSize.height > heightSpecSize ? heightSpecSize : oriPicSize.height;
+                    measureResult = getMinRateSize(0, tmpHeight);
+                } else if (widthMode == MeasureSpec.AT_MOST) {
+                    int tmpWidth = oriPicSize.width > widthSpecSize ? widthSpecSize : oriPicSize.width;
+                    int tmpHeight = oriPicSize.height > heightSpecSize ? heightSpecSize : oriPicSize.height;
+                    measureResult = getMinRateSize(tmpWidth, tmpHeight);
+                } else {
+                    measureResult = getMinRateSize(widthSpecSize, heightSpecSize);
+                }
             }
-
-            widthResult = (int) (oriPicSize.width * actualRate);
-            heightResult = (int) (oriPicSize.height * actualRate);
+        } else if (scaleMode == SimpleScale.Fill) {
+            if (heightMode == MeasureSpec.UNSPECIFIED) {
+                if (widthMode == MeasureSpec.EXACTLY) {
+                    measureResult = getMinRateSize(widthSpecSize, 0);
+                } else if (widthMode == MeasureSpec.UNSPECIFIED) {
+                    measureResult = new CustomSize(oriPicSize.width, oriPicSize.height);
+                } else {
+                    int tmpWidth = oriPicSize.width > widthSpecSize ? widthSpecSize : oriPicSize.width;
+                    measureResult = getMinRateSize(tmpWidth, 0);
+                }
+            } else if (heightMode == MeasureSpec.EXACTLY) {
+                if (widthMode == MeasureSpec.UNSPECIFIED) {
+                    measureResult = getMinRateSize(0, heightSpecSize);
+                } else if (widthMode == MeasureSpec.AT_MOST) {
+                    CustomSize tmpSize = getMinRateSize(0, heightSpecSize);
+                    int tmpWidth = tmpSize.width > widthSpecSize ? widthSpecSize : tmpSize.width;
+                    measureResult = new CustomSize(tmpWidth, heightSpecSize);
+                } else {
+                    measureResult = new CustomSize(widthSpecSize, heightSpecSize);
+                }
+            } else if (heightMode == MeasureSpec.AT_MOST) {
+                if (widthMode == MeasureSpec.UNSPECIFIED) {
+                    int tmpHeight = oriPicSize.height > heightSpecSize ? heightSpecSize : oriPicSize.height;
+                    measureResult = getMinRateSize(0, tmpHeight);
+                } else if (widthMode == MeasureSpec.AT_MOST) {
+                    int tmpWidth = oriPicSize.width > widthSpecSize ? widthSpecSize : oriPicSize.width;
+                    int tmpHeight = oriPicSize.height > heightSpecSize ? heightSpecSize : oriPicSize.height;
+                    measureResult = getMinRateSize(tmpWidth, tmpHeight);
+                } else {
+                    CustomSize tmpSize = getMinRateSize(widthSpecSize, 0);
+                    int tmpheight = heightSpecSize > tmpSize.height ? tmpSize.height : heightSpecSize;
+                    measureResult = new CustomSize(widthSpecSize, tmpheight);
+                }
+            }
+        } else if (scaleMode == SimpleScale.Center) {
+            if (heightMode == MeasureSpec.UNSPECIFIED) {
+                if (widthMode == MeasureSpec.EXACTLY) {
+                    measureResult = getMinRateSize(widthSpecSize, 0);
+                } else if (widthMode == MeasureSpec.UNSPECIFIED) {
+                    measureResult = new CustomSize(oriPicSize.width, oriPicSize.height);
+                } else {
+                    int tmpWidth = oriPicSize.width > widthSpecSize ? widthSpecSize : oriPicSize.width;
+                    measureResult = getMinRateSize(tmpWidth, 0);
+                }
+            } else if (heightMode == MeasureSpec.EXACTLY) {
+                if (widthMode == MeasureSpec.UNSPECIFIED) {
+                    measureResult = getMinRateSize(0, heightSpecSize);
+                } else if (widthMode == MeasureSpec.AT_MOST) {
+                    int tmpWidth = widthSpecSize > oriPicSize.width ? oriPicSize.width : widthSpecSize;
+                    measureResult = new CustomSize(tmpWidth, heightSpecSize);
+                } else {
+                    measureResult = new CustomSize(widthSpecSize, heightSpecSize);
+                }
+            } else if (heightMode == MeasureSpec.AT_MOST) {
+                if (heightMode == MeasureSpec.UNSPECIFIED) {
+                    int tmpHeight = oriPicSize.height > heightSpecSize ? heightSpecSize : oriPicSize.height;
+                    measureResult = getMinRateSize(0, tmpHeight);
+                } else if (widthMode == MeasureSpec.AT_MOST) {
+                    int tmpWidth = oriPicSize.width > widthSpecSize ? widthSpecSize : oriPicSize.width;
+                    int tmpHeight = oriPicSize.height > heightSpecSize ? heightSpecSize : oriPicSize.height;
+                    measureResult = new CustomSize(tmpWidth, tmpHeight);
+                } else {
+                    int tmpHeight = oriPicSize.height > heightSpecSize ? heightSpecSize : oriPicSize.height;
+                    measureResult = new CustomSize(widthSpecSize, tmpHeight);
+                }
+            }
         }
 
-        setMeasuredDimension(widthResult, heightResult);
+        setMeasuredDimension(measureResult.width, measureResult.height);
+    }
+
+    private CustomSize getMinRateSize(int mayBeWidth, int mayBeHeight) {
+        CustomSize oriPicSize = getImageSize();
+        double widthRate = mayBeWidth * (double) 1 / oriPicSize.width;
+        double heightRate = mayBeHeight * (double) 1 / oriPicSize.height;
+        double actualRate = 0;
+
+        if (widthRate > heightRate) {
+            if (heightRate != 0)
+                actualRate = heightRate;
+            else
+                actualRate = widthRate;
+        } else {
+            if (widthRate != 0)
+                actualRate = widthRate;
+            else
+                actualRate = heightRate;
+        }
+
+        return new CustomSize((int) (oriPicSize.width * actualRate), (int) (oriPicSize.height * actualRate));
     }
 
 
