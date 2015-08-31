@@ -167,5 +167,39 @@
                 android:textSize="14sp" />
 
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llAffectedSkill"
+            style="@style/layout_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="4"
+            android:background="@drawable/layout_border"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                style="@style/normal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/task1"
+                android:textColor="@color/font_color4"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvaffectedSkill"
+                style="@style/normal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:maxLines="2"
+                android:text="Test:收集满60碎片"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

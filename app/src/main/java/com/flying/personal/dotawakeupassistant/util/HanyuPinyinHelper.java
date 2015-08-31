@@ -142,13 +142,43 @@ public class HanyuPinyinHelper {
         }
     }
 
+    public String getFirstPinyin(int n, String str, boolean simplePinyin) {
+        if (str == null || n >= str.length())
+            return null;
+
+        this.isSimple = simplePinyin;
+        list.clear();
+        buffer.delete(0, buffer.length());
+
+        for (int i = n; i < str.length(); i++) {
+            char c = str.charAt(i);
+
+            if (0x3007 == c || (0x4E00 <= c && c <= 0x9FA5)) {
+                String[] arrayStrings = getHanyuPinyins(c);
+                if (arrayStrings == null || arrayStrings.length == 0) {
+                    buffer.append(c);
+                } else {
+                    if (isSimple)
+                        buffer.append(arrayStrings[0].substring(0, 1));
+                    else
+                        buffer.append(arrayStrings[0]);
+                }
+            } else {
+                buffer.append(c);
+            }
+        }
+
+        return buffer.toString();
+    }
+
+
     private void convertToT9Index(int n, String str) {
         if (str == null || n >= str.length())
             return;
 
         List<List<String>> allPinYinList = new ArrayList<List<String>>(str.length());
 
-        for (int i = 0; i < str.length(); i++) {
+        for (int i = n; i < str.length(); i++) {
             char c = str.charAt(i);
             List<String> currentPinyins = null;
 
@@ -179,7 +209,7 @@ public class HanyuPinyinHelper {
                 currentPinyins.add(c + "");
             }
 
-            allPinYinList.add(i, currentPinyins);
+            allPinYinList.add(i - n, currentPinyins);
         }
 
         List<String> tmpResult = new ArrayList<String>(10);
