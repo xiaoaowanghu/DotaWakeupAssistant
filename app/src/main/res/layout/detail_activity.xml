@@ -9,7 +9,7 @@
     <LinearLayout
         android:id="@+id/llHead"
         style="@style/layout_vertical"
-        android:layout_weight="300"
+        android:layout_weight="382"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -29,31 +29,33 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/llTopName"
             style="@style/layout_horizontal"
             android:layout_weight="618"
             android:orientation="vertical">
 
-            <com.flying.personal.dotawakeupassistant.view.AutoAdjustFontSizeTextView
+            <TextView
                 android:id="@+id/tvHeroName"
                 style="@style/layout_vertical"
                 android:layout_marginTop="10dp"
-                android:layout_weight="382"
+                android:layout_weight="2"
                 android:gravity="center"
                 android:text="HeroName"
                 android:textColor="@color/black"
-                android:textSize="30sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/tvSkillDesc"
                 style="@style/layout_vertical"
-                android:layout_weight="618"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="2"
                 android:gravity="left|top"
                 android:maxLines="3"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:text="位置: 三大法撒旦发射大法师多发时段发生三大法撒旦发射大撒旦发射"
                 android:textColor="@color/font_color5"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
         </LinearLayout>
     </LinearLayout>
@@ -70,7 +72,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginTop="10dp"
-            android:layout_weight="4"
+            android:layout_weight="2"
             android:background="@drawable/layout_border"
             android:orientation="vertical"
             android:paddingBottom="5dp"
@@ -83,8 +85,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/task1"
-                android:textColor="@color/font_color4"
-                android:textSize="16sp" />
+                android:textColor="@color/font_color5"
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/tvTask1"
@@ -94,7 +96,7 @@
                 android:layout_marginTop="10dp"
                 android:maxLines="2"
                 android:text="Test:收集满60碎片"
-                android:textColor="@color/white"
+                android:textColor="@color/font_color3"
                 android:textSize="14sp" />
         </LinearLayout>
 
@@ -103,7 +105,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginTop="10dp"
-            android:layout_weight="3"
+            android:layout_weight="2"
             android:background="@drawable/layout_border"
             android:orientation="vertical"
             android:paddingBottom="5dp"
@@ -116,8 +118,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/task2"
-                android:textColor="@color/font_color4"
-                android:textSize="16sp" />
+                android:textColor="@color/font_color5"
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/tvTask2"
@@ -128,7 +130,7 @@
                 android:layout_marginTop="10dp"
                 android:maxLines="2"
                 android:text="Test:收集满60碎片"
-                android:textColor="@color/white"
+                android:textColor="@color/font_color3"
                 android:textSize="14sp" />
 
         </LinearLayout>
@@ -139,7 +141,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginTop="10dp"
-            android:layout_weight="3"
+            android:layout_weight="2"
             android:background="@drawable/layout_border"
             android:orientation="vertical"
             android:paddingBottom="5dp"
@@ -152,8 +154,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/task3"
-                android:textColor="@color/font_color4"
-                android:textSize="16sp" />
+                android:textColor="@color/font_color5"
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/tvTask3"
@@ -163,43 +165,10 @@
                 android:layout_marginTop="10dp"
                 android:maxLines="2"
                 android:text="Test:收集满60碎片"
-                android:textColor="@color/white"
+                android:textColor="@color/font_color3"
                 android:textSize="14sp" />
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/llAffectedSkill"
-            style="@style/layout_vertical"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="10dp"
-            android:layout_weight="4"
-            android:background="@drawable/layout_border"
-            android:orientation="vertical"
-            android:paddingBottom="5dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingTop="5dp">
-
-            <TextView
-                style="@style/normal_margin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/task1"
-                android:textColor="@color/font_color4"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/tvaffectedSkill"
-                style="@style/normal_margin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:maxLines="2"
-                android:text="Test:收集满60碎片"
-                android:textColor="@color/white"
-                android:textSize="14sp" />
-        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

@@ -7,6 +7,7 @@ import com.flying.personal.dotawakeupassistant.model.HeroTag;
 import com.flying.personal.dotawakeupassistant.model.SpecialStage;
 import com.flying.personal.dotawakeupassistant.model.WakeUpRepeatableTask;
 import com.flying.personal.dotawakeupassistant.model.WakeUpTask;
+import com.flying.personal.dotawakeupassistant.model.WakeupSkill;
 import com.flying.personal.dotawakeupassistant.util.HanyuPinyinHelper;
 
 import java.util.ArrayList;
@@ -18,17 +19,17 @@ import java.util.Map;
  * Created by wangxian on 8/31/2015.
  */
 public class BuiltInData {
+
+    private Map<String, HeroTag> tagCache;
+    private Map<String, List<String>> tagHeroCache;
     private Map<String, EquipmentItem> equipCache;
     private Map<String, GameStage> stageCache;
     private List<Hero> heroes;
-    private Map<String, HeroTag> tagCache;
-    private Map<String, List<String>> tagHeroCache;
 
     public BuiltInData() {
         createTagCache();
         createEquipCache();
         createStageCache();
-        createHeroes();
     }
 
     public void clear() {
@@ -49,22 +50,32 @@ public class BuiltInData {
     }
 
     public Map<String, EquipmentItem> getEquipCache() {
+        if (equipCache == null)
+            createEquipCache();
         return equipCache;
     }
 
     public Map<String, GameStage> getStageCache() {
+        if (stageCache == null)
+            createStageCache();
         return stageCache;
     }
 
     public List<Hero> getHeroes() {
+        if (heroes == null)
+            createHeroes();
         return heroes;
     }
 
     public Map<String, HeroTag> getTagCache() {
+        if (tagCache == null)
+            createTagCache();
         return tagCache;
     }
 
     public Map<String, List<String>> getTagHeroCache() {
+        if (tagHeroCache == null)
+            createTagCache();
         return tagHeroCache;
     }
 
@@ -73,7 +84,6 @@ public class BuiltInData {
         tagHeroCache = new HashMap<>(30);
         String picExtensionName = ".jpg";
         {
-
             String tagName = "野兽";
             HeroTag tag = new HeroTag();
             tag.tagName = tagName;
@@ -86,7 +96,6 @@ public class BuiltInData {
             heroNames.add("浣熊");
             heroNames.add("刚背猪");
             heroNames.add("神牛");
-
         }
         {
             String tagName = "斧系";
@@ -1473,7 +1482,15 @@ public class BuiltInData {
             h1.setAbilityType(Hero.AbilityType.Agility);
             h1.setPortraitPath("xiaohei.jpg");
             h1.setPicPath("xiaohei_big.jpg");
-            h1.setWakeupSkillString("增加女武神队友90点护甲穿透");
+
+            WakeupSkill skill = new WakeupSkill("增加女武神队友90点护甲穿透");
+            skill.affectTag = tagCache.get("女武神");
+            h1.setWakeupSkill(skill);
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.物理穿透;
+            skill.abilitiesAffected[0].value = "+90";
+
             List<String> alias = new ArrayList<String>(5);
             alias.add("冰箭");
             h1.setAlias(alias);
@@ -1504,9 +1521,14 @@ public class BuiltInData {
             h1.setAbilityType(Hero.AbilityType.Intelligence);
             h1.setPortraitPath("shuangtoulong.jpg");
             h1.setPicPath("shuangtoulong_big.jpg");
-            h1.setWakeupSkillString("吐息系队友增加819点魔法");
-            List<String> alias = new ArrayList<String>(5);
-            h1.setAlias(alias);
+
+            WakeupSkill skill = new WakeupSkill("吐息系队友增加819点魔法强度");
+            skill.affectTag = tagCache.get("吐息系");
+            h1.setWakeupSkill(skill);
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.魔法强度;
+            skill.abilitiesAffected[0].value = "+819";
 
             WakeUpTask[] tasks = new WakeUpTask[3];
             h1.setTasks(tasks);
@@ -1534,7 +1556,15 @@ public class BuiltInData {
             h1.setAbilityType(Hero.AbilityType.Strength);
             h1.setPortraitPath("fenghuang.jpg");
             h1.setPicPath("fenghuang_big.jpg");
-            h1.setWakeupSkillString("敢死队队友增加270点智力");
+
+            WakeupSkill skill = new WakeupSkill("敢死队队友增加270点智力");
+            skill.affectTag = tagCache.get("敢死队");
+            h1.setWakeupSkill(skill);
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.智力;
+            skill.abilitiesAffected[0].value = "+270点";
+
             List<String> alias = new ArrayList<String>(5);
             alias.add("烧烤");
             h1.setAlias(alias);
@@ -1565,7 +1595,10 @@ public class BuiltInData {
             h1.setAbilityType(Hero.AbilityType.Strength);
             h1.setPortraitPath("gangbei.jpg");
             h1.setPicPath("gangbei_big.jpg");
-            h1.setWakeupSkillString("针刺扫射可造成额外伤害，并且每次叠加造成的额外伤害提升540点");
+
+            WakeupSkill skill = new WakeupSkill("针刺扫射可造成额外伤害，并且每次叠加造成的额外伤害提升540点");
+            h1.setWakeupSkill(skill);
+
             List<String> alias = new ArrayList<String>(5);
             alias.add("刚猪");
             h1.setAlias(alias);
@@ -1597,7 +1630,15 @@ public class BuiltInData {
             h1.setAbilityType(Hero.AbilityType.Intelligence);
             h1.setPortraitPath("wuyi.jpg");
             h1.setPicPath("wuyi_big.jpg");
-            h1.setWakeupSkillString("所有药剂师队友增加1674点魔法");
+
+            WakeupSkill skill = new WakeupSkill("所有药剂师队友增加1674点魔法");
+            skill.affectTag = tagCache.get("药剂师");
+            h1.setWakeupSkill(skill);
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.魔法强度;
+            skill.abilitiesAffected[0].value = "+1674";
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("51");
             h1.setAlias(alias);
@@ -1628,7 +1669,10 @@ public class BuiltInData {
             h1.setAbilityType(Hero.AbilityType.Intelligence);
             h1.setPortraitPath("lina.jpg");
             h1.setPicPath("lina_big.jpg");
-            h1.setWakeupSkillString("普通攻击增加45点能量");
+
+            WakeupSkill skill = new WakeupSkill("普通攻击增加45点能量");
+            h1.setWakeupSkill(skill);
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("lina");
             h1.setAlias(alias);
@@ -1659,7 +1703,10 @@ public class BuiltInData {
             h1.setAbilityType(Hero.AbilityType.Intelligence);
             h1.setPortraitPath("lion.jpg");
             h1.setPicPath("lion_big.jpg");
-            h1.setWakeupSkillString("增加变小黑鸭技能，可吸取对方能量并降低魔抗");
+
+            WakeupSkill skill = new WakeupSkill("增加变小黑鸭技能，可吸取对方能量并降低魔抗");
+            h1.setWakeupSkill(skill);
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("lion");
             h1.setAlias(alias);
@@ -1690,7 +1737,10 @@ public class BuiltInData {
             h1.setAbilityType(Hero.AbilityType.Intelligence);
             h1.setPortraitPath("qdp.jpg");
             h1.setPicPath("qdp_big.jpg");
-            h1.setWakeupSkillString("受到男性英雄伤害降低15.64%");
+
+            WakeupSkill skill = new WakeupSkill("受到男性英雄伤害降低15.64%");
+            h1.setWakeupSkill(skill);
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("qdp");
             alias.add("sm");
@@ -1722,7 +1772,10 @@ public class BuiltInData {
             h1.setAbilityType(Hero.AbilityType.Agility);
             h1.setPortraitPath("huoqiang.jpg");
             h1.setPicPath("huoqiang_big.jpg");
-            h1.setWakeupSkillString("增加273点暴击");
+
+            WakeupSkill skill = new WakeupSkill("增加自身273点暴击");
+            h1.setWakeupSkill(skill);
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("矮子");
             h1.setAlias(alias);
@@ -1753,7 +1806,10 @@ public class BuiltInData {
             h1.setAbilityType(Hero.AbilityType.Intelligence);
             h1.setPortraitPath("bingnv.jpg");
             h1.setPicPath("bingnv_big.jpg");
-            h1.setWakeupSkillString("死前为最虚弱的队友增加寒冰结界");
+
+            WakeupSkill skill = new WakeupSkill("死前为最虚弱的队友增加寒冰结界");
+            h1.setWakeupSkill(skill);
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("cm");
             h1.setAlias(alias);
@@ -1784,7 +1840,10 @@ public class BuiltInData {
             h1.setAbilityType(Hero.AbilityType.Strength);
             h1.setPortraitPath("chaoxi.jpg");
             h1.setPicPath("chaoxi_big.jpg");
-            h1.setWakeupSkillString("每损失15%生命值会触发海妖护甲，驱除负面魔法，并短时间增加护甲");
+
+            WakeupSkill skill = new WakeupSkill("每损失15%生命值会触发海妖护甲，驱除负面魔法，并短时间增加护甲");
+            h1.setWakeupSkill(skill);
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("章鱼哥");
             alias.add("鲨鱼哥");
@@ -1817,7 +1876,10 @@ public class BuiltInData {
             String picName = "heiniao";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("阵亡后，恢复队友450点魔法");
+
+            WakeupSkill skill = new WakeupSkill("阵亡后，恢复队友450点魔法");
+            h1.setWakeupSkill(skill);
+
             List<String> alias = new ArrayList<String>(2);
             h1.setAlias(alias);
 
@@ -1848,7 +1910,15 @@ public class BuiltInData {
             String picName = "guangfa";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("西行者队友增加72点魔抗");
+
+            WakeupSkill skill = new WakeupSkill("西行者队友增加72点魔抗");
+            skill.affectTag = tagCache.get("西行者");
+            h1.setWakeupSkill(skill);
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.魔抗;
+            skill.abilitiesAffected[0].value = "+72";
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("老头");
             h1.setAlias(alias);
@@ -1880,7 +1950,10 @@ public class BuiltInData {
             String picName = "naga";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("闪避攻击后，可召唤出幻象");
+
+            WakeupSkill skill = new WakeupSkill("闪避攻击后，可召唤出幻象");
+            h1.setWakeupSkill(skill);
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("naga");
             h1.setAlias(alias);
@@ -1912,7 +1985,15 @@ public class BuiltInData {
             String picName = "fuwang";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("持斧类队友，增加180点力量");
+
+            WakeupSkill skill = new WakeupSkill("持斧类队友，增加180点力量");
+            skill.affectTag = tagCache.get("斧系");
+            h1.setWakeupSkill(skill);
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.力量;
+            skill.abilitiesAffected[0].value = "+180";
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("斧头");
             alias.add("axe");

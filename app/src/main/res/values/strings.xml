@@ -16,4 +16,7 @@
     <string name="search_hint">名字/昵称/英文的拼音(字母)搜索</string>
     <string name="position_all">全部</string>
     <string name="extra_equipitem">该关还可获得</string>
+    <string name="no_affected_skill">没有能被加成的属性</string>
+    <string name="dir_hero_path">hero</string>
+    <string name="dir_equipment_path">equipment</string>
 </resources>

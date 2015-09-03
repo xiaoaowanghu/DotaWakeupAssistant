@@ -18,6 +18,16 @@ public class Hero {
     protected String portraitPath;
     protected String wakeupSkillString;
     protected List<HeroTag> tags;
+    protected WakeupSkill wakeupSkill;
+
+    public WakeupSkill getWakeupSkill() {
+        return wakeupSkill;
+    }
+
+    public void setWakeupSkill(WakeupSkill wakeupSkill) {
+        this.wakeupSkill = wakeupSkill;
+        this.wakeupSkill.hero = this;
+    }
 
     public Hero() {
         tags = new ArrayList<HeroTag>(5);

@@ -28,7 +28,7 @@ public class DataProviderImplByFile implements IDataProvider {
     private Map<Hero, List<String>> searchIndexs;
     private double version = 1.0;
     private String dataFilePath;
-    private List<WakeupSkill> wakupSkills;
+    private List<WakeupSkill> wakupAffectSkills;
 
     @Override
     public List<Hero> getAllHeroes() {
@@ -147,9 +147,9 @@ public class DataProviderImplByFile implements IDataProvider {
         List<WakeupSkill> result = new ArrayList<WakeupSkill>(5);
 
         for (int i = 0; i < tagsOfHero.size(); i++) {
-            for (int j = 0; j < wakupSkills.size(); j++) {
-                WakeupSkill skill = wakupSkills.get(j);
-                if (tagsOfHero.get(i) == skill.affectTag) {
+            for (int j = 0; j < wakupAffectSkills.size(); j++) {
+                WakeupSkill skill = wakupAffectSkills.get(j);
+                if (tagsOfHero.get(i).tagName.equalsIgnoreCase(skill.affectTag.tagName)) {
                     result.add(skill);
                 }
             }
@@ -160,55 +160,58 @@ public class DataProviderImplByFile implements IDataProvider {
 
     @Override
     public void init(String[] args) {
-        BuiltInData data = new BuiltInData();
+        SerializedData extraData = null;
+        BuiltInData builtInData = new BuiltInData();
         try {
-            this.heroes = data.getHeroes();
             dataFilePath = args[0];
 
             if (isDataFileExit()) {
                 Log.d(this.getClass().getName(), "Load data from file");
+                extraData = getExtraDataFromJsonFile();
+            }
 
-                SerializedData extraData = getExtraDataFromJsonFile();
-                if (extraData.tags != null) {
-                    Map<String, HeroTag> tagCache = data.getTagCache();
-                    for (int i = 0; i < extraData.tagHeros.size(); i++) {
-                        HeroTag t = extraData.tags.get(i);
-                        tagCache.put(t.tagName, t);
-                    }
+            if (extraData != null && extraData.tags != null) {
+                Map<String, HeroTag> tagCache = builtInData.getTagCache();
+                for (int i = 0; i < extraData.tagHeros.size(); i++) {
+                    HeroTag t = extraData.tags.get(i);
+                    tagCache.put(t.tagName, t);
                 }
+            }
 
-                if (extraData.tagHeros != null) {
-                    Map<String, List<String>> tagHeroCache = data.getTagHeroCache();
-                    Iterator<Map.Entry<String, List<String>>> entries = extraData.tagHeros.entrySet().iterator();
-                    while (entries.hasNext()) {
-                        Map.Entry<String, List<String>> entry = entries.next();
-                        tagHeroCache.put(entry.getKey(), entry.getValue());
-                    }
+            if (extraData != null && extraData.tagHeros != null) {
+                Map<String, List<String>> tagHeroCache = builtInData.getTagHeroCache();
+                Iterator<Map.Entry<String, List<String>>> entries = extraData.tagHeros.entrySet().iterator();
+                while (entries.hasNext()) {
+                    Map.Entry<String, List<String>> entry = entries.next();
+                    tagHeroCache.put(entry.getKey(), entry.getValue());
                 }
+            }
+            //hero must load after updating tag from external files
+            this.heroes = builtInData.getHeroes();
 
-                if (extraData != null) {
-                    version = extraData.version;
-                    if (extraData.heroDatas != null) {
-                        for (int i = 0; i < extraData.heroDatas.size(); i++) {
-                            Hero h = extraData.heroDatas.get(i);
-                            int j = 0;
-                            for (; j < heroes.size(); j++) {
-                                if (h.getName().equalsIgnoreCase(heroes.get(j).getName()))
-                                    break;
-                            }
-                            //Replace with new one
-                            if (j < heroes.size()) {
-                                heroes.set(j, h);
-                            } else {
-                                heroes.add(h);
-                            }
+            if (extraData != null) {
+                version = extraData.version;
+                if (extraData.heroDatas != null) {
+                    for (int i = 0; i < extraData.heroDatas.size(); i++) {
+                        Hero h = extraData.heroDatas.get(i);
+                        int j = 0;
+                        for (; j < heroes.size(); j++) {
+                            if (h.getName().equalsIgnoreCase(heroes.get(j).getName()))
+                                break;
+                        }
+                        //Replace with new one
+                        if (j < heroes.size()) {
+                            heroes.set(j, h);
+                        } else {
+                            heroes.add(h);
                         }
                     }
                 }
             }
-            //Save tags
-            Map<String, HeroTag> tagCache = data.getTagCache();
-            Map<String, List<String>> tagHeroCache = data.getTagHeroCache();
+
+            //Save tags to hero
+            Map<String, HeroTag> tagCache = builtInData.getTagCache();
+            Map<String, List<String>> tagHeroCache = builtInData.getTagHeroCache();
 
             Iterator<Map.Entry<String, List<String>>> entries = tagHeroCache.entrySet().iterator();
             while (entries.hasNext()) {
@@ -226,21 +229,11 @@ public class DataProviderImplByFile implements IDataProvider {
                 }
             }
             //Create wakeup skill relation
-            wakupSkills = new ArrayList<WakeupSkill>(heroes.size() * 2 / 3);
+            wakupAffectSkills = new ArrayList<WakeupSkill>(heroes.size() * 2 / 3);
             for (Hero h : heroes) {
-                String skillDisplayString = h.getWakeupSkillString();
-                Iterator<Map.Entry<String, HeroTag>> tagEntries = tagCache.entrySet().iterator();
-
-                while (tagEntries.hasNext()) {
-                    Map.Entry<String, HeroTag> entry = tagEntries.next();
-                    String tagName = entry.getKey();
-                    if (skillDisplayString.contains(tagName)) {
-                        WakeupSkill ws = new WakeupSkill();
-                        ws.description = skillDisplayString;
-                        ws.hero = h;
-                        ws.affectTag = entry.getValue();
-                        break;
-                    }
+                WakeupSkill ws = h.getWakeupSkill();
+                if (h.getWakeupSkill() != null && ws.abilitiesAffected != null) {
+                    wakupAffectSkills.add(ws);
                 }
             }
             //create index for quick search
@@ -260,11 +253,15 @@ public class DataProviderImplByFile implements IDataProvider {
                 searchIndexs.put(h, indexes);
             }
 
-        } catch (Exception e) {
+        } catch (
+                Exception e
+                )
+
+        {
             Log.e(this.getClass().getName(), Log.getStackTraceString(e));
         }
 
-        data.clear();
+        builtInData.clear();
     }
 
     private SerializedData getExtraDataFromJsonFile() {
@@ -312,8 +309,8 @@ public class DataProviderImplByFile implements IDataProvider {
 
     public class SerializedData {
         public double version = 1;
-        public List<Hero> heroDatas;
         public List<HeroTag> tags;
         public Map<String, List<String>> tagHeros;
+        public List<Hero> heroDatas;
     }
 }

@@ -17,7 +17,7 @@ import com.flying.personal.dotawakeupassistant.R;
  * Do not Copy/Edit/Use this class without permission.
  */
 public class QuickSearchEditText extends EditText {
-    private final static int DefaultDelayMillionSecondsToSearch = 600;
+    private final static int DefaultDelayMillionSecondsToSearch = 500;
 
     private int delayMilliseconds = DefaultDelayMillionSecondsToSearch;  //delay time to search
     private IOnSearch searchListener;
