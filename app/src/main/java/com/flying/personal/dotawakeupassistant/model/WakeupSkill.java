@@ -20,7 +20,9 @@ public class WakeupSkill {
         魔法穿透,
         智力,
         力量,
-        敏捷
+        敏捷,
+        生命回复,
+        受到物理伤害
     }
 
     public class AbilityAffected {

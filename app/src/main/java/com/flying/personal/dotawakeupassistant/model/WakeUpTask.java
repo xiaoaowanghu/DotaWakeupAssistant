@@ -10,6 +10,7 @@ public class WakeUpTask {
     protected GameStage stage;
     protected double dropRate = 6 / 4.0;
     protected String description;
+    protected EquipmentItem[] neededEquipment;
 
     public Date whenCanFinish(Date startDate, int refreshTimes) {
         Calendar c = Calendar.getInstance();
@@ -54,5 +55,13 @@ public class WakeUpTask {
 
     public void setDropRate(double dropRate) {
         this.dropRate = dropRate;
+    }
+
+    public EquipmentItem[] getNeededEquip() {
+        return neededEquipment;
+    }
+
+    public void setNeededEquip(EquipmentItem[] neededEquipment) {
+        this.neededEquipment = neededEquipment;
     }
 }

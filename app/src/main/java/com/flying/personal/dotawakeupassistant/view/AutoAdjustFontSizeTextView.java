@@ -20,8 +20,7 @@ public class AutoAdjustFontSizeTextView extends TextView {
         super(context, attrs);
         TypedArray a = context.obtainStyledAttributes(attrs,
                 R.styleable.AutoAdjustFontSizeTextView);
-        this.minTextSizePX = Utility.getInstance().dip2px(this.getContext(),
-                a.getFloat(R.styleable.AutoAdjustFontSizeTextView_minTextSize, DEFAULT_MIN_TEXT_SIZE));//sp
+        this.minTextSizePX = a.getDimension(R.styleable.AutoAdjustFontSizeTextView_minTextSize, 8);
         a.recycle();
     }
 
@@ -44,7 +43,7 @@ public class AutoAdjustFontSizeTextView extends TextView {
                 testPaint.setTextSize(trySizePX);
             }
             //change to sp
-            this.setTextSize(Utility.getInstance().px2dip(this.getContext(), trySizePX));
+            this.setTextSize(Utility.getInstance().px2sp(this.getContext(), trySizePX));
         }
     }
 

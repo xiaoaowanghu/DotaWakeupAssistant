@@ -3,6 +3,8 @@ package com.flying.personal.dotawakeupassistant.util;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Paint;
+import android.graphics.Rect;
 import android.os.Environment;
 
 import java.io.IOException;
@@ -30,6 +32,16 @@ public class Utility {
     public int px2dip(Context context, float pxValue) {
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int) (pxValue / scale + 0.5f);
+    }
+
+    public float sp2px(Context context, float spValue) {
+        final float scale = context.getResources().getDisplayMetrics().scaledDensity;
+        return spValue * scale;
+    }
+
+    public float px2sp(Context context, float pxValue) {
+        final float scale = context.getResources().getDisplayMetrics().scaledDensity;
+        return pxValue / scale;
     }
 
 
@@ -97,4 +109,16 @@ public class Utility {
         return Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
     }
 
+    public int getSuitableTextSizePX(Paint paint, int initialTextSize, int availableWidth, String text, Rect textBound) {
+        Paint testPaint = new Paint(paint);
+        testPaint.setTextSize(initialTextSize);
+
+        while ((initialTextSize > 0) && (testPaint.measureText(text) > availableWidth)) {
+            initialTextSize -= 1;
+            testPaint.setTextSize(initialTextSize);
+        }
+
+        paint.getTextBounds(text, 0, text.length(), textBound);
+        return initialTextSize;
+    }
 }

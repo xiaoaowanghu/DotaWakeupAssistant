@@ -1,5 +1,7 @@
 package com.flying.personal.dotawakeupassistant;
 
+import android.util.Log;
+
 import com.flying.personal.dotawakeupassistant.model.EquipmentItem;
 import com.flying.personal.dotawakeupassistant.model.GameStage;
 import com.flying.personal.dotawakeupassistant.model.Hero;
@@ -447,6 +449,7 @@ public class BuiltInData {
             List<String> heroNames = new ArrayList(10);
             tagHeroCache.put(tag.tagName, heroNames);
             heroNames.add("电魂");
+            heroNames.add("虚空");
         }
         {
             String tagName = "翼人系";
@@ -477,12 +480,46 @@ public class BuiltInData {
             heroNames.add("仙女龙");
             heroNames.add("双头龙");
         }
+        {
+            String tagName = "野人";
+            HeroTag tag = new HeroTag();
+            tag.tagName = tagName;
+            tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
+            tagCache.put(tagName, tag);
+            List<String> heroNames = new ArrayList(10);
+            tagHeroCache.put(tag.tagName, heroNames);
+            heroNames.add("暗影洒满");
+            heroNames.add("兽王");
+            heroNames.add("狼人");
+            heroNames.add("潮汐");
+        }
+        {
+            String tagName = "王者";
+            HeroTag tag = new HeroTag();
+            tag.tagName = tagName;
+            tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
+            tagCache.put(tagName, tag);
+            List<String> heroNames = new ArrayList(10);
+            tagHeroCache.put(tag.tagName, heroNames);
+            heroNames.add("痛苦女王");
+            heroNames.add("沙王");
+            heroNames.add("兽王");
+            heroNames.add("斧王");
+            heroNames.add("骷髅王");
+            heroNames.add("暗夜魔王");
+        }
 
         return tagCache;
     }
 
     private Map<String, EquipmentItem> createEquipCache() {
         equipCache = new HashMap<>(30);
+        {
+            EquipmentItem item = new EquipmentItem();
+            item.setDisplayName("掠夺之斧");
+            item.setPicPath("ldzf.jpg");
+            equipCache.put(item.getDisplayName(), item);
+        }
         {
             EquipmentItem item = new EquipmentItem();
             item.setDisplayName("冰甲卷轴");
@@ -1473,6 +1510,24 @@ public class BuiltInData {
         return stageCache;
     }
 
+    private EquipmentItem[] getEquiment(String... equipments) {
+        EquipmentItem[] result = null;
+
+        if (equipments == null || equipments.length == 0)
+            return result;
+
+        result = new EquipmentItem[equipments.length];
+        for (int i = 0; i < equipments.length; i++) {
+            EquipmentItem e = equipCache.get(equipments[i]);
+            if (e == null)
+                Log.e(this.getClass().getName(), "Can't find this equipment:" + equipments[i]);
+            else
+                result[i] = e;
+        }
+
+        return result;
+    }
+
     private List<Hero> createHeroes() {
         heroes = new ArrayList<Hero>(100);
         {
@@ -1499,8 +1554,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription("收集60个倚天剑碎片，合成装备");
+            w1.setDescription("收集60个紫檀木碎片，合成装备倚天剑");
             w1.setStage(stageCache.get("乱石山坡(精英)"));
+            w1.setNeededEquip(getEquiment("鹰语指环", "麒麟弯刀"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1534,8 +1590,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription("收集60个烈焰之角碎片，合成装备");
+            w1.setDescription("收集60个火红色剂碎片，合成装备烈焰之角");
             w1.setStage(stageCache.get("泰坦遗迹(精英)"));
+            w1.setNeededEquip(getEquiment("巫师之冠", "红宝石吊坠", "水晶球"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1573,8 +1630,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription("收集60个凤羽冠碎片，合成装备");
+            w1.setDescription("收集60个熔火之石碎片，合成装备凤羽冠");
             w1.setStage(stageCache.get("山腰相逢(精英)"));
+            w1.setNeededEquip(getEquiment("巫师之冠", "极限球", "水晶球"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1607,8 +1665,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription("收集60个防暴腰铠碎片，合成装备");
+            w1.setDescription("收集60个硬甲钢刺碎片，合成装备防暴腰铠");
             w1.setStage(stageCache.get("山腰相逢(精英)"));
+            w1.setNeededEquip(getEquiment("银月长矛", "泰坦战斧", "红宝石吊坠"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1622,7 +1681,6 @@ public class BuiltInData {
 
             heroes.add(h1);
         }
-
         {
             Hero h1 = new Hero();
             h1.setName("巫医");
@@ -1647,8 +1705,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription("收集60个巫毒面具碎片，合成装备");
+            w1.setDescription("收集60个蛊毒碎片，合成装备巫毒面具");
             w1.setStage(stageCache.get("沼泽边缘(精英)"));
+            w1.setNeededEquip(getEquiment("巫师之冠", "极限球", "水晶球"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1658,6 +1717,41 @@ public class BuiltInData {
             WakeUpTask w3 = new WakeUpTask();
             w3.setDescription("完成关卡且无人阵亡");
             w3.setStage(stageCache.get("乱石山坡(精英)"));
+            tasks[2] = w3;
+
+            heroes.add(h1);
+        }
+        {
+            Hero h1 = new Hero();
+            h1.setName("幽鬼");
+            h1.setPositionType(Hero.PositionType.Front);
+            h1.setAbilityType(Hero.AbilityType.Agility);
+            h1.setPortraitPath("spe.jpg");
+            h1.setPicPath("spe_big.jpg");
+
+            WakeupSkill skill = new WakeupSkill("释放鬼影重重后，本体和幻象接下来的三次攻击中附带能量流失效果");
+            h1.setWakeupSkill(skill);
+
+            List<String> alias = new ArrayList<String>(5);
+            alias.add("spe");
+            h1.setAlias(alias);
+
+            WakeUpTask[] tasks = new WakeUpTask[3];
+            h1.setTasks(tasks);
+            WakeUpTask w1 = new WakeUpTask();
+            tasks[0] = w1;
+            w1.setDescription("收集60个影之砂碎片，合成装备幽魂面甲");
+            w1.setStage(stageCache.get("山腰相逢(精英)"));
+            w1.setNeededEquip(getEquiment("银月长矛", "鹰语指环", "红宝石吊坠"));
+
+            WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
+            tasks[1] = w2;
+            w2.setExecuteTimes(10);
+            w2.setStage(stageCache.get("女武神的对决"));
+
+            WakeUpTask w3 = new WakeUpTask();
+            w3.setDescription("完成关卡，亲自击杀影魔");
+            w3.setStage(stageCache.get("黑暗者(精英)"));
             tasks[2] = w3;
 
             heroes.add(h1);
@@ -1681,8 +1775,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription("收集60个和式战服碎片，合成装备");
+            w1.setDescription("收集60个火扇碎片，合成装备和式战服");
             w1.setStage(stageCache.get("沼泽边缘(精英)"));
+            w1.setNeededEquip(getEquiment("巫师之冠", "水晶球"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1715,8 +1810,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription("收集60个小黑鸭权杖碎片，合成装备");
+            w1.setDescription("收集60个小黄鸭碎片，合成装备小黑鸭权杖");
             w1.setStage(stageCache.get("团战中心(精英)"));
+            w1.setNeededEquip(getEquiment("红宝石吊坠", "水晶球"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1750,8 +1846,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "吸血鬼之触"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "吸血獠牙", "吸血鬼之触"));
             w1.setStage(stageCache.get("山腰相逢(精英)"));
+            w1.setNeededEquip(getEquiment("巫师之冠", "水晶球", "永恒冰柱"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1784,8 +1881,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "传说之枪"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "传说哥签名", "传说之枪"));
             w1.setStage(stageCache.get("巨龙巢穴(精英)"));
+            w1.setNeededEquip(getEquiment("鹰语指环", "永恒冰柱"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1818,8 +1916,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "冰晶之杖"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "水晶鞋", "冰晶之杖"));
             w1.setStage(stageCache.get("团战中心(精英)"));
+            w1.setNeededEquip(getEquiment("红宝石吊坠", "永恒冰柱"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1853,8 +1952,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "章鱼保罗"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "水族箱", "章鱼保罗"));
             w1.setStage(stageCache.get("泰坦遗迹(精英)"));
+            w1.setNeededEquip(getEquiment("极限球", "禁卫军胸甲", "泰坦战斧"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1887,8 +1987,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "魅惑法杖"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "法老面具", "魅惑法杖"));
             w1.setStage(stageCache.get("山腰相逢(精英)"));
+            w1.setNeededEquip(getEquiment("红宝石吊坠", "蓝宝石法杖"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1927,8 +2028,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "巫师白袍"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "漂白剂", "巫师白袍"));
             w1.setStage(stageCache.get("巨龙巢穴(精英)"));
+            w1.setNeededEquip(getEquiment("极限球", "水晶球", "巫师之冠"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1962,8 +2064,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "海斗士鳞衣"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "海洋之心", "海斗士鳞衣"));
             w1.setStage(stageCache.get("山腰相逢(精英)"));
+            w1.setNeededEquip(getEquiment("红宝石吊坠", "鹰语指环"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1986,7 +2089,7 @@ public class BuiltInData {
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
 
-            WakeupSkill skill = new WakeupSkill("持斧类队友，增加180点力量");
+            WakeupSkill skill = new WakeupSkill("持斧类队友增加180点力量");
             skill.affectTag = tagCache.get("斧系");
             h1.setWakeupSkill(skill);
             skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
@@ -2003,8 +2106,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "男爵手套"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "恶魔之血", "男爵手套"));
             w1.setStage(stageCache.get("乱石山坡(精英)"));
+            w1.setNeededEquip(getEquiment("极限球", "泰坦战斧", "禁卫军胸甲"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2026,7 +2130,10 @@ public class BuiltInData {
             String picName = "quanneng";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("圣光可额外增加270点护甲");
+
+            WakeupSkill skill = new WakeupSkill("圣光可额外增加270点护甲");
+            h1.setWakeupSkill(skill);
+
             List<String> alias = new ArrayList<String>(2);
             h1.setAlias(alias);
 
@@ -2034,8 +2141,10 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "暮光圣经"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "暮光晶体", "暮光圣经"));
             w1.setStage(stageCache.get("乱石山坡(精英)"));
+            w1.setNeededEquip(getEquiment("水晶球", "掠夺之斧", "禁卫军胸甲"));
+
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2057,7 +2166,10 @@ public class BuiltInData {
             String picName = "paipai";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("每层烙印可令目标额外受到630点伤害");
+
+            WakeupSkill skill = new WakeupSkill("每层烙印可令目标额外受到630点伤害");
+            h1.setWakeupSkill(skill);
+
             List<String> alias = new ArrayList<String>(2);
             h1.setAlias(alias);
 
@@ -2065,8 +2177,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "斯巴达披风"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "斯巴达矛尖", "斯巴达披风"));
             w1.setStage(stageCache.get("巨龙巢穴(精英)"));
+            w1.setNeededEquip(getEquiment("银月长矛", "麒麟弯刀"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2088,7 +2201,15 @@ public class BuiltInData {
             String picName = "yuren";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("渔人队友增加180点敏捷");
+
+            WakeupSkill skill = new WakeupSkill("鱼人队友增加180点敏捷");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("鱼人");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.敏捷;
+            skill.abilitiesAffected[0].value = "+180";
+
             List<String> alias = new ArrayList<String>(2);
             h1.setAlias(alias);
 
@@ -2096,8 +2217,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "海神三叉戟"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "海神之螺", "海神三叉戟"));
             w1.setStage(stageCache.get("乱石山坡(精英)"));
+            w1.setNeededEquip(getEquiment("禁卫军胸甲", "泰坦战斧"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2119,7 +2241,10 @@ public class BuiltInData {
             String picName = "lanpang";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("增加另外一种爆轰术");
+
+            WakeupSkill skill = new WakeupSkill("增加另外一种爆轰术");
+            h1.setWakeupSkill(skill);
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("orge");
             h1.setAlias(alias);
@@ -2128,8 +2253,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "主导者之盔"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "九头蛇指爪", "主导者之盔"));
             w1.setStage(stageCache.get("泰坦遗迹(精英)"));
+            w1.setNeededEquip(getEquiment("巫师之冠", "泰坦战斧"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2151,7 +2277,10 @@ public class BuiltInData {
             String picName = "dianhun";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("死后给敌人造成540点能量损失");
+
+            WakeupSkill skill = new WakeupSkill("死后给敌人造成540点能量损失");
+            h1.setWakeupSkill(skill);
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("电棍");
             alias.add("razor");
@@ -2161,8 +2290,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "惩罚之雷"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "冥王之眼", "惩罚之雷"));
             w1.setStage(stageCache.get("团战中心(精英)"));
+            w1.setNeededEquip(getEquiment("永恒冰柱", "水晶球", "掠夺之斧"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2184,7 +2314,15 @@ public class BuiltInData {
             String picName = "chuanzhang";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("给新兵团增加3960点生命");
+
+            WakeupSkill skill = new WakeupSkill("新兵团增加3960点生命");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("新兵团");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.生命;
+            skill.abilitiesAffected[0].value = "+3960";
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("kunkka");
             h1.setAlias(alias);
@@ -2193,8 +2331,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "正义风衣"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "海军勋章", "正义风衣"));
             w1.setStage(stageCache.get("沼泽边缘(精英)"));
+            w1.setNeededEquip(getEquiment("永恒冰柱", "禁卫军胸甲", "掠夺之斧"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2216,7 +2355,10 @@ public class BuiltInData {
             String picName = "bainiu";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("死亡后造成1350点伤害");
+
+            WakeupSkill skill = new WakeupSkill("死亡后造成1350点伤害");
+            h1.setWakeupSkill(skill);
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("sb");
             h1.setAlias(alias);
@@ -2225,8 +2367,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "混铁战斧"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "混铁棒", "混铁战斧"));
             w1.setStage(stageCache.get("团战中心(精英)"));
+            w1.setNeededEquip(getEquiment("永恒冰柱", "禁卫军胸甲", "红宝石吊坠"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2248,7 +2391,10 @@ public class BuiltInData {
             String picName = "huomao";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("在释放无影之刃的时候可以额外释放一次燃烧锁链，造成2160点的持续伤害");
+
+            WakeupSkill skill = new WakeupSkill("在释放无影之刃的时候可以额外释放一次燃烧锁链，造成2160点的持续伤害");
+            h1.setWakeupSkill(skill);
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("火猫");
             h1.setAlias(alias);
@@ -2257,8 +2403,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "屠龙刀"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "龙珠", "屠龙刀"));
             w1.setStage(stageCache.get("泰坦遗迹(精英)"));
+            w1.setNeededEquip(getEquiment("永恒冰柱", "麒麟弯刀"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2280,7 +2427,15 @@ public class BuiltInData {
             String picName = "es";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("野兽类型队友增加182点力量");
+
+            WakeupSkill skill = new WakeupSkill("野兽类型队友增加182点力量");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("野兽");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.力量;
+            skill.abilitiesAffected[0].value = "+182";
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("憾地");
             alias.add("es");
@@ -2290,8 +2445,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription("远征补给站购买60个先祖图腾碎片，合成装备");
+            w1.setDescription("远征补给站购买60个红杉碎片，合成装备先祖图腾");
             w1.setStage(null);
+            w1.setNeededEquip(getEquiment("红宝石吊坠", "银月长矛", "泰坦战斧"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2313,7 +2469,15 @@ public class BuiltInData {
             String picName = "jugg";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("刀剑系队友增加180点物理暴击");
+
+            WakeupSkill skill = new WakeupSkill("刀剑系队友增加180点物理暴击");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("刀剑系");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.物理暴击;
+            skill.abilitiesAffected[0].value = "+180";
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("jugg");
             alias.add("bm");
@@ -2323,8 +2487,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription("巅峰竞技商店购买60个先妖刀村正碎片，合成装备");
+            w1.setDescription("巅峰竞技商店购买60个陨铁碎片，合成装备先妖刀村正");
             w1.setStage(null);
+            w1.setNeededEquip(getEquiment("麒麟弯刀"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2346,7 +2511,15 @@ public class BuiltInData {
             String picName = "tiny";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("给队友增加180点魔抗");
+
+            WakeupSkill skill = new WakeupSkill("巨人队友增加180点魔抗");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("巨人");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.魔抗;
+            skill.abilitiesAffected[0].value = "+180";
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("石头");
             alias.add("tiny");
@@ -2356,8 +2529,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "雪人"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "雪球", "雪人"));
             w1.setStage(stageCache.get("山腰相逢(精英)"));
+            w1.setNeededEquip(getEquiment("永恒冰柱"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2379,7 +2553,15 @@ public class BuiltInData {
             String picName = "fengxing";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("给弓箭系队友增加36.4命中");
+
+            WakeupSkill skill = new WakeupSkill("弓箭系队友增加36.4命中");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("弓箭系");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.命中;
+            skill.abilitiesAffected[0].value = "+36";
+
             List<String> alias = new ArrayList<String>(2);
             h1.setAlias(alias);
 
@@ -2387,8 +2569,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "侠盗羽帽"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "绿帽", "侠盗羽帽"));
             w1.setStage(stageCache.get("沼泽边缘(精英)"));
+            w1.setNeededEquip(getEquiment("红宝石吊坠", "巫师之冠"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2410,7 +2593,10 @@ public class BuiltInData {
             String picName = "nec";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("给弓箭系队友增加36.4命中");
+
+            WakeupSkill skill = new WakeupSkill("从死亡单位上召唤骷髅兵");
+            h1.setWakeupSkill(skill);
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("nec");
             h1.setAlias(alias);
@@ -2419,8 +2605,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "死神镰刀"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "死神名单", "死神镰刀"));
             w1.setStage(stageCache.get("沼泽边缘(精英)"));
+            w1.setNeededEquip(getEquiment("水晶球", "永恒冰柱"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2442,7 +2629,10 @@ public class BuiltInData {
             String picName = "shenling";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("每损失10%最大生命值，提升10%攻速");
+
+            WakeupSkill skill = new WakeupSkill("每损失10%最大生命值，提升10%攻速");
+            h1.setWakeupSkill(skill);
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("狠角色");
             h1.setAlias(alias);
@@ -2451,8 +2641,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "黑侠面具"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "吸光涂料", "黑侠面具"));
             w1.setStage(stageCache.get("乱石山坡(精英)"));
+            w1.setNeededEquip(getEquiment("泰坦战斧", "禁卫军胸甲"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2474,7 +2665,18 @@ public class BuiltInData {
             String picName = "feiji";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("增加机械系队友27%攻击速度和施法速度");
+
+            WakeupSkill skill = new WakeupSkill("机械系队友增加27%攻击速度和施法速度");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("机械系");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[2];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.攻击速度;
+            skill.abilitiesAffected[0].value = "+27%";
+            skill.abilitiesAffected[1] = skill.new AbilityAffected();
+            skill.abilitiesAffected[1].abilityType = WakeupSkill.AbilityType.施法速度;
+            skill.abilitiesAffected[1].value = "+27%";
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("飞机");
             h1.setAlias(alias);
@@ -2483,8 +2685,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "加特林机枪"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "枪管", "加特林机枪"));
             w1.setStage(stageCache.get("巨龙巢穴(精英)"));
+            w1.setNeededEquip(getEquiment("掠夺之斧", "鹰语指环"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2506,7 +2709,15 @@ public class BuiltInData {
             String picName = "viper";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("增加飞行系队友810点魔法强度");
+
+            WakeupSkill skill = new WakeupSkill("飞行系队友增加810点魔法强度");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("飞行系");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.魔法强度;
+            skill.abilitiesAffected[0].value = "+810";
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("冥界亚龙");
             alias.add("毒龙");
@@ -2517,8 +2728,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "红色能量宝石"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "二极管", "红色能量宝石"));
             w1.setStage(stageCache.get("沼泽边缘(精英)"));
+            w1.setNeededEquip(getEquiment("红宝石吊坠", "极限球", "水晶球"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2540,7 +2752,10 @@ public class BuiltInData {
             String picName = "pa";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("给窒息之刃增加一次伤害更高的攻击");
+
+            WakeupSkill skill = new WakeupSkill("给窒息之刃增加一次伤害更高的攻击");
+            h1.setWakeupSkill(skill);
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("pa");
             alias.add("刺客");
@@ -2550,8 +2765,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "海市蜃楼"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "幻影水晶", "海市蜃楼"));
             w1.setStage(stageCache.get("乱石山坡(精英)"));
+            w1.setNeededEquip(getEquiment("红宝石吊坠", "麒麟弯刀"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2573,7 +2789,15 @@ public class BuiltInData {
             String picName = "doom";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("给恶魔之角的队友增加180点护甲");
+
+            WakeupSkill skill = new WakeupSkill("恶魔之角的队友增加180点护甲");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("恶魔之角");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.护甲;
+            skill.abilitiesAffected[0].value = "+180";
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("路西法");
             alias.add("doom");
@@ -2584,8 +2808,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "路西法之翼"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "堕天之证", "路西法之翼"));
             w1.setStage(stageCache.get("乱石山坡(精英)"));
+            w1.setNeededEquip(getEquiment("永恒冰柱", "禁卫军胸甲", "泰坦战斧"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2607,7 +2832,15 @@ public class BuiltInData {
             String picName = "dp";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("给女法神队友增加90点魔法穿透");
+
+            WakeupSkill skill = new WakeupSkill("女法神队友增加90点魔法穿透");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("女法神");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.魔法穿透;
+            skill.abilitiesAffected[0].value = "+90";
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("dp");
             h1.setAlias(alias);
@@ -2616,8 +2849,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "死者之书"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "怨灵精华", "死者之书"));
             w1.setStage(stageCache.get("沼泽边缘(精英)"));
+            w1.setNeededEquip(getEquiment("红宝石吊坠", "巫师之冠", "水晶球"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2639,7 +2873,10 @@ public class BuiltInData {
             String picName = "shushi";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("给友军召唤物增加3680点生命");
+
+            WakeupSkill skill = new WakeupSkill("给友军召唤物增加3680点生命");
+            h1.setWakeupSkill(skill);
+
             List<String> alias = new ArrayList<String>(2);
             h1.setAlias(alias);
 
@@ -2647,8 +2884,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "毁灭之石"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "陨石", "毁灭之石"));
             w1.setStage(stageCache.get("泰坦遗迹(精英)"));
+            w1.setNeededEquip(getEquiment("巫师之冠", "水晶球", "禁卫军胸甲"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2670,7 +2908,15 @@ public class BuiltInData {
             String picName = "juntuan";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("增加所有女性英雄2880点生命");
+
+            WakeupSkill skill = new WakeupSkill("女性英雄增加2880点生命");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("女性");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.生命;
+            skill.abilitiesAffected[0].value = "+2880";
+
             List<String> alias = new ArrayList<String>(2);
             h1.setAlias(alias);
 
@@ -2678,8 +2924,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "大帝战盔"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "罗马战旗", "大帝战盔"));
             w1.setStage(stageCache.get("团战中心(精英)"));
+            w1.setNeededEquip(getEquiment("永恒冰柱", "银月长矛", "泰坦战斧"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2701,7 +2948,15 @@ public class BuiltInData {
             String picName = "sven";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("增加变身系英雄540点攻击");
+
+            WakeupSkill skill = new WakeupSkill("变身系英雄增加540点攻击");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("变身系");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.物理攻击;
+            skill.abilitiesAffected[0].value = "+540";
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("sven");
             alias.add("真男人");
@@ -2711,8 +2966,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "麒麟臂"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "麒麟之血", "麒麟臂"));
             w1.setStage(stageCache.get("巨龙巢穴(精英)"));
+            w1.setNeededEquip(getEquiment("永恒冰柱", "银月长矛", "泰坦战斧"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2734,7 +2990,15 @@ public class BuiltInData {
             String picName = "longqi";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("增加龙族队友4500点生命");
+
+            WakeupSkill skill = new WakeupSkill("龙族队友增加4500点生命");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("龙族");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.生命;
+            skill.abilitiesAffected[0].value = "+4500";
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("dk");
             h1.setAlias(alias);
@@ -2743,8 +3007,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "斩龙剑"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "龙鳞", "斩龙剑"));
             w1.setStage(stageCache.get("沼泽边缘(精英)"));
+            w1.setNeededEquip(getEquiment("银月长矛", "泰坦战斧"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2766,7 +3031,15 @@ public class BuiltInData {
             String picName = "dk";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("亡灵系队友每秒回复270点生命");
+
+            WakeupSkill skill = new WakeupSkill("亡灵系队友每秒回复270点生命");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("亡灵");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.生命回复;
+            skill.abilitiesAffected[0].value = "+270";
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("dk");
             h1.setAlias(alias);
@@ -2775,8 +3048,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "梦魇兽"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "安眠药", "梦魇兽"));
             w1.setStage(stageCache.get("团战中心(精英)"));
+            w1.setNeededEquip(getEquiment("极限球", "红宝石吊坠", "泰坦战斧"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2798,7 +3072,10 @@ public class BuiltInData {
             String picName = "xiaokulou";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("亡灵系队友每秒回复270点生命");
+
+            WakeupSkill skill = new WakeupSkill("吞噬召唤物，90%生命值转化为生命上限，10%转化为攻击力");
+            h1.setWakeupSkill(skill);
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("小骷髅");
             alias.add("舞王");
@@ -2808,16 +3085,17 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "天牛座圣衣"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "山铜", "天牛座圣衣"));
             w1.setStage(stageCache.get("泰坦遗迹(精英)"));
+            w1.setNeededEquip(getEquiment("红宝石吊坠", "银月长矛"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
             w2.setExecuteTimes(10);
-            w2.setStage(stageCache.get("诅咒之城(精英)"));
+            w2.setStage(stageCache.get("诅咒之城(魔免)"));
 
             WakeUpTask w3 = new WakeUpTask();
-            w3.setDescription("完成关卡，并无人阵亡");
+            w3.setDescription("完成关卡，并且无人阵亡");
             w3.setStage(stageCache.get("龙语(精英)"));
             tasks[2] = w3;
 
@@ -2831,7 +3109,15 @@ public class BuiltInData {
             String picName = "puck";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("增加森林系队友4600点生命");
+
+            WakeupSkill skill = new WakeupSkill("丛林系队友增加4600点生命");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("丛林系");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.生命;
+            skill.abilitiesAffected[0].value = "+4600";
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("puck");
             h1.setAlias(alias);
@@ -2840,8 +3126,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "梦之谣"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "眠梦法珠", "梦之谣"));
             w1.setStage(stageCache.get("泰坦遗迹(精英)"));
+            w1.setNeededEquip(getEquiment("水晶球", "红宝石吊坠", "巫师之冠"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2863,7 +3150,10 @@ public class BuiltInData {
             String picName = "ta";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("闪避攻击时给自己增加一层折光，最多可抵挡9000伤害");
+
+            WakeupSkill skill = new WakeupSkill("闪避攻击时给自己增加一层折光，最多可抵挡9000伤害");
+            h1.setWakeupSkill(skill);
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("ta");
             h1.setAlias(alias);
@@ -2872,8 +3162,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "神秘面纱"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "紫隐纱", "神秘面纱"));
             w1.setStage(stageCache.get("山腰相逢(精英)"));
+            w1.setNeededEquip(getEquiment("麒麟弯刀", "红宝石吊坠"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2895,7 +3186,18 @@ public class BuiltInData {
             String picName = "jumo";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("增加巨魔队友27%的攻击速度和施法速度");
+
+            WakeupSkill skill = new WakeupSkill("巨魔族队友增加27%的攻击速度和施法速度");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("巨魔族");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[2];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.攻击速度;
+            skill.abilitiesAffected[0].value = "+27%";
+            skill.abilitiesAffected[1] = skill.new AbilityAffected();
+            skill.abilitiesAffected[1].abilityType = WakeupSkill.AbilityType.施法速度;
+            skill.abilitiesAffected[1].value = "+27%";
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("troll");
             alias.add("绿皮");
@@ -2905,8 +3207,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "狂野护符"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "兽牙", "狂野护符"));
             w1.setStage(stageCache.get("乱石山坡(精英)"));
+            w1.setNeededEquip(getEquiment("鹰语指环", "红宝石吊坠", "银月长矛"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2928,7 +3231,15 @@ public class BuiltInData {
             String picName = "shouwang";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("增加野兽队友225点力量");
+
+            WakeupSkill skill = new WakeupSkill("野兽队友增加225点力量");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("野兽");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.力量;
+            skill.abilitiesAffected[0].value = "+225";
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("beast");
             h1.setAlias(alias);
@@ -2937,8 +3248,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "百兽盔"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "兽骨", "百兽盔"));
             w1.setStage(stageCache.get("山腰相逢(精英)"));
+            w1.setNeededEquip(getEquiment("麒麟弯刀", "红宝石吊坠"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2960,7 +3272,15 @@ public class BuiltInData {
             String picName = "snk";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("持盾系队友受到物理伤害降低9%");
+
+            WakeupSkill skill = new WakeupSkill("持盾系队友受到物理伤害降低9%");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("持盾系");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.受到物理伤害;
+            skill.abilitiesAffected[0].value = "-9%";
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("snk");
             alias.add("大骷髅");
@@ -2970,8 +3290,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "亡者王冠"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "蓝水晶", "亡者王冠"));
             w1.setStage(stageCache.get("沼泽边缘(精英)"));
+            w1.setNeededEquip(getEquiment("泰坦战斧", "红宝石吊坠", "永恒冰柱"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2993,7 +3314,15 @@ public class BuiltInData {
             String picName = "luna";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("增加骑行系队友4500点生命");
+
+            WakeupSkill skill = new WakeupSkill("骑行系队友增加4500点生命");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("骑行系");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.生命;
+            skill.abilitiesAffected[0].value = "+4500";
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("luna");
             alias.add("月女");
@@ -3003,8 +3332,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "月影护盔"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "月影锭", "月影护盔"));
             w1.setStage(stageCache.get("团战中心(精英)"));
+            w1.setNeededEquip(getEquiment("银月长矛", "麒麟弯刀"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -3027,7 +3357,15 @@ public class BuiltInData {
             String picName = "tiannu";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("增加翼人系队友4650点生命");
+
+            WakeupSkill skill = new WakeupSkill("翼人系队友增加4650点生命");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("翼人系");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.生命;
+            skill.abilitiesAffected[0].value = "+4650";
+
             List<String> alias = new ArrayList<String>(2);
             h1.setAlias(alias);
 
@@ -3035,8 +3373,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "神怒之翼"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "圣洁羽毛", "神怒之翼"));
             w1.setStage(stageCache.get("巨龙巢穴(精英)"));
+            w1.setNeededEquip(getEquiment("水晶球", "红宝石吊坠", "巫师之冠"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -3054,11 +3393,14 @@ public class BuiltInData {
             Hero h1 = new Hero();
             h1.setName("吸血鬼");
             h1.setPositionType(Hero.PositionType.Front);
-            h1.setAbilityType(Hero.AbilityType.Agility);
+            h1.setAbilityType(Hero.AbilityType.Intelligence);
             String picName = "xixuegui";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("降低敌方女性英雄364点生命");
+
+            WakeupSkill skill = new WakeupSkill("降低敌方女性英雄364点生命");
+            h1.setWakeupSkill(skill);
+
             List<String> alias = new ArrayList<String>(2);
             h1.setAlias(alias);
 
@@ -3066,8 +3408,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "血族面具"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "挚爱之血", "血族面具"));
             w1.setStage(stageCache.get("山腰相逢(精英)"));
+            w1.setNeededEquip(getEquiment("水晶球", "红宝石吊坠"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -3089,7 +3432,10 @@ public class BuiltInData {
             String picName = "difa";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("释放能量燃烧时，会给自己加一层护盾，抵挡魔法伤害");
+
+            WakeupSkill skill = new WakeupSkill("释放能量燃烧时，会给自己加一层护盾，抵挡魔法伤害");
+            h1.setWakeupSkill(skill);
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("am");
             h1.setAlias(alias);
@@ -3098,8 +3444,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "秘法之敌"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "陨星", "秘法之敌"));
             w1.setStage(stageCache.get("泰坦遗迹(精英)"));
+            w1.setNeededEquip(getEquiment("麒麟弯刀", "银月长矛"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -3121,7 +3468,10 @@ public class BuiltInData {
             String picName = "sf";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("再次命中影压时，增加136%伤害");
+
+            WakeupSkill skill = new WakeupSkill("再次命中影压时，增加136%伤害\"");
+            h1.setWakeupSkill(skill);
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("sf");
             h1.setAlias(alias);
@@ -3130,8 +3480,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "火神角盔"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "地心熔岩", "火神角盔"));
             w1.setStage(stageCache.get("团战中心(精英)"));
+            w1.setNeededEquip(getEquiment("麒麟弯刀", "禁卫军胸甲"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -3153,7 +3504,10 @@ public class BuiltInData {
             String picName = "vs";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("死亡时增加队友643点物理攻击和魔法强度");
+
+            WakeupSkill skill = new WakeupSkill("死亡时增加队友643点物理攻击和魔法强度");
+            h1.setWakeupSkill(skill);
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("vs");
             h1.setAlias(alias);
@@ -3162,8 +3516,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "复仇之刃"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "复仇怨灵", "复仇之刃"));
             w1.setStage(stageCache.get("乱石山坡(精英)"));
+            w1.setNeededEquip(getEquiment("鹰语指环", "红宝石吊坠"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -3186,7 +3541,15 @@ public class BuiltInData {
             String picName = "pom";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("增加夜精灵队友27点闪避");
+
+            WakeupSkill skill = new WakeupSkill("夜精灵队友增加27点闪避");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("夜精灵");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.闪避;
+            skill.abilitiesAffected[0].value = "+27";
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("pom");
             alias.add("哲别");
@@ -3197,8 +3560,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "月翼轻盔"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "月晶石", "月翼轻盔"));
             w1.setStage(stageCache.get("山腰相逢(精英)"));
+            w1.setNeededEquip(getEquiment("鹰语指环", "红宝石吊坠", "银月长矛"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -3220,7 +3584,15 @@ public class BuiltInData {
             String picName = "xukong";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("增加异次元队友180点闪避");
+
+            WakeupSkill skill = new WakeupSkill("异次元队友增加180点魔抗");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("异次元");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.魔抗;
+            skill.abilitiesAffected[0].value = "+180";
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("鸡巴脸");
             h1.setAlias(alias);
@@ -3229,8 +3601,9 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "幽浮之力"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "雅达曼谷合金", "幽浮之力"));
             w1.setStage(stageCache.get("巨龙巢穴(精英)"));
+            w1.setNeededEquip(getEquiment("麒麟弯刀", "永恒冰柱"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -3252,7 +3625,10 @@ public class BuiltInData {
             String picName = "xianzhi";
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
-            h1.setWakeupSkillString("在场外时每秒增加攻速9%");
+
+            WakeupSkill skill = new WakeupSkill("在场外时每秒增加攻速9%");
+            h1.setWakeupSkill(skill);
+
             List<String> alias = new ArrayList<String>(2);
             alias.add("furion");
             h1.setAlias(alias);
@@ -3261,8 +3637,50 @@ public class BuiltInData {
             h1.setTasks(tasks);
             WakeUpTask w1 = new WakeUpTask();
             tasks[0] = w1;
-            w1.setDescription(String.format("收集60个%s碎片，合成装备", "丛林之角"));
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "黄龙玉", "丛林之角"));
             w1.setStage(stageCache.get("巨龙巢穴(精英)"));
+            w1.setNeededEquip(getEquiment("红宝石吊坠", "永恒冰柱", "禁卫军胸甲"));
+
+            WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
+            tasks[1] = w2;
+            w2.setExecuteTimes(1);
+            w2.setStage(stageCache.get("影魔"));
+
+            WakeUpTask w3 = new WakeUpTask();
+            w3.setDescription("完成关卡，并且无人阵亡");
+            w3.setStage(stageCache.get("亡语森林(精英)"));
+            tasks[2] = w3;
+
+            heroes.add(h1);
+        }
+        {
+            Hero h1 = new Hero();
+            h1.setName("狼人");
+            h1.setPositionType(Hero.PositionType.Front);
+            h1.setAbilityType(Hero.AbilityType.Strength);
+            String picName = "langren";
+            h1.setPortraitPath(String.format("%s.jpg", picName));
+            h1.setPicPath(String.format("%s_big.jpg", picName));
+
+            WakeupSkill skill = new WakeupSkill("野人队友增加180点护甲");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("野人");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.护甲;
+            skill.abilitiesAffected[0].value = "+180";
+
+            List<String> alias = new ArrayList<String>(2);
+            alias.add("furion");
+            h1.setAlias(alias);
+
+            WakeUpTask[] tasks = new WakeUpTask[3];
+            h1.setTasks(tasks);
+            WakeUpTask w1 = new WakeUpTask();
+            tasks[0] = w1;
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "狼魂", "丛林之角"));
+            w1.setStage(stageCache.get("巨龙巢穴(精英)"));
+            w1.setNeededEquip(getEquiment("泰坦战斧", "永恒冰柱", "银月长矛"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;

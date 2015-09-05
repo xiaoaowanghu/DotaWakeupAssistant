@@ -6,11 +6,13 @@
     <color name="detail_back">#0e4371</color>
     <color name="dark_blue">#98CEEC</color>
     <color name="font_color1">#d2d2d2</color>
-    <color name="font_color2">#858489</color>
-    <color name="font_color3">#ffe9ad</color>
+    <color name="font_task_lable">#ffe9ad</color>
+    <color name="font_color3">#858489</color>858489
     <color name="hero_portrait_border">#ff0000</color>
     <color name="font_color4">#324b84</color>
-    <color name="font_color5">#4c4c4c</color>
+    <color name="font_detail_main">#0d2d3e</color>
+    <color name="font_detail_main2">#274c60</color>
     <color name="bg_color1">#1e1c1a</color>
     <color name="bottom_selected_bg">#fff1ca</color>
+    <color name="tag_bg">#767171</color>
 </resources>

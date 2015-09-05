@@ -800,7 +800,9 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int middleBarArrowSize=0x7f01002b;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
@@ -1396,19 +1398,19 @@ containing a value of this type.
         public static final int abc_config_showMenuShortcutsWhenKeyboardPresent=0x7f090006;
     }
     public static final class color {
-        public static final int abc_background_cache_hint_selector_material_dark=0x7f0b0040;
-        public static final int abc_background_cache_hint_selector_material_light=0x7f0b0041;
+        public static final int abc_background_cache_hint_selector_material_dark=0x7f0b0042;
+        public static final int abc_background_cache_hint_selector_material_light=0x7f0b0043;
         public static final int abc_input_method_navigation_guard=0x7f0b0000;
-        public static final int abc_primary_text_disable_only_material_dark=0x7f0b0042;
-        public static final int abc_primary_text_disable_only_material_light=0x7f0b0043;
-        public static final int abc_primary_text_material_dark=0x7f0b0044;
-        public static final int abc_primary_text_material_light=0x7f0b0045;
-        public static final int abc_search_url_text=0x7f0b0046;
+        public static final int abc_primary_text_disable_only_material_dark=0x7f0b0044;
+        public static final int abc_primary_text_disable_only_material_light=0x7f0b0045;
+        public static final int abc_primary_text_material_dark=0x7f0b0046;
+        public static final int abc_primary_text_material_light=0x7f0b0047;
+        public static final int abc_search_url_text=0x7f0b0048;
         public static final int abc_search_url_text_normal=0x7f0b0001;
         public static final int abc_search_url_text_pressed=0x7f0b0002;
         public static final int abc_search_url_text_selected=0x7f0b0003;
-        public static final int abc_secondary_text_material_dark=0x7f0b0047;
-        public static final int abc_secondary_text_material_light=0x7f0b0048;
+        public static final int abc_secondary_text_material_dark=0x7f0b0049;
+        public static final int abc_secondary_text_material_light=0x7f0b004a;
         public static final int accent_material_dark=0x7f0b0004;
         public static final int accent_material_light=0x7f0b0005;
         public static final int background_floating_material_dark=0x7f0b0006;
@@ -1434,43 +1436,45 @@ containing a value of this type.
         public static final int dim_foreground_material_light=0x7f0b001a;
         public static final int equip_im_border=0x7f0b001b;
         public static final int font_color1=0x7f0b001c;
-        public static final int font_color2=0x7f0b001d;
-        public static final int font_color3=0x7f0b001e;
-        public static final int font_color4=0x7f0b001f;
-        public static final int font_color5=0x7f0b0020;
-        public static final int hero_portrait_border=0x7f0b0021;
-        public static final int highlighted_text_material_dark=0x7f0b0022;
-        public static final int highlighted_text_material_light=0x7f0b0023;
-        public static final int hint_foreground_material_dark=0x7f0b0024;
-        public static final int hint_foreground_material_light=0x7f0b0025;
-        public static final int link_text_material_dark=0x7f0b0026;
-        public static final int link_text_material_light=0x7f0b0027;
-        public static final int material_blue_grey_800=0x7f0b0028;
-        public static final int material_blue_grey_900=0x7f0b0029;
-        public static final int material_blue_grey_950=0x7f0b002a;
-        public static final int material_deep_teal_200=0x7f0b002b;
-        public static final int material_deep_teal_500=0x7f0b002c;
-        public static final int primary_dark_material_dark=0x7f0b002d;
-        public static final int primary_dark_material_light=0x7f0b002e;
-        public static final int primary_material_dark=0x7f0b002f;
-        public static final int primary_material_light=0x7f0b0030;
-        public static final int primary_text_default_material_dark=0x7f0b0031;
-        public static final int primary_text_default_material_light=0x7f0b0032;
-        public static final int primary_text_disabled_material_dark=0x7f0b0033;
-        public static final int primary_text_disabled_material_light=0x7f0b0034;
-        public static final int ripple_material_dark=0x7f0b0035;
-        public static final int ripple_material_light=0x7f0b0036;
-        public static final int secondary_text_default_material_dark=0x7f0b0037;
-        public static final int secondary_text_default_material_light=0x7f0b0038;
-        public static final int secondary_text_disabled_material_dark=0x7f0b0039;
-        public static final int secondary_text_disabled_material_light=0x7f0b003a;
-        public static final int switch_thumb_disabled_material_dark=0x7f0b003b;
-        public static final int switch_thumb_disabled_material_light=0x7f0b003c;
-        public static final int switch_thumb_material_dark=0x7f0b0049;
-        public static final int switch_thumb_material_light=0x7f0b004a;
-        public static final int switch_thumb_normal_material_dark=0x7f0b003d;
-        public static final int switch_thumb_normal_material_light=0x7f0b003e;
-        public static final int white=0x7f0b003f;
+        public static final int font_color3=0x7f0b001d;
+        public static final int font_color4=0x7f0b001e;
+        public static final int font_detail_main=0x7f0b001f;
+        public static final int font_detail_main2=0x7f0b0020;
+        public static final int font_task_lable=0x7f0b0021;
+        public static final int hero_portrait_border=0x7f0b0022;
+        public static final int highlighted_text_material_dark=0x7f0b0023;
+        public static final int highlighted_text_material_light=0x7f0b0024;
+        public static final int hint_foreground_material_dark=0x7f0b0025;
+        public static final int hint_foreground_material_light=0x7f0b0026;
+        public static final int link_text_material_dark=0x7f0b0027;
+        public static final int link_text_material_light=0x7f0b0028;
+        public static final int material_blue_grey_800=0x7f0b0029;
+        public static final int material_blue_grey_900=0x7f0b002a;
+        public static final int material_blue_grey_950=0x7f0b002b;
+        public static final int material_deep_teal_200=0x7f0b002c;
+        public static final int material_deep_teal_500=0x7f0b002d;
+        public static final int primary_dark_material_dark=0x7f0b002e;
+        public static final int primary_dark_material_light=0x7f0b002f;
+        public static final int primary_material_dark=0x7f0b0030;
+        public static final int primary_material_light=0x7f0b0031;
+        public static final int primary_text_default_material_dark=0x7f0b0032;
+        public static final int primary_text_default_material_light=0x7f0b0033;
+        public static final int primary_text_disabled_material_dark=0x7f0b0034;
+        public static final int primary_text_disabled_material_light=0x7f0b0035;
+        public static final int ripple_material_dark=0x7f0b0036;
+        public static final int ripple_material_light=0x7f0b0037;
+        public static final int secondary_text_default_material_dark=0x7f0b0038;
+        public static final int secondary_text_default_material_light=0x7f0b0039;
+        public static final int secondary_text_disabled_material_dark=0x7f0b003a;
+        public static final int secondary_text_disabled_material_light=0x7f0b003b;
+        public static final int switch_thumb_disabled_material_dark=0x7f0b003c;
+        public static final int switch_thumb_disabled_material_light=0x7f0b003d;
+        public static final int switch_thumb_material_dark=0x7f0b004b;
+        public static final int switch_thumb_material_light=0x7f0b004c;
+        public static final int switch_thumb_normal_material_dark=0x7f0b003e;
+        public static final int switch_thumb_normal_material_light=0x7f0b003f;
+        public static final int tag_bg=0x7f0b0040;
+        public static final int white=0x7f0b0041;
     }
     public static final class dimen {
         public static final int abc_action_bar_content_inset_material=0x7f07000c;
@@ -1670,7 +1674,6 @@ containing a value of this type.
         public static final int ifRoom=0x7f0c0018;
         public static final int image=0x7f0c002b;
         public static final int info=0x7f0c007d;
-        public static final int ivAffectedSkillPic=0x7f0c0056;
         public static final int ivAllPosition=0x7f0c0065;
         public static final int ivBackPosition=0x7f0c006e;
         public static final int ivFrontPosition=0x7f0c0068;
@@ -1734,6 +1737,7 @@ containing a value of this type.
         public static final int title_template=0x7f0c0032;
         public static final int topPanel=0x7f0c0031;
         public static final int tvAffectedSkillDesc=0x7f0c0057;
+        public static final int tvAffectedTag=0x7f0c0056;
         public static final int tvAllPosition=0x7f0c0066;
         public static final int tvBackPosition=0x7f0c006f;
         public static final int tvFrontPosition=0x7f0c0069;
@@ -1842,6 +1846,7 @@ containing a value of this type.
         public static final int task1=0x7f060023;
         public static final int task2=0x7f060024;
         public static final int task3=0x7f060025;
+        public static final int wakeup_equipment_matires_remind=0x7f060026;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f080073;
@@ -2874,7 +2879,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           attribute's value can be found in the {@link #AutoAdjustFontSizeTextView} array.
 
 
-          <p>Must be a floating point value, such as "<code>1.2</code>".
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form

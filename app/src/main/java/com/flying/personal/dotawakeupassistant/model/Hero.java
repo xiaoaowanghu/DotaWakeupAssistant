@@ -41,13 +41,13 @@ public class Hero {
         this.tags = tags;
     }
 
-    public String getWakeupSkillString() {
-        return wakeupSkillString;
-    }
-
-    public void setWakeupSkillString(String wakeupSkill) {
-        this.wakeupSkillString = wakeupSkill;
-    }
+//    public String getWakeupSkillString() {
+//        return wakeupSkillString;
+//    }
+//
+//    public void setWakeupSkillString(String wakeupSkill) {
+//        this.wakeupSkillString = wakeupSkill;
+//    }
 
     public enum PositionType {
         Front, Middle, Back
