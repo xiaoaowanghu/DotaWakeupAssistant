@@ -28,6 +28,7 @@ import com.flying.personal.dotawakeupassistant.util.Utility;
 import com.flying.personal.dotawakeupassistant.view.RoundImageView;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -122,19 +123,24 @@ public class DetailActivity extends ActionBarActivity {
                                 }
 
                                 int widthPX = Utility.getInstance().dip2px(DetailActivity.this, widthDP) - 2;
-                                String text = tag.tagName;
+                                String text = tag.getKeyName();
 
                                 if (text == null)
-                                    text = "No tag";
+                                    text = "N";
                                 else {
                                     if (text.length() > 2)
                                         text = text.substring(0, 2);
+
                                 }
+
+                                String tmpText = text;
+                                if (tmpText.length() < 2)
+                                    tmpText = tmpText + "占";// 占位符
 
                                 Paint paint = tv.getPaint();
                                 Rect textBound = new Rect();
                                 int fontSize = Utility.getInstance().getSuitableTextSizePX(paint, (int) tv.getTextSize(),
-                                        widthPX - tv.getPaddingLeft() - tv.getPaddingRight(), text, textBound);
+                                        widthPX - tv.getPaddingLeft() - tv.getPaddingRight(), tmpText, textBound);
                                 lp.width = lp.height = widthPX;
                                 tv.setTextSize(TypedValue.COMPLEX_UNIT_PX, fontSize);
                                 tv.setText(text);
@@ -142,10 +148,10 @@ public class DetailActivity extends ActionBarActivity {
                             } else if (data instanceof WakeupSkill) {
                                 TextView tv = (TextView) view;
                                 WakeupSkill ws = (WakeupSkill) data;
-                                String desc = "搭配" + ws.hero.getName();
+                                String desc = "搭配" + ws.hero.getName() + " ";
                                 for (int i = 0; i < ws.abilitiesAffected.length; i++) {
                                     WakeupSkill.AbilityAffected a = ws.abilitiesAffected[i];
-                                    desc += a.abilityType.toString() + " " + a.value + ",";
+                                    desc += a.abilityType.toString() + a.value + ",";
                                 }
 
                                 if (desc.length() > 0) {
@@ -182,10 +188,39 @@ public class DetailActivity extends ActionBarActivity {
         if (currentHero.getWakeupSkill() != null)
             tvSkillDesc.setText("觉醒技能: " + currentHero.getWakeupSkill().description);
         else
-            Log.e(this.getClass().getName(), currentHero.getName() + "skill is null");
+            Log.d(this.getClass().getName(), currentHero.getName() + "skill is null");
 
         ((TextView) findViewById(R.id.tvTask1)).setText(currentHero.getTasks()[0].getDisplayInfo());
-        ((TextView) findViewById(R.id.tvTask2)).setText(currentHero.getTasks()[1].getDisplayInfo());
+
+        final Calendar c = Calendar.getInstance();
+        int mWay = c.get(Calendar.DAY_OF_WEEK);
+        String day = null;
+        switch (mWay) {
+            case 1:
+                day = "日";
+                break;
+            case 2:
+                day = "一";
+                break;
+            case 3:
+                day = "二";
+                break;
+            case 4:
+                day = "三";
+                break;
+            case 5:
+                day = "四";
+                break;
+            case 6:
+                day = "五";
+                break;
+            case 7:
+                day = "六";
+                break;
+        }
+
+
+        ((TextView) findViewById(R.id.tvTask2)).setText(currentHero.getTasks()[1].getDisplayInfo() + "\n(今天周" + day + ")");
         ((TextView) findViewById(R.id.tvTask3)).setText(currentHero.getTasks()[2].getDisplayInfo());
 
         showAffectedTag();
@@ -193,7 +228,7 @@ public class DetailActivity extends ActionBarActivity {
         EquipmentItem[] neededEquipments = currentHero.getTasks()[0].getNeededEquip();
 
         if (neededEquipments == null || neededEquipments.length == 0) {
-            Log.e(this.getClass().getName(), currentHero.getName() + " needed equipment is null");
+            Log.d(this.getClass().getName(), currentHero.getName() + " needed equipment is null");
         } else {
 
             LinearLayout llForNeededEquip = new LinearLayout(this);
@@ -246,7 +281,7 @@ public class DetailActivity extends ActionBarActivity {
         for (int i = 0; i < affectedSkills.size(); i++) {
             WakeupSkill ws = affectedSkills.get(i);
 
-            if (ws.abilitiesAffected == null)
+            if (ws.abilitiesAffected == null || ws.hero.getName().equalsIgnoreCase(currentHero.getName()))
                 continue;
 
             Map<String, Object> itemData = new HashMap<>(3);

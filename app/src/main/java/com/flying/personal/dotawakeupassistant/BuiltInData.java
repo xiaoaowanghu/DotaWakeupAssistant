@@ -35,20 +35,6 @@ public class BuiltInData {
     }
 
     public void clear() {
-//        if (equipCache != null)
-//            equipCache.clear();
-//
-//        if (stageCache != null)
-//            stageCache.clear();
-//
-////        if (heroes != null)
-////            heroes.clear();
-//
-//        if (tagCache != null)
-//            tagCache.clear();
-//
-//        if (tagHeroCache != null)
-//            tagHeroCache.clear();
     }
 
     public Map<String, EquipmentItem> getEquipCache() {
@@ -88,6 +74,7 @@ public class BuiltInData {
         {
             String tagName = "野兽";
             HeroTag tag = new HeroTag();
+            tag.keyName = "兽";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -102,6 +89,7 @@ public class BuiltInData {
         {
             String tagName = "斧系";
             HeroTag tag = new HeroTag();
+            tag.keyName = "斧";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -116,6 +104,7 @@ public class BuiltInData {
         {
             String tagName = "巨魔族";
             HeroTag tag = new HeroTag();
+            tag.keyName = "巨魔";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -129,6 +118,7 @@ public class BuiltInData {
         {
             String tagName = "刀剑系";
             HeroTag tag = new HeroTag();
+            tag.keyName = "刀";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -147,6 +137,7 @@ public class BuiltInData {
         {
             String tagName = "西行者";
             HeroTag tag = new HeroTag();
+            tag.keyName = "行";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -160,6 +151,7 @@ public class BuiltInData {
         {
             String tagName = "机械系";
             HeroTag tag = new HeroTag();
+            tag.keyName = "机";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -174,6 +166,7 @@ public class BuiltInData {
         {
             String tagName = "敢死队";
             HeroTag tag = new HeroTag();
+            tag.keyName = "死";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -187,6 +180,7 @@ public class BuiltInData {
         {
             String tagName = "飞行系";
             HeroTag tag = new HeroTag();
+            tag.keyName = "飞";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -203,6 +197,7 @@ public class BuiltInData {
         {
             String tagName = "吐息系";
             HeroTag tag = new HeroTag();
+            tag.keyName = "吐";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -214,6 +209,7 @@ public class BuiltInData {
         {
             String tagName = "弓箭系";
             HeroTag tag = new HeroTag();
+            tag.keyName = "弓";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -229,6 +225,7 @@ public class BuiltInData {
         {
             String tagName = "鱼人";
             HeroTag tag = new HeroTag();
+            tag.keyName = "鱼";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -241,6 +238,7 @@ public class BuiltInData {
         {
             String tagName = "新兵团";
             HeroTag tag = new HeroTag();
+            tag.keyName = "新";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -255,6 +253,7 @@ public class BuiltInData {
         {
             String tagName = "巨人";
             HeroTag tag = new HeroTag();
+            tag.keyName = "巨";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -268,6 +267,7 @@ public class BuiltInData {
         {
             String tagName = "持盾系";
             HeroTag tag = new HeroTag();
+            tag.keyName = "盾";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -285,6 +285,7 @@ public class BuiltInData {
         {
             String tagName = "亡灵";
             HeroTag tag = new HeroTag();
+            tag.keyName = "亡";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -301,6 +302,7 @@ public class BuiltInData {
         {
             String tagName = "骑行系";
             HeroTag tag = new HeroTag();
+            tag.keyName = "骑";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -316,6 +318,7 @@ public class BuiltInData {
         {
             String tagName = "药剂师";
             HeroTag tag = new HeroTag();
+            tag.keyName = "药";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -328,6 +331,7 @@ public class BuiltInData {
         {
             String tagName = "夜精灵";
             HeroTag tag = new HeroTag();
+            tag.keyName = "夜";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -344,6 +348,7 @@ public class BuiltInData {
         {
             String tagName = "女武神";
             HeroTag tag = new HeroTag();
+            tag.keyName = "武";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -365,6 +370,7 @@ public class BuiltInData {
         {
             String tagName = "女法神";
             HeroTag tag = new HeroTag();
+            tag.keyName = "法";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -386,6 +392,7 @@ public class BuiltInData {
         {
             String tagName = "女性";
             HeroTag tag = new HeroTag();
+            tag.keyName = "女";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -397,6 +404,7 @@ public class BuiltInData {
         {
             String tagName = "恶魔之角";
             HeroTag tag = new HeroTag();
+            tag.keyName = "角";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -411,6 +419,7 @@ public class BuiltInData {
         {
             String tagName = "丛林系";
             HeroTag tag = new HeroTag();
+            tag.keyName = "林";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -426,6 +435,7 @@ public class BuiltInData {
         {
             String tagName = "变身系";
             HeroTag tag = new HeroTag();
+            tag.keyName = "变";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -443,6 +453,7 @@ public class BuiltInData {
         {
             String tagName = "异次元";
             HeroTag tag = new HeroTag();
+            tag.keyName = "异";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -454,6 +465,7 @@ public class BuiltInData {
         {
             String tagName = "翼人系";
             HeroTag tag = new HeroTag();
+            tag.keyName = "翼";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -470,6 +482,7 @@ public class BuiltInData {
         {
             String tagName = "龙族";
             HeroTag tag = new HeroTag();
+            tag.keyName = "龙";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -483,6 +496,7 @@ public class BuiltInData {
         {
             String tagName = "野人";
             HeroTag tag = new HeroTag();
+            tag.keyName = "野";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -496,6 +510,7 @@ public class BuiltInData {
         {
             String tagName = "王者";
             HeroTag tag = new HeroTag();
+            tag.keyName = "王";
             tag.tagName = tagName;
             tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
             tagCache.put(tagName, tag);
@@ -1538,7 +1553,7 @@ public class BuiltInData {
             h1.setPortraitPath("xiaohei.jpg");
             h1.setPicPath("xiaohei_big.jpg");
 
-            WakeupSkill skill = new WakeupSkill("增加女武神队友90点护甲穿透");
+            WakeupSkill skill = new WakeupSkill("女武神队友增加90点护甲穿透");
             skill.affectTag = tagCache.get("女武神");
             h1.setWakeupSkill(skill);
             skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
@@ -1585,6 +1600,9 @@ public class BuiltInData {
             skill.abilitiesAffected[0] = skill.new AbilityAffected();
             skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.魔法强度;
             skill.abilitiesAffected[0].value = "+819";
+
+            List<String> alias = new ArrayList<String>(1);
+            h1.setAlias(alias);
 
             WakeUpTask[] tasks = new WakeUpTask[3];
             h1.setTasks(tasks);
@@ -3671,7 +3689,7 @@ public class BuiltInData {
             skill.abilitiesAffected[0].value = "+180";
 
             List<String> alias = new ArrayList<String>(2);
-            alias.add("furion");
+            alias.add("wolf");
             h1.setAlias(alias);
 
             WakeUpTask[] tasks = new WakeUpTask[3];

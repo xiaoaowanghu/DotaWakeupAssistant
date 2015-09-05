@@ -222,7 +222,7 @@ public class DataProviderImplByFile implements IDataProvider {
                 for (int i = 0; i < heroNames.size(); i++) {
                     Hero h = getHeroByName(heroNames.get(i));
                     if (h == null) {
-                        Log.e(this.getClass().getName(), "Can't find this Hero:" + heroNames.get(i));
+                        Log.d(this.getClass().getName(), "Can't find this Hero:" + heroNames.get(i));
                     } else {
                         h.getTags().add(tagCache.get(tagName));
                     }
@@ -243,21 +243,23 @@ public class DataProviderImplByFile implements IDataProvider {
                 List<String> indexes = new ArrayList<String>(20);
                 indexes.addAll(HanyuPinyinHelper.getInstance().getHanziT9Index(h.getName()));
 
-                if (h.getAlias() == null)
-                    continue;
-
-                for (String a : h.getAlias()) {
-                    indexes.addAll(HanyuPinyinHelper.getInstance().getHanziT9Index(a));
+                List<String> alias = h.getAlias();
+                if (alias != null && alias.size() > 0) {
+                    for (String a : alias) {
+                        indexes.addAll(HanyuPinyinHelper.getInstance().getHanziT9Index(a));
+                    }
                 }
+
+                if (alias == null)
+                    Log.d(this.getClass().getName(), h.getName() + " alias is null");
 
                 searchIndexs.put(h, indexes);
             }
 
-        } catch (
-                Exception e
-                )
+            if (searchIndexs.size() != heroes.size())
+                Log.d(this.getClass().getName(), "searchIndexs.size() != heroes.size()");
 
-        {
+        } catch (Exception e) {
             Log.e(this.getClass().getName(), Log.getStackTraceString(e));
         }
 
