@@ -19,5 +19,5 @@
     <string name="no_affected_skill">没有能被加成的属性</string>
     <string name="dir_hero_path">hero</string>
     <string name="dir_equipment_path">equipment</string>
-    <string name="wakeup_equipment_matires_remind">其他合成材料</string>
+    <string name="wakeup_equipment_matires_remind">其他合成材料：</string>
 </resources>

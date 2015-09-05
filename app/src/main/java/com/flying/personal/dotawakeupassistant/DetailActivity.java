@@ -98,11 +98,11 @@ public class DetailActivity extends ActionBarActivity {
             if (affectedData == null || affectedData.size() == 0)
                 return;
 
-            if (affectedData.size() > 3) {
-                LinearLayout headLayout = (LinearLayout) findViewById(R.id.llHead);
-                LinearLayout.LayoutParams param = (LinearLayout.LayoutParams) headLayout.getLayoutParams();
-                param.weight = 500;
-            }
+//            if (affectedData.size() > 3) {
+//                LinearLayout headLayout = (LinearLayout) findViewById(R.id.llHead);
+//                LinearLayout.LayoutParams param = (LinearLayout.LayoutParams) headLayout.getLayoutParams();
+//                param.weight = 500;
+//            }
 
             SimpleAdapter sa = new SimpleAdapter(this, affectedData, R.layout.affected_skill,
                     new String[]{"tag", "skill"},
@@ -213,6 +213,7 @@ public class DetailActivity extends ActionBarActivity {
 
             int radius = Utility.getInstance().dip2px(this, 1);
             int borderWidth = Utility.getInstance().dip2px(this, 1);
+            int imgHeight = Utility.getInstance().dip2px(this, 32);
 
             for (int i = 0; i < neededEquipments.length; i++) {
                 EquipmentItem ei = neededEquipments[i];
@@ -223,7 +224,7 @@ public class DetailActivity extends ActionBarActivity {
                 riv.setBorderWidthPX(borderWidth);
                 riv.invalidate();
 
-                LinearLayout.LayoutParams lpForIM = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT);
+                LinearLayout.LayoutParams lpForIM = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, imgHeight);
                 lpForIM.setMargins(columnMargin, 0, columnMargin, 0);
                 llForNeededEquip.addView(riv, lpForIM);
             }
