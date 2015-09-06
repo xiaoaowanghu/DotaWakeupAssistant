@@ -8,6 +8,7 @@ import com.flying.personal.dotawakeupassistant.model.GameStage;
 import com.flying.personal.dotawakeupassistant.model.Hero;
 import com.flying.personal.dotawakeupassistant.model.WakeUpRepeatableTask;
 import com.flying.personal.dotawakeupassistant.model.WakeUpTask;
+import com.flying.personal.dotawakeupassistant.model.WakeupSkill;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -186,4 +187,11 @@ public class DataProviderImplByMock implements IDataProvider {
     public double getVersion() {
         return 1;
     }
+
+    @Override
+    public List<WakeupSkill> getHeroAffectedSkill(String heroName) {
+        return null;
+    }
+
+
 }

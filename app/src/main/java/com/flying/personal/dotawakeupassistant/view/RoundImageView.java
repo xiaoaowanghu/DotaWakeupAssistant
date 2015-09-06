@@ -277,7 +277,6 @@ public class RoundImageView extends View {
         return new CustomSize((int) (oriPicSize.width * actualRate), (int) (oriPicSize.height * actualRate));
     }
 
-
     @Override
     protected void onDraw(Canvas canvas) {
         try {
@@ -410,7 +409,6 @@ public class RoundImageView extends View {
     }
 
     @Override
-
     public void invalidate() {
         mWeakBitmap = null;
         originalPicSize = null;

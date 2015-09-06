@@ -2,6 +2,7 @@ package com.flying.personal.dotawakeupassistant.model;
 
 import com.flying.personal.dotawakeupassistant.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,15 +16,38 @@ public class Hero {
     protected AbilityType abilityType;
     protected String picPath;
     protected String portraitPath;
-    protected String wakeupSkill;
+    protected String wakeupSkillString;
+    protected List<HeroTag> tags;
+    protected WakeupSkill wakeupSkill;
 
-    public String getWakeupSkill() {
+    public WakeupSkill getWakeupSkill() {
         return wakeupSkill;
     }
 
-    public void setWakeupSkill(String wakeupSkill) {
+    public void setWakeupSkill(WakeupSkill wakeupSkill) {
         this.wakeupSkill = wakeupSkill;
+        this.wakeupSkill.hero = this;
     }
+
+    public Hero() {
+        tags = new ArrayList<HeroTag>(5);
+    }
+
+    public List<HeroTag> getTags() {
+        return tags;
+    }
+
+    public void setTags(List<HeroTag> tags) {
+        this.tags = tags;
+    }
+
+//    public String getWakeupSkillString() {
+//        return wakeupSkillString;
+//    }
+//
+//    public void setWakeupSkillString(String wakeupSkill) {
+//        this.wakeupSkillString = wakeupSkill;
+//    }
 
     public enum PositionType {
         Front, Middle, Back

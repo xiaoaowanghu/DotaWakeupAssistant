@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left|center_vertical"
+    android:orientation="horizontal">
+
+    <!--<ImageView-->
+    <!--android:id="@+id/ivAffectedSkillPic"-->
+    <!--android:layout_width="25dp"-->
+    <!--android:layout_height="25dp"-->
+    <!--android:scaleType="fitCenter" />-->
+
+
+    <TextView
+        android:id="@+id/tvAffectedTag"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@color/tag_bg"
+        android:gravity="center"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="Test"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"/>
+
+    <TextView
+        android:id="@+id/tvAffectedSkillDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:maxLines="2"
+        android:text="Test"
+        android:textColor="@color/font_detail_main"
+        android:textSize="13sp" />
+</LinearLayout>

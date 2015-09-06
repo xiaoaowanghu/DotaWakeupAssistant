@@ -86,7 +86,7 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
             ivHeroPic.getLayoutParams().width = picWidthPX;
             ivHeroPic.getLayoutParams().height = picWidthPX;
             ivHeroPic.setTag(h.getName());
-            ivHeroPic.setFilePath(h.getPortraitPath());
+            ivHeroPic.setFilePath(getResources().getString(R.string.dir_hero_path) + "/" + h.getPortraitPath());
             ivHeroPic.invalidate();
             ivHeroPic.setOnClickListener(imageClickListener);
 

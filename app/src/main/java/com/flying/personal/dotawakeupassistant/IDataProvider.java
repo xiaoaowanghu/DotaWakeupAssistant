@@ -1,6 +1,7 @@
 package com.flying.personal.dotawakeupassistant;
 
 import com.flying.personal.dotawakeupassistant.model.Hero;
+import com.flying.personal.dotawakeupassistant.model.WakeupSkill;
 
 import java.util.List;
 import java.util.Map;
@@ -22,6 +23,8 @@ public interface IDataProvider {
     List<Hero> getHeroesByPosition(Hero.PositionType position);
 
     List<Hero> getHeroesByAbilityType(Hero.AbilityType abilityType);
+
+    List<WakeupSkill> getHeroAffectedSkill(String heroName);
 
     void init(String[] args);
 
