@@ -84,6 +84,7 @@ public class BuiltInData {
             heroNames.add("白牛");
             heroNames.add("浣熊");
             heroNames.add("刚背猪");
+            heroNames.add("兽王");
             heroNames.add("神牛");
         }
         {
@@ -96,6 +97,7 @@ public class BuiltInData {
             List<String> heroNames = new ArrayList(10);
             tagHeroCache.put(tag.tagName, heroNames);
             heroNames.add("宙斯");
+            heroNames.add("斧王");
             heroNames.add("白牛");
             heroNames.add("巨魔");
             heroNames.add("人马");
@@ -132,7 +134,8 @@ public class BuiltInData {
             heroNames.add("屠芙");
             heroNames.add("小娜迦");
             heroNames.add("灰烬之灵");
-            //TODO
+            heroNames.add("流浪");
+            heroNames.add("末日");
         }
         {
             String tagName = "西行者";
@@ -192,6 +195,7 @@ public class BuiltInData {
             heroNames.add("双头龙");
             heroNames.add("亚龙");
             heroNames.add("天怒法师");
+            heroNames.add("仙女龙");
             //TODO
         }
         {
@@ -205,6 +209,7 @@ public class BuiltInData {
             tagHeroCache.put(tag.tagName, heroNames);
             heroNames.add("凤凰");
             heroNames.add("亚龙");
+            heroNames.add("双头龙");
         }
         {
             String tagName = "弓箭系";
@@ -263,6 +268,8 @@ public class BuiltInData {
             heroNames.add("小小");
             heroNames.add("蓝胖");
             heroNames.add("潮汐");
+            heroNames.add("末日");
+            heroNames.add("铁面狂人");
         }
         {
             String tagName = "持盾系";
@@ -280,7 +287,6 @@ public class BuiltInData {
             heroNames.add("月骑");
             heroNames.add("奥丁之子");
             heroNames.add("龙骑士");
-            //TODO
         }
         {
             String tagName = "亡灵";
@@ -364,9 +370,8 @@ public class BuiltInData {
             heroNames.add("月骑");
             heroNames.add("小黑");
             heroNames.add("小娜迦");
-            //TODO
+            heroNames.add("圣堂");
         }
-
         {
             String tagName = "女法神";
             HeroTag tag = new HeroTag();
@@ -387,7 +392,6 @@ public class BuiltInData {
             heroNames.add("仙女龙");
             heroNames.add("天怒法师");
             heroNames.add("蜘蛛女郎");
-            //TODO
         }
         {
             String tagName = "女性";
@@ -448,6 +452,7 @@ public class BuiltInData {
             heroNames.add("吸血鬼");
             heroNames.add("暗夜魔王");
             heroNames.add("狼人");
+            heroNames.add("流浪");
             //TODO
         }
         {
@@ -477,7 +482,7 @@ public class BuiltInData {
             heroNames.add("仙女龙");
             heroNames.add("天怒法师");
             heroNames.add("暗夜魔王");
-            //TODO
+            heroNames.add("魂守");
         }
         {
             String tagName = "龙族";
@@ -2446,13 +2451,8 @@ public class BuiltInData {
             h1.setPortraitPath(String.format("%s.jpg", picName));
             h1.setPicPath(String.format("%s_big.jpg", picName));
 
-            WakeupSkill skill = new WakeupSkill("野兽类型队友增加182点力量");
+            WakeupSkill skill = new WakeupSkill("施放技能时，对附近每一个敌人造成余震伤害");
             h1.setWakeupSkill(skill);
-            skill.affectTag = tagCache.get("野兽");
-            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
-            skill.abilitiesAffected[0] = skill.new AbilityAffected();
-            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.力量;
-            skill.abilitiesAffected[0].value = "+182";
 
             List<String> alias = new ArrayList<String>(2);
             alias.add("憾地");

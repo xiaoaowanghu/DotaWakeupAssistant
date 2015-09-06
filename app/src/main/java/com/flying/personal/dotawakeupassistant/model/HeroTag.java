@@ -7,7 +7,6 @@ public class HeroTag {
     public String tagName;
     public String picPath;
     public String desc;
-
     public String keyName;
 
     public String getKeyName() {

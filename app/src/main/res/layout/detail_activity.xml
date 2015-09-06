@@ -49,6 +49,7 @@
                 android:id="@+id/tvSkillDesc"
                 style="@style/layout_vertical"
                 android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
                 android:layout_weight="3"
                 android:gravity="left|top"
                 android:maxLines="3"

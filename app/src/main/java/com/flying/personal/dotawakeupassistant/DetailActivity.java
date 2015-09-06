@@ -80,31 +80,24 @@ public class DetailActivity extends ActionBarActivity {
 
     private void showAffectedTag() {
         LinearLayout ll = (LinearLayout) findViewById(R.id.llTopName);
-        LinearLayout.LayoutParams layoutParamForTV = new LinearLayout.LayoutParams(
+        LinearLayout.LayoutParams lpForAffectedItem = new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, 0);
-        layoutParamForTV.gravity = Gravity.CENTER_VERTICAL | Gravity.LEFT;
-        layoutParamForTV.weight = 5;
-        layoutParamForTV.setMargins(Utility.getInstance().dip2px(this, 10), Utility.getInstance().dip2px(this, 5),
-                0, Utility.getInstance().dip2px(this, 5));
+        lpForAffectedItem.gravity = Gravity.CENTER_VERTICAL | Gravity.LEFT;
+        lpForAffectedItem.weight = 5;
+        int marginRightPX = Utility.getInstance().dip2px(this, 10);
+        lpForAffectedItem.setMargins(marginRightPX, Utility.getInstance().dip2px(this, 5),
+                marginRightPX, 0);
 
-        if (currentHero.getTags() == null || currentHero.getTags().size() == 0) {
+        final List<Map<String, Object>> affectedData = getAffectedSkillData();
+
+        if (affectedData == null || affectedData.size() == 0) {
             TextView tv = new TextView(this);
-            tv.setTextColor(getResources().getColor(R.color.white));
+            tv.setTextColor(getResources().getColor(R.color.font_task_lable));
             tv.setText(R.string.no_affected_skill);
             tv.setTextAppearance(this, R.style.normal_margin);
             tv.setTextSize(14); //sp
-            ll.addView(tv, layoutParamForTV);
+            ll.addView(tv, lpForAffectedItem);
         } else {
-            final List<Map<String, Object>> affectedData = getAffectedSkillData();
-            if (affectedData == null || affectedData.size() == 0)
-                return;
-
-//            if (affectedData.size() > 3) {
-//                LinearLayout headLayout = (LinearLayout) findViewById(R.id.llHead);
-//                LinearLayout.LayoutParams param = (LinearLayout.LayoutParams) headLayout.getLayoutParams();
-//                param.weight = 500;
-//            }
-
             SimpleAdapter sa = new SimpleAdapter(this, affectedData, R.layout.affected_skill,
                     new String[]{"tag", "skill"},
                     new int[]{R.id.tvAffectedTag, R.id.tvAffectedSkillDesc});
@@ -148,7 +141,12 @@ public class DetailActivity extends ActionBarActivity {
                             } else if (data instanceof WakeupSkill) {
                                 TextView tv = (TextView) view;
                                 WakeupSkill ws = (WakeupSkill) data;
-                                String desc = "搭配" + ws.hero.getName() + " ";
+                                String desc = "";
+
+                                if (!ws.hero.getName().equalsIgnoreCase(currentHero.getName())) {
+                                    desc = "搭配" + ws.hero.getName() + " ";
+                                }
+
                                 for (int i = 0; i < ws.abilitiesAffected.length; i++) {
                                     WakeupSkill.AbilityAffected a = ws.abilitiesAffected[i];
                                     desc += a.abilityType.toString() + a.value + ",";
@@ -172,7 +170,7 @@ public class DetailActivity extends ActionBarActivity {
             lv.setDividerHeight(5);
             lv.setBackgroundColor(Color.TRANSPARENT);
             lv.setAdapter(sa);
-            ll.addView(lv, layoutParamForTV);
+            ll.addView(lv, lpForAffectedItem);
         }
     }
 
@@ -281,14 +279,19 @@ public class DetailActivity extends ActionBarActivity {
         for (int i = 0; i < affectedSkills.size(); i++) {
             WakeupSkill ws = affectedSkills.get(i);
 
-            if (ws.abilitiesAffected == null || ws.hero.getName().equalsIgnoreCase(currentHero.getName()))
+            if (ws.abilitiesAffected == null)
                 continue;
 
             Map<String, Object> itemData = new HashMap<>(3);
             itemData.put("skill", ws);
             HeroTag tag = ws.affectTag;
             itemData.put("tag", tag);
-            data.add(itemData);
+
+            if (ws.hero.getName().equalsIgnoreCase(currentHero.getName())) {
+                data.add(0, itemData);
+            } else {
+                data.add(itemData);
+            }
         }
         return data;
     }

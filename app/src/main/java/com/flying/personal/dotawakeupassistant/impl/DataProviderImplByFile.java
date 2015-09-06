@@ -144,6 +144,10 @@ public class DataProviderImplByFile implements IDataProvider {
     public List<WakeupSkill> getHeroAffectedSkill(String heroName) {
         Hero h = getHeroByName(heroName);
         List<HeroTag> tagsOfHero = h.getTags();
+
+        if (tagsOfHero == null || tagsOfHero.size() == 0)
+            return null;
+
         List<WakeupSkill> result = new ArrayList<WakeupSkill>(5);
 
         for (int i = 0; i < tagsOfHero.size(); i++) {
