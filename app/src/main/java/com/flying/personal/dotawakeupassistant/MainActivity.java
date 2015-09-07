@@ -1,6 +1,9 @@
 package com.flying.personal.dotawakeupassistant;
 
+import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -11,7 +14,10 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -40,6 +46,7 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
         init();
     }
 
+
     private void init() {
         mainHeroLayout = (GridLayout) this.findViewById(R.id.gridLayout);
 
@@ -53,6 +60,7 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
                 intent.putExtras(bundle);
                 intent.setClass(MainActivity.this, DetailActivity.class);
                 startActivity(intent);
+                MainActivity.this.overridePendingTransition(R.anim.slide_right_in, R.anim.slide_left_out);
             }
         };
 
@@ -143,13 +151,52 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
         return this.getFilesDir().getAbsolutePath() + "/data.json";
     }
 
-    public String getSDpath() {
-        try {
-            return this.getExternalFilesDir(null).getAbsolutePath() + "/data.json";
-        } catch (Exception e) {
-            Log.e(this.getClass().getName(), Log.getStackTraceString(e));
-        }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.title_context_menu, menu);
+        return true;
+    }
 
-        return null;
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.miActionAbout) {
+            View view = LayoutInflater.from(this).inflate(R.layout.about_dialog, null);// 自定义布局
+            final AlertDialog dialog = new AlertDialog.Builder(this).create();
+
+            TextView tv = (TextView) view.findViewById(R.id.tvVersion);
+            String versionName = "N/A";
+            PackageInfo info = null;
+
+            try {
+                info = this.getPackageManager().getPackageInfo(this.getPackageName(), 0);
+                versionName = info.versionName;
+            } catch (PackageManager.NameNotFoundException e) {
+                Log.e(this.getClass().getName(), Log.getStackTraceString(e));
+            }
+            tv.setText(getResources().getString(R.string.app_name) + "v" + versionName);
+
+            TextView tv1 = (TextView) view.findViewById(R.id.tvInformation);
+            tv1.setText(R.string.about_content);
+
+            Button closeButton = (Button) view.findViewById(R.id.btnCloseAbout);
+            closeButton.setOnClickListener(new android.view.View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dialog.dismiss();
+                }
+            });
+
+            dialog.show();
+            dialog.getWindow().setContentView(view);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

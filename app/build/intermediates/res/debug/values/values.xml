@@ -234,7 +234,8 @@
     <string name="ability_type_strength">力量</string>
     <string name="ablility_type_Agility">敏捷</string>
     <string name="ablility_type_Intelligence">智力</string>
-    <string name="action_settings">Settings</string>
+    <string name="about_content">作者:葱花    技术支持:猎豹\nAll rights reserved.</string>
+    <string name="action_about">关于</string>
     <string name="affectedSkill">被其他觉醒技能影响</string>
     <string name="app_name">小刀助手</string>
     <string name="dir_equipment_path">equipment</string>
@@ -1515,12 +1516,6 @@
     <style name="Widget.AppCompat.Toolbar.Button.Navigation" parent="RtlOverlay.Widget.AppCompat.Toolbar.Button.Navigation"/>
     <!-- From: file:/D:/mywork/GitHub/DotaWakeupAssistant/app/src/main/res/values/styles.xml -->
     <eat-comment/>
-    <style name="activityAnimation" parent="@android:style/Animation.Translucent">
-        <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>
-        <item name="android:activityOpenExitAnimation">@anim/slide_left_out</item>
-        <item name="android:activityCloseEnterAnimation">@anim/slide_left_in</item>
-        <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
-    </style>
     <style name="layout_full">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">fill_parent</item>

@@ -71,6 +71,12 @@ public class DetailActivity extends ActionBarActivity {
     }
 
     @Override
+    public void finish() {
+        super.finish();
+        this.overridePendingTransition(R.anim.slide_left_in, R.anim.slide_right_out);
+    }
+
+    @Override
     public boolean onTouchEvent(MotionEvent event) {
         if (!this.gesture.onTouchEvent(event))
             return super.onTouchEvent(event);
