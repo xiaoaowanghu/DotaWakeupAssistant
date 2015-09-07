@@ -71,6 +71,12 @@ public class DetailActivity extends ActionBarActivity {
     }
 
     @Override
+    public void finish() {
+        super.finish();
+        this.overridePendingTransition(R.anim.slide_left_in, R.anim.slide_right_out);
+    }
+
+    @Override
     public boolean onTouchEvent(MotionEvent event) {
         if (!this.gesture.onTouchEvent(event))
             return super.onTouchEvent(event);
@@ -86,7 +92,7 @@ public class DetailActivity extends ActionBarActivity {
         lpForAffectedItem.weight = 5;
         int marginRightPX = Utility.getInstance().dip2px(this, 10);
         lpForAffectedItem.setMargins(marginRightPX, Utility.getInstance().dip2px(this, 5),
-                marginRightPX, 0);
+                0, 0);
 
         final List<Map<String, Object>> affectedData = getAffectedSkillData();
 
@@ -236,6 +242,8 @@ public class DetailActivity extends ActionBarActivity {
             lp.setMargins(lineMarginLeft, columnMargin, columnMargin, columnMargin);
             llForNeededEquip.setGravity(Gravity.LEFT | Gravity.CENTER);
             llForNeededEquip.setOrientation(LinearLayout.HORIZONTAL);
+            LinearLayout task1LL = (LinearLayout) findViewById(R.id.llTask1);
+            task1LL.addView(llForNeededEquip, lp);
 
             TextView tv = new TextView(this);
             tv.setTextSize(12);
@@ -248,22 +256,22 @@ public class DetailActivity extends ActionBarActivity {
             int borderWidth = Utility.getInstance().dip2px(this, 1);
             int imgHeight = Utility.getInstance().dip2px(this, 32);
 
+
             for (int i = 0; i < neededEquipments.length; i++) {
                 EquipmentItem ei = neededEquipments[i];
                 RoundImageView riv = new RoundImageView(this);
                 riv.setBorderColor(ei.getBorderColor());
+                riv.setMaxHeightPX(imgHeight);
                 riv.setFilePath("equipment/" + ei.getPicPath());
                 riv.setBorderWidthPX(radius);
                 riv.setBorderWidthPX(borderWidth);
                 riv.invalidate();
 
-                LinearLayout.LayoutParams lpForIM = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, imgHeight);
+                LinearLayout.LayoutParams lpForIM = new LinearLayout.LayoutParams(
+                        ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT);
                 lpForIM.setMargins(columnMargin, 0, columnMargin, 0);
                 llForNeededEquip.addView(riv, lpForIM);
             }
-
-            LinearLayout task1LL = (LinearLayout) findViewById(R.id.llTask1);
-            task1LL.addView(llForNeededEquip, lp);
         }
     }
 

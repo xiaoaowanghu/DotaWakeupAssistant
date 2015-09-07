@@ -59,6 +59,8 @@ public class RoundImageView extends View {
     protected WeakReference<Bitmap> mWeakBitmap;
     protected String filePath;
     protected SimpleScale scaleMode;
+    protected int maxWidthPX;
+    protected int maxHeightPX;
 
     public int getmBorderRadiusPX() {
         return mBorderRadiusPX;
@@ -103,8 +105,11 @@ public class RoundImageView extends View {
         borderWidthPX = typedArray.getDimensionPixelSize(R.styleable.RoundImageView_borderWidth,
                 Utility.getInstance().dip2px(context, DefaultBorderWidthDP));
         borderColor = typedArray.getColor(R.styleable.RoundImageView_borderColor, Color.BLACK);
+        maxHeightPX = typedArray.getDimensionPixelSize(R.styleable.RoundImageView_maxHeight, 0);
+        maxWidthPX = typedArray.getDimensionPixelSize(R.styleable.RoundImageView_maxWidth, 0);
         typedArray.recycle();
     }
+
 
     protected void sharedConstructor(Context context) {
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -142,6 +147,22 @@ public class RoundImageView extends View {
 
     public void setFilePath(String filePath) {
         this.filePath = filePath;
+    }
+
+    public int getMaxWidthPX() {
+        return maxWidthPX;
+    }
+
+    public void setMaxWidthPX(int maxWidthPX) {
+        this.maxWidthPX = maxWidthPX;
+    }
+
+    public int getMaxHeightPX() {
+        return maxHeightPX;
+    }
+
+    public void setMaxHeightPX(int maxHeightPX) {
+        this.maxHeightPX = maxHeightPX;
     }
 
     @Override
@@ -185,6 +206,15 @@ public class RoundImageView extends View {
                     measureResult = getMinRateSize(widthSpecSize, heightSpecSize);
                 }
             }
+
+            if (maxWidthPX > 0 && measureResult.width > maxWidthPX) {
+                measureResult = getMinRateSize(maxWidthPX, 0);
+            }
+
+            if (maxHeightPX > 0 && measureResult.height > maxHeightPX) {
+                measureResult = getMinRateSize(0, maxHeightPX);
+            }
+
         } else if (scaleMode == SimpleScale.Fill) {
             if (heightMode == MeasureSpec.UNSPECIFIED) {
                 if (widthMode == MeasureSpec.EXACTLY) {
@@ -219,6 +249,14 @@ public class RoundImageView extends View {
                     measureResult = new CustomSize(widthSpecSize, tmpheight);
                 }
             }
+
+            if (maxWidthPX > 0 && measureResult.width > maxWidthPX) {
+                measureResult.width = maxWidthPX;
+            }
+
+            if (maxHeightPX > 0 && measureResult.height > maxHeightPX) {
+                measureResult.height = maxHeightPX;
+            }
         } else if (scaleMode == SimpleScale.Center) {
             if (heightMode == MeasureSpec.UNSPECIFIED) {
                 if (widthMode == MeasureSpec.EXACTLY) {
@@ -250,6 +288,14 @@ public class RoundImageView extends View {
                     int tmpHeight = oriPicSize.height > heightSpecSize ? heightSpecSize : oriPicSize.height;
                     measureResult = new CustomSize(widthSpecSize, tmpHeight);
                 }
+            }
+
+            if (maxWidthPX > 0 && measureResult.width > maxWidthPX) {
+                measureResult.width = maxWidthPX;
+            }
+
+            if (maxHeightPX > 0 && measureResult.height > maxHeightPX) {
+                measureResult.height = maxHeightPX;
             }
         }
 

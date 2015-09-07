@@ -14,9 +14,9 @@
 
         <LinearLayout
             style="@style/layout_horizontal"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginTop="5dp"
-            android:layout_weight="382"
+            android:layout_weight="320"
             android:gravity="center">
 
             <com.flying.personal.dotawakeupassistant.view.RoundImageView
@@ -31,7 +31,8 @@
         <LinearLayout
             android:id="@+id/llTopName"
             style="@style/layout_horizontal"
-            android:layout_weight="618"
+            android:layout_marginRight="10dp"
+            android:layout_weight="620"
             android:orientation="vertical">
 
             <com.flying.personal.dotawakeupassistant.view.AutoAdjustFontSizeTextView
@@ -48,13 +49,10 @@
             <TextView
                 android:id="@+id/tvSkillDesc"
                 style="@style/layout_vertical"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="10dp"
                 android:layout_weight="3"
                 android:gravity="left|top"
                 android:maxLines="3"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
+                android:paddingLeft="10dp"
                 android:text="位置: 三大法撒旦发射大法师多发时段发生三大法撒旦发射大撒旦发射"
                 android:textColor="@color/font_detail_main"
                 android:textSize="14sp" />
@@ -95,7 +93,8 @@
                 style="@style/normal_margin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="left|center_vertical"
                 android:maxLines="2"
                 android:text="Test:收集满60碎片"
                 android:textColor="@color/font_detail_main"
@@ -127,9 +126,8 @@
                 android:id="@+id/tvTask2"
                 style="@style/normal_margin"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|left"
-                android:layout_marginTop="10dp"
+                android:layout_height="match_parent"
+                android:gravity="left|center_vertical"
                 android:maxLines="2"
                 android:text="Test:收集满60碎片"
                 android:textColor="@color/font_detail_main"
@@ -163,8 +161,8 @@
                 android:id="@+id/tvTask3"
                 style="@style/normal_margin"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_height="match_parent"
+                android:gravity="left|center_vertical"
                 android:maxLines="2"
                 android:text="Test:收集满60碎片"
                 android:textColor="@color/font_detail_main"
