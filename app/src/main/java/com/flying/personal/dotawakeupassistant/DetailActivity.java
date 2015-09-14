@@ -1,5 +1,6 @@
 package com.flying.personal.dotawakeupassistant;
 
+import android.app.AlertDialog;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
@@ -12,9 +13,11 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.view.GestureDetector;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -111,6 +114,8 @@ public class DetailActivity extends ActionBarActivity {
                     new SimpleAdapter.ViewBinder() {
                         @Override
                         public boolean setViewValue(View view, Object data, String textRepresentation) {
+                            Log.d(this.getClass().getName(), "ViewBinder.setViewValue");
+
                             if (data instanceof HeroTag) {
                                 TextView tv = (TextView) view;
                                 HeroTag tag = (HeroTag) data;
@@ -176,6 +181,34 @@ public class DetailActivity extends ActionBarActivity {
             lv.setDividerHeight(5);
             lv.setBackgroundColor(Color.TRANSPARENT);
             lv.setAdapter(sa);
+            lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Map<String, Object> data = (Map<String, Object>) parent.getItemAtPosition(position);
+                    HeroTag heroTag = (HeroTag) data.get("tag");
+                    List<Hero> heroes = ProviderFactory.getInstance().getDataProvider().getHeroesByTag(heroTag.tagName);
+
+                    StringBuilder sb = new StringBuilder(50);
+                    for (Hero h : heroes) {
+                        sb.append(h.getName());
+                        sb.append(", ");
+                    }
+
+                    final AlertDialog dialog = new AlertDialog.Builder(DetailActivity.this).create();
+                    View dialogView = LayoutInflater.from(DetailActivity.this).inflate(R.layout.tag_hero, null);// 自定义布局
+                    ((TextView) dialogView.findViewById(R.id.tv_dialog_title)).setText(heroTag.tagName);
+                    ((TextView) dialogView.findViewById(R.id.tv_dialog_message)).setText(sb.substring(0, sb.length() - 2));
+                    dialogView.findViewById(R.id.btnCloseTagHero).setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            dialog.dismiss();
+                        }
+                    });
+
+                    dialog.show();
+                    dialog.getWindow().setContentView(dialogView);
+                }
+            });
             ll.addView(lv, lpForAffectedItem);
         }
     }
@@ -254,8 +287,7 @@ public class DetailActivity extends ActionBarActivity {
 
             int radius = Utility.getInstance().dip2px(this, 1);
             int borderWidth = Utility.getInstance().dip2px(this, 1);
-            int imgHeight = Utility.getInstance().dip2px(this, 32);
-
+            int imgHeight = Utility.getInstance().dip2px(this, 35);
 
             for (int i = 0; i < neededEquipments.length; i++) {
                 EquipmentItem ei = neededEquipments[i];

@@ -33,4 +33,6 @@ public interface IDataProvider {
     void visitHero(Hero hero);
 
     double getVersion();
+
+    List<Hero> getHeroesByTag(String tagName);
 }

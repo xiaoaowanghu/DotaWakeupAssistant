@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@color/dark_blue"
+    android:background="@color/main_blue"
     android:orientation="vertical">
 
     <ImageView
@@ -35,7 +35,7 @@
         android:gravity="center"
         android:maxLines="3"
         android:text="Design by 葱花. 友情支持: 猎豹"
-        android:textColor="@color/white"
+        android:textColor="@color/friend_white"
         android:textSize="16sp" />
 
     <Button
