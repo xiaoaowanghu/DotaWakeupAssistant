@@ -9,7 +9,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="0dp"
-        app:borderColor="@color/dark_blue"
+        app:borderColor="@color/main_blue"
         app:borderWidth="2dp" />
 
     <TextView

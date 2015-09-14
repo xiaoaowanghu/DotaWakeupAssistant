@@ -4,7 +4,8 @@
     <color name="black">#000000</color>
     <color name="equip_im_border">#a67900</color>
     <color name="detail_back">#0e4371</color>
-    <color name="dark_blue">#98CEEC</color>
+    <color name="light_blue">#98CEEC</color>
+    <color name="main_blue">#6db2db</color>
     <color name="font_color1">#d2d2d2</color>
     <color name="font_task_lable">#ffe9ad</color>
     <color name="font_color3">#858489</color>858489
@@ -14,4 +15,6 @@
     <color name="bg_color1">#1e1c1a</color>
     <color name="bottom_selected_bg">#fff1ca</color>
     <color name="tag_bg">#767171</color>
+    <color name="dialog_title_bg">#6db2db</color>
+    <color name="friend_white">#eee</color>
 </resources>

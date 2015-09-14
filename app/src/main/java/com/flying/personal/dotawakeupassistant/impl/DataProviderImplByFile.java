@@ -29,6 +29,7 @@ public class DataProviderImplByFile implements IDataProvider {
     private double version = 1.0;
     private String dataFilePath;
     private List<WakeupSkill> wakupAffectSkills;
+    private Map<String, List<String>> tagHeroes;
 
     @Override
     public List<Hero> getAllHeroes() {
@@ -163,6 +164,24 @@ public class DataProviderImplByFile implements IDataProvider {
     }
 
     @Override
+    public List<Hero> getHeroesByTag(String tagName) {
+        List<String> heroNames = tagHeroes.get(tagName);
+        List<Hero> result = new ArrayList<>(15);
+        int totalCount = heroNames.size();
+
+        for (int i = 0; i < totalCount; i++) {
+            for (Hero h : heroes) {
+                if (heroNames.get(i).equalsIgnoreCase(h.getName())) {
+                    result.add(h);
+                    break;
+                }
+            }
+        }
+
+        return result;
+    }
+
+    @Override
     public void init(String[] args) {
         SerializedData extraData = null;
         BuiltInData builtInData = new BuiltInData();
@@ -215,9 +234,9 @@ public class DataProviderImplByFile implements IDataProvider {
 
             //Save tags to hero
             Map<String, HeroTag> tagCache = builtInData.getTagCache();
-            Map<String, List<String>> tagHeroCache = builtInData.getTagHeroCache();
+            tagHeroes = builtInData.getTagHeroCache();
 
-            Iterator<Map.Entry<String, List<String>>> entries = tagHeroCache.entrySet().iterator();
+            Iterator<Map.Entry<String, List<String>>> entries = tagHeroes.entrySet().iterator();
             while (entries.hasNext()) {
                 Map.Entry<String, List<String>> entry = entries.next();
                 String tagName = entry.getKey();
@@ -266,8 +285,6 @@ public class DataProviderImplByFile implements IDataProvider {
         } catch (Exception e) {
             Log.e(this.getClass().getName(), Log.getStackTraceString(e));
         }
-
-        builtInData.clear();
     }
 
     private SerializedData getExtraDataFromJsonFile() {

@@ -34,9 +34,6 @@ public class BuiltInData {
         createStageCache();
     }
 
-    public void clear() {
-    }
-
     public Map<String, EquipmentItem> getEquipCache() {
         if (equipCache == null)
             createEquipCache();
@@ -664,868 +661,15 @@ public class BuiltInData {
         return equipCache;
     }
 
+
     private Map<String, GameStage> createStageCache() {
-        stageCache = new HashMap<String, GameStage>(56);
-        //=============================10==================================
-        {
-            GameStage gs = new GameStage();
-            gs.setName("地穴女王");
-            gs.setChapter(10);
-            gs.setSequenceNo(2);
-            gs.setStamina(10);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("冰甲卷轴"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("地穴女王(精英·)");
-            gs.setChapter(10);
-            gs.setSequenceNo(2);
-            gs.setStamina(20);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("冰甲卷轴"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        //=============================11===================================
-        {
-            GameStage gs = new GameStage();
-            gs.setName("双头(精英)");
-            gs.setChapter(11);
-            gs.setSequenceNo(1);
-            gs.setStamina(20);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("冰甲卷轴"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("双头");
-            gs.setChapter(11);
-            gs.setSequenceNo(1);
-            gs.setStamina(10);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("冰甲卷轴"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("以一敌百(精英)");
-            gs.setChapter(11);
-            gs.setSequenceNo(2);
-            gs.setStamina(20);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("辉耀卷轴"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("以一敌百");
-            gs.setChapter(11);
-            gs.setSequenceNo(2);
-            gs.setStamina(10);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("辉耀卷轴"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("黑暗者(精英)");
-            gs.setChapter(11);
-            gs.setSequenceNo(3);
-            gs.setStamina(20);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("大炮卷轴"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("黑暗者");
-            gs.setChapter(11);
-            gs.setSequenceNo(3);
-            gs.setStamina(10);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("大炮卷轴"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("决死(精英)");
-            gs.setChapter(11);
-            gs.setSequenceNo(4);
-            gs.setStamina(20);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("决死");
-            gs.setChapter(11);
-            gs.setSequenceNo(4);
-            gs.setStamina(10);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("震荡(精英)");
-            gs.setChapter(11);
-            gs.setSequenceNo(5);
-            gs.setStamina(20);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("龙心"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("震荡");
-            gs.setChapter(11);
-            gs.setSequenceNo(5);
-            gs.setStamina(10);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("龙心"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("斩杀(精英)");
-            gs.setChapter(11);
-            gs.setSequenceNo(6);
-            gs.setStamina(20);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("撒旦卷轴"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("斩杀");
-            gs.setChapter(11);
-            gs.setSequenceNo(6);
-            gs.setStamina(10);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("撒旦卷轴"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("出口(精英)");
-            gs.setChapter(11);
-            gs.setSequenceNo(7);
-            gs.setStamina(20);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("恶魔刀锋"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("出口");
-            gs.setChapter(11);
-            gs.setSequenceNo(7);
-            gs.setStamina(10);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("恶魔刀锋"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        //==============================12====================================
-        {
-            GameStage gs = new GameStage();
-            gs.setName("火药(精英)");
-            gs.setChapter(12);
-            gs.setSequenceNo(1);
-            gs.setStamina(20);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("大炮卷轴"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("火药");
-            gs.setChapter(12);
-            gs.setSequenceNo(1);
-            gs.setStamina(10);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("大炮卷轴"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("冰火两重天(精英)");
-            gs.setChapter(12);
-            gs.setSequenceNo(2);
-            gs.setStamina(20);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("冰火两重天");
-            gs.setChapter(12);
-            gs.setSequenceNo(2);
-            gs.setStamina(10);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("沉默");
-            gs.setChapter(12);
-            gs.setSequenceNo(3);
-            gs.setStamina(10);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("沉默(精英)");
-            gs.setChapter(12);
-            gs.setSequenceNo(3);
-            gs.setStamina(20);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("神殿守卫(精英)");
-            gs.setChapter(12);
-            gs.setSequenceNo(4);
-            gs.setStamina(20);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("神殿守卫");
-            gs.setChapter(12);
-            gs.setSequenceNo(4);
-            gs.setStamina(10);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("一姐");
-            gs.setChapter(12);
-            gs.setSequenceNo(5);
-            gs.setStamina(10);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("撒旦卷轴"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("一姐(精英)");
-            gs.setChapter(12);
-            gs.setSequenceNo(5);
-            gs.setStamina(20);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("撒旦卷轴"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("食人(精英)");
-            gs.setChapter(12);
-            gs.setSequenceNo(6);
-            gs.setStamina(20);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("龙心卷轴"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("食人");
-            gs.setChapter(12);
-            gs.setSequenceNo(6);
-            gs.setStamina(10);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("龙心卷轴"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("游走");
-            gs.setChapter(12);
-            gs.setSequenceNo(7);
-            gs.setStamina(10);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("远古卷轴"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("游走(精英)");
-            gs.setChapter(12);
-            gs.setSequenceNo(7);
-            gs.setStamina(20);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("远古遗物"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("近卫(精英)");
-            gs.setChapter(12);
-            gs.setSequenceNo(8);
-            gs.setStamina(20);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("辉耀卷轴"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("近卫");
-            gs.setChapter(12);
-            gs.setSequenceNo(8);
-            gs.setStamina(10);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("辉耀卷轴"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        //==============================13=====================================
-        {
-            GameStage gs = new GameStage();
-            gs.setName("沼泽边缘(精英)");
-            gs.setChapter(13);
-            gs.setSequenceNo(1);
-            gs.setStamina(24);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("永恒冰柱"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("沼泽边缘");
-            gs.setChapter(13);
-            gs.setSequenceNo(1);
-            gs.setStamina(12);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("永恒冰柱"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("河道相逢");
-            gs.setChapter(13);
-            gs.setSequenceNo(2);
-            gs.setStamina(12);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("银月长矛"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("河道相逢(精英)");
-            gs.setChapter(13);
-            gs.setSequenceNo(2);
-            gs.setStamina(24);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("银月长矛"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("团战中心(精英)");
-            gs.setChapter(13);
-            gs.setSequenceNo(3);
-            gs.setStamina(24);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("鹰语指环"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("团战中心");
-            gs.setChapter(13);
-            gs.setSequenceNo(3);
-            gs.setStamina(12);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("鹰语指环"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("遗骨小岛");
-            gs.setChapter(13);
-            gs.setSequenceNo(4);
-            gs.setStamina(12);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("巫师之冠"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("遗骨小岛(精英)");
-            gs.setChapter(13);
-            gs.setSequenceNo(4);
-            gs.setStamina(24);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("巫师之冠"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("亡语森林(精英)");
-            gs.setChapter(13);
-            gs.setSequenceNo(5);
-            gs.setStamina(24);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("龙心卷轴"));
-            }
-            {
-                items.add(equipCache.get("泰坦战斧"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("亡语森林");
-            gs.setChapter(13);
-            gs.setSequenceNo(5);
-            gs.setStamina(12);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("龙心卷轴"));
-            }
-            {
-                items.add(equipCache.get("泰坦战斧"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("泰坦遗迹");
-            gs.setChapter(13);
-            gs.setSequenceNo(6);
-            gs.setStamina(12);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("水晶球"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("泰坦遗迹(精英)");
-            gs.setChapter(13);
-            gs.setSequenceNo(6);
-            gs.setStamina(24);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("水晶球"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        //==============================14======================================
-        {
-            GameStage gs = new GameStage();
-            gs.setName("柳暗花明(精英)");
-            gs.setChapter(14);
-            gs.setSequenceNo(1);
-            gs.setStamina(24);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("巫师之冠"));
-            }
-            {
-                items.add(equipCache.get("极限球"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("柳暗花明");
-            gs.setChapter(14);
-            gs.setSequenceNo(1);
-            gs.setStamina(12);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("巫师之冠"));
-            }
-            {
-                items.add(equipCache.get("极限球"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("瀑布崖");
-            gs.setChapter(14);
-            gs.setSequenceNo(2);
-            gs.setStamina(12);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("红宝石吊坠"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("瀑布崖(精英)");
-            gs.setChapter(14);
-            gs.setSequenceNo(2);
-            gs.setStamina(24);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("红宝石吊坠"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("山腰相逢(精英)");
-            gs.setChapter(14);
-            gs.setSequenceNo(3);
-            gs.setStamina(24);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("禁卫军胸甲"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("山腰相逢");
-            gs.setChapter(14);
-            gs.setSequenceNo(3);
-            gs.setStamina(12);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("禁卫军胸甲"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("乱石山坡");
-            gs.setChapter(14);
-            gs.setSequenceNo(4);
-            gs.setStamina(12);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("远古遗物"));
-            }
-            {
-                items.add(equipCache.get("恶魔之失"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("乱石山坡(精英)");
-            gs.setChapter(14);
-            gs.setSequenceNo(4);
-            gs.setStamina(24);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("远古遗物"));
-            }
-            {
-                items.add(equipCache.get("恶魔之失"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("龙语(精英)");
-            gs.setChapter(14);
-            gs.setSequenceNo(5);
-            gs.setStamina(24);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("蓝宝石法杖"));
-            }
-            {
-                items.add(equipCache.get("撒旦卷轴"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("龙语");
-            gs.setChapter(14);
-            gs.setSequenceNo(5);
-            gs.setStamina(12);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("蓝宝石法杖"));
-            }
-            {
-                items.add(equipCache.get("撒旦卷轴"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("巨龙巢穴(精英)");
-            gs.setChapter(14);
-            gs.setSequenceNo(6);
-            gs.setStamina(24);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("麒麟弯刀"));
-            }
-            {
-                items.add(equipCache.get("辉耀卷轴"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            GameStage gs = new GameStage();
-            gs.setName("巨龙巢穴");
-            gs.setChapter(14);
-            gs.setSequenceNo(6);
-            gs.setStamina(12);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("麒麟弯刀"));
-            }
-            {
-                items.add(equipCache.get("辉耀卷轴"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
+        stageCache = new HashMap<String, GameStage>(60);
 
-
-        //=============================================Special Stage======================================
-        {
-            SpecialStage gs = new SpecialStage();
-            gs.setName("诅咒之城(魔免)");
-            gs.setStamina(6);
-            gs.setOccurDays(SpecialStage.Weekday.Monday | SpecialStage.Weekday.Thursday | SpecialStage.Weekday.Sunday);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("水晶球"));
-            }
-            {
-                items.add(equipCache.get("巫师之冠"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            SpecialStage gs = new SpecialStage();
-            gs.setName("折戟山谷(物免)");
-            gs.setStamina(6);
-            gs.setOccurDays(SpecialStage.Weekday.Tuesday | SpecialStage.Weekday.Friday | SpecialStage.Weekday.Sunday);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            SpecialStage gs = new SpecialStage();
-            gs.setName("女武神的对决");
-            gs.setStamina(6);
-            gs.setOccurDays(SpecialStage.Weekday.Wednesday | SpecialStage.Weekday.Saturday | SpecialStage.Weekday.Sunday);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            {
-                items.add(equipCache.get("静息项链"));
-            }
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            SpecialStage gs = new SpecialStage();
-            gs.setName("潮汐神庙");
-            gs.setStamina(6);
-            gs.setOccurDays(SpecialStage.Weekday.Monday | SpecialStage.Weekday.Wednesday | SpecialStage.Weekday.Friday | SpecialStage.Weekday.Sunday);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        {
-            SpecialStage gs = new SpecialStage();
-            gs.setName("矮人军工厂");
-            gs.setStamina(6);
-            gs.setOccurDays(SpecialStage.Weekday.Tuesday | SpecialStage.Weekday.Thursday | SpecialStage.Weekday.Saturday | SpecialStage.Weekday.Sunday);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            gs.setOutputItems(items);
-            stageCache.put(gs.getName(), gs);
-        }
-        //=======================预言之池===============================
-        {
-            SpecialStage gs = new SpecialStage();
-            gs.setName("预言之池-影之魔王(影魔)");
-            gs.setStamina(6);
-            gs.setOccurDays(SpecialStage.Weekday.Sunday);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            gs.setOutputItems(items);
-            stageCache.put("影魔", gs);
-        }
-        {
-            SpecialStage gs = new SpecialStage();
-            gs.setName("预言之池-雷神之锤(众神)");
-            gs.setStamina(6);
-            gs.setOccurDays(SpecialStage.Weekday.Monday);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            gs.setOutputItems(items);
-            stageCache.put("众神", gs);
-        }
-        {
-            SpecialStage gs = new SpecialStage();
-            gs.setName("预言之池-钛合金机甲(浣熊)");
-            gs.setStamina(6);
-            gs.setOccurDays(SpecialStage.Weekday.Tuesday);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            gs.setOutputItems(items);
-            stageCache.put("浣熊", gs);
-        }
-        {
-            SpecialStage gs = new SpecialStage();
-            gs.setName("预言之池-北境巨龙(冰龙)");
-            gs.setStamina(6);
-            gs.setOccurDays(SpecialStage.Weekday.Wednesday);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            gs.setOutputItems(items);
-            stageCache.put("冰龙", gs);
-        }
-        {
-            SpecialStage gs = new SpecialStage();
-            gs.setName("预言之池-不死烈焰(凤凰)");
-            gs.setStamina(6);
-            gs.setOccurDays(SpecialStage.Weekday.Thursday);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            gs.setOutputItems(items);
-            stageCache.put("凤凰", gs);
-        }
-        {
-            SpecialStage gs = new SpecialStage();
-            gs.setName("预言之池-疯狂之血(神灵)");
-            gs.setStamina(6);
-            gs.setOccurDays(SpecialStage.Weekday.Friday);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            gs.setOutputItems(items);
-            stageCache.put("神灵", gs);
-        }
-        {
-            SpecialStage gs = new SpecialStage();
-            gs.setName("预言之池-地穴领主(蚂蚁)");
-            gs.setStamina(6);
-            gs.setOccurDays(SpecialStage.Weekday.Friday);
-            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
-            gs.setOutputItems(items);
-            stageCache.put("蚂蚁", gs);
-        }
+        createChapter10And11Stage();
+        createChapter12Stage();
+        createChapter13Stage();
+        createChapter14Stage();
+        createSpecialStage();
 
         return stageCache;
     }
@@ -3714,5 +2858,879 @@ public class BuiltInData {
         }
 
         return heroes;
+    }
+
+    private void createChapter10And11Stage() {
+        //=============================10==================================
+        {
+            GameStage gs = new GameStage();
+            gs.setName("地穴女王");
+            gs.setChapter(10);
+            gs.setSequenceNo(2);
+            gs.setStamina(10);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("冰甲卷轴"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("地穴女王(精英·)");
+            gs.setChapter(10);
+            gs.setSequenceNo(2);
+            gs.setStamina(20);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("冰甲卷轴"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        //=============================11===================================
+        {
+            GameStage gs = new GameStage();
+            gs.setName("双头(精英)");
+            gs.setChapter(11);
+            gs.setSequenceNo(1);
+            gs.setStamina(20);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("冰甲卷轴"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("双头");
+            gs.setChapter(11);
+            gs.setSequenceNo(1);
+            gs.setStamina(10);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("冰甲卷轴"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("以一敌百(精英)");
+            gs.setChapter(11);
+            gs.setSequenceNo(2);
+            gs.setStamina(20);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("辉耀卷轴"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("以一敌百");
+            gs.setChapter(11);
+            gs.setSequenceNo(2);
+            gs.setStamina(10);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("辉耀卷轴"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("黑暗者(精英)");
+            gs.setChapter(11);
+            gs.setSequenceNo(3);
+            gs.setStamina(20);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("大炮卷轴"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("黑暗者");
+            gs.setChapter(11);
+            gs.setSequenceNo(3);
+            gs.setStamina(10);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("大炮卷轴"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("决死(精英)");
+            gs.setChapter(11);
+            gs.setSequenceNo(4);
+            gs.setStamina(20);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("决死");
+            gs.setChapter(11);
+            gs.setSequenceNo(4);
+            gs.setStamina(10);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("震荡(精英)");
+            gs.setChapter(11);
+            gs.setSequenceNo(5);
+            gs.setStamina(20);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("龙心"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("震荡");
+            gs.setChapter(11);
+            gs.setSequenceNo(5);
+            gs.setStamina(10);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("龙心"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("斩杀(精英)");
+            gs.setChapter(11);
+            gs.setSequenceNo(6);
+            gs.setStamina(20);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("撒旦卷轴"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("斩杀");
+            gs.setChapter(11);
+            gs.setSequenceNo(6);
+            gs.setStamina(10);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("撒旦卷轴"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("出口(精英)");
+            gs.setChapter(11);
+            gs.setSequenceNo(7);
+            gs.setStamina(20);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("恶魔刀锋"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("出口");
+            gs.setChapter(11);
+            gs.setSequenceNo(7);
+            gs.setStamina(10);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("恶魔刀锋"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+    }
+
+    private void createChapter12Stage() {
+        //==============================12====================================
+        {
+            GameStage gs = new GameStage();
+            gs.setName("火药(精英)");
+            gs.setChapter(12);
+            gs.setSequenceNo(1);
+            gs.setStamina(20);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("大炮卷轴"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("火药");
+            gs.setChapter(12);
+            gs.setSequenceNo(1);
+            gs.setStamina(10);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("大炮卷轴"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("冰火两重天(精英)");
+            gs.setChapter(12);
+            gs.setSequenceNo(2);
+            gs.setStamina(20);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("冰火两重天");
+            gs.setChapter(12);
+            gs.setSequenceNo(2);
+            gs.setStamina(10);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("沉默");
+            gs.setChapter(12);
+            gs.setSequenceNo(3);
+            gs.setStamina(10);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("沉默(精英)");
+            gs.setChapter(12);
+            gs.setSequenceNo(3);
+            gs.setStamina(20);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("神殿守卫(精英)");
+            gs.setChapter(12);
+            gs.setSequenceNo(4);
+            gs.setStamina(20);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("神殿守卫");
+            gs.setChapter(12);
+            gs.setSequenceNo(4);
+            gs.setStamina(10);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("一姐");
+            gs.setChapter(12);
+            gs.setSequenceNo(5);
+            gs.setStamina(10);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("撒旦卷轴"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("一姐(精英)");
+            gs.setChapter(12);
+            gs.setSequenceNo(5);
+            gs.setStamina(20);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("撒旦卷轴"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("食人(精英)");
+            gs.setChapter(12);
+            gs.setSequenceNo(6);
+            gs.setStamina(20);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("龙心卷轴"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("食人");
+            gs.setChapter(12);
+            gs.setSequenceNo(6);
+            gs.setStamina(10);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("龙心卷轴"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("游走");
+            gs.setChapter(12);
+            gs.setSequenceNo(7);
+            gs.setStamina(10);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("远古卷轴"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("游走(精英)");
+            gs.setChapter(12);
+            gs.setSequenceNo(7);
+            gs.setStamina(20);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("远古遗物"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("近卫(精英)");
+            gs.setChapter(12);
+            gs.setSequenceNo(8);
+            gs.setStamina(20);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("辉耀卷轴"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("近卫");
+            gs.setChapter(12);
+            gs.setSequenceNo(8);
+            gs.setStamina(10);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("辉耀卷轴"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+
+    }
+
+    private void createChapter13Stage() {
+        //==============================13=====================================
+        {
+            GameStage gs = new GameStage();
+            gs.setName("沼泽边缘(精英)");
+            gs.setChapter(13);
+            gs.setSequenceNo(1);
+            gs.setStamina(24);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("永恒冰柱"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("沼泽边缘");
+            gs.setChapter(13);
+            gs.setSequenceNo(1);
+            gs.setStamina(12);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("永恒冰柱"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("河道相逢");
+            gs.setChapter(13);
+            gs.setSequenceNo(2);
+            gs.setStamina(12);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("银月长矛"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("河道相逢(精英)");
+            gs.setChapter(13);
+            gs.setSequenceNo(2);
+            gs.setStamina(24);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("银月长矛"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("团战中心(精英)");
+            gs.setChapter(13);
+            gs.setSequenceNo(3);
+            gs.setStamina(24);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("鹰语指环"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("团战中心");
+            gs.setChapter(13);
+            gs.setSequenceNo(3);
+            gs.setStamina(12);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("鹰语指环"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("遗骨小岛");
+            gs.setChapter(13);
+            gs.setSequenceNo(4);
+            gs.setStamina(12);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("巫师之冠"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("遗骨小岛(精英)");
+            gs.setChapter(13);
+            gs.setSequenceNo(4);
+            gs.setStamina(24);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("巫师之冠"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("亡语森林(精英)");
+            gs.setChapter(13);
+            gs.setSequenceNo(5);
+            gs.setStamina(24);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("龙心卷轴"));
+            }
+            {
+                items.add(equipCache.get("泰坦战斧"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("亡语森林");
+            gs.setChapter(13);
+            gs.setSequenceNo(5);
+            gs.setStamina(12);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("龙心卷轴"));
+            }
+            {
+                items.add(equipCache.get("泰坦战斧"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("泰坦遗迹");
+            gs.setChapter(13);
+            gs.setSequenceNo(6);
+            gs.setStamina(12);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("水晶球"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("泰坦遗迹(精英)");
+            gs.setChapter(13);
+            gs.setSequenceNo(6);
+            gs.setStamina(24);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("水晶球"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+    }
+
+    private void createChapter14Stage() {
+        //==============================14======================================
+        {
+            GameStage gs = new GameStage();
+            gs.setName("柳暗花明(精英)");
+            gs.setChapter(14);
+            gs.setSequenceNo(1);
+            gs.setStamina(24);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("巫师之冠"));
+            }
+            {
+                items.add(equipCache.get("极限球"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("柳暗花明");
+            gs.setChapter(14);
+            gs.setSequenceNo(1);
+            gs.setStamina(12);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("巫师之冠"));
+            }
+            {
+                items.add(equipCache.get("极限球"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("瀑布崖");
+            gs.setChapter(14);
+            gs.setSequenceNo(2);
+            gs.setStamina(12);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("红宝石吊坠"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("瀑布崖(精英)");
+            gs.setChapter(14);
+            gs.setSequenceNo(2);
+            gs.setStamina(24);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("红宝石吊坠"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("山腰相逢(精英)");
+            gs.setChapter(14);
+            gs.setSequenceNo(3);
+            gs.setStamina(24);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("禁卫军胸甲"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("山腰相逢");
+            gs.setChapter(14);
+            gs.setSequenceNo(3);
+            gs.setStamina(12);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("禁卫军胸甲"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("乱石山坡");
+            gs.setChapter(14);
+            gs.setSequenceNo(4);
+            gs.setStamina(12);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("远古遗物"));
+            }
+            {
+                items.add(equipCache.get("恶魔之失"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("乱石山坡(精英)");
+            gs.setChapter(14);
+            gs.setSequenceNo(4);
+            gs.setStamina(24);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("远古遗物"));
+            }
+            {
+                items.add(equipCache.get("恶魔之失"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("龙语(精英)");
+            gs.setChapter(14);
+            gs.setSequenceNo(5);
+            gs.setStamina(24);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("蓝宝石法杖"));
+            }
+            {
+                items.add(equipCache.get("撒旦卷轴"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("龙语");
+            gs.setChapter(14);
+            gs.setSequenceNo(5);
+            gs.setStamina(12);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("蓝宝石法杖"));
+            }
+            {
+                items.add(equipCache.get("撒旦卷轴"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("巨龙巢穴(精英)");
+            gs.setChapter(14);
+            gs.setSequenceNo(6);
+            gs.setStamina(24);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("麒麟弯刀"));
+            }
+            {
+                items.add(equipCache.get("辉耀卷轴"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            GameStage gs = new GameStage();
+            gs.setName("巨龙巢穴");
+            gs.setChapter(14);
+            gs.setSequenceNo(6);
+            gs.setStamina(12);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("麒麟弯刀"));
+            }
+            {
+                items.add(equipCache.get("辉耀卷轴"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+    }
+
+    private void createSpecialStage() {
+        //=============================================Special Stage======================================
+        {
+            SpecialStage gs = new SpecialStage();
+            gs.setName("诅咒之城(魔免)");
+            gs.setStamina(6);
+            gs.setOccurDays(SpecialStage.Weekday.Monday | SpecialStage.Weekday.Thursday | SpecialStage.Weekday.Sunday);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("水晶球"));
+            }
+            {
+                items.add(equipCache.get("巫师之冠"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            SpecialStage gs = new SpecialStage();
+            gs.setName("折戟山谷(物免)");
+            gs.setStamina(6);
+            gs.setOccurDays(SpecialStage.Weekday.Tuesday | SpecialStage.Weekday.Friday | SpecialStage.Weekday.Sunday);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            SpecialStage gs = new SpecialStage();
+            gs.setName("女武神的对决");
+            gs.setStamina(6);
+            gs.setOccurDays(SpecialStage.Weekday.Wednesday | SpecialStage.Weekday.Saturday | SpecialStage.Weekday.Sunday);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            {
+                items.add(equipCache.get("静息项链"));
+            }
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            SpecialStage gs = new SpecialStage();
+            gs.setName("潮汐神庙");
+            gs.setStamina(6);
+            gs.setOccurDays(SpecialStage.Weekday.Monday | SpecialStage.Weekday.Wednesday | SpecialStage.Weekday.Friday | SpecialStage.Weekday.Sunday);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        {
+            SpecialStage gs = new SpecialStage();
+            gs.setName("矮人军工厂");
+            gs.setStamina(6);
+            gs.setOccurDays(SpecialStage.Weekday.Tuesday | SpecialStage.Weekday.Thursday | SpecialStage.Weekday.Saturday | SpecialStage.Weekday.Sunday);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            gs.setOutputItems(items);
+            stageCache.put(gs.getName(), gs);
+        }
+        //=======================预言之池===============================
+        {
+            SpecialStage gs = new SpecialStage();
+            gs.setName("预言之池-影之魔王(影魔)");
+            gs.setStamina(6);
+            gs.setOccurDays(SpecialStage.Weekday.Sunday);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            gs.setOutputItems(items);
+            stageCache.put("影魔", gs);
+        }
+        {
+            SpecialStage gs = new SpecialStage();
+            gs.setName("预言之池-雷神之锤(众神)");
+            gs.setStamina(6);
+            gs.setOccurDays(SpecialStage.Weekday.Monday);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            gs.setOutputItems(items);
+            stageCache.put("众神", gs);
+        }
+        {
+            SpecialStage gs = new SpecialStage();
+            gs.setName("预言之池-钛合金机甲(浣熊)");
+            gs.setStamina(6);
+            gs.setOccurDays(SpecialStage.Weekday.Tuesday);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            gs.setOutputItems(items);
+            stageCache.put("浣熊", gs);
+        }
+        {
+            SpecialStage gs = new SpecialStage();
+            gs.setName("预言之池-北境巨龙(冰龙)");
+            gs.setStamina(6);
+            gs.setOccurDays(SpecialStage.Weekday.Wednesday);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            gs.setOutputItems(items);
+            stageCache.put("冰龙", gs);
+        }
+        {
+            SpecialStage gs = new SpecialStage();
+            gs.setName("预言之池-疯狂之血(神灵)");
+            gs.setStamina(6);
+            gs.setOccurDays(SpecialStage.Weekday.Thursday);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            gs.setOutputItems(items);
+            stageCache.put("神灵", gs);
+        }
+        {
+            SpecialStage gs = new SpecialStage();
+            gs.setName("预言之池-不死烈焰(凤凰)");
+            gs.setStamina(6);
+            gs.setOccurDays(SpecialStage.Weekday.Friday);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            gs.setOutputItems(items);
+            stageCache.put("凤凰", gs);
+        }
+        {
+            SpecialStage gs = new SpecialStage();
+            gs.setName("预言之池-地穴领主(蚂蚁)");
+            gs.setStamina(6);
+            gs.setOccurDays(SpecialStage.Weekday.Saturday);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            gs.setOutputItems(items);
+            stageCache.put("蚂蚁", gs);
+        }
     }
 }

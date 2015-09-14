@@ -40,8 +40,8 @@
     <color name="button_material_light">#ffd6d7d7</color>
     <!-- From: file:/D:/mywork/GitHub/DotaWakeupAssistant/app/src/main/res/values/color.xml -->
     <eat-comment/>
-    <color name="dark_blue">#98CEEC</color>
     <color name="detail_back">#0e4371</color>
+    <color name="dialog_title_bg">#6db2db</color>
     <!-- From: file:/D:/mywork/GitHub/DotaWakeupAssistant/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
@@ -56,6 +56,7 @@
     <color name="font_color4">#324b84</color>
     <color name="font_detail_main">#0d2d3e</color>
     <color name="font_task_lable">#ffe9ad</color>
+    <color name="friend_white">#eee</color>
     <color name="hero_portrait_border">#ff0000</color>
     <!-- From: file:/D:/mywork/GitHub/DotaWakeupAssistant/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
@@ -63,8 +64,18 @@
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="hint_foreground_material_dark">@color/bright_foreground_disabled_material_dark</color>
     <color name="hint_foreground_material_light">@color/bright_foreground_disabled_material_light</color>
+    <!-- From: file:/D:/mywork/GitHub/DotaWakeupAssistant/app/src/main/res/values/color.xml -->
+    <eat-comment/>
+    <color name="light_blue">#98CEEC</color>
+    <!-- From: file:/D:/mywork/GitHub/DotaWakeupAssistant/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <eat-comment/>
     <color name="link_text_material_dark">@color/material_deep_teal_200</color>
     <color name="link_text_material_light">@color/material_deep_teal_500</color>
+    <!-- From: file:/D:/mywork/GitHub/DotaWakeupAssistant/app/src/main/res/values/color.xml -->
+    <eat-comment/>
+    <color name="main_blue">#6db2db</color>
+    <!-- From: file:/D:/mywork/GitHub/DotaWakeupAssistant/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <eat-comment/>
     <color name="material_blue_grey_800">#ff37474f</color>
     <color name="material_blue_grey_900">#ff263238</color>
     <color name="material_blue_grey_950">#ff21272b</color>
