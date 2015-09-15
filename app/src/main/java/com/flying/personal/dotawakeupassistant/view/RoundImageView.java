@@ -19,6 +19,9 @@ import android.view.View;
 import com.flying.personal.dotawakeupassistant.R;
 import com.flying.personal.dotawakeupassistant.util.Utility;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.ref.WeakReference;
@@ -40,6 +43,14 @@ public class RoundImageView extends View {
         Center     //当原始图大于View的size时，显示中心位置
     }
 
+    public enum LoadSource {
+        AutoDetect,
+        Asset,
+        AppDataDir,
+        SDDir
+    }
+
+
     public class CustomSize {
         public int width;
         public int height;
@@ -54,6 +65,7 @@ public class RoundImageView extends View {
         }
     }
 
+    protected LoadSource loadSource;
     protected int mBorderRadiusPX;
     protected Paint mPaint;
     protected WeakReference<Bitmap> mWeakBitmap;
@@ -90,6 +102,14 @@ public class RoundImageView extends View {
     protected int borderWidthPX;
     protected int borderColor;
 
+    public LoadSource getLoadSource() {
+        return loadSource;
+    }
+
+    public void setLoadSource(LoadSource loadSource) {
+        this.loadSource = loadSource;
+    }
+
     public RoundImageView(Context context) {
         super(context);
         sharedConstructor(context);
@@ -105,6 +125,7 @@ public class RoundImageView extends View {
         borderWidthPX = typedArray.getDimensionPixelSize(R.styleable.RoundImageView_borderWidth,
                 Utility.getInstance().dip2px(context, DefaultBorderWidthDP));
         borderColor = typedArray.getColor(R.styleable.RoundImageView_borderColor, Color.BLACK);
+        loadSource = LoadSource.values()[typedArray.getInteger(R.styleable.RoundImageView_loadSource, 0)];
         maxHeightPX = typedArray.getDimensionPixelSize(R.styleable.RoundImageView_maxHeight, 0);
         maxWidthPX = typedArray.getDimensionPixelSize(R.styleable.RoundImageView_maxWidth, 0);
         typedArray.recycle();
@@ -117,18 +138,47 @@ public class RoundImageView extends View {
         scaleMode = SimpleScale.AutoScale.AutoScale;
         borderWidthPX = Utility.getInstance().dip2px(context, DefaultBorderWidthDP);
         borderColor = Color.BLACK;
+        loadSource = LoadSource.AutoDetect;
+    }
+
+    private InputStream getImageInputStream() throws IOException {
+        InputStream is = null;
+        if (loadSource == LoadSource.AutoDetect) {
+            File f = new File(filePath);
+
+            if (!f.exists()) {
+                loadSource = LoadSource.Asset;
+            } else {
+                try {
+                    is = this.getContext().openFileInput(filePath);
+                    loadSource = LoadSource.AppDataDir;
+                    return is;
+                } catch (FileNotFoundException e) {
+                    loadSource = LoadSource.SDDir;
+                }
+            }
+        }
+
+        if (loadSource == LoadSource.Asset)
+            is = this.getContext().getAssets().open(filePath);
+        else if (loadSource == LoadSource.AppDataDir)
+            is = this.getContext().openFileInput(filePath);
+        else
+            is = new FileInputStream(filePath);
+
+        return is;
     }
 
     protected CustomSize getImageSize() {
         if (originalPicSize == null) {
             BitmapFactory.Options opts = new BitmapFactory.Options();
-
+            InputStream is = null;
             try {
                 //only for preview
                 if (this.getContext() == null || this.getContext().getAssets() == null)
                     return new CustomSize();
 
-                InputStream is = this.getContext().getAssets().open(filePath);
+                is = getImageInputStream();
                 opts.inJustDecodeBounds = true;
                 BitmapFactory.decodeStream(is, null, opts);
             } catch (IOException e) {
@@ -362,7 +412,7 @@ public class RoundImageView extends View {
         Bitmap resultBitmap = null;
         int oriWidth = originalPicSize.width;
         int oriHeight = originalPicSize.height;
-        InputStream is = this.getContext().getAssets().open(filePath);
+        InputStream is = getImageInputStream();
 
         if (oriHeight == getHeight() && oriWidth == getHeight()) {
             resultBitmap = BitmapFactory.decodeStream(is, null, null);
@@ -492,5 +542,4 @@ public class RoundImageView extends View {
 
         return inSampleSize;
     }
-
 }

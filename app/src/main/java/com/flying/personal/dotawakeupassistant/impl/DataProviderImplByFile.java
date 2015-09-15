@@ -26,10 +26,11 @@ public class DataProviderImplByFile implements IDataProvider {
 
     private List<Hero> heroes;
     private Map<Hero, List<String>> searchIndexs;
-    private double version = 1.0;
-    private String dataFilePath;
     private List<WakeupSkill> wakupAffectSkills;
     private Map<String, List<String>> tagHeroes;
+    private String appDir;
+    private double dataFileVersion = 1;
+    private String updateURL;
 
     @Override
     public List<Hero> getAllHeroes() {
@@ -164,29 +165,16 @@ public class DataProviderImplByFile implements IDataProvider {
     }
 
     @Override
-    public List<Hero> getHeroesByTag(String tagName) {
-        List<String> heroNames = tagHeroes.get(tagName);
-        List<Hero> result = new ArrayList<>(15);
-        int totalCount = heroNames.size();
-
-        for (int i = 0; i < totalCount; i++) {
-            for (Hero h : heroes) {
-                if (heroNames.get(i).equalsIgnoreCase(h.getName())) {
-                    result.add(h);
-                    break;
-                }
-            }
-        }
-
-        return result;
+    public List<String> getHeroesByTag(String tagName) {
+        return tagHeroes.get(tagName);
     }
 
     @Override
     public void init(String[] args) {
         SerializedData extraData = null;
-        BuiltInData builtInData = new BuiltInData();
+        appDir = args[0];
         try {
-            dataFilePath = args[0];
+            BuiltInData builtInData = new BuiltInData();
 
             if (isDataFileExit()) {
                 Log.d(this.getClass().getName(), "Load data from file");
@@ -209,11 +197,12 @@ public class DataProviderImplByFile implements IDataProvider {
                     tagHeroCache.put(entry.getKey(), entry.getValue());
                 }
             }
-            //hero must load after updating tag from external files
+            //hero must be loaded after updating tag from external files
             this.heroes = builtInData.getHeroes();
 
             if (extraData != null) {
-                version = extraData.version;
+                dataFileVersion = extraData.version;
+
                 if (extraData.heroDatas != null) {
                     for (int i = 0; i < extraData.heroDatas.size(); i++) {
                         Hero h = extraData.heroDatas.get(i);
@@ -287,10 +276,11 @@ public class DataProviderImplByFile implements IDataProvider {
         }
     }
 
+
     private SerializedData getExtraDataFromJsonFile() {
         SerializedData result = null;
         try {
-            InputStreamReader isr = new InputStreamReader(new FileInputStream(this.dataFilePath), "UTF-8");
+            InputStreamReader isr = new InputStreamReader(new FileInputStream(getDataFilePath()), "UTF-8");
             Gson gson = new Gson();
             result = gson.fromJson(isr, SerializedData.class);
         } catch (Exception e) {
@@ -301,7 +291,7 @@ public class DataProviderImplByFile implements IDataProvider {
 
     @Override
     public void save(String[] args) {
-        Log.e(this.getClass().getName(), "save not implemented");
+        //TODO:
     }
 
     @Override
@@ -320,14 +310,22 @@ public class DataProviderImplByFile implements IDataProvider {
         heroes.add(0, hero);
     }
 
+    private String getDataFilePath() {
+        return appDir + "/data.json";
+    }
+
     private boolean isDataFileExit() {
-        File f = new File(dataFilePath);
+        File f = new File(getDataFilePath());
         return f.exists();
     }
 
     @Override
-    public double getVersion() {
-        return version;
+    public String getDataVersion() {
+        return String.valueOf(dataFileVersion);
+    }
+
+    public String getUpdateURL() {
+        return updateURL;
     }
 
     public class SerializedData {
@@ -335,5 +333,6 @@ public class DataProviderImplByFile implements IDataProvider {
         public List<HeroTag> tags;
         public Map<String, List<String>> tagHeros;
         public List<Hero> heroDatas;
+        public String updateURL;
     }
 }

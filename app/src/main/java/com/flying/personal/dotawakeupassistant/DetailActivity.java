@@ -114,8 +114,6 @@ public class DetailActivity extends ActionBarActivity {
                     new SimpleAdapter.ViewBinder() {
                         @Override
                         public boolean setViewValue(View view, Object data, String textRepresentation) {
-                            Log.d(this.getClass().getName(), "ViewBinder.setViewValue");
-
                             if (data instanceof HeroTag) {
                                 TextView tv = (TextView) view;
                                 HeroTag tag = (HeroTag) data;
@@ -186,11 +184,11 @@ public class DetailActivity extends ActionBarActivity {
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     Map<String, Object> data = (Map<String, Object>) parent.getItemAtPosition(position);
                     HeroTag heroTag = (HeroTag) data.get("tag");
-                    List<Hero> heroes = ProviderFactory.getInstance().getDataProvider().getHeroesByTag(heroTag.tagName);
+                    List<String> heroes = ProviderFactory.getInstance().getDataProvider().getHeroesByTag(heroTag.tagName);
 
                     StringBuilder sb = new StringBuilder(50);
-                    for (Hero h : heroes) {
-                        sb.append(h.getName());
+                    for (String s : heroes) {
+                        sb.append(s);
                         sb.append(", ");
                     }
 
@@ -216,10 +214,15 @@ public class DetailActivity extends ActionBarActivity {
     private void showDetail() {
         RoundImageView ivPortrait = (RoundImageView) findViewById(R.id.ivHeroPortrait);
         ivPortrait.setFilePath(getResources().getString(R.string.dir_hero_path) + "/" + currentHero.getPicPath());
+
+        if (currentHero.isBuiltData())
+            ivPortrait.setLoadSource(RoundImageView.LoadSource.Asset);
+        else
+            ivPortrait.setLoadSource(RoundImageView.LoadSource.AppDataDir);
+
         ivPortrait.invalidate();
         TextView tvName = (TextView) findViewById(R.id.tvHeroName);
         tvName.setText(currentHero.getName());
-
         TextView tvSkillDesc = (TextView) findViewById(R.id.tvSkillDesc);
 
         if (currentHero.getWakeupSkill() != null)
@@ -256,7 +259,6 @@ public class DetailActivity extends ActionBarActivity {
                 break;
         }
 
-
         ((TextView) findViewById(R.id.tvTask2)).setText(currentHero.getTasks()[1].getDisplayInfo() + "\n(今天周" + day + ")");
         ((TextView) findViewById(R.id.tvTask3)).setText(currentHero.getTasks()[2].getDisplayInfo());
 
@@ -287,7 +289,7 @@ public class DetailActivity extends ActionBarActivity {
 
             int radius = Utility.getInstance().dip2px(this, 1);
             int borderWidth = Utility.getInstance().dip2px(this, 1);
-            int imgHeight = Utility.getInstance().dip2px(this, 35);
+            int imgHeight = Utility.getInstance().dip2px(this, 36);
 
             for (int i = 0; i < neededEquipments.length; i++) {
                 EquipmentItem ei = neededEquipments[i];

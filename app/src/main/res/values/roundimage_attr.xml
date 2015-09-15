@@ -7,6 +7,11 @@
         <attr name="borderColor" format="color" />
         <attr name="maxWidth" format="dimension" />
         <attr name="maxHeight" format="dimension" />
+        <attr name="loadSource" format="enum">
+            <enum name="AutoDetect" value="0" />
+            <enum name="Asset" value="1" />
+            <enum name="AppDataDir" value="2" />
+        </attr>
         <attr name="scaleType" format="enum">
             <enum name="AutoScale" value="0" />
             <enum name="Fill" value="1" />

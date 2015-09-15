@@ -16,9 +16,9 @@ public class Hero {
     protected AbilityType abilityType;
     protected String picPath;
     protected String portraitPath;
-    protected String wakeupSkillString;
     protected List<HeroTag> tags;
     protected WakeupSkill wakeupSkill;
+    protected boolean isBuiltData = true;
 
     public WakeupSkill getWakeupSkill() {
         return wakeupSkill;
@@ -37,17 +37,17 @@ public class Hero {
         return tags;
     }
 
+    public boolean isBuiltData() {
+        return isBuiltData;
+    }
+
+    public void setIsBuiltData(boolean isBuiltData) {
+        this.isBuiltData = isBuiltData;
+    }
+
     public void setTags(List<HeroTag> tags) {
         this.tags = tags;
     }
-
-//    public String getWakeupSkillString() {
-//        return wakeupSkillString;
-//    }
-//
-//    public void setWakeupSkillString(String wakeupSkill) {
-//        this.wakeupSkillString = wakeupSkill;
-//    }
 
     public enum PositionType {
         Front, Middle, Back

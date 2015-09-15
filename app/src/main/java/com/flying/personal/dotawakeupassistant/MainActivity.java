@@ -6,6 +6,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
@@ -27,25 +28,48 @@ import com.flying.personal.dotawakeupassistant.util.Utility;
 import com.flying.personal.dotawakeupassistant.view.IOnSearch;
 import com.flying.personal.dotawakeupassistant.view.RoundImageView;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MainActivity extends ActionBarActivity implements IOnSearch {
+public class MainActivity extends ActionBarActivity implements IOnSearch, Updater.ICallBack {
     private Hero.PositionType currentPositionType = null;
     private GridLayout mainHeroLayout;
     private LayoutInflater infalter;
     private View.OnClickListener imageClickListener;
     private List<Hero> currentHeroes;
+    private Updater updater;
+    private Handler handler;
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         infalter = LayoutInflater.from(this);
         setContentView(R.layout.activity_main);
-        ProviderFactory.getInstance().initFactory(new String[]{getAppPath()});
+        ProviderFactory.getInstance().initFactory(new String[]{getAppPath() + File.separator + "data.json"});
+        updater = new Updater();
+        handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (MainActivity.this.isFinishing())
+                    return;
+
+                String updateRecordFilePath = getAppPath() + File.separator + "update";
+                //TODO:
+                try {
+                    File f = new File(updateRecordFilePath);
+                    FileInputStream fis = new FileInputStream(updateRecordFilePath);
+                    updater.doUpdate(MainActivity.this, "", null, MainActivity.this);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }, 10000);
         init();
     }
-
 
     private void init() {
         mainHeroLayout = (GridLayout) this.findViewById(R.id.gridLayout);
@@ -94,6 +118,12 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
             ivHeroPic.getLayoutParams().width = picWidthPX;
             ivHeroPic.getLayoutParams().height = picWidthPX;
             ivHeroPic.setTag(h.getName());
+
+            if (h.isBuiltData())
+                ivHeroPic.setLoadSource(RoundImageView.LoadSource.Asset);
+            else
+                ivHeroPic.setLoadSource(RoundImageView.LoadSource.AppDataDir);
+
             ivHeroPic.setFilePath(getResources().getString(R.string.dir_hero_path) + "/" + h.getPortraitPath());
             ivHeroPic.invalidate();
             ivHeroPic.setOnClickListener(imageClickListener);
@@ -129,6 +159,9 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
 
     @Override
     public void onSearch(String text) {
+        if (this.isFinishing())
+            return;
+
         HashMap<Hero, String> matchedIndex = new HashMap<Hero, String>(30);
         currentHeroes = ProviderFactory.getInstance().getDataProvider()
                 .getMatchedHeroes(text, currentPositionType, matchedIndex);
@@ -148,7 +181,7 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
     }
 
     public String getAppPath() {
-        return this.getFilesDir().getAbsolutePath() + "/data.json";
+        return this.getFilesDir().getAbsolutePath();
     }
 
     @Override
@@ -180,7 +213,7 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
             } catch (PackageManager.NameNotFoundException e) {
                 Log.e(this.getClass().getName(), Log.getStackTraceString(e));
             }
-            tv.setText(getResources().getString(R.string.app_name) + "v" + versionName);
+            tv.setText(getResources().getString(R.string.app_name) + "v" + versionName + " 数据版本" + ProviderFactory.getInstance().getDataProvider().getDataVersion());
 
             TextView tv1 = (TextView) view.findViewById(R.id.tvInformation);
             tv1.setText(R.string.about_content);
@@ -198,5 +231,11 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void NotifyResult(int code, String information) {
+        if (this.isFinishing())
+            return;
     }
 }
