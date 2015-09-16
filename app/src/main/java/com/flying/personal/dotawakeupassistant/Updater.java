@@ -1,6 +1,8 @@
 package com.flying.personal.dotawakeupassistant;
 
 import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -10,11 +12,14 @@ import org.apache.http.NameValuePair;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -28,6 +33,8 @@ public class Updater extends AsyncTask {
 
     public interface ICallBack {
         void NotifyResult(int code, String information);
+
+        void NotifyProgress(int percentValue);
     }
 
     public final static int NoUpdate = -100;
@@ -36,7 +43,6 @@ public class Updater extends AsyncTask {
     private String urlString;
     private List<NameValuePair> postParams;
     private ICallBack callBack;
-
 
     public void doUpdate(Context context, String urlString,
                          List<NameValuePair> postParams, ICallBack callBack) {
@@ -54,10 +60,31 @@ public class Updater extends AsyncTask {
         this.execute();
     }
 
+    public void setCallBack(ICallBack callBack) {
+        this.callBack = callBack;
+    }
+
     @Override
     protected Object doInBackground(Object[] params) {
         ResultData result = new ResultData();
+        String tmpDirPath = context.getFilesDir().getAbsolutePath() + "/tmp";
+        String downloadFileName = "tmpDataFile";
+        String downloadFileFullPath = tmpDirPath + File.separator + downloadFileName;
+        String updateRecordFilePath = context.getFilesDir().getAbsolutePath() + File.separator + "update";
+        int progress = 0;
         try {
+            if (context != null) {
+                ConnectivityManager mConnectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+                NetworkInfo mNetworkInfo = mConnectivityManager.getActiveNetworkInfo();
+                if (mNetworkInfo == null || !mNetworkInfo.isAvailable()) {
+                    result.returnCode = -5;
+                    result.information = "No Network connection";
+                    return result;
+                }
+            }
+            progress = 5;
+            publishProgress(progress);
+
             URL url = new URL(urlString);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setConnectTimeout(timeoutValue);
@@ -93,13 +120,12 @@ public class Updater extends AsyncTask {
                 os.flush();
             }
 
-            String tmpDirPath = context.getFilesDir().getAbsolutePath() + "/tmp";
             File tmpDir = new File(tmpDirPath);
             FileUtility.deleteAllFiles(tmpDir);
             tmpDir.mkdir();
 
-            String downloadFileName = "tmpDataFile";
-            String downloadFileFullPath = tmpDirPath + File.separator + downloadFileName;
+            progress = 10;
+            publishProgress(progress);
 
             if (conn.getResponseCode() == 200) {
                 InputStream downloadIS = conn.getInputStream();
@@ -109,18 +135,38 @@ public class Updater extends AsyncTask {
 
                 while ((len = downloadIS.read(buffer)) != -1) {
                     downloadFOS.write(buffer, 0, len);
+
+                    if (progress < 75) {
+                        progress += 5;
+                        publishProgress(progress);
+                    }
                 }
 
                 downloadIS.close();
                 downloadFOS.close();
+
+                progress = 80;
+                publishProgress(progress);
                 //analyse file
                 File f = new File(downloadFileFullPath);
 
-                if (f.exists() && f.length() > 2) {
+                if (f.exists() && f.length() > 6) {
                     String extractDir = tmpDirPath + File.separator + "extract__";
                     FileUtility.unZip(downloadFileFullPath, extractDir);
                     FileUtility.copyFolder(extractDir, context.getFilesDir().getAbsolutePath());
                     result.returnCode = 0;
+                    progress = 95;
+                    publishProgress(progress);
+                    //save update time
+                    SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                    try {
+                        FileOutputStream updateRecordFOS = new FileOutputStream(updateRecordFilePath);
+                        updateRecordFOS.write(formatter.format(new Date()).getBytes("UTF-8"));
+                        updateRecordFOS.flush();
+                        updateRecordFOS.close();
+                    } catch (IOException e) {
+                        Log.e(Updater.this.getClass().getName(), Log.getStackTraceString(e));
+                    }
                 } else {
                     result.returnCode = NoUpdate;
                 }
@@ -133,27 +179,37 @@ public class Updater extends AsyncTask {
 
             result.returnCode = -2;
             result.information = e.getMessage();
+        } finally {
+            File tmpDir = new File(tmpDirPath);
+            FileUtility.deleteAllFiles(tmpDir);
+            progress = 100;
+            publishProgress(progress);
         }
 
         return result;
     }
 
-    /**
-     * <p>Runs on the UI thread after {@link #doInBackground}. The
-     * specified result is the value returned by {@link #doInBackground}.</p>
-     * <p/>
-     * <p>This method won't be invoked if the task was cancelled.</p>
-     *
-     * @param o The result of the operation computed by {@link #doInBackground}.
-     * @see #onPreExecute
-     * @see #doInBackground
-     * @see #onCancelled(Object)
-     */
     @Override
     protected void onPostExecute(Object o) {
         if (callBack != null) {
             ResultData r = (ResultData) o;
             callBack.NotifyResult(r.returnCode, r.information);
+        }
+    }
+
+    /**
+     * Runs on the UI thread after {@link #publishProgress} is invoked.
+     * The specified values are the values passed to {@link #publishProgress}.
+     *
+     * @param values The values indicating progress.
+     * @see #publishProgress
+     * @see #doInBackground
+     */
+    @Override
+    protected void onProgressUpdate(Object[] values) {
+        if (callBack != null) {
+            int value = (int) values[0];
+            callBack.NotifyProgress(value);
         }
     }
 }

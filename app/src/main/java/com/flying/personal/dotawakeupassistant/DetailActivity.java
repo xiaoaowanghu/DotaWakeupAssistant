@@ -1,6 +1,5 @@
 package com.flying.personal.dotawakeupassistant;
 
-import android.app.AlertDialog;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
@@ -13,7 +12,6 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.view.GestureDetector;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -192,19 +190,7 @@ public class DetailActivity extends ActionBarActivity {
                         sb.append(", ");
                     }
 
-                    final AlertDialog dialog = new AlertDialog.Builder(DetailActivity.this).create();
-                    View dialogView = LayoutInflater.from(DetailActivity.this).inflate(R.layout.tag_hero, null);// 自定义布局
-                    ((TextView) dialogView.findViewById(R.id.tv_dialog_title)).setText(heroTag.tagName);
-                    ((TextView) dialogView.findViewById(R.id.tv_dialog_message)).setText(sb.substring(0, sb.length() - 2));
-                    dialogView.findViewById(R.id.btnCloseTagHero).setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            dialog.dismiss();
-                        }
-                    });
-
-                    dialog.show();
-                    dialog.getWindow().setContentView(dialogView);
+                    Utility.getInstance().showNormalDialog(DetailActivity.this, heroTag.tagName, sb.substring(0, sb.length() - 2));
                 }
             });
             ll.addView(lv, lpForAffectedItem);

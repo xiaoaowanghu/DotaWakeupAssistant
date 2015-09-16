@@ -1,6 +1,7 @@
 package com.flying.personal.dotawakeupassistant.model;
 
 import com.flying.personal.dotawakeupassistant.R;
+import com.google.gson.annotations.Expose;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,12 +12,14 @@ import java.util.List;
 public class Hero {
     protected String name;
     protected List<String> alias;
+
     protected WakeUpTask[] tasks;
     protected PositionType positionType;
     protected AbilityType abilityType;
     protected String picPath;
     protected String portraitPath;
     protected List<HeroTag> tags;
+
     protected WakeupSkill wakeupSkill;
     protected boolean isBuiltData = true;
 

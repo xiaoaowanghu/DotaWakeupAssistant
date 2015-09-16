@@ -247,6 +247,7 @@
     <string name="ablility_type_Intelligence">智力</string>
     <string name="about_content">作者:葱花    技术支持:猎豹\nAll rights reserved.</string>
     <string name="action_about">关于</string>
+    <string name="action_update">更新数据</string>
     <string name="affectedSkill">被其他觉醒技能影响</string>
     <string name="app_name">小刀助手</string>
     <string name="dir_equipment_path">equipment</string>

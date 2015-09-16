@@ -1,5 +1,7 @@
 package com.flying.personal.dotawakeupassistant.model;
 
+import com.google.gson.annotations.Expose;
+
 /**
  * Created by wangxian on 8/31/2015.
  */
@@ -30,7 +32,8 @@ public class WakeupSkill {
         public String value;
     }
 
-    public Hero hero;
+    @Expose
+    public transient Hero hero;
     public String description;
     public HeroTag affectTag;
     public AbilityAffected[] abilitiesAffected;

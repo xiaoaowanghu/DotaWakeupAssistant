@@ -1,11 +1,18 @@
 package com.flying.personal.dotawakeupassistant.util;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.os.Environment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.TextView;
+
+import com.flying.personal.dotawakeupassistant.R;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -120,5 +127,23 @@ public class Utility {
 
         paint.getTextBounds(text, 0, text.length(), textBound);
         return initialTextSize;
+    }
+
+    public Dialog showNormalDialog(Context context, String title, String message) {
+        final AlertDialog dialog = new AlertDialog.Builder(context).create();
+        View dialogView = LayoutInflater.from(context).inflate(R.layout.tag_hero, null);
+        ((TextView) dialogView.findViewById(R.id.tv_dialog_title)).setText(title);
+        ((TextView) dialogView.findViewById(R.id.tv_dialog_message)).setText(message);
+
+        dialogView.findViewById(R.id.btnCloseTagHero).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+        dialog.getWindow().setContentView(dialogView);
+        return dialog;
     }
 }
