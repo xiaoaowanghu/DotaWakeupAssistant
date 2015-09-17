@@ -720,7 +720,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription("收集60个紫檀木碎片，合成装备倚天剑");
             w1.setStage(stageCache.get("乱石山坡(精英)"));
-            w1.setNeededEquip(getEquiment("鹰语指环", "麒麟弯刀"));
+            w1.setNeededEquipment(getEquiment("鹰语指环", "麒麟弯刀"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -759,7 +759,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription("收集60个火红色剂碎片，合成装备烈焰之角");
             w1.setStage(stageCache.get("泰坦遗迹(精英)"));
-            w1.setNeededEquip(getEquiment("巫师之冠", "红宝石吊坠", "水晶球"));
+            w1.setNeededEquipment(getEquiment("巫师之冠", "红宝石吊坠", "水晶球"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -799,7 +799,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription("收集60个熔火之石碎片，合成装备凤羽冠");
             w1.setStage(stageCache.get("山腰相逢(精英)"));
-            w1.setNeededEquip(getEquiment("巫师之冠", "极限球", "水晶球"));
+            w1.setNeededEquipment(getEquiment("巫师之冠", "极限球", "水晶球"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -834,7 +834,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription("收集60个硬甲钢刺碎片，合成装备防暴腰铠");
             w1.setStage(stageCache.get("山腰相逢(精英)"));
-            w1.setNeededEquip(getEquiment("银月长矛", "泰坦战斧", "红宝石吊坠"));
+            w1.setNeededEquipment(getEquiment("银月长矛", "泰坦战斧", "红宝石吊坠"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -874,7 +874,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription("收集60个蛊毒碎片，合成装备巫毒面具");
             w1.setStage(stageCache.get("沼泽边缘(精英)"));
-            w1.setNeededEquip(getEquiment("巫师之冠", "极限球", "水晶球"));
+            w1.setNeededEquipment(getEquiment("巫师之冠", "极限球", "水晶球"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -909,7 +909,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription("收集60个影之砂碎片，合成装备幽魂面甲");
             w1.setStage(stageCache.get("山腰相逢(精英)"));
-            w1.setNeededEquip(getEquiment("银月长矛", "鹰语指环", "红宝石吊坠"));
+            w1.setNeededEquipment(getEquiment("银月长矛", "鹰语指环", "红宝石吊坠"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -944,7 +944,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription("收集60个火扇碎片，合成装备和式战服");
             w1.setStage(stageCache.get("沼泽边缘(精英)"));
-            w1.setNeededEquip(getEquiment("巫师之冠", "水晶球"));
+            w1.setNeededEquipment(getEquiment("巫师之冠", "水晶球"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -979,7 +979,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription("收集60个小黄鸭碎片，合成装备小黑鸭权杖");
             w1.setStage(stageCache.get("团战中心(精英)"));
-            w1.setNeededEquip(getEquiment("红宝石吊坠", "水晶球"));
+            w1.setNeededEquipment(getEquiment("红宝石吊坠", "水晶球"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1015,7 +1015,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "吸血獠牙", "吸血鬼之触"));
             w1.setStage(stageCache.get("山腰相逢(精英)"));
-            w1.setNeededEquip(getEquiment("巫师之冠", "水晶球", "永恒冰柱"));
+            w1.setNeededEquipment(getEquiment("巫师之冠", "水晶球", "永恒冰柱"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1050,7 +1050,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "传说哥签名", "传说之枪"));
             w1.setStage(stageCache.get("巨龙巢穴(精英)"));
-            w1.setNeededEquip(getEquiment("鹰语指环", "永恒冰柱"));
+            w1.setNeededEquipment(getEquiment("鹰语指环", "永恒冰柱"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1085,7 +1085,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "水晶鞋", "冰晶之杖"));
             w1.setStage(stageCache.get("团战中心(精英)"));
-            w1.setNeededEquip(getEquiment("红宝石吊坠", "永恒冰柱"));
+            w1.setNeededEquipment(getEquiment("红宝石吊坠", "永恒冰柱"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1121,7 +1121,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "水族箱", "章鱼保罗"));
             w1.setStage(stageCache.get("泰坦遗迹(精英)"));
-            w1.setNeededEquip(getEquiment("极限球", "禁卫军胸甲", "泰坦战斧"));
+            w1.setNeededEquipment(getEquiment("极限球", "禁卫军胸甲", "泰坦战斧"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1156,7 +1156,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "法老面具", "魅惑法杖"));
             w1.setStage(stageCache.get("山腰相逢(精英)"));
-            w1.setNeededEquip(getEquiment("红宝石吊坠", "蓝宝石法杖"));
+            w1.setNeededEquipment(getEquiment("红宝石吊坠", "蓝宝石法杖"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1197,7 +1197,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "漂白剂", "巫师白袍"));
             w1.setStage(stageCache.get("巨龙巢穴(精英)"));
-            w1.setNeededEquip(getEquiment("极限球", "水晶球", "巫师之冠"));
+            w1.setNeededEquipment(getEquiment("极限球", "水晶球", "巫师之冠"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1233,7 +1233,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "海洋之心", "海斗士鳞衣"));
             w1.setStage(stageCache.get("山腰相逢(精英)"));
-            w1.setNeededEquip(getEquiment("红宝石吊坠", "鹰语指环"));
+            w1.setNeededEquipment(getEquiment("红宝石吊坠", "鹰语指环"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1275,7 +1275,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "恶魔之血", "男爵手套"));
             w1.setStage(stageCache.get("乱石山坡(精英)"));
-            w1.setNeededEquip(getEquiment("极限球", "泰坦战斧", "禁卫军胸甲"));
+            w1.setNeededEquipment(getEquiment("极限球", "泰坦战斧", "禁卫军胸甲"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1310,7 +1310,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "暮光晶体", "暮光圣经"));
             w1.setStage(stageCache.get("乱石山坡(精英)"));
-            w1.setNeededEquip(getEquiment("水晶球", "掠夺之斧", "禁卫军胸甲"));
+            w1.setNeededEquipment(getEquiment("水晶球", "掠夺之斧", "禁卫军胸甲"));
 
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
@@ -1346,7 +1346,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "斯巴达矛尖", "斯巴达披风"));
             w1.setStage(stageCache.get("巨龙巢穴(精英)"));
-            w1.setNeededEquip(getEquiment("银月长矛", "麒麟弯刀"));
+            w1.setNeededEquipment(getEquiment("银月长矛", "麒麟弯刀"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1386,7 +1386,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "海神之螺", "海神三叉戟"));
             w1.setStage(stageCache.get("乱石山坡(精英)"));
-            w1.setNeededEquip(getEquiment("禁卫军胸甲", "泰坦战斧"));
+            w1.setNeededEquipment(getEquiment("禁卫军胸甲", "泰坦战斧"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1422,7 +1422,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "九头蛇指爪", "主导者之盔"));
             w1.setStage(stageCache.get("泰坦遗迹(精英)"));
-            w1.setNeededEquip(getEquiment("巫师之冠", "泰坦战斧"));
+            w1.setNeededEquipment(getEquiment("巫师之冠", "泰坦战斧"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1459,7 +1459,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "冥王之眼", "惩罚之雷"));
             w1.setStage(stageCache.get("团战中心(精英)"));
-            w1.setNeededEquip(getEquiment("永恒冰柱", "水晶球", "掠夺之斧"));
+            w1.setNeededEquipment(getEquiment("永恒冰柱", "水晶球", "掠夺之斧"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1500,7 +1500,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "海军勋章", "正义风衣"));
             w1.setStage(stageCache.get("沼泽边缘(精英)"));
-            w1.setNeededEquip(getEquiment("永恒冰柱", "禁卫军胸甲", "掠夺之斧"));
+            w1.setNeededEquipment(getEquiment("永恒冰柱", "禁卫军胸甲", "掠夺之斧"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1536,7 +1536,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "混铁棒", "混铁战斧"));
             w1.setStage(stageCache.get("团战中心(精英)"));
-            w1.setNeededEquip(getEquiment("永恒冰柱", "禁卫军胸甲", "红宝石吊坠"));
+            w1.setNeededEquipment(getEquiment("永恒冰柱", "禁卫军胸甲", "红宝石吊坠"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1572,7 +1572,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "龙珠", "屠龙刀"));
             w1.setStage(stageCache.get("泰坦遗迹(精英)"));
-            w1.setNeededEquip(getEquiment("永恒冰柱", "麒麟弯刀"));
+            w1.setNeededEquipment(getEquiment("永恒冰柱", "麒麟弯刀"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1609,7 +1609,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription("远征补给站购买60个红杉碎片，合成装备先祖图腾");
             w1.setStage(null);
-            w1.setNeededEquip(getEquiment("红宝石吊坠", "银月长矛", "泰坦战斧"));
+            w1.setNeededEquipment(getEquiment("红宝石吊坠", "银月长矛", "泰坦战斧"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1651,7 +1651,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription("巅峰竞技商店购买60个陨铁碎片，合成装备先妖刀村正");
             w1.setStage(null);
-            w1.setNeededEquip(getEquiment("麒麟弯刀"));
+            w1.setNeededEquipment(getEquiment("麒麟弯刀"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1693,7 +1693,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "雪球", "雪人"));
             w1.setStage(stageCache.get("山腰相逢(精英)"));
-            w1.setNeededEquip(getEquiment("永恒冰柱"));
+            w1.setNeededEquipment(getEquiment("永恒冰柱"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1733,7 +1733,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "绿帽", "侠盗羽帽"));
             w1.setStage(stageCache.get("沼泽边缘(精英)"));
-            w1.setNeededEquip(getEquiment("红宝石吊坠", "巫师之冠"));
+            w1.setNeededEquipment(getEquiment("红宝石吊坠", "巫师之冠"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1769,7 +1769,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "死神名单", "死神镰刀"));
             w1.setStage(stageCache.get("沼泽边缘(精英)"));
-            w1.setNeededEquip(getEquiment("水晶球", "永恒冰柱"));
+            w1.setNeededEquipment(getEquiment("水晶球", "永恒冰柱"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1805,7 +1805,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "吸光涂料", "黑侠面具"));
             w1.setStage(stageCache.get("乱石山坡(精英)"));
-            w1.setNeededEquip(getEquiment("泰坦战斧", "禁卫军胸甲"));
+            w1.setNeededEquipment(getEquiment("泰坦战斧", "禁卫军胸甲"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1849,7 +1849,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "枪管", "加特林机枪"));
             w1.setStage(stageCache.get("巨龙巢穴(精英)"));
-            w1.setNeededEquip(getEquiment("掠夺之斧", "鹰语指环"));
+            w1.setNeededEquipment(getEquiment("掠夺之斧", "鹰语指环"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1892,7 +1892,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "二极管", "红色能量宝石"));
             w1.setStage(stageCache.get("沼泽边缘(精英)"));
-            w1.setNeededEquip(getEquiment("红宝石吊坠", "极限球", "水晶球"));
+            w1.setNeededEquipment(getEquiment("红宝石吊坠", "极限球", "水晶球"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1929,7 +1929,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "幻影水晶", "海市蜃楼"));
             w1.setStage(stageCache.get("乱石山坡(精英)"));
-            w1.setNeededEquip(getEquiment("红宝石吊坠", "麒麟弯刀"));
+            w1.setNeededEquipment(getEquiment("红宝石吊坠", "麒麟弯刀"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -1972,7 +1972,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "堕天之证", "路西法之翼"));
             w1.setStage(stageCache.get("乱石山坡(精英)"));
-            w1.setNeededEquip(getEquiment("永恒冰柱", "禁卫军胸甲", "泰坦战斧"));
+            w1.setNeededEquipment(getEquiment("永恒冰柱", "禁卫军胸甲", "泰坦战斧"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2013,7 +2013,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "怨灵精华", "死者之书"));
             w1.setStage(stageCache.get("沼泽边缘(精英)"));
-            w1.setNeededEquip(getEquiment("红宝石吊坠", "巫师之冠", "水晶球"));
+            w1.setNeededEquipment(getEquiment("红宝石吊坠", "巫师之冠", "水晶球"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2048,7 +2048,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "陨石", "毁灭之石"));
             w1.setStage(stageCache.get("泰坦遗迹(精英)"));
-            w1.setNeededEquip(getEquiment("巫师之冠", "水晶球", "禁卫军胸甲"));
+            w1.setNeededEquipment(getEquiment("巫师之冠", "水晶球", "禁卫军胸甲"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2088,7 +2088,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "罗马战旗", "大帝战盔"));
             w1.setStage(stageCache.get("团战中心(精英)"));
-            w1.setNeededEquip(getEquiment("永恒冰柱", "银月长矛", "泰坦战斧"));
+            w1.setNeededEquipment(getEquiment("永恒冰柱", "银月长矛", "泰坦战斧"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2130,7 +2130,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "麒麟之血", "麒麟臂"));
             w1.setStage(stageCache.get("巨龙巢穴(精英)"));
-            w1.setNeededEquip(getEquiment("永恒冰柱", "银月长矛", "泰坦战斧"));
+            w1.setNeededEquipment(getEquiment("永恒冰柱", "银月长矛", "泰坦战斧"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2171,7 +2171,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "龙鳞", "斩龙剑"));
             w1.setStage(stageCache.get("沼泽边缘(精英)"));
-            w1.setNeededEquip(getEquiment("银月长矛", "泰坦战斧"));
+            w1.setNeededEquipment(getEquiment("银月长矛", "泰坦战斧"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2212,7 +2212,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "安眠药", "梦魇兽"));
             w1.setStage(stageCache.get("团战中心(精英)"));
-            w1.setNeededEquip(getEquiment("极限球", "红宝石吊坠", "泰坦战斧"));
+            w1.setNeededEquipment(getEquiment("极限球", "红宝石吊坠", "泰坦战斧"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2249,7 +2249,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "山铜", "天牛座圣衣"));
             w1.setStage(stageCache.get("泰坦遗迹(精英)"));
-            w1.setNeededEquip(getEquiment("红宝石吊坠", "银月长矛"));
+            w1.setNeededEquipment(getEquiment("红宝石吊坠", "银月长矛"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2290,7 +2290,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "眠梦法珠", "梦之谣"));
             w1.setStage(stageCache.get("泰坦遗迹(精英)"));
-            w1.setNeededEquip(getEquiment("水晶球", "红宝石吊坠", "巫师之冠"));
+            w1.setNeededEquipment(getEquiment("水晶球", "红宝石吊坠", "巫师之冠"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2326,7 +2326,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "紫隐纱", "神秘面纱"));
             w1.setStage(stageCache.get("山腰相逢(精英)"));
-            w1.setNeededEquip(getEquiment("麒麟弯刀", "红宝石吊坠"));
+            w1.setNeededEquipment(getEquiment("麒麟弯刀", "红宝石吊坠"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2371,7 +2371,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "兽牙", "狂野护符"));
             w1.setStage(stageCache.get("乱石山坡(精英)"));
-            w1.setNeededEquip(getEquiment("鹰语指环", "红宝石吊坠", "银月长矛"));
+            w1.setNeededEquipment(getEquiment("鹰语指环", "红宝石吊坠", "银月长矛"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2412,7 +2412,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "兽骨", "百兽盔"));
             w1.setStage(stageCache.get("山腰相逢(精英)"));
-            w1.setNeededEquip(getEquiment("麒麟弯刀", "红宝石吊坠"));
+            w1.setNeededEquipment(getEquiment("麒麟弯刀", "红宝石吊坠"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2454,7 +2454,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "蓝水晶", "亡者王冠"));
             w1.setStage(stageCache.get("沼泽边缘(精英)"));
-            w1.setNeededEquip(getEquiment("泰坦战斧", "红宝石吊坠", "永恒冰柱"));
+            w1.setNeededEquipment(getEquiment("泰坦战斧", "红宝石吊坠", "永恒冰柱"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2496,7 +2496,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "月影锭", "月影护盔"));
             w1.setStage(stageCache.get("团战中心(精英)"));
-            w1.setNeededEquip(getEquiment("银月长矛", "麒麟弯刀"));
+            w1.setNeededEquipment(getEquiment("银月长矛", "麒麟弯刀"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2537,7 +2537,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "圣洁羽毛", "神怒之翼"));
             w1.setStage(stageCache.get("巨龙巢穴(精英)"));
-            w1.setNeededEquip(getEquiment("水晶球", "红宝石吊坠", "巫师之冠"));
+            w1.setNeededEquipment(getEquiment("水晶球", "红宝石吊坠", "巫师之冠"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2572,7 +2572,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "挚爱之血", "血族面具"));
             w1.setStage(stageCache.get("山腰相逢(精英)"));
-            w1.setNeededEquip(getEquiment("水晶球", "红宝石吊坠"));
+            w1.setNeededEquipment(getEquiment("水晶球", "红宝石吊坠"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2608,7 +2608,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "陨星", "秘法之敌"));
             w1.setStage(stageCache.get("泰坦遗迹(精英)"));
-            w1.setNeededEquip(getEquiment("麒麟弯刀", "银月长矛"));
+            w1.setNeededEquipment(getEquiment("麒麟弯刀", "银月长矛"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2644,7 +2644,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "地心熔岩", "火神角盔"));
             w1.setStage(stageCache.get("团战中心(精英)"));
-            w1.setNeededEquip(getEquiment("麒麟弯刀", "禁卫军胸甲"));
+            w1.setNeededEquipment(getEquiment("麒麟弯刀", "禁卫军胸甲"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2680,7 +2680,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "复仇怨灵", "复仇之刃"));
             w1.setStage(stageCache.get("乱石山坡(精英)"));
-            w1.setNeededEquip(getEquiment("鹰语指环", "红宝石吊坠"));
+            w1.setNeededEquipment(getEquiment("鹰语指环", "红宝石吊坠"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2724,7 +2724,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "月晶石", "月翼轻盔"));
             w1.setStage(stageCache.get("山腰相逢(精英)"));
-            w1.setNeededEquip(getEquiment("鹰语指环", "红宝石吊坠", "银月长矛"));
+            w1.setNeededEquipment(getEquiment("鹰语指环", "红宝石吊坠", "银月长矛"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2765,7 +2765,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "雅达曼谷合金", "幽浮之力"));
             w1.setStage(stageCache.get("巨龙巢穴(精英)"));
-            w1.setNeededEquip(getEquiment("麒麟弯刀", "永恒冰柱"));
+            w1.setNeededEquipment(getEquiment("麒麟弯刀", "永恒冰柱"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2801,7 +2801,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "黄龙玉", "丛林之角"));
             w1.setStage(stageCache.get("巨龙巢穴(精英)"));
-            w1.setNeededEquip(getEquiment("红宝石吊坠", "永恒冰柱", "禁卫军胸甲"));
+            w1.setNeededEquipment(getEquiment("红宝石吊坠", "永恒冰柱", "禁卫军胸甲"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -2842,7 +2842,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "狼魂", "丛林之角"));
             w1.setStage(stageCache.get("巨龙巢穴(精英)"));
-            w1.setNeededEquip(getEquiment("泰坦战斧", "永恒冰柱", "银月长矛"));
+            w1.setNeededEquipment(getEquiment("泰坦战斧", "永恒冰柱", "银月长矛"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;

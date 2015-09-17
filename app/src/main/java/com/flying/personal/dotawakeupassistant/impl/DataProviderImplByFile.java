@@ -4,12 +4,15 @@ import android.util.Log;
 
 import com.flying.personal.dotawakeupassistant.BuiltInData;
 import com.flying.personal.dotawakeupassistant.IDataProvider;
+import com.flying.personal.dotawakeupassistant.model.GameStage;
 import com.flying.personal.dotawakeupassistant.model.Hero;
 import com.flying.personal.dotawakeupassistant.model.HeroTag;
+import com.flying.personal.dotawakeupassistant.model.WakeUpTask;
 import com.flying.personal.dotawakeupassistant.model.WakeupSkill;
 import com.flying.personal.dotawakeupassistant.util.FileUtility;
 import com.flying.personal.dotawakeupassistant.util.HanyuPinyinHelper;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -26,7 +29,10 @@ import java.util.Map;
  * Created by wangxian on 8/23/2015.
  */
 public class DataProviderImplByFile implements IDataProvider {
-
+    //adb command
+    //cd C:/Users/wangxian/AppData/Local/Android/sdk/platform-tools/
+    //adb pull /data/data/com.flying.personal.dotawakeupassistant/files/data.json z:/
+    //adb push z:/data.json /data/data/com.flying.personal.dotawakeupassistant/files/
     private List<Hero> heroes;
     private Map<Hero, List<String>> searchIndexs;
     private List<WakeupSkill> wakupAffectSkills;
@@ -184,8 +190,6 @@ public class DataProviderImplByFile implements IDataProvider {
                 Log.d(this.getClass().getName(), "Load data from file");
                 extraData = getExtraDataFromJsonFile();
             }
-            //hero must be loaded after updating tag from external files
-            this.heroes = builtInData.getHeroes();
 
             if (extraData != null) {
                 //必须按顺序来load: version, url, tag, tagHero, hero
@@ -212,6 +216,9 @@ public class DataProviderImplByFile implements IDataProvider {
                     }
                 }
 
+                //hero must be loaded after updating tag from external files
+                this.heroes = builtInData.getHeroes();
+
                 if (extraData.heroDatas != null) {
                     for (int i = 0; i < extraData.heroDatas.size(); i++) {
                         Hero h = extraData.heroDatas.get(i);
@@ -228,6 +235,8 @@ public class DataProviderImplByFile implements IDataProvider {
                         }
                     }
                 }
+            } else {
+                this.heroes = builtInData.getHeroes();
             }
 
             //Save tags to hero
@@ -285,12 +294,13 @@ public class DataProviderImplByFile implements IDataProvider {
         }
     }
 
-
     private SerializedData getExtraDataFromJsonFile() {
         SerializedData result = null;
         try {
             InputStreamReader isr = new InputStreamReader(new FileInputStream(getDataFilePath()), "UTF-8");
-            Gson gson = new Gson();
+            Gson gson = new GsonBuilder().registerTypeAdapter(GameStage.class, new GameStage.StageDeserializeAdapter())
+                    .registerTypeAdapter(WakeUpTask.class, new WakeUpTask.TaskDeserializeAdapter())
+                    .registerTypeAdapter(Hero.class, new Hero.HeroDeserializeAdapter()).create();
             result = gson.fromJson(isr, SerializedData.class);
         } catch (Exception e) {
             Log.e(this.getClass().getName(), Log.getStackTraceString(e));
@@ -306,31 +316,28 @@ public class DataProviderImplByFile implements IDataProvider {
 
     @Override
     public void save(String[] args) {
-        List<Hero> hs = new ArrayList<>(10);
-        hs.add(getHeroByName("小黑"));
-
         SerializedData s = new SerializedData();
         s.version = 1.1;
-        s.heroDatas = hs;
-//        s.tagHeroes = this.tagHeroes;
-//        s.tags = new ArrayList<HeroTag>(40);
-//
-//        for (int i = 0; i < hs.size(); i++) {
-//            Hero h = hs.get(i);
-//            for (int j = 0; j < h.getTags().size(); j++) {
-//                boolean isFind = false;
-//
-//                for (HeroTag t : s.tags) {
-//                    if (t.tagName.equalsIgnoreCase(h.getTags().get(j).tagName)) {
-//                        isFind = true;
-//                        break;
-//                    }
-//                }
-//                if (!isFind) {
-//                    s.tags.add(h.getTags().get(j));
-//                }
-//            }
-//        }
+        s.heroDatas = heroes;
+        s.tagHeroes = this.tagHeroes;
+        s.tags = new ArrayList<HeroTag>(40);
+
+        for (int i = 0; i < heroes.size(); i++) {
+            Hero h = heroes.get(i);
+            for (int j = 0; j < h.getTags().size(); j++) {
+                boolean isFind = false;
+
+                for (HeroTag t : s.tags) {
+                    if (t.tagName.equalsIgnoreCase(h.getTags().get(j).tagName)) {
+                        isFind = true;
+                        break;
+                    }
+                }
+                if (!isFind) {
+                    s.tags.add(h.getTags().get(j));
+                }
+            }
+        }
 
         s.updateURL = "http://www.baidu.com";
 
@@ -386,5 +393,6 @@ public class DataProviderImplByFile implements IDataProvider {
         public Map<String, List<String>> tagHeroes;
         public List<Hero> heroDatas;
         public String updateURL;
+
     }
 }

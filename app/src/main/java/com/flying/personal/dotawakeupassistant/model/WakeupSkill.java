@@ -32,7 +32,6 @@ public class WakeupSkill {
         public String value;
     }
 
-    @Expose
     public transient Hero hero;
     public String description;
     public HeroTag affectTag;

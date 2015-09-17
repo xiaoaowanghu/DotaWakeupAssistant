@@ -50,7 +50,6 @@ public class RoundImageView extends View {
         SDDir
     }
 
-
     public class CustomSize {
         public int width;
         public int height;
@@ -130,7 +129,6 @@ public class RoundImageView extends View {
         maxWidthPX = typedArray.getDimensionPixelSize(R.styleable.RoundImageView_maxWidth, 0);
         typedArray.recycle();
     }
-
 
     protected void sharedConstructor(Context context) {
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);

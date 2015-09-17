@@ -130,7 +130,6 @@ public class DetailActivity extends ActionBarActivity {
                                 else {
                                     if (text.length() > 2)
                                         text = text.substring(0, 2);
-
                                 }
 
                                 String tmpText = text;

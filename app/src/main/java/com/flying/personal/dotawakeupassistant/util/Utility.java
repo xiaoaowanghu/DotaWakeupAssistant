@@ -13,9 +13,16 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.flying.personal.dotawakeupassistant.R;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 /**
  * Created by wangxian on 8/12/2015.
@@ -50,7 +57,6 @@ public class Utility {
         final float scale = context.getResources().getDisplayMetrics().scaledDensity;
         return pxValue / scale;
     }
-
 
     public Bitmap createImageFromAsset(Context context, String fileName, int minSideLength, int maxNumOfPixels) {
         Bitmap bitmap = null;
@@ -129,6 +135,15 @@ public class Utility {
         return initialTextSize;
     }
 
+    public String getSetterName(String fieldName) {
+        if (fieldName == null || fieldName.length() == 0)
+            return "";
+
+        String first = String.valueOf(fieldName.charAt(0));
+        first = first.toUpperCase();
+        return "set" + first + fieldName.substring(1);
+    }
+
     public Dialog showNormalDialog(Context context, String title, String message) {
         final AlertDialog dialog = new AlertDialog.Builder(context).create();
         View dialogView = LayoutInflater.from(context).inflate(R.layout.tag_hero, null);
@@ -145,5 +160,82 @@ public class Utility {
         dialog.show();
         dialog.getWindow().setContentView(dialogView);
         return dialog;
+    }
+
+    public void deserializeNormalField(Object obj, Class type, JsonObject jsonObj,
+                                       JsonDeserializationContext jsonContext, boolean useSetter) throws JsonParseException {
+        Field[] fs = type.getDeclaredFields();
+        try {
+            if (useSetter) {
+                for (Field f : fs) {
+                    JsonElement je = jsonObj.get(f.getName());
+
+                    if (je == null)
+                        continue;
+
+                    if (f.getType() == String.class) {
+                        Method s1 = type.getDeclaredMethod(Utility.getInstance().getSetterName(f.getName()), String.class);
+                        s1.invoke(obj, je.getAsString());
+                    } else if (f.getType() == int.class) {
+                        Method s2 = type.getDeclaredMethod(Utility.getInstance().getSetterName(f.getName()), int.class);
+                        s2.invoke(obj, je.getAsInt());
+                    } else if (f.getType() == boolean.class) {
+                        Method s3 = type.getDeclaredMethod(Utility.getInstance().getSetterName(f.getName()), boolean.class);
+                        s3.invoke(obj, je.getAsBoolean());
+                    } else if (f.getType() == long.class) {
+                        Method s3 = type.getDeclaredMethod(Utility.getInstance().getSetterName(f.getName()), long.class);
+                        s3.invoke(obj, je.getAsLong());
+                    } else if (f.getType() == short.class) {
+                        Method s4 = type.getDeclaredMethod(Utility.getInstance().getSetterName(f.getName()), short.class);
+                        s4.invoke(obj, je.getAsShort());
+                    } else if (f.getType() == double.class) {
+                        Method s4 = type.getDeclaredMethod(Utility.getInstance().getSetterName(f.getName()), double.class);
+                        s4.invoke(obj, je.getAsDouble());
+                    } else if (f.getType() == float.class) {
+                        Method s4 = type.getDeclaredMethod(Utility.getInstance().getSetterName(f.getName()), float.class);
+                        s4.invoke(obj, je.getAsFloat());
+                    } else {
+                        Method sn = type.getDeclaredMethod(Utility.getInstance().getSetterName(f.getName()), f.getType());
+
+                        if (f.getGenericType() != f.getType()) {
+                            sn.invoke(obj, jsonContext.deserialize(je, TypeToken.get(f.getGenericType()).getType()));
+                        } else {
+                            sn.invoke(obj, jsonContext.deserialize(je, f.getType()));
+                        }
+                    }
+                }
+            } else {
+                for (Field f : fs) {
+                    JsonElement je = jsonObj.get(f.getName());
+
+                    if (je == null)
+                        continue;
+
+                    if (f.getType() == String.class) {
+                        f.set(obj, je.getAsString());
+                    } else if (f.getType() == int.class) {
+                        f.set(obj, je.getAsInt());
+                    } else if (f.getType() == boolean.class) {
+                        f.set(obj, je.getAsBoolean());
+                    } else if (f.getType() == long.class) {
+                        f.set(obj, je.getAsLong());
+                    } else if (f.getType() == short.class) {
+                        f.set(obj, je.getAsShort());
+                    } else if (f.getType() == double.class) {
+                        f.set(obj, je.getAsShort());
+                    } else if (f.getType() == float.class) {
+                        f.set(obj, je.getAsFloat());
+                    } else {
+                        if (f.getGenericType() != f.getType()) {
+                            f.set(obj, jsonContext.deserialize(je, TypeToken.get(f.getGenericType()).getType()));
+                        } else {
+                            f.set(obj, jsonContext.deserialize(je, f.getType()));
+                        }
+                    }
+                }
+            }
+        } catch (Exception e) {
+            throw new JsonParseException(this.getClass().getName() + " error.     " + e.getMessage());
+        }
     }
 }

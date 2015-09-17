@@ -16,6 +16,13 @@
         <dex dex="D:\mywork\GitHub\DotaWakeupAssistant\app\build\intermediates\pre-dexed\debug\classes-33ac635640fede05478bbd5dfb722db5aeb009b3.jar" />
     </item>
     <item
+        jar="C:\Users\wangxian\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="D:\mywork\GitHub\DotaWakeupAssistant\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-66e7942cd8bba2976e8df4f3b73ecfab68efe531.jar" />
+    </item>
+    <item
         jar="D:\mywork\GitHub\DotaWakeupAssistant\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -28,13 +35,6 @@
         revision="21.1.2"
         sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
         <dex dex="D:\mywork\GitHub\DotaWakeupAssistant\app\build\intermediates\pre-dexed\debug\gson-2.3.1-839338e06cac977e6d1ae3bf0ba6dce5688ec059.jar" />
-    </item>
-    <item
-        jar="C:\Users\wangxian\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
-        <dex dex="D:\mywork\GitHub\DotaWakeupAssistant\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-66e7942cd8bba2976e8df4f3b73ecfab68efe531.jar" />
     </item>
 
 </items>

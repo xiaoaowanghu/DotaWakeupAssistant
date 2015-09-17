@@ -1,8 +1,14 @@
 package com.flying.personal.dotawakeupassistant.model;
 
 import com.flying.personal.dotawakeupassistant.R;
-import com.google.gson.annotations.Expose;
+import com.flying.personal.dotawakeupassistant.util.Utility;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,14 +18,12 @@ import java.util.List;
 public class Hero {
     protected String name;
     protected List<String> alias;
-
     protected WakeUpTask[] tasks;
     protected PositionType positionType;
     protected AbilityType abilityType;
     protected String picPath;
     protected String portraitPath;
     protected List<HeroTag> tags;
-
     protected WakeupSkill wakeupSkill;
     protected boolean isBuiltData = true;
 
@@ -140,5 +144,16 @@ public class Hero {
 
     public void setPositionType(PositionType positionType) {
         this.positionType = positionType;
+    }
+
+    public static class HeroDeserializeAdapter implements JsonDeserializer<Hero> {
+        @Override
+        public Hero deserialize(JsonElement jsonElement, Type type,
+                                JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {
+            JsonObject object = jsonElement.getAsJsonObject();
+            Hero result = new Hero();
+            Utility.getInstance().deserializeNormalField(result, Hero.class, object, jsonDeserializationContext, true);
+            return result;
+        }
     }
 }
