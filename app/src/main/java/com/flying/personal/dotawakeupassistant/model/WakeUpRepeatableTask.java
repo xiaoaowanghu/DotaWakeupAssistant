@@ -25,10 +25,6 @@ public class WakeUpRepeatableTask extends WakeUpTask {
         return (SpecialStage) stage;
     }
 
-    public void setStage(SpecialStage stage) {
-        this.stage = stage;
-    }
-
     @Override
     public String getDisplayInfo() {
         String result = "完成" + stage.getName() + executeTimes + "次";
@@ -42,7 +38,7 @@ public class WakeUpRepeatableTask extends WakeUpTask {
                 dayIndex++;
                 result += String.valueOf(dayIndex) + ",";
             }
-            result =  result.substring(0, result.length() - 1).replace("7", "日") + " 开放";
+            result = result.substring(0, result.length() - 1).replace("7", "日") + " 开放";
         }
 
         return result;

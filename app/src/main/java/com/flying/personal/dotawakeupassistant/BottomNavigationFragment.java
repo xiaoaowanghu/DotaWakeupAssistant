@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,14 +19,16 @@ public class BottomNavigationFragment extends Fragment {
     private IOnSearch searchListener;
     private View selectedBackground;
     private View.OnClickListener clickListener;
+    private LinearLayout rootLayout;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         LinearLayout fragmentRoot = (LinearLayout) inflater.inflate(R.layout.fragment_bottom_navbar, container, false);
-        initListener(fragmentRoot);
+        rootLayout = fragmentRoot;
+        initListener();
         return fragmentRoot;
     }
 
-    private void initListener(LinearLayout rootLayout) {
+    private void initListener() {
         int i = 0;
         clickListener = new View.OnClickListener() {
             @Override
@@ -40,8 +41,6 @@ public class BottomNavigationFragment extends Fragment {
                 selectedBackground = ll;
 
                 if (searchListener != null) {
-                    Log.d("flying.click", getResources().getResourceName(ll.getId()));
-
                     if (ll.getId() == R.id.l1AllPosition)
                         searchListener.onPositionTypeChange(null);
                     else if (ll.getId() == R.id.llBackPosition)
@@ -65,6 +64,15 @@ public class BottomNavigationFragment extends Fragment {
                 ll.setBackgroundColor(getResources().getColor(R.color.bottom_selected_bg));
             }
         }
+    }
+
+    public void selectWithOutTriggerEvent(int index) {
+        if (selectedBackground != null)
+            selectedBackground.setBackgroundColor(Color.TRANSPARENT);
+
+        LinearLayout ll = (LinearLayout) rootLayout.getChildAt(index);
+        selectedBackground = ll;
+        ll.setBackgroundColor(getResources().getColor(R.color.bottom_selected_bg));
     }
 
     @Override

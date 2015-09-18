@@ -1,7 +1,14 @@
 package com.flying.personal.dotawakeupassistant.model;
 
 import com.flying.personal.dotawakeupassistant.R;
+import com.flying.personal.dotawakeupassistant.util.Utility;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,9 +23,9 @@ public class Hero {
     protected AbilityType abilityType;
     protected String picPath;
     protected String portraitPath;
-    protected String wakeupSkillString;
     protected List<HeroTag> tags;
     protected WakeupSkill wakeupSkill;
+    protected boolean isBuiltData = true;
 
     public WakeupSkill getWakeupSkill() {
         return wakeupSkill;
@@ -37,17 +44,17 @@ public class Hero {
         return tags;
     }
 
+    public boolean isBuiltData() {
+        return isBuiltData;
+    }
+
+    public void setIsBuiltData(boolean isBuiltData) {
+        this.isBuiltData = isBuiltData;
+    }
+
     public void setTags(List<HeroTag> tags) {
         this.tags = tags;
     }
-
-//    public String getWakeupSkillString() {
-//        return wakeupSkillString;
-//    }
-//
-//    public void setWakeupSkillString(String wakeupSkill) {
-//        this.wakeupSkillString = wakeupSkill;
-//    }
 
     public enum PositionType {
         Front, Middle, Back
@@ -137,5 +144,16 @@ public class Hero {
 
     public void setPositionType(PositionType positionType) {
         this.positionType = positionType;
+    }
+
+    public static class HeroDeserializeAdapter implements JsonDeserializer<Hero> {
+        @Override
+        public Hero deserialize(JsonElement jsonElement, Type type,
+                                JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {
+            JsonObject object = jsonElement.getAsJsonObject();
+            Hero result = new Hero();
+            Utility.getInstance().deserializeNormalField(result, Hero.class, object, jsonDeserializationContext, true);
+            return result;
+        }
     }
 }

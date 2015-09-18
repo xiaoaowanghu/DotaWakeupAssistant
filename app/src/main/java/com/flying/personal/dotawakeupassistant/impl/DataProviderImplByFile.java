@@ -4,15 +4,21 @@ import android.util.Log;
 
 import com.flying.personal.dotawakeupassistant.BuiltInData;
 import com.flying.personal.dotawakeupassistant.IDataProvider;
+import com.flying.personal.dotawakeupassistant.model.GameStage;
 import com.flying.personal.dotawakeupassistant.model.Hero;
 import com.flying.personal.dotawakeupassistant.model.HeroTag;
+import com.flying.personal.dotawakeupassistant.model.WakeUpTask;
 import com.flying.personal.dotawakeupassistant.model.WakeupSkill;
+import com.flying.personal.dotawakeupassistant.util.FileUtility;
 import com.flying.personal.dotawakeupassistant.util.HanyuPinyinHelper;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -23,13 +29,17 @@ import java.util.Map;
  * Created by wangxian on 8/23/2015.
  */
 public class DataProviderImplByFile implements IDataProvider {
-
+    //adb command
+    //cd C:/Users/wangxian/AppData/Local/Android/sdk/platform-tools/
+    //adb pull /data/data/com.flying.personal.dotawakeupassistant/files/data.json z:/
+    //adb push z:/data.json /data/data/com.flying.personal.dotawakeupassistant/files/
     private List<Hero> heroes;
     private Map<Hero, List<String>> searchIndexs;
-    private double version = 1.0;
-    private String dataFilePath;
     private List<WakeupSkill> wakupAffectSkills;
     private Map<String, List<String>> tagHeroes;
+    private String appDir;
+    private double dataFileVersion = 0.5;
+    private String updateURL;
 
     @Override
     public List<Hero> getAllHeroes() {
@@ -164,56 +174,51 @@ public class DataProviderImplByFile implements IDataProvider {
     }
 
     @Override
-    public List<Hero> getHeroesByTag(String tagName) {
-        List<String> heroNames = tagHeroes.get(tagName);
-        List<Hero> result = new ArrayList<>(15);
-        int totalCount = heroNames.size();
-
-        for (int i = 0; i < totalCount; i++) {
-            for (Hero h : heroes) {
-                if (heroNames.get(i).equalsIgnoreCase(h.getName())) {
-                    result.add(h);
-                    break;
-                }
-            }
-        }
-
-        return result;
+    public List<String> getHeroesByTag(String tagName) {
+        return tagHeroes.get(tagName);
     }
 
     @Override
     public void init(String[] args) {
         SerializedData extraData = null;
-        BuiltInData builtInData = new BuiltInData();
+        appDir = args[0];
         try {
-            dataFilePath = args[0];
+            BuiltInData builtInData = new BuiltInData();
+            this.updateURL = "http://www.baidu.com";
 
             if (isDataFileExit()) {
                 Log.d(this.getClass().getName(), "Load data from file");
                 extraData = getExtraDataFromJsonFile();
             }
 
-            if (extraData != null && extraData.tags != null) {
-                Map<String, HeroTag> tagCache = builtInData.getTagCache();
-                for (int i = 0; i < extraData.tagHeros.size(); i++) {
-                    HeroTag t = extraData.tags.get(i);
-                    tagCache.put(t.tagName, t);
-                }
-            }
-
-            if (extraData != null && extraData.tagHeros != null) {
-                Map<String, List<String>> tagHeroCache = builtInData.getTagHeroCache();
-                Iterator<Map.Entry<String, List<String>>> entries = extraData.tagHeros.entrySet().iterator();
-                while (entries.hasNext()) {
-                    Map.Entry<String, List<String>> entry = entries.next();
-                    tagHeroCache.put(entry.getKey(), entry.getValue());
-                }
-            }
-            //hero must load after updating tag from external files
-            this.heroes = builtInData.getHeroes();
-
             if (extraData != null) {
-                version = extraData.version;
+                //必须按顺序来load: version, url, tag, tagHero, hero
+                this.dataFileVersion = extraData.version;
+
+                if (extraData.updateURL != null) {
+                    this.updateURL = extraData.updateURL;
+                }
+
+                if (extraData.tags != null) {
+                    Map<String, HeroTag> tagCache = builtInData.getTagCache();
+                    for (int i = 0; i < extraData.tagHeroes.size(); i++) {
+                        HeroTag t = extraData.tags.get(i);
+                        tagCache.put(t.tagName, t);
+                    }
+                }
+
+                if (extraData.tagHeroes != null) {
+                    Map<String, List<String>> tagHeroCache = builtInData.getTagHeroCache();
+                    Iterator<Map.Entry<String, List<String>>> entries = extraData.tagHeroes.entrySet().iterator();
+                    while (entries.hasNext()) {
+                        Map.Entry<String, List<String>> entry = entries.next();
+                        tagHeroCache.put(entry.getKey(), entry.getValue());
+                    }
+                }
+
+                //hero must be loaded after updating tag from external files
+                this.heroes = builtInData.getHeroes();
+
                 if (extraData.heroDatas != null) {
                     for (int i = 0; i < extraData.heroDatas.size(); i++) {
                         Hero h = extraData.heroDatas.get(i);
@@ -230,6 +235,8 @@ public class DataProviderImplByFile implements IDataProvider {
                         }
                     }
                 }
+            } else {
+                this.heroes = builtInData.getHeroes();
             }
 
             //Save tags to hero
@@ -290,18 +297,60 @@ public class DataProviderImplByFile implements IDataProvider {
     private SerializedData getExtraDataFromJsonFile() {
         SerializedData result = null;
         try {
-            InputStreamReader isr = new InputStreamReader(new FileInputStream(this.dataFilePath), "UTF-8");
-            Gson gson = new Gson();
+            InputStreamReader isr = new InputStreamReader(new FileInputStream(getDataFilePath()), "UTF-8");
+            Gson gson = new GsonBuilder().registerTypeAdapter(GameStage.class, new GameStage.StageDeserializeAdapter())
+                    .registerTypeAdapter(WakeUpTask.class, new WakeUpTask.TaskDeserializeAdapter())
+                    .registerTypeAdapter(Hero.class, new Hero.HeroDeserializeAdapter()).create();
             result = gson.fromJson(isr, SerializedData.class);
         } catch (Exception e) {
             Log.e(this.getClass().getName(), Log.getStackTraceString(e));
+            //DeleteAllFiles
+            File dir = new File(appDir);
+            File[] files = dir.listFiles();
+            for (File f : files) {
+                FileUtility.deleteAllFiles(f);
+            }
         }
         return result;
     }
 
     @Override
     public void save(String[] args) {
-        Log.e(this.getClass().getName(), "save not implemented");
+        SerializedData s = new SerializedData();
+        s.version = 1.1;
+        s.heroDatas = heroes;
+        s.tagHeroes = this.tagHeroes;
+        s.tags = new ArrayList<HeroTag>(40);
+
+        for (int i = 0; i < heroes.size(); i++) {
+            Hero h = heroes.get(i);
+            for (int j = 0; j < h.getTags().size(); j++) {
+                boolean isFind = false;
+
+                for (HeroTag t : s.tags) {
+                    if (t.tagName.equalsIgnoreCase(h.getTags().get(j).tagName)) {
+                        isFind = true;
+                        break;
+                    }
+                }
+                if (!isFind) {
+                    s.tags.add(h.getTags().get(j));
+                }
+            }
+        }
+
+        s.updateURL = "http://www.baidu.com";
+
+        try {
+            Log.e(this.getClass().getName(), getDataFilePath());
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(new FileOutputStream(getDataFilePath()), "UTF-8");
+            Gson gson = new Gson();
+            gson.toJson(s, outputStreamWriter);
+            outputStreamWriter.flush();
+            outputStreamWriter.close();
+        } catch (Exception e) {
+            Log.e(this.getClass().getName(), Log.getStackTraceString(e));
+        }
     }
 
     @Override
@@ -320,20 +369,30 @@ public class DataProviderImplByFile implements IDataProvider {
         heroes.add(0, hero);
     }
 
+    private String getDataFilePath() {
+        return appDir + File.separator + "data.json";
+    }
+
     private boolean isDataFileExit() {
-        File f = new File(dataFilePath);
+        File f = new File(getDataFilePath());
         return f.exists();
     }
 
     @Override
-    public double getVersion() {
-        return version;
+    public String getDataVersion() {
+        return String.valueOf(dataFileVersion);
+    }
+
+    public String getUpdateURL() {
+        return updateURL;
     }
 
     public class SerializedData {
         public double version = 1;
         public List<HeroTag> tags;
-        public Map<String, List<String>> tagHeros;
+        public Map<String, List<String>> tagHeroes;
         public List<Hero> heroDatas;
+        public String updateURL;
+
     }
 }

@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">小刀助手</string>
     <string name="action_about">关于</string>
+    <string name="action_update">更新数据</string>
     <string name="task1">任务1</string>
     <string name="task2">任务2</string>
     <string name="task3">任务3</string>
@@ -21,4 +22,5 @@
     <string name="dir_equipment_path">equipment</string>
     <string name="wakeup_equipment_matires_remind">其他合成材料：</string>
     <string name="about_content">作者:葱花&#160;&#160;&#160;&#160;技术支持:猎豹\nAll rights reserved.</string>
+    <string name="update_url">www.baidu.com</string>
 </resources>

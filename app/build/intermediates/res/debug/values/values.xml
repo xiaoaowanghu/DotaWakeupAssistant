@@ -122,7 +122,7 @@
     <declare-styleable name="PopupWindow"><attr format="boolean" name="overlapAnchor"/><attr name="android:popupBackground"/></declare-styleable>
     <declare-styleable name="PopupWindowBackgroundState"><attr format="boolean" name="state_above_anchor"/></declare-styleable>
     <declare-styleable name="QuickSearchEditText"><attr format="integer" name="delayToSearch"/></declare-styleable>
-    <declare-styleable name="RoundImageView"><attr format="dimension" name="borderRadius"/><attr format="string" name="srcFilePath"/><attr format="dimension" name="borderWidth"/><attr format="color" name="borderColor"/><attr format="dimension" name="maxWidth"/><attr format="dimension" name="maxHeight"/><attr format="enum" name="scaleType"><enum name="AutoScale" value="0"/><enum name="Fill" value="1"/><enum name="Center" value="2"/></attr></declare-styleable>
+    <declare-styleable name="RoundImageView"><attr format="dimension" name="borderRadius"/><attr format="string" name="srcFilePath"/><attr format="dimension" name="borderWidth"/><attr format="color" name="borderColor"/><attr format="dimension" name="maxWidth"/><attr format="dimension" name="maxHeight"/><attr format="enum" name="loadSource"><enum name="AutoDetect" value="0"/><enum name="Asset" value="1"/><enum name="AppDataDir" value="2"/></attr><attr format="enum" name="scaleType"><enum name="AutoScale" value="0"/><enum name="Fill" value="1"/><enum name="Center" value="2"/></attr></declare-styleable>
     <declare-styleable name="SearchView"><attr format="reference" name="layout"/><attr format="boolean" name="iconifiedByDefault"/><attr name="android:maxWidth"/><attr format="string" name="queryHint"/><attr format="string" name="defaultQueryHint"/><attr name="android:imeOptions"/><attr name="android:inputType"/><attr format="reference" name="closeIcon"/><attr format="reference" name="goIcon"/><attr format="reference" name="searchIcon"/><attr format="reference" name="searchHintIcon"/><attr format="reference" name="voiceIcon"/><attr format="reference" name="commitIcon"/><attr format="reference" name="suggestionRowLayout"/><attr format="reference" name="queryBackground"/><attr format="reference" name="submitBackground"/><attr name="android:focusable"/></declare-styleable>
     <declare-styleable name="Spinner"><attr format="reference" name="prompt"/><attr format="enum" name="spinnerMode"><enum name="dialog" value="0"/><enum name="dropdown" value="1"/></attr><attr name="android:dropDownSelector"/><attr name="android:popupBackground"/><attr name="android:dropDownVerticalOffset"/><attr name="android:dropDownHorizontalOffset"/><attr name="android:dropDownWidth"/><attr format="reference" name="popupPromptView"/><attr name="android:gravity"/><attr format="boolean" name="disableChildrenWhenDisabled"/><attr name="android:background"/></declare-styleable>
     <declare-styleable name="SwitchCompat"><attr name="android:thumb"/><attr format="reference" name="track"/><attr name="android:textOn"/><attr name="android:textOff"/><attr format="dimension" name="thumbTextPadding"/><attr format="reference" name="switchTextAppearance"/><attr format="dimension" name="switchMinWidth"/><attr format="dimension" name="switchPadding"/><attr format="boolean" name="splitTrack"/><attr format="boolean" name="showText"/></declare-styleable>
@@ -247,6 +247,7 @@
     <string name="ablility_type_Intelligence">智力</string>
     <string name="about_content">作者:葱花    技术支持:猎豹\nAll rights reserved.</string>
     <string name="action_about">关于</string>
+    <string name="action_update">更新数据</string>
     <string name="affectedSkill">被其他觉醒技能影响</string>
     <string name="app_name">小刀助手</string>
     <string name="dir_equipment_path">equipment</string>
@@ -268,6 +269,7 @@
     <string name="task1">任务1</string>
     <string name="task2">任务2</string>
     <string name="task3">任务3</string>
+    <string name="update_url">www.baidu.com</string>
     <string name="wakeup_equipment_matires_remind">其他合成材料：</string>
     <!-- From: file:/D:/mywork/GitHub/DotaWakeupAssistant/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>

@@ -1,5 +1,13 @@
 package com.flying.personal.dotawakeupassistant.model;
 
+import com.flying.personal.dotawakeupassistant.util.Utility;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+
+import java.lang.reflect.Type;
 import java.util.List;
 
 /**
@@ -59,5 +67,31 @@ public class GameStage {
 
     public void setDifficultyLevel(int difficultyLevel) {
         this.difficultyLevel = difficultyLevel;
+    }
+
+    public static class StageDeserializeAdapter implements JsonDeserializer<GameStage> {
+        @Override
+        public GameStage deserialize(JsonElement jsonElement, Type type,
+                                     JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {
+            JsonObject object = jsonElement.getAsJsonObject();
+            GameStage result = null;
+
+            //occurDays
+            JsonElement occurDays = object.get("occurDays");
+            if (occurDays != null) {
+                result = new SpecialStage();
+                ((SpecialStage) result).setOccurDays(occurDays.getAsInt());
+
+                JsonElement canBeExecutedTimes = object.get("canBeExecutedTimes");
+                ((SpecialStage) result).setCanBeExecutedTimes(canBeExecutedTimes.getAsInt());
+            }
+
+            if (result == null) {
+                result = new GameStage();
+            }
+
+            Utility.getInstance().deserializeNormalField(result, GameStage.class, object, jsonDeserializationContext, true);
+            return result;
+        }
     }
 }

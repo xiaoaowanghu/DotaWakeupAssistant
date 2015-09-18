@@ -1,11 +1,14 @@
 package com.flying.personal.dotawakeupassistant;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
@@ -27,6 +30,13 @@ import com.flying.personal.dotawakeupassistant.util.Utility;
 import com.flying.personal.dotawakeupassistant.view.IOnSearch;
 import com.flying.personal.dotawakeupassistant.view.RoundImageView;
 
+import org.apache.http.NameValuePair;
+
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -37,6 +47,13 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
     private LayoutInflater infalter;
     private View.OnClickListener imageClickListener;
     private List<Hero> currentHeroes;
+    private Updater updater;
+    private Handler handler;
+
+
+    private String getUpdateRecordPath() {
+        return getAppPath() + File.separator + "update";
+    }
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,8 +63,94 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
         init();
     }
 
+    private void reLoadData() {
+        SearchEditTextFragment f = (SearchEditTextFragment) this.getFragmentManager().findFragmentById(R.id.fragment_search);
+        f.clearText();
+
+        BottomNavigationFragment f2 = (BottomNavigationFragment) this.getFragmentManager().findFragmentById(R.id.fragment_nav);
+        f2.selectWithOutTriggerEvent(0);
+
+        currentHeroes = ProviderFactory.getInstance().getDataProvider().getAllHeroes();
+        showHeroes(null);
+    }
 
     private void init() {
+        //Update
+//        updater = new Updater();
+//        handler = new Handler();
+//        handler.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                if (MainActivity.this.isFinishing())
+//                    return;
+//
+//                String updateRecordFilePath = getUpdateRecordPath();
+//                File updateRecordFile = null;
+//                FileInputStream fis = null;
+//                BufferedReader br = null;
+//                Date lastUpdateTime = null;
+//                try {
+//                    updateRecordFile = new File(updateRecordFilePath);
+//                    if (updateRecordFile.exists()) {
+//                        fis = new FileInputStream(updateRecordFile);
+//                        br = new BufferedReader(new InputStreamReader(fis, "UTF-8"));
+//                        String timestamp = br.readLine();
+//                        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//                        lastUpdateTime = formatter.parse(timestamp);
+//                    }
+//                } catch (ParseException parseEx) {
+//                    Log.e(MainActivity.class.getName(), "The update time is invalid");
+//
+//                    if (updateRecordFile != null && updateRecordFile.exists())
+//                        updateRecordFile.delete();
+//
+//                } catch (Exception e) {
+//                    Log.e(MainActivity.class.getName(), Log.getStackTraceString(e));
+//                } finally {
+//                    try {
+//                        if (br != null)
+//                            br.close();
+//
+//                        if (fis != null)
+//                            fis.close();
+//                    } catch (IOException e1) {
+//                        Log.e(MainActivity.class.getName(), Log.getStackTraceString(e1));
+//                    }
+//                }
+//
+//                if (lastUpdateTime != null
+//                        && System.currentTimeMillis() - lastUpdateTime.getTime() < 24 * 3600 * 1000) {
+//                    return;
+//                }
+//
+//                List<NameValuePair> params = new ArrayList<>(5);
+//                Date currentDate = new Date();
+//                SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//                NameValuePair n1 = new PairData("current_version", ProviderFactory.getInstance().getDataProvider().getDataVersion());
+//                NameValuePair n2 = new PairData("timestamp", formatter.format(currentDate));
+//                NameValuePair n3 = new PairData("token", generateToken(currentDate));
+//                params.add(n1);
+//                params.add(n2);
+//                params.add(n3);
+//                updater.doUpdate(MainActivity.this, ProviderFactory.getInstance().getDataProvider().getUpdateURL(), params,
+//                        new Updater.ICallBack() {
+//                            @Override
+//                            public void NotifyResult(int code, String information) {
+//                                if (code == 0) {
+//                                    Utility.getInstance().showNormalDialog(MainActivity.this, "更新", "更新成功，页面将重新加载");
+//                                    ProviderFactory.getInstance().getDataProvider().init(new String[]{getAppPath() + File.separator + "data.json"});
+//                                    reLoadData();
+//                                }
+//                            }
+//
+//                            @Override
+//                            public void NotifyProgress(int percentValue) {
+//                                //Do Nothing;
+//                            }
+//                        });
+//            }
+//        }, 10000);
+
         mainHeroLayout = (GridLayout) this.findViewById(R.id.gridLayout);
 
         imageClickListener = new View.OnClickListener() {
@@ -66,7 +169,6 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
 
         currentHeroes = ProviderFactory.getInstance().getDataProvider().getAllHeroes();
         showHeroes(null);
-        mainHeroLayout.requestFocus();
     }
 
     private void showHeroes(Map<Hero, String> matchedIndex) {
@@ -94,6 +196,12 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
             ivHeroPic.getLayoutParams().width = picWidthPX;
             ivHeroPic.getLayoutParams().height = picWidthPX;
             ivHeroPic.setTag(h.getName());
+
+            if (h.isBuiltData())
+                ivHeroPic.setLoadSource(RoundImageView.LoadSource.Asset);
+            else
+                ivHeroPic.setLoadSource(RoundImageView.LoadSource.AppDataDir);
+
             ivHeroPic.setFilePath(getResources().getString(R.string.dir_hero_path) + "/" + h.getPortraitPath());
             ivHeroPic.invalidate();
             ivHeroPic.setOnClickListener(imageClickListener);
@@ -129,6 +237,9 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
 
     @Override
     public void onSearch(String text) {
+        if (this.isFinishing())
+            return;
+
         HashMap<Hero, String> matchedIndex = new HashMap<Hero, String>(30);
         currentHeroes = ProviderFactory.getInstance().getDataProvider()
                 .getMatchedHeroes(text, currentPositionType, matchedIndex);
@@ -148,7 +259,7 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
     }
 
     public String getAppPath() {
-        return this.getFilesDir().getAbsolutePath() + "/data.json";
+        return this.getFilesDir().getAbsolutePath();
     }
 
     @Override
@@ -180,7 +291,7 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
             } catch (PackageManager.NameNotFoundException e) {
                 Log.e(this.getClass().getName(), Log.getStackTraceString(e));
             }
-            tv.setText(getResources().getString(R.string.app_name) + "v" + versionName);
+            tv.setText(getResources().getString(R.string.app_name) + "v" + versionName + " 数据版本" + ProviderFactory.getInstance().getDataProvider().getDataVersion());
 
             TextView tv1 = (TextView) view.findViewById(R.id.tvInformation);
             tv1.setText(R.string.about_content);
@@ -196,7 +307,83 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
             dialog.show();
             dialog.getWindow().setContentView(view);
             return true;
+        } else if (id == R.id.miUpdate) {
+
+            final ProgressDialog pbarDialog = new ProgressDialog(this);
+            pbarDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+            pbarDialog.setMessage("Updating...");
+            pbarDialog.setCancelable(false);
+            pbarDialog.setMax(100);
+            pbarDialog.show();
+
+            Updater.ICallBack callBack = new Updater.ICallBack() {
+                @Override
+                public void NotifyResult(int code, String information) {
+                    pbarDialog.dismiss();
+
+                    if (code == 0) {
+                        ProviderFactory.getInstance().getDataProvider().init(new String[]{getAppPath() + File.separator + "data.json"});
+                        reLoadData();
+                    } else {
+                        Utility.getInstance().showNormalDialog(MainActivity.this, "更新失败", information + "\n" + "错误码:" + code);
+                    }
+                }
+
+                @Override
+                public void NotifyProgress(int percentValue) {
+                    pbarDialog.setProgress(percentValue);
+                }
+            };
+
+            if (updater != null && updater.getStatus() == AsyncTask.Status.RUNNING) {
+                updater.setCallBack(callBack);
+            } else {
+                updater = new Updater();
+                List<NameValuePair> params = new ArrayList<>(5);
+                Date currentDate = new Date();
+                SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                NameValuePair n1 = new PairData("current_version", ProviderFactory.getInstance().getDataProvider().getDataVersion());
+                NameValuePair n2 = new PairData("timestamp", formatter.format(currentDate));
+                NameValuePair n3 = new PairData("token", generateToken(currentDate));
+                params.add(n1);
+                params.add(n2);
+                params.add(n3);
+                updater.doUpdate(MainActivity.this, ProviderFactory.getInstance().getDataProvider().getUpdateURL(), params, callBack);
+            }
+
+            return true;
+        } else if (id == R.id.miTest) {
+            ProviderFactory.getInstance().getDataProvider().save(null);
         }
+
         return super.onOptionsItemSelected(item);
+    }
+
+
+    public class PairData implements NameValuePair {
+        private String name;
+        private String value;
+
+        public PairData(String name, String value) {
+            this.name = name;
+            this.value = value;
+        }
+
+        @Override
+        public String getName() {
+            return name;
+        }
+
+        @Override
+        public String getValue() {
+            return value;
+        }
+    }
+
+    private String generateToken(Date date) {
+        long base = 13556531555l;
+        Calendar c = Calendar.getInstance();
+        c.setTime(date);
+        return String.valueOf(base / c.get(Calendar.MINUTE));
     }
 }

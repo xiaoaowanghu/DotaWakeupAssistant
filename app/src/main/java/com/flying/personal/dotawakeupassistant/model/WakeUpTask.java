@@ -1,5 +1,13 @@
 package com.flying.personal.dotawakeupassistant.model;
 
+import com.flying.personal.dotawakeupassistant.util.Utility;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+
+import java.lang.reflect.Type;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -8,7 +16,7 @@ import java.util.Date;
  */
 public class WakeUpTask {
     protected GameStage stage;
-    protected double dropRate = 6 / 4.0;
+    protected double dropRate = 6 / 4.0 * 1.2;
     protected String description;
     protected EquipmentItem[] neededEquipment;
 
@@ -61,7 +69,30 @@ public class WakeUpTask {
         return neededEquipment;
     }
 
-    public void setNeededEquip(EquipmentItem[] neededEquipment) {
+    public void setNeededEquipment(EquipmentItem[] neededEquipment) {
         this.neededEquipment = neededEquipment;
+    }
+
+    public static class TaskDeserializeAdapter implements JsonDeserializer<WakeUpTask> {
+        @Override
+        public WakeUpTask deserialize(JsonElement jsonElement, Type type,
+                                      JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {
+            JsonObject object = jsonElement.getAsJsonObject();
+            WakeUpTask result = null;
+
+            //occurDays
+            JsonElement occurDays = object.get("executeTimes");
+            if (occurDays != null) {
+                result = new WakeUpRepeatableTask();
+                ((WakeUpRepeatableTask) result).setExecuteTimes(occurDays.getAsInt());
+            }
+
+            if (result == null) {
+                result = new WakeUpTask();
+            }
+
+            Utility.getInstance().deserializeNormalField(result, WakeUpTask.class, object, jsonDeserializationContext, true);
+            return result;
+        }
     }
 }

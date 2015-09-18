@@ -6,9 +6,7 @@ import android.graphics.Color;
  * Created by wangxian on 8/18/2015.
  */
 public class EquipmentItem {
-    //    public static final int purpleEquipBorderColor = Color.parseColor("#6c006c");
     public static final int purpleEquipBorderColor = Color.parseColor("#730065");
-    //    public static final int orangeEquipBOrderColor = Color.parseColor("#a67900");
     public static final int orangeEquipBOrderColor = Color.parseColor("#ff8b00");
     private String displayName;
     private String picPath;

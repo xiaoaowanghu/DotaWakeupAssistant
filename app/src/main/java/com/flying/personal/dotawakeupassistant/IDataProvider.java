@@ -32,7 +32,9 @@ public interface IDataProvider {
 
     void visitHero(Hero hero);
 
-    double getVersion();
+    List<String> getHeroesByTag(String tagName);
 
-    List<Hero> getHeroesByTag(String tagName);
+    String getDataVersion();
+
+    String getUpdateURL();
 }

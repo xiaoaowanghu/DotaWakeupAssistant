@@ -3,8 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
     <item
+        android:id="@+id/miUpdate"
+        android:orderInCategory="10"
+        android:title="@string/action_update"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/miActionAbout"
         android:orderInCategory="100"
         android:title="@string/action_about"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/miTest"
+        android:orderInCategory="200"
+        android:title="测试"
         app:showAsAction="never" />
 </menu>
