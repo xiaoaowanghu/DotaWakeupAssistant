@@ -250,10 +250,10 @@
     <string name="action_update">更新数据</string>
     <string name="affectedSkill">被其他觉醒技能影响</string>
     <string name="app_name">小刀助手</string>
-    <string name="dir_equipment_path">equipment</string>
-    <string name="dir_hero_path">hero</string>
     <string name="equipRemind">其他碎片</string>
+    <string name="equipment_dir_name">equipment</string>
     <string name="extra_equipitem">该关还可获得</string>
+    <string name="hero_dir_name">hero</string>
     <string name="no_affected_skill">没有能被加成的属性</string>
     <string name="only_can_input">qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM1234567890</string>
     <string name="position_all">全部</string>

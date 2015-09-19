@@ -20,7 +20,7 @@
             android:gravity="center">
 
             <com.flying.personal.dotawakeupassistant.view.RoundImageView
-                android:id="@+id/ivHeroPortrait"
+                android:id="@+id/ivHeroPic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:borderRadius="8dp"

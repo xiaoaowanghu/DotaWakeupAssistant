@@ -18,8 +18,8 @@
     <string name="position_all">全部</string>
     <string name="extra_equipitem">该关还可获得</string>
     <string name="no_affected_skill">没有能被加成的属性</string>
-    <string name="dir_hero_path">hero</string>
-    <string name="dir_equipment_path">equipment</string>
+    <string name="hero_dir_name">hero</string>
+    <string name="equipment_dir_name">equipment</string>
     <string name="wakeup_equipment_matires_remind">其他合成材料：</string>
     <string name="about_content">作者:葱花&#160;&#160;&#160;&#160;技术支持:猎豹\nAll rights reserved.</string>
     <string name="update_url">www.baidu.com</string>

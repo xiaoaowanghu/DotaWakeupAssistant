@@ -8,7 +8,7 @@ import android.util.AttributeSet;
 import android.widget.TextView;
 
 import com.flying.personal.dotawakeupassistant.R;
-import com.flying.personal.dotawakeupassistant.util.Utility;
+import com.flying.personal.dotawakeupassistant.util.CommonUtility;
 
 public class AutoAdjustFontSizeTextView extends TextView {
     private final static float DEFAULT_MIN_TEXT_SIZE = 8; //sp
@@ -43,7 +43,7 @@ public class AutoAdjustFontSizeTextView extends TextView {
                 testPaint.setTextSize(trySizePX);
             }
             //change to sp
-            this.setTextSize(Utility.getInstance().px2sp(this.getContext(), trySizePX));
+            this.setTextSize(CommonUtility.px2sp(this.getContext(), trySizePX));
         }
     }
 

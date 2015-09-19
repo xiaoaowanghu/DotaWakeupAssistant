@@ -8,8 +8,8 @@ android {
         applicationId "com.flying.personal.dotawakeupassistant"
         minSdkVersion 15
         targetSdkVersion 21
-        versionCode 20150914
-        versionName "0.7.0"
+        versionCode 20150919
+        versionName "0.7.5"
     }
     buildTypes {
         release {

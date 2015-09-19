@@ -59,18 +59,24 @@ ADDED from AndroidManifest.xml:25:9
 		ADDED from AndroidManifest.xml:27:13
 	android:name
 		ADDED from AndroidManifest.xml:26:13
+activity#com.flying.personal.dotawakeupassistant.BigPicActivity
+ADDED from AndroidManifest.xml:29:9
+	android:theme
+		ADDED from AndroidManifest.xml:31:13
+	android:name
+		ADDED from AndroidManifest.xml:30:13
 supports-screens
-ADDED from AndroidManifest.xml:30:5
+ADDED from AndroidManifest.xml:34:5
 	android:resizeable
-		ADDED from AndroidManifest.xml:34:9
+		ADDED from AndroidManifest.xml:38:9
 	android:largeScreens
-		ADDED from AndroidManifest.xml:32:9
+		ADDED from AndroidManifest.xml:36:9
 	android:anyDensity
-		ADDED from AndroidManifest.xml:31:9
-	android:normalScreens
-		ADDED from AndroidManifest.xml:33:9
-	android:smallScreens
 		ADDED from AndroidManifest.xml:35:9
+	android:normalScreens
+		ADDED from AndroidManifest.xml:37:9
+	android:smallScreens
+		ADDED from AndroidManifest.xml:39:9
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from com.android.support:appcompat-v7:22.2.0:20:5

@@ -1,5 +1,8 @@
 package com.flying.personal.dotawakeupassistant;
 
+import android.animation.LayoutTransition;
+import android.animation.ObjectAnimator;
+import android.animation.PropertyValuesHolder;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -23,10 +26,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.flying.personal.dotawakeupassistant.model.Hero;
-import com.flying.personal.dotawakeupassistant.util.Utility;
+import com.flying.personal.dotawakeupassistant.util.CommonUtility;
 import com.flying.personal.dotawakeupassistant.view.IOnSearch;
 import com.flying.personal.dotawakeupassistant.view.RoundImageView;
 
@@ -49,7 +53,8 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
     private List<Hero> currentHeroes;
     private Updater updater;
     private Handler handler;
-
+    private boolean firstLoad = true;
+    private int colCount = 5;
 
     private String getUpdateRecordPath() {
         return getAppPath() + File.separator + "update";
@@ -57,14 +62,14 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        infalter = LayoutInflater.from(this);
         setContentView(R.layout.activity_main);
-        ProviderFactory.getInstance().initFactory(new String[]{getAppPath()});
-        init();
+        initInMainThread();
+        initInBackendThread();
     }
 
     private void reLoadData() {
         SearchEditTextFragment f = (SearchEditTextFragment) this.getFragmentManager().findFragmentById(R.id.fragment_search);
+        currentSearchString = null;
         f.clearText();
 
         BottomNavigationFragment f2 = (BottomNavigationFragment) this.getFragmentManager().findFragmentById(R.id.fragment_nav);
@@ -74,7 +79,68 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
         showHeroes(null);
     }
 
-    private void init() {
+    private void initInBackendThread() {
+        AsyncTask loader = new AsyncTask() {
+            private int marginPX;
+            private int totalCount;
+
+            @Override
+            protected Object doInBackground(Object[] params) {
+                try {
+                    int loadCountOneTime = 5;
+                    ProviderFactory.getInstance().initFactory(new String[]{getAppPath()});
+                    marginPX = CommonUtility.dip2px(MainActivity.this, 5);
+                    currentHeroes = ProviderFactory.getInstance().getDataProvider().getAllHeroes();
+                    totalCount = currentHeroes.size();
+
+                    for (int i = 0; i < totalCount; i = i + colCount) {
+                        Object[] args = null;
+                        if (loadCountOneTime + i >= totalCount) {
+                            args = new Object[totalCount - i + 1];
+                        } else {
+                            args = new Object[loadCountOneTime + 1];
+                        }
+                        for (int j = 1; j < args.length; j++) {
+                            args[j] = currentHeroes.get(i + j - 1);
+                        }
+                        args[0] = i;
+                        publishProgress(args);
+                        Thread.sleep(110);
+                    }
+                } catch (Exception e) {
+                    Log.e("flying.AsyncTask.loader", Log.getStackTraceString(e));
+                }
+
+                return null;
+            }
+
+            @Override
+            protected void onPreExecute() {
+                LayoutTransition lt = new LayoutTransition();
+                PropertyValuesHolder pvhAlpha = PropertyValuesHolder.ofFloat("alpha", 0f, 1f);
+                final ObjectAnimator changeIn = ObjectAnimator.ofPropertyValuesHolder(
+                        this, pvhAlpha).setDuration(100);
+                lt.setAnimator(LayoutTransition.APPEARING, changeIn);
+                mainHeroLayout.setLayoutTransition(lt);
+            }
+
+            @Override
+            protected void onPostExecute(Object o) {
+                mainHeroLayout.setLayoutTransition(null);
+                ((ScrollView) mainHeroLayout.getParent()).requestLayout();
+            }
+
+            @Override
+            protected void onProgressUpdate(Object[] values) {
+                int index = (int) values[0];
+                for (int i = 1; i < values.length; i++) {
+                    loadHeroes((Hero) values[i], getHeroPicWidthPX(), null, marginPX, (index + i - 1) / colCount, (index + i - 1) % colCount);
+                }
+            }
+        };
+
+        loader.execute(new String[]{getAppPath()});
+
         //Update
 //        updater = new Updater();
 //        handler = new Handler();
@@ -137,8 +203,8 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
 //                            @Override
 //                            public void NotifyResult(int code, String information) {
 //                                if (code == 0) {
-//                                    Utility.getInstance().showNormalDialog(MainActivity.this, "更新", "更新成功，页面将重新加载");
-//                                    ProviderFactory.getInstance().getDataProvider().init(new String[]{getAppPath() + File.separator + "data.json"});
+//                                    CommonUtility.showNormalDialog(MainActivity.this, "更新", "更新成功，页面将重新加载");
+//                                    ProviderFactory.getInstance().getDataProvider().initInMainThread(new String[]{getAppPath() + File.separator + "data.json"});
 //                                    reLoadData();
 //                                }
 //                            }
@@ -151,6 +217,10 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
 //            }
 //        }, 10000);
 
+    }
+
+    private void initInMainThread() {
+        infalter = LayoutInflater.from(this);
         mainHeroLayout = (GridLayout) this.findViewById(R.id.gridLayout);
 
         imageClickListener = new View.OnClickListener() {
@@ -166,71 +236,81 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
                 MainActivity.this.overridePendingTransition(R.anim.slide_right_in, R.anim.slide_left_out);
             }
         };
-
-        currentHeroes = ProviderFactory.getInstance().getDataProvider().getAllHeroes();
-        showHeroes(null);
     }
 
     private void showHeroes(Map<Hero, String> matchedIndex) {
         List<Hero> heroes = currentHeroes;
         mainHeroLayout.removeAllViews();
         IDataProvider dataProvider = ProviderFactory.getInstance().getDataProvider();
-        DisplayMetrics dm = new DisplayMetrics();
-        this.getWindowManager().getDefaultDisplay().getMetrics(dm);
-        int screenWidthPX = dm.widthPixels;
-        int colCount = 5;
-        int marginDP = 5; //dp
-        int marginPX = Utility.getInstance().dip2px(this, marginDP);
-        int picWidthPX = (int) ((screenWidthPX - marginPX * (colCount + 1)) / colCount * 1.0);
+        int marginPX = CommonUtility.dip2px(this, 5);
 
         for (int i = 0; i < heroes.size(); i++) {
             final Hero h = heroes.get(i);
-            LinearLayout searchItemRoot = (LinearLayout) this.infalter.inflate(R.layout.search_item, null);
-            LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(picWidthPX, picWidthPX);
-            param.setMargins(0, 0, 0, 0);
-            searchItemRoot.setLayoutParams(param);
-            searchItemRoot.setOrientation(LinearLayout.VERTICAL);
-            searchItemRoot.setPadding(0, 0, 0, 0);
+            String matchedText = null;
 
-            RoundImageView ivHeroPic = (RoundImageView) searchItemRoot.getChildAt(0);
-            ivHeroPic.getLayoutParams().width = picWidthPX;
-            ivHeroPic.getLayoutParams().height = picWidthPX;
-            ivHeroPic.setTag(h.getName());
-
-            if (h.isBuiltData())
-                ivHeroPic.setLoadSource(RoundImageView.LoadSource.Asset);
-            else
-                ivHeroPic.setLoadSource(RoundImageView.LoadSource.AppDataDir);
-
-            ivHeroPic.setFilePath(getResources().getString(R.string.dir_hero_path) + "/" + h.getPortraitPath());
-            ivHeroPic.invalidate();
-            ivHeroPic.setOnClickListener(imageClickListener);
-
-            TextView tvHeroDisplayName = (TextView) searchItemRoot.getChildAt(1);
-
-            if (currentSearchString == null || currentSearchString.length() == 0) {
-                tvHeroDisplayName.setText(h.getName());
-            } else {
-                String index = matchedIndex.get(h);
-
-                if (index == null) {
-                    tvHeroDisplayName.setText(h.getName());
-                } else {
-                    int startChangeColorIndex = index.indexOf(currentSearchString);
-                    SpannableStringBuilder span = new SpannableStringBuilder(index);
-                    span.setSpan(new ForegroundColorSpan(Color.RED), startChangeColorIndex,
-                            startChangeColorIndex + currentSearchString.length(), Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
-                    tvHeroDisplayName.setText(span);
-                }
+            if (currentSearchString != null && currentSearchString.length() > 0 && matchedIndex != null) {
+                matchedText = matchedIndex.get(h);
             }
 
-            GridLayout.Spec rowSpec = GridLayout.spec(i / colCount);
-            GridLayout.Spec columnSpec = GridLayout.spec(i % colCount);
-            GridLayout.LayoutParams params = new GridLayout.LayoutParams(rowSpec, columnSpec);
-            params.setMargins(marginPX, marginPX, 0, 0);
-            params.setGravity(Gravity.CENTER);
-            mainHeroLayout.addView(searchItemRoot, params);
+            loadHeroes(h, getHeroPicWidthPX(), matchedText, marginPX, i / colCount, i % colCount);
         }
+    }
+
+    private int heroPicWidth = -1;
+
+    private int getHeroPicWidthPX() {
+        if (heroPicWidth > 0)
+            return heroPicWidth;
+
+        int marginDP = 5; //dp
+        int marginPX = CommonUtility.dip2px(this, marginDP);
+        DisplayMetrics dm = new DisplayMetrics();
+        this.getWindowManager().getDefaultDisplay().getMetrics(dm);
+        int screenWidthPX = dm.widthPixels;
+        heroPicWidth = (int) ((screenWidthPX - marginPX * (colCount + 1)) / colCount * 1.0);
+        return heroPicWidth;
+    }
+
+    private void loadHeroes(Hero h, int picWidthPX, String matchedText, int marginPX, int rowIndex, int colIndex) {
+        LinearLayout searchItemRoot = (LinearLayout) this.infalter.inflate(R.layout.search_item, null);
+        LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(picWidthPX, picWidthPX);
+        param.setMargins(0, 0, 0, 0);
+        searchItemRoot.setLayoutParams(param);
+        searchItemRoot.setOrientation(LinearLayout.VERTICAL);
+        searchItemRoot.setPadding(0, 0, 0, 0);
+
+        RoundImageView ivHeroPic = (RoundImageView) searchItemRoot.getChildAt(0);
+        ivHeroPic.getLayoutParams().width = picWidthPX;
+        ivHeroPic.getLayoutParams().height = picWidthPX;
+        ivHeroPic.setTag(h.getName());
+
+        if (h.isBuiltInData())
+            ivHeroPic.setLoadSource(RoundImageView.LoadSource.Asset);
+        else
+            ivHeroPic.setLoadSource(RoundImageView.LoadSource.AppDataDir);
+
+        ivHeroPic.setFilePath(CommonUtility.getActuallResourcePath(this, h, h.getPortraitPath()));
+        ivHeroPic.invalidate();
+        ivHeroPic.setOnClickListener(imageClickListener);
+
+        TextView tvHeroDisplayName = (TextView) searchItemRoot.getChildAt(1);
+
+        if (currentSearchString == null || currentSearchString.length() == 0 || matchedText == null) {
+            tvHeroDisplayName.setText(h.getName());
+        } else {
+            int startChangeColorIndex = matchedText.indexOf(currentSearchString);
+            SpannableStringBuilder span = new SpannableStringBuilder(matchedText);
+            span.setSpan(new ForegroundColorSpan(Color.RED), startChangeColorIndex,
+                    startChangeColorIndex + currentSearchString.length(), Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
+            tvHeroDisplayName.setText(span);
+        }
+
+        GridLayout.Spec rowSpec = GridLayout.spec(rowIndex);
+        GridLayout.Spec columnSpec = GridLayout.spec(colIndex);
+        GridLayout.LayoutParams params = new GridLayout.LayoutParams(rowSpec, columnSpec);
+        params.setMargins(marginPX, marginPX, 0, 0);
+        params.setGravity(Gravity.CENTER);
+        mainHeroLayout.addView(searchItemRoot, params);
     }
 
     private String currentSearchString;
@@ -325,7 +405,7 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
                         ProviderFactory.getInstance().getDataProvider().init(new String[]{getAppPath() + File.separator + "data.json"});
                         reLoadData();
                     } else {
-                        Utility.getInstance().showNormalDialog(MainActivity.this, "更新失败", information + "\n" + "错误码:" + code);
+                        CommonUtility.showNormalDialog(MainActivity.this, "更新失败", information + "\n" + "错误码:" + code);
                     }
                 }
 
@@ -359,7 +439,6 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
         return super.onOptionsItemSelected(item);
     }
 
-
     public class PairData implements NameValuePair {
         private String name;
         private String value;
@@ -378,6 +457,7 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
         public String getValue() {
             return value;
         }
+
     }
 
     private String generateToken(Date date) {

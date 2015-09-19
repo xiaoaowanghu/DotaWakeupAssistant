@@ -1,6 +1,6 @@
 package com.flying.personal.dotawakeupassistant.model;
 
-import com.flying.personal.dotawakeupassistant.util.Utility;
+import com.flying.personal.dotawakeupassistant.util.CommonUtility;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
@@ -90,7 +90,7 @@ public class GameStage {
                 result = new GameStage();
             }
 
-            Utility.getInstance().deserializeNormalField(result, GameStage.class, object, jsonDeserializationContext, true);
+            CommonUtility.deserializeNormalField(result, GameStage.class, object, jsonDeserializationContext, true);
             return result;
         }
     }

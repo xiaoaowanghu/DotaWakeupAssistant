@@ -1,7 +1,7 @@
 package com.flying.personal.dotawakeupassistant.model;
 
 import com.flying.personal.dotawakeupassistant.R;
-import com.flying.personal.dotawakeupassistant.util.Utility;
+import com.flying.personal.dotawakeupassistant.util.CommonUtility;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * Created by wangxian on 8/10/2015.
  */
-public class Hero {
+public class Hero implements IResource {
     protected String name;
     protected List<String> alias;
     protected WakeUpTask[] tasks;
@@ -25,7 +25,7 @@ public class Hero {
     protected String portraitPath;
     protected List<HeroTag> tags;
     protected WakeupSkill wakeupSkill;
-    protected boolean isBuiltData = true;
+    protected boolean isBuiltInData = true;
 
     public WakeupSkill getWakeupSkill() {
         return wakeupSkill;
@@ -44,12 +44,13 @@ public class Hero {
         return tags;
     }
 
-    public boolean isBuiltData() {
-        return isBuiltData;
+    @Override
+    public boolean isBuiltInData() {
+        return isBuiltInData;
     }
 
-    public void setIsBuiltData(boolean isBuiltData) {
-        this.isBuiltData = isBuiltData;
+    public void setIsBuiltInData(boolean isBuiltInData) {
+        this.isBuiltInData = isBuiltInData;
     }
 
     public void setTags(List<HeroTag> tags) {
@@ -152,8 +153,13 @@ public class Hero {
                                 JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {
             JsonObject object = jsonElement.getAsJsonObject();
             Hero result = new Hero();
-            Utility.getInstance().deserializeNormalField(result, Hero.class, object, jsonDeserializationContext, true);
+            CommonUtility.deserializeNormalField(result, Hero.class, object, jsonDeserializationContext, true);
             return result;
         }
+    }
+
+    @Override
+    public ResourceType getResourceType() {
+        return ResourceType.Hero;
     }
 }
