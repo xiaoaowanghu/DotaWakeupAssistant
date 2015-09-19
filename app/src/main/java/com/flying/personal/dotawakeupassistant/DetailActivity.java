@@ -1,5 +1,10 @@
 package com.flying.personal.dotawakeupassistant;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.ObjectAnimator;
+import android.animation.PropertyValuesHolder;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
@@ -15,6 +20,7 @@ import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.BounceInterpolator;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -25,7 +31,7 @@ import com.flying.personal.dotawakeupassistant.model.EquipmentItem;
 import com.flying.personal.dotawakeupassistant.model.Hero;
 import com.flying.personal.dotawakeupassistant.model.HeroTag;
 import com.flying.personal.dotawakeupassistant.model.WakeupSkill;
-import com.flying.personal.dotawakeupassistant.util.Utility;
+import com.flying.personal.dotawakeupassistant.util.CommonUtility;
 import com.flying.personal.dotawakeupassistant.view.RoundImageView;
 
 import java.util.ArrayList;
@@ -41,14 +47,16 @@ public class DetailActivity extends ActionBarActivity {
 
     private GestureDetector gesture;
     private Hero currentHero;
+    private View.OnClickListener bigPicOnClickListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detail_activity);
         LinearLayout parentView = (LinearLayout) findViewById(R.id.llparent_in_detail);
-        BitmapDrawable bd = new BitmapDrawable(null, Utility.getInstance().createImageFromAsset(this, "bg9.jpg", 1080, 1920 * 1080));
+        BitmapDrawable bd = new BitmapDrawable(null, CommonUtility.createImageFromAsset(this, "bg9.jpg", 1080, 1920 * 1080));
         parentView.setBackgroundDrawable(bd);
+        InitBigPicClickListener();
         Bundle bundle = this.getIntent().getExtras();
         String name = bundle.getString("name");
         currentHero = ProviderFactory.getInstance().getDataProvider().getHeroByName(name);
@@ -65,6 +73,14 @@ public class DetailActivity extends ActionBarActivity {
                 }
             }
         });
+    }
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        final RoundImageView ivPortrait = (RoundImageView) findViewById(R.id.ivHeroPic);
+        ivPortrait.setScaleX(1);
+        ivPortrait.setScaleY(1);
     }
 
     public void close() {
@@ -91,8 +107,8 @@ public class DetailActivity extends ActionBarActivity {
                 ViewGroup.LayoutParams.MATCH_PARENT, 0);
         lpForAffectedItem.gravity = Gravity.CENTER_VERTICAL | Gravity.LEFT;
         lpForAffectedItem.weight = 5;
-        int marginRightPX = Utility.getInstance().dip2px(this, 10);
-        lpForAffectedItem.setMargins(marginRightPX, Utility.getInstance().dip2px(this, 5),
+        int marginRightPX = CommonUtility.dip2px(this, 10);
+        lpForAffectedItem.setMargins(marginRightPX, CommonUtility.dip2px(this, 5),
                 0, 0);
 
         final List<Map<String, Object>> affectedData = getAffectedSkillData();
@@ -122,7 +138,7 @@ public class DetailActivity extends ActionBarActivity {
                                     widthDP = 25;
                                 }
 
-                                int widthPX = Utility.getInstance().dip2px(DetailActivity.this, widthDP) - 2;
+                                int widthPX = CommonUtility.dip2px(DetailActivity.this, widthDP) - 2;
                                 String text = tag.getKeyName();
 
                                 if (text == null)
@@ -138,7 +154,7 @@ public class DetailActivity extends ActionBarActivity {
 
                                 Paint paint = tv.getPaint();
                                 Rect textBound = new Rect();
-                                int fontSize = Utility.getInstance().getSuitableTextSizePX(paint, (int) tv.getTextSize(),
+                                int fontSize = CommonUtility.getSuitableTextSizePX(paint, (int) tv.getTextSize(),
                                         widthPX - tv.getPaddingLeft() - tv.getPaddingRight(), tmpText, textBound);
                                 lp.width = lp.height = widthPX;
                                 tv.setTextSize(TypedValue.COMPLEX_UNIT_PX, fontSize);
@@ -189,7 +205,7 @@ public class DetailActivity extends ActionBarActivity {
                         sb.append(", ");
                     }
 
-                    Utility.getInstance().showNormalDialog(DetailActivity.this, heroTag.tagName, sb.substring(0, sb.length() - 2));
+                    CommonUtility.showNormalDialog(DetailActivity.this, heroTag.tagName, sb.substring(0, sb.length() - 2));
                 }
             });
             ll.addView(lv, lpForAffectedItem);
@@ -197,15 +213,17 @@ public class DetailActivity extends ActionBarActivity {
     }
 
     private void showDetail() {
-        RoundImageView ivPortrait = (RoundImageView) findViewById(R.id.ivHeroPortrait);
-        ivPortrait.setFilePath(getResources().getString(R.string.dir_hero_path) + "/" + currentHero.getPicPath());
+        final RoundImageView ivPortrait = (RoundImageView) findViewById(R.id.ivHeroPic);
+        ivPortrait.setFilePath(CommonUtility.getActuallResourcePath(this, currentHero, currentHero.getPicPath()));
 
-        if (currentHero.isBuiltData())
+        if (currentHero.isBuiltInData())
             ivPortrait.setLoadSource(RoundImageView.LoadSource.Asset);
         else
             ivPortrait.setLoadSource(RoundImageView.LoadSource.AppDataDir);
 
         ivPortrait.invalidate();
+        ivPortrait.setOnClickListener(bigPicOnClickListener);
+
         TextView tvName = (TextView) findViewById(R.id.tvHeroName);
         tvName.setText(currentHero.getName());
         TextView tvSkillDesc = (TextView) findViewById(R.id.tvSkillDesc);
@@ -257,8 +275,8 @@ public class DetailActivity extends ActionBarActivity {
 
             LinearLayout llForNeededEquip = new LinearLayout(this);
             LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-            int lineMarginLeft = Utility.getInstance().dip2px(this, 10);
-            int columnMargin = Utility.getInstance().dip2px(this, 1);
+            int lineMarginLeft = CommonUtility.dip2px(this, 10);
+            int columnMargin = CommonUtility.dip2px(this, 1);
             lp.setMargins(lineMarginLeft, columnMargin, columnMargin, columnMargin);
             llForNeededEquip.setGravity(Gravity.LEFT | Gravity.CENTER);
             llForNeededEquip.setOrientation(LinearLayout.HORIZONTAL);
@@ -272,16 +290,16 @@ public class DetailActivity extends ActionBarActivity {
             LinearLayout.LayoutParams lpForTv = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             llForNeededEquip.addView(tv, lpForTv);
 
-            int radius = Utility.getInstance().dip2px(this, 1);
-            int borderWidth = Utility.getInstance().dip2px(this, 1);
-            int imgHeight = Utility.getInstance().dip2px(this, 36);
+            int radius = CommonUtility.dip2px(this, 1);
+            int borderWidth = CommonUtility.dip2px(this, 1);
+            int imgHeight = CommonUtility.dip2px(this, 36);
 
             for (int i = 0; i < neededEquipments.length; i++) {
                 EquipmentItem ei = neededEquipments[i];
                 RoundImageView riv = new RoundImageView(this);
                 riv.setBorderColor(ei.getBorderColor());
                 riv.setMaxHeightPX(imgHeight);
-                riv.setFilePath("equipment/" + ei.getPicPath());
+                riv.setFilePath(CommonUtility.getActuallResourcePath(this, ei, ei.getPicPath()));
                 riv.setBorderWidthPX(radius);
                 riv.setBorderWidthPX(borderWidth);
                 riv.invalidate();
@@ -321,5 +339,32 @@ public class DetailActivity extends ActionBarActivity {
             }
         }
         return data;
+    }
+
+    private void InitBigPicClickListener() {
+        bigPicOnClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final RoundImageView riv = (RoundImageView) v;
+                PropertyValuesHolder pvhX = PropertyValuesHolder.ofFloat("scaleX", 1, 0);
+                PropertyValuesHolder pvhY = PropertyValuesHolder.ofFloat("scaleY", 1, 0);
+                ObjectAnimator oa = ObjectAnimator.ofPropertyValuesHolder(riv, pvhX, pvhY).setDuration(1000);
+                oa.setInterpolator(new BounceInterpolator());
+
+                oa.addListener(new AnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        Intent intent = new Intent();
+                        intent.setClass(DetailActivity.this, BigPicActivity.class);
+                        intent.putExtra("path", riv.getFilePath());
+                        intent.putExtra("isBuiltIn", currentHero.isBuiltInData());
+                        startActivity(intent);
+                        DetailActivity.this.overridePendingTransition(R.anim.scale_in, R.anim.direct_disappear);
+                    }
+                });
+
+                oa.start();
+            }
+        };
     }
 }

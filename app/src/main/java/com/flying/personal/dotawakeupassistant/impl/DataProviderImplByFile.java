@@ -231,7 +231,7 @@ public class DataProviderImplByFile implements IDataProvider {
                         if (j < heroes.size()) {
                             heroes.set(j, h);
                         } else {
-                            heroes.add(h);
+                            heroes.add(0, h);
                         }
                     }
                 }

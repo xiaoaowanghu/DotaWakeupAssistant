@@ -106,8 +106,6 @@ public class FileUtility {
                     }
                 }
             }
-        } catch (Exception ex) {
-            ex.printStackTrace();
         } finally {
             if (zipFile != null) {
                 zipFile.close();

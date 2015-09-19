@@ -19,10 +19,12 @@ public final class R {
         public static final int abc_slide_in_top=0x7f040007;
         public static final int abc_slide_out_bottom=0x7f040008;
         public static final int abc_slide_out_top=0x7f040009;
-        public static final int slide_left_in=0x7f04000a;
-        public static final int slide_left_out=0x7f04000b;
-        public static final int slide_right_in=0x7f04000c;
-        public static final int slide_right_out=0x7f04000d;
+        public static final int direct_disappear=0x7f04000a;
+        public static final int scale_in=0x7f04000b;
+        public static final int slide_left_in=0x7f04000c;
+        public static final int slide_left_out=0x7f04000d;
+        public static final int slide_right_in=0x7f04000e;
+        public static final int slide_right_out=0x7f04000f;
     }
     public static final class attr {
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
@@ -1717,7 +1719,7 @@ containing a value of this type.
         public static final int ivAllPosition=0x7f0b006b;
         public static final int ivBackPosition=0x7f0b0074;
         public static final int ivFrontPosition=0x7f0b006e;
-        public static final int ivHeroPortrait=0x7f0b0060;
+        public static final int ivHeroPic=0x7f0b0060;
         public static final int ivMiddlePosition=0x7f0b0071;
         public static final int l1AllPosition=0x7f0b006a;
         public static final int line1=0x7f0b007d;
@@ -1882,10 +1884,10 @@ containing a value of this type.
         public static final int action_update=0x7f050016;
         public static final int affectedSkill=0x7f050017;
         public static final int app_name=0x7f050018;
-        public static final int dir_equipment_path=0x7f050019;
-        public static final int dir_hero_path=0x7f05001a;
-        public static final int equipRemind=0x7f05001b;
-        public static final int extra_equipitem=0x7f05001c;
+        public static final int equipRemind=0x7f050019;
+        public static final int equipment_dir_name=0x7f05001a;
+        public static final int extra_equipitem=0x7f05001b;
+        public static final int hero_dir_name=0x7f05001c;
         public static final int no_affected_skill=0x7f05001d;
         public static final int only_can_input=0x7f05001e;
         public static final int position_all=0x7f05001f;

@@ -17,7 +17,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.flying.personal.dotawakeupassistant.R;
-import com.flying.personal.dotawakeupassistant.util.Utility;
+import com.flying.personal.dotawakeupassistant.util.CommonUtility;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -36,34 +36,6 @@ public class RoundImageView extends View {
     private final static Xfermode xfermodeForBorder = new PorterDuffXfermode(PorterDuff.Mode.SRC_OVER);
     private final static int DefaultRaidusDP = 10;
     private final static int DefaultBorderWidthDP = 0;
-
-    public enum SimpleScale {
-        AutoScale, //按比例缩放，自动确定大小
-        Fill,      //按View指定的Size拉伸
-        Center     //当原始图大于View的size时，显示中心位置
-    }
-
-    public enum LoadSource {
-        AutoDetect,
-        Asset,
-        AppDataDir,
-        SDDir
-    }
-
-    public class CustomSize {
-        public int width;
-        public int height;
-
-        public CustomSize(int w, int h) {
-            width = w;
-            height = h;
-        }
-
-        public CustomSize() {
-
-        }
-    }
-
     protected LoadSource loadSource;
     protected int mBorderRadiusPX;
     protected Paint mPaint;
@@ -72,6 +44,32 @@ public class RoundImageView extends View {
     protected SimpleScale scaleMode;
     protected int maxWidthPX;
     protected int maxHeightPX;
+    protected CustomSize originalPicSize;
+    protected int borderWidthPX;
+
+
+    protected int borderColor;
+
+    public RoundImageView(Context context) {
+        super(context);
+        sharedConstructor(context);
+    }
+
+    public RoundImageView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        sharedConstructor(context);
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.RoundImageView);
+        mBorderRadiusPX = typedArray.getDimensionPixelSize(R.styleable.RoundImageView_borderRadius,
+                CommonUtility.dip2px(context, DefaultRaidusDP));
+        scaleMode = SimpleScale.values()[typedArray.getInteger(R.styleable.RoundImageView_scaleType, 0)];
+        borderWidthPX = typedArray.getDimensionPixelSize(R.styleable.RoundImageView_borderWidth,
+                CommonUtility.dip2px(context, DefaultBorderWidthDP));
+        borderColor = typedArray.getColor(R.styleable.RoundImageView_borderColor, Color.BLACK);
+        loadSource = LoadSource.values()[typedArray.getInteger(R.styleable.RoundImageView_loadSource, 0)];
+        maxHeightPX = typedArray.getDimensionPixelSize(R.styleable.RoundImageView_maxHeight, 0);
+        maxWidthPX = typedArray.getDimensionPixelSize(R.styleable.RoundImageView_maxWidth, 0);
+        typedArray.recycle();
+    }
 
     public int getmBorderRadiusPX() {
         return mBorderRadiusPX;
@@ -97,10 +95,6 @@ public class RoundImageView extends View {
         this.borderWidthPX = borderWidthPX;
     }
 
-    protected CustomSize originalPicSize;
-    protected int borderWidthPX;
-    protected int borderColor;
-
     public LoadSource getLoadSource() {
         return loadSource;
     }
@@ -109,32 +103,11 @@ public class RoundImageView extends View {
         this.loadSource = loadSource;
     }
 
-    public RoundImageView(Context context) {
-        super(context);
-        sharedConstructor(context);
-    }
-
-    public RoundImageView(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        sharedConstructor(context);
-        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.RoundImageView);
-        mBorderRadiusPX = typedArray.getDimensionPixelSize(R.styleable.RoundImageView_borderRadius,
-                Utility.getInstance().dip2px(context, DefaultRaidusDP));
-        scaleMode = SimpleScale.values()[typedArray.getInteger(R.styleable.RoundImageView_scaleType, 0)];
-        borderWidthPX = typedArray.getDimensionPixelSize(R.styleable.RoundImageView_borderWidth,
-                Utility.getInstance().dip2px(context, DefaultBorderWidthDP));
-        borderColor = typedArray.getColor(R.styleable.RoundImageView_borderColor, Color.BLACK);
-        loadSource = LoadSource.values()[typedArray.getInteger(R.styleable.RoundImageView_loadSource, 0)];
-        maxHeightPX = typedArray.getDimensionPixelSize(R.styleable.RoundImageView_maxHeight, 0);
-        maxWidthPX = typedArray.getDimensionPixelSize(R.styleable.RoundImageView_maxWidth, 0);
-        typedArray.recycle();
-    }
-
     protected void sharedConstructor(Context context) {
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        this.mBorderRadiusPX = Utility.getInstance().dip2px(context, DefaultRaidusDP);
+        this.mBorderRadiusPX = CommonUtility.dip2px(context, DefaultRaidusDP);
         scaleMode = SimpleScale.AutoScale.AutoScale;
-        borderWidthPX = Utility.getInstance().dip2px(context, DefaultBorderWidthDP);
+        borderWidthPX = CommonUtility.dip2px(context, DefaultBorderWidthDP);
         borderColor = Color.BLACK;
         loadSource = LoadSource.AutoDetect;
     }
@@ -215,7 +188,7 @@ public class RoundImageView extends View {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        if (widthMeasureSpec == 0 && heightMeasureSpec == 0) {
+        if (isInEditMode() || (widthMeasureSpec == 0 && heightMeasureSpec == 0)) {
             super.onMeasure(widthMeasureSpec, heightMeasureSpec);
             return;
         }
@@ -539,5 +512,40 @@ public class RoundImageView extends View {
         }
 
         return inSampleSize;
+    }
+
+    public SimpleScale getScaleMode() {
+        return scaleMode;
+    }
+
+    public void setScaleMode(SimpleScale scaleMode) {
+        this.scaleMode = scaleMode;
+    }
+
+    public enum SimpleScale {
+        AutoScale, //按比例缩放，自动确定大小
+        Fill,      //按View指定的Size拉伸
+        Center     //当原始图大于View的size时，显示中心位置
+    }
+
+    public enum LoadSource {
+        AutoDetect,
+        Asset,
+        AppDataDir,
+        SDDir
+    }
+
+    public class CustomSize {
+        public int width;
+        public int height;
+
+        public CustomSize(int w, int h) {
+            width = w;
+            height = h;
+        }
+
+        public CustomSize() {
+
+        }
     }
 }
