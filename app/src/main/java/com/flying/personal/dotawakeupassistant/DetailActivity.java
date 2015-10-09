@@ -72,6 +72,8 @@ public class DetailActivity extends ActionBarActivity {
                     return super.onFling(e1, e2, velocityX, velocityY);
                 }
             }
+
+
         });
     }
 

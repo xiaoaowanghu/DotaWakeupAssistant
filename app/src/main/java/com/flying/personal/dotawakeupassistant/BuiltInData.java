@@ -69,6 +69,28 @@ public class BuiltInData {
         tagHeroCache = new HashMap<>(30);
         String picExtensionName = ".jpg";
         {
+            String tagName = "法杖";
+            HeroTag tag = new HeroTag();
+            tag.keyName = "杖";
+            tag.tagName = tagName;
+            tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
+            tagCache.put(tagName, tag);
+            List<String> heroNames = new ArrayList(12);
+            tagHeroCache.put(tag.tagName, heroNames);
+            heroNames.add("大魔导师");
+            heroNames.add("恶魔巫师");
+            heroNames.add("冰女");
+            heroNames.add("死灵法师");
+            heroNames.add("先知");
+            heroNames.add("暗牧");
+            heroNames.add("黑鸟");
+            heroNames.add("术士");
+            heroNames.add("骨法");
+            heroNames.add("天怒");
+            heroNames.add("巫医");
+            heroNames.add("光法");
+        }
+        {
             String tagName = "野兽";
             HeroTag tag = new HeroTag();
             tag.keyName = "兽";
@@ -463,6 +485,7 @@ public class BuiltInData {
             tagHeroCache.put(tag.tagName, heroNames);
             heroNames.add("电魂");
             heroNames.add("虚空");
+            heroNames.add("大魔导师");
         }
         {
             String tagName = "翼人系";
@@ -661,7 +684,6 @@ public class BuiltInData {
         return equipCache;
     }
 
-
     private Map<String, GameStage> createStageCache() {
         stageCache = new HashMap<String, GameStage>(60);
 
@@ -694,6 +716,122 @@ public class BuiltInData {
 
     private List<Hero> createHeroes() {
         heroes = new ArrayList<Hero>(100);
+        {
+            Hero h1 = new Hero();
+            h1.setName("魂守");
+            h1.setPositionType(Hero.PositionType.Middle);
+            h1.setAbilityType(Hero.AbilityType.Agility);
+            h1.setPortraitPath("spe.jpg");
+            h1.setPicPath("spe_big.jpg");
+
+            WakeupSkill skill = new WakeupSkill("对召唤物和幻象造成2.3倍伤害");
+            h1.setWakeupSkill(skill);
+
+            List<String> alias = new ArrayList<String>(5);
+            alias.add("灵魂守卫");
+            alias.add("tb");
+            h1.setAlias(alias);
+
+            WakeUpTask[] tasks = new WakeUpTask[3];
+            h1.setTasks(tasks);
+            WakeUpTask w1 = new WakeUpTask();
+            tasks[0] = w1;
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "恶魔血", "黑暗之魂"));
+            w1.setStage(stageCache.get("巨龙巢穴(精英)"));
+            w1.setNeededEquipment(getEquiment("巫师之冠", "水晶球"));
+
+            WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
+            tasks[1] = w2;
+            w2.setExecuteTimes(10);
+            w2.setStage(stageCache.get("诅咒之城(魔免)"));
+
+            WakeUpTask w3 = new WakeUpTask();
+            w3.setDescription("独自完成关卡");
+            w3.setStage(stageCache.get("泰坦遗迹"));
+            tasks[2] = w3;
+
+            heroes.add(h1);
+        }
+        {
+            Hero h1 = new Hero();
+            h1.setName("大魔导师");
+            h1.setPositionType(Hero.PositionType.Back);
+            h1.setAbilityType(Hero.AbilityType.Intelligence);
+            h1.setPortraitPath("spe.jpg");
+            h1.setPicPath("spe_big.jpg");
+
+            WakeupSkill skill = new WakeupSkill("增加法杖队友810点魔法强度");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("法杖");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.魔法强度;
+            skill.abilitiesAffected[0].value = "+810";
+
+            List<String> alias = new ArrayList<String>(5);
+            alias.add("偷儿");
+            alias.add("拉比克");
+            h1.setAlias(alias);
+
+            WakeUpTask[] tasks = new WakeUpTask[3];
+            h1.setTasks(tasks);
+            WakeUpTask w1 = new WakeUpTask();
+            tasks[0] = w1;
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "宇宙之石", "异界之星"));
+            w1.setStage(stageCache.get("巨龙巢穴(精英)"));
+            w1.setNeededEquipment(getEquiment("巫师之冠", "水晶球"));
+
+            WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
+            tasks[1] = w2;
+            w2.setExecuteTimes(10);
+            w2.setStage(stageCache.get("矮人军工厂"));
+
+            WakeUpTask w3 = new WakeUpTask();
+            w3.setDescription("完成关卡，亲自击杀影魔");
+            w3.setStage(stageCache.get("黑暗者(精英)"));
+            tasks[2] = w3;
+
+            heroes.add(h1);
+        }
+        {
+            Hero h1 = new Hero();
+            h1.setName("暗夜魔王");
+            h1.setPositionType(Hero.PositionType.Front);
+            h1.setAbilityType(Hero.AbilityType.Strength);
+            h1.setPortraitPath("spe.jpg");
+            h1.setPicPath("spe_big.jpg");
+
+            WakeupSkill skill = new WakeupSkill("增加王者队友180点护甲");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("王者");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.护甲;
+            skill.abilitiesAffected[0].value = "+180";
+
+            List<String> alias = new ArrayList<String>(5);
+            h1.setAlias(alias);
+
+            WakeUpTask[] tasks = new WakeUpTask[3];
+            h1.setTasks(tasks);
+            WakeUpTask w1 = new WakeUpTask();
+            tasks[0] = w1;
+            w1.setDescription("收集60个暗夜战甲碎片，合成装备暗夜战甲");
+            w1.setStage(stageCache.get("团战中心(精英)"));
+            w1.setNeededEquipment(getEquiment("银月长矛", "永恒冰柱", "红宝石吊坠"));
+
+            WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
+            tasks[1] = w2;
+            w2.setExecuteTimes(10);
+            w2.setStage(stageCache.get("矮人军工厂"));
+
+            WakeUpTask w3 = new WakeUpTask();
+            w3.setDescription("完成关卡，亲自击杀影魔");
+            w3.setStage(stageCache.get("黑暗者(精英)"));
+            tasks[2] = w3;
+
+            heroes.add(h1);
+        }
         {
             Hero h1 = new Hero();
             h1.setName("幽鬼");
