@@ -14,8 +14,14 @@
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/miTest"
+        android:id="@+id/miSerializeData"
         android:orderInCategory="200"
-        android:title="测试"
+        android:title="测试-序列化数据文件"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/miRestData"
+        android:orderInCategory="300"
+        android:title="重置数据文件"
         app:showAsAction="never" />
 </menu>

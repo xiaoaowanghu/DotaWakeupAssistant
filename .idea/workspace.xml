@@ -62,50 +62,15 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21242775">
-              <caret line="107" column="39" selection-start-line="107" selection-start-column="39" selection-end-line="107" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.48410404">
+              <caret line="293" column="13" selection-start-line="293" selection-start-column="13" selection-end-line="293" selection-end-column="13" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#onSearch#0;class#MainActivity#0" expanded="false" />
-                <element signature="e#13601#13615#0" expanded="true" />
                 <element signature="method#onPositionTypeChange#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
                 <element signature="class#PairData#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#generateToken#0;class#MainActivity#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScrollView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/widget/ScrollView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1480" column="30" selection-start-line="1480" selection-start-column="30" selection-end-line="1480" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.275862">
-              <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArrayList.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.7.0_75/src.zip!/java/util/ArrayList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="254" column="0" selection-start-line="254" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -113,82 +78,18 @@
       <file leaf-file-name="BuiltInData.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/BuiltInData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1475" column="9" selection-start-line="1475" selection-start-column="9" selection-end-line="1475" selection-end-column="9" />
-              <folding>
-                <element signature="method#createTagCache#0;class#BuiltInData#0" expanded="false" />
-                <element signature="method#createEquipCache#0;class#BuiltInData#0" expanded="false" />
-                <element signature="method#createStageCache#0;class#BuiltInData#0" expanded="false" />
-                <element signature="method#getEquiment#0;class#BuiltInData#0" expanded="false" />
-                <element signature="e#25916#25924#0" expanded="true" />
-                <element signature="e#27235#27243#0" expanded="true" />
-                <element signature="e#28908#28916#0" expanded="true" />
-                <element signature="e#30577#30585#0" expanded="true" />
-                <element signature="e#32162#32170#0" expanded="true" />
-                <element signature="e#33734#33742#0" expanded="true" />
-                <element signature="e#35280#35288#0" expanded="true" />
-                <element signature="e#36538#36546#0" expanded="true" />
-                <element signature="e#38105#38113#0" expanded="true" />
-                <element signature="e#39425#39433#0" expanded="true" />
-                <element signature="e#40735#40743#0" expanded="true" />
-                <element signature="e#42072#42080#0" expanded="true" />
-                <element signature="e#43404#43412#0" expanded="true" />
-                <element signature="e#46473#46481#0" expanded="true" />
-                <element signature="e#48355#48363#0" expanded="true" />
-                <element signature="e#50047#50055#0" expanded="true" />
-                <element signature="e#51715#51723#0" expanded="true" />
-                <element signature="e#53418#53426#0" expanded="true" />
-                <element signature="e#55122#55130#0" expanded="true" />
-                <element signature="e#56364#56372#0" expanded="true" />
-                <element signature="e#57603#57611#0" expanded="true" />
-                <element signature="e#58897#58905#0" expanded="true" />
-                <element signature="e#60148#60156#0" expanded="true" />
-                <element signature="e#61416#61424#0" expanded="true" />
-                <element signature="e#62793#62801#0" expanded="true" />
-                <element signature="e#64431#64439#0" expanded="true" />
-                <element signature="e#65771#65779#0" expanded="true" />
-                <element signature="e#67427#67435#0" expanded="true" />
-                <element signature="e#68797#68805#0" expanded="true" />
-                <element signature="e#70113#70121#0" expanded="true" />
-                <element signature="e#71741#71749#0" expanded="true" />
-                <element signature="e#73038#73046#0" expanded="true" />
-                <element signature="e#74370#74378#0" expanded="true" />
-                <element signature="e#76071#76079#0" expanded="true" />
-                <element signature="e#77407#77415#0" expanded="true" />
-                <element signature="e#78766#78774#0" expanded="true" />
-                <element signature="e#80089#80097#0" expanded="true" />
-                <element signature="e#81743#81751#0" expanded="true" />
-                <element signature="e#83374#83382#0" expanded="true" />
-                <element signature="e#85050#85058#0" expanded="true" />
-                <element signature="e#86354#86362#0" expanded="true" />
-                <element signature="e#87693#87701#0" expanded="true" />
-                <element signature="e#89565#89573#0" expanded="true" />
-                <element signature="e#91227#91235#0" expanded="true" />
-                <element signature="e#92629#92637#0" expanded="true" />
-                <element signature="e#94316#94324#0" expanded="true" />
-                <element signature="e#96067#96075#0" expanded="true" />
-                <element signature="e#97408#97416#0" expanded="true" />
-                <element signature="e#99043#99051#0" expanded="true" />
-                <element signature="e#100687#100695#0" expanded="true" />
-                <element signature="e#102386#102394#0" expanded="true" />
-                <element signature="e#104049#104057#0" expanded="true" />
-                <element signature="e#107103#107111#0" expanded="true" />
-                <element signature="e#108353#108361#0" expanded="true" />
-                <element signature="method#createChapter10And11Stage#0;class#BuiltInData#0" expanded="false" />
-                <element signature="method#createChapter12Stage#0;class#BuiltInData#0" expanded="false" />
-                <element signature="method#createChapter13Stage#0;class#BuiltInData#0" expanded="false" />
-                <element signature="method#createChapter14Stage#0;class#BuiltInData#0" expanded="false" />
-                <element signature="method#createSpecialStage#0;class#BuiltInData#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="-60.793102">
+              <caret line="2538" column="25" selection-start-line="2538" selection-start-column="23" selection-end-line="2538" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataProviderImplByFile.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/impl/DataProviderImplByFile.java">
+      <file leaf-file-name="Updater.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/Updater.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="233" column="37" selection-start-line="233" selection-start-column="37" selection-end-line="233" selection-end-column="37" />
+              <caret line="93" column="27" selection-start-line="93" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -201,9 +102,9 @@
       <list>
         <option value="Enum" />
         <option value="layoutResourceFile_vertical" />
-        <option value="Interface" />
         <option value="resourceFile" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -1643,17 +1544,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/model/SpecialStage.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/impl/DataProviderImplByMock.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/model/AbilityType.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/search_item.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/affected_skill.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/auto_adjust_tv_attr.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/util/HanyuPinyinHelper.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/model/HeroTag.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/title_bar.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/drawable/close_button.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/color.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/tag_hero.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/layout_border.xml" />
@@ -1663,7 +1553,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/IDataProvider.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/BottomNavigationFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/Updater.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/menu/title_context_menu.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/util/TypeHierarchyAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/model/WakeupSkill.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/util/PolymorphismDessrializeAdapter.java" />
@@ -1677,7 +1566,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/model/Hero.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/model/WakeUpTask.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/model/GameStage.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/util/CommonUtility.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/view/RoundImageView.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/detail_activity.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/anim/direct_disappear.xml" />
@@ -1686,13 +1574,26 @@
         <option value="$PROJECT_DIR$/app/src/main/res/anim/slide_right_in.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/anim/slide_right_out.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/BigPicActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/DetailActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/anim/scale_in.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/AsyncLoader.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/impl/DataProviderImplByFile.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/BuiltInData.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/util/CommonUtility.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/DetailActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/view/LayoutLoading.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/view/ILoadingLayout.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/view/LoadingLayout.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/view/IPullToRefresh.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/view/PullToRefreshBase.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/view/FooterLoadingLayout.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/pull_to_refresh_header2.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/pull_refresh_strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/view/HeaderLoadingLayout.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/anim/pull_arrow_down.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/BuiltInData.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/title_context_menu.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/MainActivity.java" />
       </list>
     </option>
@@ -1758,116 +1659,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DotaWakeupAssistant" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Gradle Scripts" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DotaWakeupAssistant" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DotaWakeupAssistant" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DotaWakeupAssistant" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DotaWakeupAssistant" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DotaWakeupAssistant" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dotawakeupassistant" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DotaWakeupAssistant" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dotawakeupassistant" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1875,6 +1666,10 @@
               <option name="myItemId" value="DotaWakeupAssistant" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1883,6 +1678,64 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="DotaWakeupAssistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DotaWakeupAssistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DotaWakeupAssistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gradle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wrapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DotaWakeupAssistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DotaWakeupAssistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="intermediates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DotaWakeupAssistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DotaWakeupAssistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="intermediates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dex-cache" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1947,10 +1800,6 @@
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gson-2.3.1.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1969,12 +1818,107 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="androidTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dotawakeupassistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DotaWakeupAssistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DotaWakeupAssistant" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DotaWakeupAssistant" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DotaWakeupAssistant" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DotaWakeupAssistant" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dotawakeupassistant" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DotaWakeupAssistant" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manifests" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1991,10 +1935,10 @@
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/sdk" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
-    <property name="settings.editor.selected.configurable" value="preferences.intentionPowerPack" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.24289912" />
     <property name="recentsLimit" value="5" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_21" />
     <property name="FullScreen" value="false" />
     <property name="OverrideImplement.combined" value="true" />
@@ -2002,18 +1946,21 @@
     <property name="ExportApk.ApkPath" value="D:\mywork\GitHub\DotaWakeupAssistant\app" />
     <property name="ExportApk.Flavors" value="" />
     <property name="ExportApk.BuildType" value="debug" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/values" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\mywork\GitHub\DotaWakeupAssistant\app\src\main\res\drawable" />
-      <recent name="D:\mywork\GitHub\DotaWakeupAssistant\app\src\main\assets" />
-      <recent name="D:\mywork\GitHub\DotaWakeupAssistant\app\src\main\lib" />
-      <recent name="D:\mywork\GitHub\DotaWakeupAssistant\app\src\main\java\com\flying\personal\dotawakeupassistant\util" />
+      <recent name="D:\mywork\GitHub\DotaWakeupAssistant\app\src\main\res\values" />
+      <recent name="D:\mywork\GitHub\DotaWakeupAssistant\app\src\main\res\anim" />
+      <recent name="D:\mywork\GitHub\DotaWakeupAssistant\app\src\main\res\layout" />
+      <recent name="D:\mywork\GitHub\DotaWakeupAssistant\app\src\main\java\com\flying\personal\dotawakeupassistant\view" />
     </key>
     <key name="android.template.packageName">
       <recent name="com.flying.personal.computerforwakeupheroofdotalegend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\mywork\GitHub\DotaWakeupAssistant\app\src\main\res\values" />
       <recent name="D:\mywork\GitHub\DotaWakeupAssistant\app\src\main" />
       <recent name="D:\mywork\GitHub\DotaWakeupAssistant\app\src\main\assets" />
     </key>
@@ -2237,33 +2184,33 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20437019" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.49485862" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904884" sideWeight="0.49103138" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34583333" sideWeight="0.6709511" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34583333" sideWeight="0.32904884" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49861112" sideWeight="0.6709511" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2986111" sideWeight="0.41580978" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22943445" sideWeight="0.3611111" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1940874" sideWeight="0.35277778" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.48971722" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41805556" sideWeight="0.45694086" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.49485862" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32969153" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.49444443" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32969153" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22943445" sideWeight="0.6388889" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2986111" sideWeight="0.46786633" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1940874" sideWeight="0.6472222" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2986111" sideWeight="0.58419025" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="143" y="118" width="1416" height="676" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20437019" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2318,339 +2265,48 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/Updater.java</url>
-          <line>154</line>
-          <properties />
-          <option name="timeStamp" value="376" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/animation/ValueAnimator.java</url>
-          <line>486</line>
-          <properties />
-          <option name="timeStamp" value="390" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="400" />
+      <option name="time" value="406" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="app">
-        <watch expression="a.isDirectory()" language="JAVA" custom="" />
-        <watch expression="f.length()" language="JAVA" custom="" />
-        <watch expression="riv.getLayoutParams().width" language="JAVA" custom="" />
-        <watch expression="riv.getLayoutParams().height" language="JAVA" custom="" />
+        <watch expression="tagName" language="JAVA" custom="" />
+        <watch expression="h.getName()" language="JAVA" custom="" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/model/HeroTag.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_75/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
+          <caret line="254" column="0" selection-start-line="254" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/model/EquipmentItem.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/util/CommonUtility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.92774564">
+          <caret line="221" column="52" selection-start-line="221" selection-start-column="52" selection-end-line="221" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/view/MotionEvent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-          <folding>
-            <element signature="e#710#711#0" expanded="false" />
-            <element signature="e#744#745#0" expanded="false" />
-            <element signature="e#798#799#0" expanded="false" />
-            <element signature="e#844#845#0" expanded="false" />
-            <element signature="e#878#879#0" expanded="false" />
-            <element signature="e#908#909#0" expanded="false" />
-            <element signature="e#954#955#0" expanded="false" />
-            <element signature="e#992#993#0" expanded="false" />
-            <element signature="e#1027#1028#0" expanded="false" />
-            <element signature="e#1061#1062#0" expanded="false" />
-            <element signature="e#1112#1113#0" expanded="false" />
-            <element signature="e#1158#1159#0" expanded="false" />
-            <element signature="e#1210#1211#0" expanded="false" />
-            <element signature="e#1246#1247#0" expanded="false" />
-            <element signature="e#1305#1306#0" expanded="false" />
-            <element signature="e#1355#1356#0" expanded="false" />
-            <element signature="e#1415#1416#0" expanded="false" />
-            <element signature="e#1460#1461#0" expanded="false" />
-          </folding>
+          <caret line="167" column="30" selection-start-line="167" selection-start-column="19" selection-end-line="167" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.222222">
-          <caret line="21" column="36" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/java/io/File.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62716764">
-          <caret line="890" column="19" selection-start-line="890" selection-start-column="19" selection-end-line="890" selection-end-column="19" />
-          <folding>
-            <element signature="e#32867#32868#0" expanded="false" />
-            <element signature="e#32903#32904#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/model/Hero.java">
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/view/GestureDetector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="155" column="25" selection-start-line="155" selection-start-column="25" selection-end-line="155" selection-end-column="25" />
-          <folding>
-            <element signature="method#setWakeupSkill#0;class#Hero#0" expanded="false" />
-            <element signature="class#PositionType#0;class#Hero#0" expanded="false" />
-            <element signature="class#AbilityType#0;class#Hero#0" expanded="false" />
-            <element signature="method#getPositionDisplayNameIndex#0;class#Hero#0" expanded="false" />
-            <element signature="method#getAbilityDisplayNameIndex#0;class#Hero#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/model/WakeUpTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="93" column="25" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
-          <folding>
-            <element signature="method#whenCanFinish#0;class#WakeUpTask#0" expanded="false" />
-            <element signature="method#getDisplayInfo#0;class#WakeUpTask#0" expanded="false" />
-            <element signature="method#setNeededEquipment#0;class#WakeUpTask#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/model/GameStage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="92" column="25" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/util/FileUtility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39306358">
-          <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
-          <folding>
-            <element signature="method#copyFolder#0;class#FileUtility#0" expanded="false" />
-            <element signature="method#unZip#0;class#FileUtility#0" expanded="false" />
-            <element signature="method#deleteAllFiles#0;class#FileUtility#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/util/HanyuPinyinHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.024566473">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="method#getInstance#0;class#HanyuPinyinHelper#0" expanded="false" />
-          </folding>
+          <caret line="519" column="30" selection-start-line="519" selection-start-column="28" selection-end-line="519" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/view/IOnSearch.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/view/AutoAdjustFontSizeTextView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="36" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/model/SpecialStage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="initializer##0;class#SpecialStage#0" expanded="false" />
-            <element signature="class#Weekday#0;class#SpecialStage#0" expanded="false" />
-            <element signature="method#setCanBeExecutedTimes#0;class#SpecialStage#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/view/QuickSearchEditText.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="59" column="28" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/content/Intent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4811" column="50" selection-start-line="4811" selection-start-column="50" selection-end-line="4811" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_item.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.6896553">
-          <caret line="11" column="41" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/os/BaseBundle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="916" column="18" selection-start-line="916" selection-start-column="18" selection-end-line="916" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/util/CommonUtility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
-          <folding>
-            <element signature="method#CommonUtility#0;class#CommonUtility#0" expanded="false" />
-            <element signature="method#px2dip#0;class#CommonUtility#0" expanded="false" />
-            <element signature="method#sp2px#0;class#CommonUtility#0" expanded="false" />
-            <element signature="method#px2sp#0;class#CommonUtility#0" expanded="false" />
-            <element signature="method#createImageFromAsset#0;class#CommonUtility#0" expanded="false" />
-            <element signature="method#createImageFromAsset#1;class#CommonUtility#0" expanded="false" />
-            <element signature="method#computeSampleSize#0;class#CommonUtility#0" expanded="false" />
-            <element signature="method#computeInitialSampleSize#0;class#CommonUtility#0" expanded="false" />
-            <element signature="method#isSDCardAvailable#0;class#CommonUtility#0" expanded="false" />
-            <element signature="method#getSuitableTextSizePX#0;class#CommonUtility#0" expanded="false" />
-            <element signature="method#getSetterName#0;class#CommonUtility#0" expanded="false" />
-            <element signature="method#showNormalDialog#0;class#CommonUtility#0" expanded="false" />
-            <element signature="method#deserializeNormalField#0;class#CommonUtility#0" expanded="false" />
-            <element signature="method#getActuallResourcePath#0;class#CommonUtility#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/view/animation/Animation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84175825">
-          <caret line="603" column="16" selection-start-line="603" selection-start-column="16" selection-end-line="603" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/app/Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36043957">
-          <caret line="4395" column="72" selection-start-line="4395" selection-start-column="47" selection-end-line="4395" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="493" column="30" selection-start-line="493" selection-start-column="30" selection-end-line="493" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/view/RoundImageView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="110" column="34" selection-start-line="110" selection-start-column="34" selection-end-line="110" selection-end-column="34" />
-          <folding>
-            <element signature="method#getImageSize#0;class#RoundImageView#0" expanded="false" />
-            <element signature="method#onMeasure#0;class#RoundImageView#0" expanded="false" />
-            <element signature="method#getMinRateSize#0;class#RoundImageView#0" expanded="false" />
-            <element signature="method#getSuitableSizePic#0;class#RoundImageView#0" expanded="false" />
-            <element signature="method#invalidate#0;class#RoundImageView#0" expanded="false" />
-            <element signature="method#calculateInSampleSize#0;class#RoundImageView#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/animation/KeyframeSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/animation/PropertyValuesHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1036" column="0" selection-start-line="1036" selection-start-column="0" selection-end-line="1036" selection-end-column="0" />
-          <folding>
-            <element signature="e#50281#50282#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/animation/ValueAnimator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="213" column="27" selection-start-line="213" selection-start-column="27" selection-end-line="213" selection-end-column="27" />
-          <folding>
-            <element signature="e#21099#21100#0" expanded="false" />
-            <element signature="e#21169#21170#0" expanded="false" />
-            <element signature="e#39914#39915#0" expanded="false" />
-            <element signature="e#39942#39943#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/animation/AnimatorListenerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/direct_disappear.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/slide_right_in.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="64" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/slide_right_out.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="64" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/slide_left_out.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="64" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/slide_left_in.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="64" />
-          <folding />
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -2659,127 +2315,28 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.8965516">
+        <state vertical-scroll-proportion="-0.5862069">
           <caret line="68" column="8" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/view/View.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/about_dialog.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="16122" column="16" selection-start-line="16122" selection-start-column="16" selection-end-line="16122" selection-end-column="16" />
-          <folding />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/model/IResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2494759">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/affected_skill.xml">
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/color.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21383648">
-          <caret line="6" column="27" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/BigPicActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/scale_in.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/animation/ObjectAnimator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="686" column="50" selection-start-line="686" selection-start-column="50" selection-end-line="686" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/view/ViewGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18786128">
-          <caret line="4201" column="16" selection-start-line="4201" selection-start-column="16" selection-end-line="4201" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/layout_border.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12283237">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/Updater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="83" column="13" selection-start-line="83" selection-start-column="13" selection-end-line="83" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/DetailActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/SearchEditTextFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="16" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41555557">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11333334">
-          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/widget/ScrollView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1480" column="30" selection-start-line="1480" selection-start-column="30" selection-end-line="1480" selection-end-column="30" />
-          <folding />
+        <state vertical-scroll-proportion="-8.206897">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -2788,112 +2345,336 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.275862">
-          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+        <state vertical-scroll-proportion="-9.965517">
+          <caret line="17" column="36" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/pull_refresh_strings.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30769232">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/view/HeaderLoadingLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46676302">
+          <caret line="87" column="58" selection-start-line="87" selection-start-column="58" selection-end-line="87" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/anim/pull_arrow_down.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.098265894">
+          <caret line="4" column="71" selection-start-line="4" selection-start-column="71" selection-end-line="4" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-w820dp/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/picture_dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/pull_to_refresh_header.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.051282052">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/pull_to_refresh_header2.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.025641026">
+          <caret line="31" column="72" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/pull_to_load_footer.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53846157">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/view/AutoAdjustFontSizeTextView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54046243">
+          <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/view/LoadingLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="5.66763">
+          <caret line="257" column="28" selection-start-line="257" selection-start-column="28" selection-end-line="257" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/view/ILoadingLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.3193642">
+          <caret line="59" column="24" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/view/FooterLoadingLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1054913">
+          <caret line="54" column="51" selection-start-line="54" selection-start-column="51" selection-end-line="54" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/view/ViewConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="541" column="15" selection-start-line="541" selection-start-column="15" selection-end-line="541" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/view/PullToRefreshBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.2355492">
+          <caret line="167" column="0" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/os/AsyncTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="280" column="11" selection-start-line="280" selection-start-column="11" selection-end-line="280" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/view/IPullToRefresh.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17196532">
+          <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/animation/ValueAnimator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="486" column="0" selection-start-line="486" selection-start-column="0" selection-end-line="486" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/model/WakeUpTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="78" column="49" selection-start-line="78" selection-start-column="49" selection-end-line="78" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/IDataProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/title_context_menu.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="40" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_75/src.zip!/java/util/ArrayList.java">
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/java/io/File.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="254" column="0" selection-start-line="254" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/BuiltInData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1475" column="9" selection-start-line="1475" selection-start-column="9" selection-end-line="1475" selection-end-column="9" />
+          <caret line="132" column="4" selection-start-line="132" selection-start-column="4" selection-end-line="132" selection-end-column="4" />
           <folding>
-            <element signature="method#createTagCache#0;class#BuiltInData#0" expanded="false" />
-            <element signature="method#createEquipCache#0;class#BuiltInData#0" expanded="false" />
-            <element signature="method#createStageCache#0;class#BuiltInData#0" expanded="false" />
-            <element signature="method#getEquiment#0;class#BuiltInData#0" expanded="false" />
-            <element signature="e#25916#25924#0" expanded="true" />
-            <element signature="e#27235#27243#0" expanded="true" />
-            <element signature="e#28908#28916#0" expanded="true" />
-            <element signature="e#30577#30585#0" expanded="true" />
-            <element signature="e#32162#32170#0" expanded="true" />
-            <element signature="e#33734#33742#0" expanded="true" />
-            <element signature="e#35280#35288#0" expanded="true" />
-            <element signature="e#36538#36546#0" expanded="true" />
-            <element signature="e#38105#38113#0" expanded="true" />
-            <element signature="e#39425#39433#0" expanded="true" />
-            <element signature="e#40735#40743#0" expanded="true" />
-            <element signature="e#42072#42080#0" expanded="true" />
-            <element signature="e#43404#43412#0" expanded="true" />
-            <element signature="e#46473#46481#0" expanded="true" />
-            <element signature="e#48355#48363#0" expanded="true" />
-            <element signature="e#50047#50055#0" expanded="true" />
-            <element signature="e#51715#51723#0" expanded="true" />
-            <element signature="e#53418#53426#0" expanded="true" />
-            <element signature="e#55122#55130#0" expanded="true" />
-            <element signature="e#56364#56372#0" expanded="true" />
-            <element signature="e#57603#57611#0" expanded="true" />
-            <element signature="e#58897#58905#0" expanded="true" />
-            <element signature="e#60148#60156#0" expanded="true" />
-            <element signature="e#61416#61424#0" expanded="true" />
-            <element signature="e#62793#62801#0" expanded="true" />
-            <element signature="e#64431#64439#0" expanded="true" />
-            <element signature="e#65771#65779#0" expanded="true" />
-            <element signature="e#67427#67435#0" expanded="true" />
-            <element signature="e#68797#68805#0" expanded="true" />
-            <element signature="e#70113#70121#0" expanded="true" />
-            <element signature="e#71741#71749#0" expanded="true" />
-            <element signature="e#73038#73046#0" expanded="true" />
-            <element signature="e#74370#74378#0" expanded="true" />
-            <element signature="e#76071#76079#0" expanded="true" />
-            <element signature="e#77407#77415#0" expanded="true" />
-            <element signature="e#78766#78774#0" expanded="true" />
-            <element signature="e#80089#80097#0" expanded="true" />
-            <element signature="e#81743#81751#0" expanded="true" />
-            <element signature="e#83374#83382#0" expanded="true" />
-            <element signature="e#85050#85058#0" expanded="true" />
-            <element signature="e#86354#86362#0" expanded="true" />
-            <element signature="e#87693#87701#0" expanded="true" />
-            <element signature="e#89565#89573#0" expanded="true" />
-            <element signature="e#91227#91235#0" expanded="true" />
-            <element signature="e#92629#92637#0" expanded="true" />
-            <element signature="e#94316#94324#0" expanded="true" />
-            <element signature="e#96067#96075#0" expanded="true" />
-            <element signature="e#97408#97416#0" expanded="true" />
-            <element signature="e#99043#99051#0" expanded="true" />
-            <element signature="e#100687#100695#0" expanded="true" />
-            <element signature="e#102386#102394#0" expanded="true" />
-            <element signature="e#104049#104057#0" expanded="true" />
-            <element signature="e#107103#107111#0" expanded="true" />
-            <element signature="e#108353#108361#0" expanded="true" />
-            <element signature="method#createChapter10And11Stage#0;class#BuiltInData#0" expanded="false" />
-            <element signature="method#createChapter12Stage#0;class#BuiltInData#0" expanded="false" />
-            <element signature="method#createChapter13Stage#0;class#BuiltInData#0" expanded="false" />
-            <element signature="method#createChapter14Stage#0;class#BuiltInData#0" expanded="false" />
-            <element signature="method#createSpecialStage#0;class#BuiltInData#0" expanded="false" />
+            <element signature="e#4944#4945#0" expanded="false" />
+            <element signature="e#4988#4989#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="117" column="16" selection-start-line="117" selection-start-column="16" selection-end-line="117" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/java/lang/AbstractStringBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6517341">
+          <caret line="226" column="26" selection-start-line="226" selection-start-column="26" selection-end-line="226" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/java/lang/StringBuffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35693642">
+          <caret line="376" column="15" selection-start-line="376" selection-start-column="8" selection-end-line="376" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/util/HanyuPinyinHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6286127">
+          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar!/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar!/.readme">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/DetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="309" column="34" selection-start-line="309" selection-start-column="34" selection-end-line="309" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/BottomNavigationFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/BigPicActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="21" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/model/GameStage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/model/EquipmentItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/model/SpecialStage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/model/WakeUpRepeatableTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/impl/DataProviderImplByFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="233" column="37" selection-start-line="233" selection-start-column="37" selection-end-line="233" selection-end-column="37" />
+          <caret line="35" column="21" selection-start-line="35" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/view/RoundImageView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="6.903179">
+          <caret line="360" column="34" selection-start-line="360" selection-start-column="27" selection-end-line="360" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/ProviderFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3684971">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+          <folding>
+            <element signature="e#423#424#0" expanded="true" />
+            <element signature="e#451#452#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/Updater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="93" column="27" selection-start-line="93" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/BuiltInData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-60.793102">
+          <caret line="2538" column="25" selection-start-line="2538" selection-start-column="23" selection-end-line="2538" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/flying/personal/dotawakeupassistant/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21242775">
-          <caret line="107" column="39" selection-start-line="107" selection-start-column="39" selection-end-line="107" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.48410404">
+          <caret line="293" column="13" selection-start-line="293" selection-start-column="13" selection-end-line="293" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#onSearch#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#13601#13615#0" expanded="true" />
             <element signature="method#onPositionTypeChange#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
             <element signature="class#PairData#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#generateToken#0;class#MainActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>

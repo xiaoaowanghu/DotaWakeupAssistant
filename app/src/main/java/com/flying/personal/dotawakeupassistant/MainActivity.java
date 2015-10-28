@@ -1,8 +1,5 @@
 package com.flying.personal.dotawakeupassistant;
 
-import android.animation.LayoutTransition;
-import android.animation.ObjectAnimator;
-import android.animation.PropertyValuesHolder;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -82,31 +79,13 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
     private void initInBackendThread() {
         AsyncTask loader = new AsyncTask() {
             private int marginPX;
-            private int totalCount;
 
             @Override
             protected Object doInBackground(Object[] params) {
                 try {
-                    int loadCountOneTime = 5;
                     ProviderFactory.getInstance().initFactory(new String[]{getAppPath()});
                     marginPX = CommonUtility.dip2px(MainActivity.this, 5);
                     currentHeroes = ProviderFactory.getInstance().getDataProvider().getAllHeroes();
-                    totalCount = currentHeroes.size();
-
-                    for (int i = 0; i < totalCount; i = i + colCount) {
-                        Object[] args = null;
-                        if (loadCountOneTime + i >= totalCount) {
-                            args = new Object[totalCount - i + 1];
-                        } else {
-                            args = new Object[loadCountOneTime + 1];
-                        }
-                        for (int j = 1; j < args.length; j++) {
-                            args[j] = currentHeroes.get(i + j - 1);
-                        }
-                        args[0] = i;
-                        publishProgress(args);
-                        Thread.sleep(110);
-                    }
                 } catch (Exception e) {
                     Log.e("flying.AsyncTask.loader", Log.getStackTraceString(e));
                 }
@@ -115,27 +94,12 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
             }
 
             @Override
-            protected void onPreExecute() {
-                LayoutTransition lt = new LayoutTransition();
-                PropertyValuesHolder pvhAlpha = PropertyValuesHolder.ofFloat("alpha", 0f, 1f);
-                final ObjectAnimator changeIn = ObjectAnimator.ofPropertyValuesHolder(
-                        this, pvhAlpha).setDuration(100);
-                lt.setAnimator(LayoutTransition.APPEARING, changeIn);
-                mainHeroLayout.setLayoutTransition(lt);
-            }
-
-            @Override
             protected void onPostExecute(Object o) {
-                mainHeroLayout.setLayoutTransition(null);
-                ((ScrollView) mainHeroLayout.getParent()).requestLayout();
-            }
-
-            @Override
-            protected void onProgressUpdate(Object[] values) {
-                int index = (int) values[0];
-                for (int i = 1; i < values.length; i++) {
-                    loadHeroes((Hero) values[i], getHeroPicWidthPX(), null, marginPX, (index + i - 1) / colCount, (index + i - 1) % colCount);
+                for (int i = 0; i < currentHeroes.size(); i++) {
+                    loadHeroes(currentHeroes.get(i), getHeroPicWidthPX(), null, marginPX, i / colCount, i % colCount);
                 }
+
+                ((ScrollView) mainHeroLayout.getParent()).requestLayout();
             }
         };
 
@@ -432,8 +396,19 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
             }
 
             return true;
-        } else if (id == R.id.miTest) {
+        } else if (id == R.id.miSerializeData) {
             ProviderFactory.getInstance().getDataProvider().save(null);
+        } else if (id == R.id.miRestData) {
+            File f = new File(getAppPath() + File.separator + "data.json");
+
+            try {
+                if (f.exists())
+                    f.delete();
+            } catch (Exception e) {
+                Log.e(this.getClass().getName(), Log.getStackTraceString(e));
+            }
+
+            this.finish();
         }
 
         return super.onOptionsItemSelected(item);
