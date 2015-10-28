@@ -1,8 +1,5 @@
 package com.flying.personal.dotawakeupassistant;
 
-import android.animation.LayoutTransition;
-import android.animation.ObjectAnimator;
-import android.animation.PropertyValuesHolder;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -94,16 +91,6 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
                 }
 
                 return null;
-            }
-
-            @Override
-            protected void onPreExecute() {
-                LayoutTransition lt = new LayoutTransition();
-                PropertyValuesHolder pvhAlpha = PropertyValuesHolder.ofFloat("alpha", 0f, 1f);
-                final ObjectAnimator changeIn = ObjectAnimator.ofPropertyValuesHolder(
-                        this, pvhAlpha).setDuration(100);
-                lt.setAnimator(LayoutTransition.APPEARING, changeIn);
-                mainHeroLayout.setLayoutTransition(lt);
             }
 
             @Override
