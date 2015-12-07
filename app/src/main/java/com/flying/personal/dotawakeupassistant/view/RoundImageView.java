@@ -36,7 +36,7 @@ public class RoundImageView extends View {
     private final static Xfermode xfermodeForBorder = new PorterDuffXfermode(PorterDuff.Mode.SRC_OVER);
     private final static int DefaultRaidusDP = 10;
     private final static int DefaultBorderWidthDP = 0;
-    protected LoadSource loadSource;
+    protected LoadSource loadSource = LoadSource.AutoDetect;
     protected int mBorderRadiusPX;
     protected Paint mPaint;
     protected WeakReference<Bitmap> mWeakBitmap;
@@ -140,6 +140,23 @@ public class RoundImageView extends View {
         return is;
     }
 
+    public boolean isFileExist() {
+        boolean result = false;
+
+        try {
+            InputStream is = getImageInputStream();
+            result = is != null;
+
+            if (is != null)
+                is.close();
+
+        } catch (IOException e) {
+            result = false;
+        }
+
+        return result;
+    }
+
     protected CustomSize getImageSize() {
         if (originalPicSize == null) {
             BitmapFactory.Options opts = new BitmapFactory.Options();
@@ -154,6 +171,13 @@ public class RoundImageView extends View {
                 BitmapFactory.decodeStream(is, null, opts);
             } catch (IOException e) {
                 Log.e(this.getClass().getName(), Log.getStackTraceString(e));
+            } finally {
+                if (is != null)
+                    try {
+                        is.close();
+                    } catch (IOException e) {
+                        Log.e(this.getClass().getName(), Log.getStackTraceString(e));
+                    }
             }
 
             originalPicSize = new CustomSize(opts.outWidth, opts.outHeight);
