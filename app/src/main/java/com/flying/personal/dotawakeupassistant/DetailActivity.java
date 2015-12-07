@@ -216,12 +216,23 @@ public class DetailActivity extends ActionBarActivity {
 
     private void showDetail() {
         final RoundImageView ivPortrait = (RoundImageView) findViewById(R.id.ivHeroPic);
+
+        //注销下面可以使得以后可以自动更新图片
+//        if (currentHero.isBuiltInData())
+//            ivPortrait.setLoadSource(RoundImageView.LoadSource.Asset);
+//        else
+//            ivPortrait.setLoadSource(RoundImageView.LoadSource.AppDataDir);
+
+        if (!currentHero.isBuiltInData()) {
+            ivPortrait.setLoadSource(RoundImageView.LoadSource.AppDataDir);
+        }
+
         ivPortrait.setFilePath(CommonUtility.getActuallResourcePath(this, currentHero, currentHero.getPicPath()));
 
-        if (currentHero.isBuiltInData())
+        if (!ivPortrait.isFileExist()) {
             ivPortrait.setLoadSource(RoundImageView.LoadSource.Asset);
-        else
-            ivPortrait.setLoadSource(RoundImageView.LoadSource.AppDataDir);
+            ivPortrait.setFilePath(CommonUtility.getActuallResourcePath(this, currentHero, "hero_default_big.png"));
+        }
 
         ivPortrait.invalidate();
         ivPortrait.setOnClickListener(bigPicOnClickListener);

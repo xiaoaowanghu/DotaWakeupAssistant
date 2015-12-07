@@ -247,13 +247,24 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
         ivHeroPic.getLayoutParams().width = picWidthPX;
         ivHeroPic.getLayoutParams().height = picWidthPX;
         ivHeroPic.setTag(h.getName());
+//注销下面可以使得以后可以自动更新图片
 
-        if (h.isBuiltInData())
-            ivHeroPic.setLoadSource(RoundImageView.LoadSource.Asset);
-        else
+//        if (h.isBuiltInData()) {
+//            ivHeroPic.setLoadSource(RoundImageView.LoadSource.Asset);
+//        } else {
+//            ivHeroPic.setLoadSource(RoundImageView.LoadSource.AppDataDir);
+//        }
+        if (!h.isBuiltInData()) {
             ivHeroPic.setLoadSource(RoundImageView.LoadSource.AppDataDir);
+        }
 
         ivHeroPic.setFilePath(CommonUtility.getActuallResourcePath(this, h, h.getPortraitPath()));
+
+        if (!ivHeroPic.isFileExist()) {
+            ivHeroPic.setLoadSource(RoundImageView.LoadSource.Asset);
+            ivHeroPic.setFilePath(CommonUtility.getActuallResourcePath(this, h, "hero_default.jpg"));
+        }
+
         ivHeroPic.invalidate();
         ivHeroPic.setOnClickListener(imageClickListener);
 

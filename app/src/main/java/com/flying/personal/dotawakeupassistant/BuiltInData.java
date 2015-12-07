@@ -89,6 +89,7 @@ public class BuiltInData {
             heroNames.add("天怒");
             heroNames.add("巫医");
             heroNames.add("光法");
+            heroNames.add("黑暗小丑");
         }
         {
             String tagName = "野兽";
@@ -215,6 +216,7 @@ public class BuiltInData {
             heroNames.add("亚龙");
             heroNames.add("天怒法师");
             heroNames.add("仙女龙");
+            heroNames.add("冰龙");
             //TODO
         }
         {
@@ -351,7 +353,7 @@ public class BuiltInData {
             tagHeroCache.put(tag.tagName, heroNames);
             heroNames.add("蓝胖");
             heroNames.add("巫医");
-            heroNames.add("熊猫");
+            heroNames.add("熊猫酒仙");
         }
         {
             String tagName = "夜精灵";
@@ -410,6 +412,7 @@ public class BuiltInData {
             heroNames.add("巫妖");
             heroNames.add("仙女龙");
             heroNames.add("天怒法师");
+            heroNames.add("厄运之源");
             heroNames.add("蜘蛛女郎");
         }
         {
@@ -548,6 +551,99 @@ public class BuiltInData {
             heroNames.add("骷髅王");
             heroNames.add("暗夜魔王");
         }
+        {
+            String tagName = "岩土系";
+            HeroTag tag = new HeroTag();
+            tag.keyName = "岩";
+            tag.tagName = tagName;
+            tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
+            tagCache.put(tagName, tag);
+            List<String> heroNames = new ArrayList(10);
+            tagHeroCache.put(tag.tagName, heroNames);
+            heroNames.add("神牛");
+            heroNames.add("大地之灵");
+            heroNames.add("小小");
+            heroNames.add("沙王");
+        }
+        {
+            String tagName = "长老系";
+            HeroTag tag = new HeroTag();
+            tag.keyName = "老";
+            tag.tagName = tagName;
+            tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
+            tagCache.put(tagName, tag);
+            List<String> heroNames = new ArrayList(10);
+            tagHeroCache.put(tag.tagName, heroNames);
+            heroNames.add("大树");
+            heroNames.add("老鹿");
+            heroNames.add("宙斯");
+            heroNames.add("死灵");
+            heroNames.add("蓝猫");
+            heroNames.add("光法");
+        }
+        {
+            String tagName = "枪戟系";
+            HeroTag tag = new HeroTag();
+            tag.keyName = "枪";
+            tag.tagName = tagName;
+            tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
+            tagCache.put(tagName, tag);
+            List<String> heroNames = new ArrayList(10);
+            tagHeroCache.put(tag.tagName, heroNames);
+            heroNames.add("猴子");
+            heroNames.add("大鱼人");
+            heroNames.add("神灵");
+            heroNames.add("军团");
+            heroNames.add("小鹿");
+        }
+        {
+            String tagName = "熊猫系";
+            HeroTag tag = new HeroTag();
+            tag.keyName = "猫";
+            tag.tagName = tagName;
+            tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
+            tagCache.put(tagName, tag);
+            List<String> heroNames = new ArrayList(10);
+            tagHeroCache.put(tag.tagName, heroNames);
+            heroNames.add("熊猫酒仙");
+            heroNames.add("火猫");
+            heroNames.add("大地之灵");
+            heroNames.add("蓝猫");
+        }
+        {
+            String tagName = "漂浮系";
+            HeroTag tag = new HeroTag();
+            tag.keyName = "漂";
+            tag.tagName = tagName;
+            tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
+            tagCache.put(tagName, tag);
+            List<String> heroNames = new ArrayList(10);
+            tagHeroCache.put(tag.tagName, heroNames);
+            heroNames.add("厄运之源");
+            heroNames.add("幽鬼");
+            heroNames.add("电魂");
+            heroNames.add("死亡先知");
+            heroNames.add("影魔");
+            heroNames.add("巫妖");
+            heroNames.add("冰魂");
+            heroNames.add("水人"); //?
+        }
+        {
+            String tagName = "元素系";
+            HeroTag tag = new HeroTag();
+            tag.keyName = "元";
+            tag.tagName = tagName;
+            tag.picPath = HanyuPinyinHelper.getInstance().getFirstPinyin(0, tagName, true) + picExtensionName;
+            tagCache.put(tagName, tag);
+            List<String> heroNames = new ArrayList(10);
+            tagHeroCache.put(tag.tagName, heroNames);
+            heroNames.add("冰魂");
+            heroNames.add("影魔");
+            heroNames.add("电魂");
+            heroNames.add("凤凰");
+            heroNames.add("水人");
+        }
+
 
         return tagCache;
     }
@@ -718,11 +814,393 @@ public class BuiltInData {
         heroes = new ArrayList<Hero>(100);
         {
             Hero h1 = new Hero();
+            h1.setName("大树");
+            h1.setPositionType(Hero.PositionType.Front);
+            h1.setAbilityType(Hero.AbilityType.Strength);
+            h1.setPortraitPath("dashu.jpg");
+            h1.setPicPath("dashu_big.jpg");
+
+            WakeupSkill skill = new WakeupSkill("长老系系队友增加4500点生命");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("长老系");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.生命;
+            skill.abilitiesAffected[0].value = "+4500";
+
+            List<String> alias = new ArrayList<String>(5);
+            alias.add("老树");
+            h1.setAlias(alias);
+
+            WakeUpTask[] tasks = new WakeUpTask[3];
+            h1.setTasks(tasks);
+            WakeUpTask w1 = new WakeUpTask();
+            tasks[0] = w1;
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "叶黄素", "枯黄树叶"));
+            w1.setStage(stageCache.get("团扎中心(精英)"));
+            w1.setNeededEquipment(getEquiment("泰坦战斧", "极限球", "禁卫军胸甲"));
+
+            WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
+            tasks[1] = w2;
+            w2.setExecuteTimes(4);
+            w2.setStage(stageCache.get("潮汐神庙"));
+
+            WakeUpTask w3 = new WakeUpTask();
+            w3.setDescription("完成关卡，且无人阵亡");
+            w3.setStage(stageCache.get("乱石山坡(精英)"));
+            tasks[2] = w3;
+
+            heroes.add(h1);
+        }
+        {
+            Hero h1 = new Hero();
+            h1.setName("巫妖");
+            h1.setPositionType(Hero.PositionType.Middle);
+            h1.setAbilityType(Hero.AbilityType.Intelligence);
+            h1.setPortraitPath("wuyao.jpg");
+            h1.setPicPath("wuyao_big.jpg");
+
+            WakeupSkill skill = new WakeupSkill("冰甲可以恢复2750点生命并造成攻击者减速");
+            h1.setWakeupSkill(skill);
+
+            List<String> alias = new ArrayList<String>(5);
+            alias.add("51");
+            alias.add("lich");
+            h1.setAlias(alias);
+
+            WakeUpTask[] tasks = new WakeUpTask[3];
+            h1.setTasks(tasks);
+            WakeUpTask w1 = new WakeUpTask();
+            tasks[0] = w1;
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "绿芽", "曼陀罗花"));
+            w1.setStage(stageCache.get("乱石山坡(精英)"));
+            w1.setNeededEquipment(getEquiment("水晶球", "巫师之冠", "红宝石吊坠"));
+
+            WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
+            tasks[1] = w2;
+            w2.setExecuteTimes(10);
+            w2.setStage(stageCache.get("折戟山谷(物免)"));
+
+            WakeUpTask w3 = new WakeUpTask();
+            w3.setDescription("完成关卡，并亲自击杀敌法");
+            w3.setStage(stageCache.get("泰坦遗迹(精英)"));
+            tasks[2] = w3;
+
+            heroes.add(h1);
+        }
+        {
+            Hero h1 = new Hero();
+            h1.setName("沉默");
+            h1.setPositionType(Hero.PositionType.Middle);
+            h1.setAbilityType(Hero.AbilityType.Intelligence);
+            h1.setPortraitPath("chenmo.jpg");
+            h1.setPicPath("chenmo_big.jpg");
+
+            WakeupSkill skill = new WakeupSkill("每个友方队友死亡提升90点智力");
+            h1.setWakeupSkill(skill);
+
+            List<String> alias = new ArrayList<String>(5);
+            h1.setAlias(alias);
+
+            WakeUpTask[] tasks = new WakeUpTask[3];
+            h1.setTasks(tasks);
+            WakeUpTask w1 = new WakeUpTask();
+            tasks[0] = w1;
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "古籍", "圆月弯刀"));
+            w1.setStage(stageCache.get("乱石山坡(精英)"));
+            w1.setNeededEquipment(getEquiment("蓝宝石法杖", "禁卫军胸甲", "红宝石吊坠"));
+
+            WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
+            tasks[1] = w2;
+            w2.setExecuteTimes(10);
+            w2.setStage(stageCache.get("折戟山谷(物免)"));
+
+            WakeUpTask w3 = new WakeUpTask();
+            w3.setDescription("独自完成关卡");
+            w3.setStage(stageCache.get("冰火两重天"));
+            tasks[2] = w3;
+
+            heroes.add(h1);
+        }
+        {
+            Hero h1 = new Hero();
+            h1.setName("大地之灵");
+            h1.setPositionType(Hero.PositionType.Front);
+            h1.setAbilityType(Hero.AbilityType.Strength);
+            h1.setPortraitPath("dadizhiling.jpg");
+            h1.setPicPath("dadizhiling_big.jpg");
+
+            WakeupSkill skill = new WakeupSkill("岩土系队友增加180点护甲");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("岩土系");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.护甲;
+            skill.abilitiesAffected[0].value = "+180";
+
+            List<String> alias = new ArrayList<String>(5);
+            alias.add("土猫");
+            h1.setAlias(alias);
+
+            WakeUpTask[] tasks = new WakeUpTask[3];
+            h1.setTasks(tasks);
+            WakeUpTask w1 = new WakeUpTask();
+            tasks[0] = w1;
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "残光符石", "裂地之柱"));
+            w1.setStage(stageCache.get("巨龙巢穴(精英)"));
+            w1.setNeededEquipment(getEquiment("水晶球", "巫师之冠", "红宝石吊坠"));
+
+            WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
+            tasks[1] = w2;
+            w2.setExecuteTimes(4);
+            w2.setStage(stageCache.get("矮人军工厂"));
+
+            WakeUpTask w3 = new WakeUpTask();
+            w3.setDescription("完成关卡，并亲自击杀影魔");
+            w3.setStage(stageCache.get("黑暗者(精英)"));
+            tasks[2] = w3;
+
+            heroes.add(h1);
+        }
+        {
+            Hero h1 = new Hero();
+            h1.setName("冰龙");
+            h1.setPositionType(Hero.PositionType.Front);
+            h1.setAbilityType(Hero.AbilityType.Intelligence);
+            h1.setPortraitPath("binglong.jpg");
+            h1.setPicPath("binglong_big.jpg");
+
+            WakeupSkill skill = new WakeupSkill("保护并治疗队友，累积治疗量为7260");
+            h1.setWakeupSkill(skill);
+
+            List<String> alias = new ArrayList<String>(5);
+            h1.setAlias(alias);
+
+            WakeUpTask[] tasks = new WakeUpTask[3];
+            h1.setTasks(tasks);
+            WakeUpTask w1 = new WakeUpTask();
+            tasks[0] = w1;
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "寒冬冰晶", "寒冬之心"));
+            w1.setStage(stageCache.get("山腰相逢(精英)"));
+            w1.setNeededEquipment(getEquiment("水晶球", "禁卫军胸甲", "红宝石吊坠"));
+
+            WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
+            tasks[1] = w2;
+            w2.setExecuteTimes(2);
+            w2.setStage(stageCache.get("任意预言之池"));
+
+            WakeUpTask w3 = new WakeUpTask();
+            w3.setDescription("完成关卡，并亲自击杀冰女");
+            w3.setStage(stageCache.get("遗骨小岛(精英)"));
+            tasks[2] = w3;
+
+            heroes.add(h1);
+        }
+        {
+            Hero h1 = new Hero();
+            h1.setName("暗牧");
+            h1.setPositionType(Hero.PositionType.Middle);
+            h1.setAbilityType(Hero.AbilityType.Intelligence);
+            h1.setPortraitPath("anmu.jpg");
+            h1.setPicPath("anmu_big.jpg");
+
+            WakeupSkill skill = new WakeupSkill("巫术盾保护最虚弱的队友，最多吸收6900点伤害");
+            h1.setWakeupSkill(skill);
+
+            List<String> alias = new ArrayList<String>(5);
+            h1.setAlias(alias);
+
+            WakeUpTask[] tasks = new WakeUpTask[3];
+            h1.setTasks(tasks);
+            WakeUpTask w1 = new WakeUpTask();
+            tasks[0] = w1;
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "野兽腿骨", "兽骨肩甲"));
+            w1.setStage(stageCache.get("泰坦遗迹(精英)"));
+            w1.setNeededEquipment(getEquiment("水晶球", "禁卫军胸甲", "掠夺之斧"));
+
+            WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
+            tasks[1] = w2;
+            w2.setExecuteTimes(10);
+            w2.setStage(stageCache.get("折戟山谷(物免)"));
+
+            WakeUpTask w3 = new WakeUpTask();
+            w3.setDescription("完成关卡，且无人阵亡");
+            w3.setStage(stageCache.get("龙语(精英)"));
+            tasks[2] = w3;
+
+            heroes.add(h1);
+        }
+        {
+            Hero h1 = new Hero();
+            h1.setName("熊猫酒仙");
+            h1.setPositionType(Hero.PositionType.Front);
+            h1.setAbilityType(Hero.AbilityType.Strength);
+            h1.setPortraitPath("xiongmaojiuxian.jpg");
+            h1.setPicPath("xiongmaojiuxian_big.jpg");
+
+            WakeupSkill skill = new WakeupSkill("熊猫系队友增加4500点生命");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("熊猫系");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.生命;
+            skill.abilitiesAffected[0].value = "+4500";
+
+            List<String> alias = new ArrayList<String>(5);
+            alias.add("猫熊");
+            h1.setAlias(alias);
+
+            WakeUpTask[] tasks = new WakeUpTask[3];
+            h1.setTasks(tasks);
+            WakeUpTask w1 = new WakeUpTask();
+            tasks[0] = w1;
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "陈年美酒", "醉仙竹"));
+            w1.setStage(stageCache.get("沼泽边缘(精英)"));
+            w1.setNeededEquipment(getEquiment("永恒冰柱", "泰坦战斧", "红宝石吊坠"));
+
+            WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
+            tasks[1] = w2;
+            w2.setExecuteTimes(10);
+            w2.setStage(stageCache.get("折戟山谷(物免)"));
+
+            WakeUpTask w3 = new WakeUpTask();
+            w3.setDescription("完成关卡，且无人阵亡");
+            w3.setStage(stageCache.get("瀑布崖(精英)"));
+            tasks[2] = w3;
+
+            heroes.add(h1);
+        }
+        {
+            Hero h1 = new Hero();
+            h1.setName("猴子");
+            h1.setPositionType(Hero.PositionType.Middle);
+            h1.setAbilityType(Hero.AbilityType.Agility);
+            h1.setPortraitPath("houzi.jpg");
+            h1.setPicPath("houzi_big.jpg");
+
+            WakeupSkill skill = new WakeupSkill("枪戟系队友增加540点攻击");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("枪戟系");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.物理攻击;
+            skill.abilitiesAffected[0].value = "+540";
+
+            List<String> alias = new ArrayList<String>(5);
+            alias.add("长毛");
+            alias.add("幻影");
+            h1.setAlias(alias);
+
+            WakeUpTask[] tasks = new WakeUpTask[3];
+            h1.setTasks(tasks);
+            WakeUpTask w1 = new WakeUpTask();
+            tasks[0] = w1;
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "红线", "奋战头箍"));
+            w1.setStage(stageCache.get("泰坦遗迹(精英)"));
+            w1.setNeededEquipment(getEquiment("银月长矛", "鹰语指环", "红宝石吊坠"));
+
+            WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
+            tasks[1] = w2;
+            w2.setExecuteTimes(10);
+            w2.setStage(stageCache.get("诅咒之城(魔免)"));
+
+            WakeUpTask w3 = new WakeUpTask();
+            w3.setDescription("完成关卡，且无人阵亡");
+            w3.setStage(stageCache.get("遗骨小岛(精英)"));
+            tasks[2] = w3;
+
+            heroes.add(h1);
+        }
+        {
+            Hero h1 = new Hero();
+            h1.setName("厄运之源");
+            h1.setPositionType(Hero.PositionType.Middle);
+            h1.setAbilityType(Hero.AbilityType.Intelligence);
+            h1.setPortraitPath("eyun.jpg");
+            h1.setPicPath("eyun_big.jpg");
+
+            WakeupSkill skill = new WakeupSkill("漂浮系队友增加180点护甲");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("漂浮系");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.护甲;
+            skill.abilitiesAffected[0].value = "+180";
+
+            List<String> alias = new ArrayList<String>(5);
+            alias.add("痛苦");
+            alias.add("祸乱之源");
+            h1.setAlias(alias);
+
+            WakeUpTask[] tasks = new WakeUpTask[3];
+            h1.setTasks(tasks);
+            WakeUpTask w1 = new WakeUpTask();
+            tasks[0] = w1;
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "纷乱花瓣", "眠梦之花"));
+            w1.setStage(stageCache.get("巨龙巢穴(精英)"));
+            w1.setNeededEquipment(getEquiment("水晶球", "巫师之冠"));
+
+            WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
+            tasks[1] = w2;
+            w2.setExecuteTimes(4);
+            w2.setStage(stageCache.get("矮人军工厂"));
+
+            WakeUpTask w3 = new WakeUpTask();
+            w3.setDescription("完成关卡，并亲自击杀影魔");
+            w3.setStage(stageCache.get("黑暗者(精英)"));
+            tasks[2] = w3;
+
+            heroes.add(h1);
+        }
+
+        {
+            Hero h1 = new Hero();
+            h1.setName("水人");
+            h1.setPositionType(Hero.PositionType.Middle);
+            h1.setAbilityType(Hero.AbilityType.Agility);
+            h1.setPortraitPath("sr.jpg");
+            h1.setPicPath("sr_big.jpg");
+
+            WakeupSkill skill = new WakeupSkill("元素生物队友增加180点魔抗");
+            h1.setWakeupSkill(skill);
+            skill.affectTag = tagCache.get("元素系");
+            skill.abilitiesAffected = new WakeupSkill.AbilityAffected[1];
+            skill.abilitiesAffected[0] = skill.new AbilityAffected();
+            skill.abilitiesAffected[0].abilityType = WakeupSkill.AbilityType.魔抗;
+            skill.abilitiesAffected[0].value = "+180";
+
+            List<String> alias = new ArrayList<String>(5);
+            alias.add("海马");
+            alias.add("水元素");
+            h1.setAlias(alias);
+
+            WakeUpTask[] tasks = new WakeUpTask[3];
+            h1.setTasks(tasks);
+            WakeUpTask w1 = new WakeUpTask();
+            tasks[0] = w1;
+            w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "防水涂料", "虚无水印"));
+            w1.setStage(stageCache.get("沼泽边缘(精英)"));
+            w1.setNeededEquipment(getEquiment("泰坦战斧", "鹰语指环", "红宝石吊坠"));
+
+            WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
+            tasks[1] = w2;
+            w2.setExecuteTimes(2);
+            w2.setStage(stageCache.get("任意预言之池"));
+
+            WakeUpTask w3 = new WakeUpTask();
+            w3.setDescription("完成关卡，并亲自击杀冰女");
+            w3.setStage(stageCache.get("遗骨小岛(精英)"));
+            tasks[2] = w3;
+
+            heroes.add(h1);
+        }
+        {
+            Hero h1 = new Hero();
             h1.setName("魂守");
             h1.setPositionType(Hero.PositionType.Middle);
             h1.setAbilityType(Hero.AbilityType.Agility);
-            h1.setPortraitPath("spe.jpg");
-            h1.setPicPath("spe_big.jpg");
+            h1.setPortraitPath("tb.jpg");
+            h1.setPicPath("tb_big.jpg");
 
             WakeupSkill skill = new WakeupSkill("对召唤物和幻象造成2.3倍伤害");
             h1.setWakeupSkill(skill);
@@ -738,7 +1216,7 @@ public class BuiltInData {
             tasks[0] = w1;
             w1.setDescription(String.format("收集60个%s碎片，合成装备%s", "恶魔血", "黑暗之魂"));
             w1.setStage(stageCache.get("巨龙巢穴(精英)"));
-            w1.setNeededEquipment(getEquiment("巫师之冠", "水晶球"));
+            w1.setNeededEquipment(getEquiment("麒麟弯刀", "鹰语指环"));
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
@@ -757,8 +1235,8 @@ public class BuiltInData {
             h1.setName("大魔导师");
             h1.setPositionType(Hero.PositionType.Back);
             h1.setAbilityType(Hero.AbilityType.Intelligence);
-            h1.setPortraitPath("spe.jpg");
-            h1.setPicPath("spe_big.jpg");
+            h1.setPortraitPath("lbk.jpg");
+            h1.setPicPath("lbk_big.jpg");
 
             WakeupSkill skill = new WakeupSkill("增加法杖队友810点魔法强度");
             h1.setWakeupSkill(skill);
@@ -783,7 +1261,7 @@ public class BuiltInData {
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
-            w2.setExecuteTimes(10);
+            w2.setExecuteTimes(4);
             w2.setStage(stageCache.get("矮人军工厂"));
 
             WakeUpTask w3 = new WakeUpTask();
@@ -798,8 +1276,8 @@ public class BuiltInData {
             h1.setName("暗夜魔王");
             h1.setPositionType(Hero.PositionType.Front);
             h1.setAbilityType(Hero.AbilityType.Strength);
-            h1.setPortraitPath("spe.jpg");
-            h1.setPicPath("spe_big.jpg");
+            h1.setPortraitPath("anye.jpg");
+            h1.setPicPath("anye_big.jpg");
 
             WakeupSkill skill = new WakeupSkill("增加王者队友180点护甲");
             h1.setWakeupSkill(skill);
@@ -822,7 +1300,7 @@ public class BuiltInData {
 
             WakeUpRepeatableTask w2 = new WakeUpRepeatableTask();
             tasks[1] = w2;
-            w2.setExecuteTimes(10);
+            w2.setExecuteTimes(4);
             w2.setStage(stageCache.get("矮人军工厂"));
 
             WakeUpTask w3 = new WakeUpTask();
@@ -3808,6 +4286,16 @@ public class BuiltInData {
             stageCache.put(gs.getName(), gs);
         }
         //=======================预言之池===============================
+        {
+            SpecialStage gs = new SpecialStage();
+            gs.setName("任意预言之池");
+            gs.setStamina(6);
+            gs.setCanBeExecutedTimes(2);
+            gs.setOccurDays(SpecialStage.Weekday.AllDays);
+            List<EquipmentItem> items = new ArrayList<EquipmentItem>();
+            gs.setOutputItems(items);
+            stageCache.put("任意预言之池", gs);
+        }
         {
             SpecialStage gs = new SpecialStage();
             gs.setName("预言之池-影之魔王(影魔)");
