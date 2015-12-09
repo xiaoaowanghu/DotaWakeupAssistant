@@ -343,7 +343,8 @@ public class DataProviderImplByFile implements IDataProvider {
 
         try {
             Log.e(this.getClass().getName(), getDataFilePath());
-            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(new FileOutputStream(getDataFilePath()), "UTF-8");
+            String path = args != null && args.length > 0 ? getDataFilePath() : "/sdcard/data.json";
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(new FileOutputStream(path), "UTF-8");
             Gson gson = new Gson();
             gson.toJson(s, outputStreamWriter);
             outputStreamWriter.flush();

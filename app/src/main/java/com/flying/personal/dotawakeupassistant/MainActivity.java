@@ -22,12 +22,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.flying.personal.dotawakeupassistant.model.Hero;
 import com.flying.personal.dotawakeupassistant.util.CommonUtility;
+import com.flying.personal.dotawakeupassistant.util.FileUtility;
 import com.flying.personal.dotawakeupassistant.view.IOnSearch;
 import com.flying.personal.dotawakeupassistant.view.RoundImageView;
 
@@ -324,6 +326,8 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
         return true;
     }
 
+    private int clickLogoContinousCount;
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -335,6 +339,18 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
         if (id == R.id.miActionAbout) {
             View view = LayoutInflater.from(this).inflate(R.layout.about_dialog, null);// 自定义布局
             final AlertDialog dialog = new AlertDialog.Builder(this).create();
+
+            ImageView iv = (ImageView) view.findViewById(R.id.ivLogo);
+            iv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    clickLogoContinousCount++;
+
+                    if (clickLogoContinousCount >= 5) {
+                        ProviderFactory.getInstance().getDataProvider().save(null);
+                    }
+                }
+            });
 
             TextView tv = (TextView) view.findViewById(R.id.tvVersion);
             String versionName = "N/A";
@@ -407,14 +423,10 @@ public class MainActivity extends ActionBarActivity implements IOnSearch {
             }
 
             return true;
-        } else if (id == R.id.miSerializeData) {
-            ProviderFactory.getInstance().getDataProvider().save(null);
         } else if (id == R.id.miRestData) {
-            File f = new File(getAppPath() + File.separator + "data.json");
 
             try {
-                if (f.exists())
-                    f.delete();
+                FileUtility.deleteAllFiles(this.getFilesDir(), false);
             } catch (Exception e) {
                 Log.e(this.getClass().getName(), Log.getStackTraceString(e));
             }

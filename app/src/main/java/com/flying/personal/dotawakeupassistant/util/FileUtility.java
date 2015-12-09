@@ -113,18 +113,25 @@ public class FileUtility {
         }
     }
 
-    public static void deleteAllFiles(File file) {
-        if (!file.exists())
+    public static void deleteAllFiles(File root) {
+        deleteAllFiles(root, true);
+    }
+
+    public static void deleteAllFiles(File root, boolean isDeleteRoot) {
+        if (!root.exists())
             return;
 
-        if (file.isDirectory()) {
-            File files[] = file.listFiles();
+        if (root.isDirectory()) {
+            File files[] = root.listFiles();
             for (int i = 0; i < files.length; i++) {
-                deleteAllFiles(files[i]);
+                deleteAllFiles(files[i], true);
             }
-        }
 
-        file.delete();
+            if (isDeleteRoot)
+                root.delete();
+        } else {
+            root.delete();
+        }
     }
 
 
