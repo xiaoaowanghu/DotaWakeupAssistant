@@ -13,11 +13,11 @@
         android:title="@string/action_about"
         app:showAsAction="never" />
 
-    <item
-        android:id="@+id/miSerializeData"
-        android:orderInCategory="200"
-        android:title="测试-序列化数据文件"
-        app:showAsAction="never" />
+    <!--<item-->
+        <!--android:id="@+id/miSerializeData"-->
+        <!--android:orderInCategory="200"-->
+        <!--android:title="测试-序列化数据文件"-->
+        <!--app:showAsAction="never" />-->
 
     <item
         android:id="@+id/miRestData"

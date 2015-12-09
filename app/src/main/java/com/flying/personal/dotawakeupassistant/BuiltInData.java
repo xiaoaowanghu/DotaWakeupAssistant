@@ -86,7 +86,7 @@ public class BuiltInData {
             heroNames.add("黑鸟");
             heroNames.add("术士");
             heroNames.add("骨法");
-            heroNames.add("天怒");
+            heroNames.add("天怒法师");
             heroNames.add("巫医");
             heroNames.add("光法");
             heroNames.add("黑暗小丑");
@@ -468,7 +468,7 @@ public class BuiltInData {
             List<String> heroNames = new ArrayList(10);
             tagHeroCache.put(tag.tagName, heroNames);
             heroNames.add("龙骑士");
-            heroNames.add("刚被");
+            heroNames.add("刚背猪");
             heroNames.add("大树");
             heroNames.add("魂守");
             heroNames.add("吸血鬼");
@@ -606,7 +606,7 @@ public class BuiltInData {
             List<String> heroNames = new ArrayList(10);
             tagHeroCache.put(tag.tagName, heroNames);
             heroNames.add("熊猫酒仙");
-            heroNames.add("火猫");
+            heroNames.add("灰烬之灵");
             heroNames.add("大地之灵");
             heroNames.add("蓝猫");
         }
